@@ -1,0 +1,29 @@
+@import "smart-grid.sass"
+@import "_variables.sass"
+
+.container-fluide
+	+wrapper-full()
+
+.container
+	+wrapper()
+
+.take-content-wrapper
+	+row-flex()
+
+@media screen and (max-width: 992px)
+
+	/* Header */
+
+	.nav-wrapper--custom
+	  display: -webkit-flex
+	  display: -ms-flex
+	  display: flex
+	  justify-content: flex-end
+
+	.header-nav__ul
+		li
+			padding: 10px 0
+
+			a
+				padding: 0 30px
+				font-weight: bold
