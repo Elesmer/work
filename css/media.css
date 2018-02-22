@@ -1,9 +1,9 @@
 /* Fonts */
-.container-fluide {
+.container-fluid {
   padding-left: 30px;
   padding-right: 30px; }
   @media screen and (max-width: 780px) {
-    .container-fluide {
+    .container-fluid {
       padding-left: 15px;
       padding-right: 15px; } }
 
@@ -45,3 +45,34 @@
     .header-nav__ul li a {
       padding: 0 30px;
       font-weight: bold; } }
+
+@media screen and (max-width: 960px) {
+  h1 {
+    font-size: 3em; }
+  .title-info__h1,
+  .title-info__h2 {
+    text-align: center; }
+  .take-control {
+    position: relative;
+    width: 100%; }
+  .parallax {
+    position: relative; }
+  .parallax-container {
+    height: auto; }
+  .parallax--img-overlay {
+    position: relative; }
+  .container--take {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    padding: 50px 0; }
+  .take-photo {
+    padding: 50px 0 10px 0; }
+    .take-photo img {
+      width: 80%; } }
+
+@media screen and (max-width: 560px) {
+  h1 {
+    font-size: 2em; }
+  h2 {
+    font-size: 1.5em; } }

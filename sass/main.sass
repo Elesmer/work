@@ -78,6 +78,9 @@ h2
   background: $light-grey
   padding: 0
 
+.take-content-wrapper
+  justify-content: center
+
 .parallax-container
   position: relative
   z-index: 10
@@ -89,7 +92,7 @@ h2
   height: 100%
   justify-content: flex-end
 
-.title-info
+.take-title-info
   display: -webkit-flex
   display: -ms-flex
   display: flex
@@ -97,7 +100,10 @@ h2
   justify-content: center
   align-items: center
   height: 100%
-  width: 70%
+  +col()
+  +size(6)
+  +size-md(8)
+  +size-sm(12)
 
 .title-info__h1,
 .title-info__h2
@@ -105,6 +111,26 @@ h2
 
 .title-info__h2
   width: 100%
+
+.take-photo
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+  justify-content: center
+  +col()
+  +size(6)
+  +size-md(8)
+  +size-sm(12)
+
+  img
+    position: static !important
+    display: block !important
+    min-width: 50px
+    min-height: 50px
+    max-width: 350px
+    max-height: 350px
+    transform: none
 
 /* Need */
 

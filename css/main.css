@@ -86,6 +86,12 @@ h2 {
   background: #D3D4D9;
   padding: 0; }
 
+.take-content-wrapper {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
 .parallax-container {
   position: relative;
   z-index: 10; }
@@ -102,7 +108,7 @@ h2 {
       -ms-flex-pack: end;
           justify-content: flex-end; }
 
-.title-info {
+.take-title-info {
   display: -webkit-flex;
   display: -ms-flex;
   display: -webkit-box;
@@ -122,7 +128,21 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  width: 70%; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(50% - 30px);
+  width: calc(50% - 30px); }
+  @media screen and (max-width: 960px) {
+    .take-title-info {
+      width: -webkit-calc(66.66667% - 30px);
+      width: calc(66.66667% - 30px); } }
+  @media screen and (max-width: 780px) {
+    .take-title-info {
+      width: -webkit-calc(100% - 30px);
+      width: calc(100% - 30px); } }
 
 .title-info__h1,
 .title-info__h2 {
@@ -130,6 +150,46 @@ h2 {
 
 .title-info__h2 {
   width: 100%; }
+
+.take-photo {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: -webkit-calc(50% - 30px);
+  width: calc(50% - 30px); }
+  @media screen and (max-width: 960px) {
+    .take-photo {
+      width: -webkit-calc(66.66667% - 30px);
+      width: calc(66.66667% - 30px); } }
+  @media screen and (max-width: 780px) {
+    .take-photo {
+      width: -webkit-calc(100% - 30px);
+      width: calc(100% - 30px); } }
+  .take-photo img {
+    position: static !important;
+    display: block !important;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 350px;
+    max-height: 350px;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none; }
 
 /* Need */
 .box {
