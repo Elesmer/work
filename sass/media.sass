@@ -1,69 +1,83 @@
 @import "smart-grid.sass"
 @import "_variables.sass"
 
-.container-fluid
-	+wrapper-full()
-
 .container
 	+wrapper()
 
-.take-content-wrapper
+.header__wrapper,
+.main-wrapper,
+.support-row,
+.copyright
 	+row-flex()
 
-@media screen and (max-width: 992px)
+.sidebar
+	+col()
+	+size(3)
 
-	/* Header */
+.content
+	+col()
+	+size(9)
+	+size-lg(12)
 
-	.nav-wrapper--custom
-	  display: -webkit-flex
-	  display: -ms-flex
-	  display: flex
-	  justify-content: flex-end
+.brand
+	+col()
+	+size(3)
+	+size-sm(12)
 
-	.header-nav__ul
-		li
-			padding: 10px 0
+.account
+	+col()
+	+size(9)
+	+size-sm(12)
 
-			a
-				padding: 0 30px
-				font-weight: bold
+.support__block
+	+col()
+	+size(6)
+	+size-sm(12)
 
-@media screen and (max-width: 960px)
+.copyright__block
+	+col()
+	+size(4)
+	+size-sm(12)
 
-	h1
-		font-size: 3em
+@media screen and (max-width: 1100px)
 
-	.title-info__h1,
-	.title-info__h2
-		text-align: center
+	.sidebar
+		display: none
 
-	.take-control
-		position: relative
+	.button-collapse--burger
+		display: block
+
+	.account
+		width: 70% !important
+		margin: 0
+
+	.container--header
+		padding: 0
+
+	.header__wrapper
+		margin: 0
+
+	.brand
+		margin: 0
+		width: 30%
+
+@media screen and (max-width: 780px)
+
+	.account
+		width: 100% !important
+		justify-content: center
+
+	.brand,
+	.info-tabs__h2,
+	.tabs--custom
 		width: 100%
 
-	.parallax
-		position: relative
+	.info-tabs__h2,
+	.error__p
+		text-align: center
 
-	.parallax-container
-		height: auto
+	.tab__table
+		overflow: scroll
 
-	.parallax--img-overlay
-		position: relative
-
-	.container--take
-		flex-wrap: wrap
-		padding: 50px 0
-
-	.take-photo
-		padding: 50px 0 10px 0
-
-		img
-			width: 80%
-
-@media screen and (max-width: 560px)
-
-	h1
-		font-size: 2em
-
-	h2
-		font-size: 1.5em
+	.table
+		min-width: 780px

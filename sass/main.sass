@@ -1,138 +1,590 @@
-
-@import "_variables.sass"
 @import "smart-grid.sass"
+@import "_variables.sass"
 
 /* Fonts */
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro:300,400,600')
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro:300,400,600")
 
 @font-face
-  font-family: "BigJohn"
-  src : url("../fonts/big/BIG JOHN.otf")
+  font-family: "Geometria"
+  src: url("../fonts/geometria/Geometria.otf")
+  font-style: normal
+  font-weight: normal
+
+@font-face
+  font-family: "Geometria"
+  src: url("../fonts/geometria/Geometria-Light.otf")
+  font-style: lighter
+  font-weight: lighter
+
+@font-face
+  font-family: "Geometria"
+  src: url("../fonts/geometria/Geometria-Medium.otf")
+  font-style: medium
+  font-weight: medium
+
+@font-face
+  font-family: "Geometria"
+  src: url("../fonts/geometria/Geometria-Bold.otf")
+  font-style: bold
+  font-weight: bold
 
 /* Main styles */
 
-section
-  padding: 100px 0
+body
+  font-family: "Geometria", sans-serif
+  font-size: 10pt
 
-h1,
-h2,
-h3,
-h4
-  color: $milk
-  font-family: $BJ
+h1
+  font-size: 1.1em
   text-transform: uppercase
-  font-size: 4em
+  color: #fff
 
-h2
-  font-family: $OS
-  font-size: 2em
+a
+  color: #000
+  transition: 0.5s
 
-.parallax--img-overlay
-  background: rgba(#000000, 0.36)
-  height: 100%
-  position: absolute
-  width: 100%
-  z-index: 200
+  &:hover
+    color: darken($blue, 15%)
+    transition: 0.5s
 
 /* Header */
 
-.header-nav
-  display: -ms-flex
-  display: -webkit-flex
-  display: flex
-  justify-content: center
+.brand
+  background: #459ef6
+  margin-right: 0px !important
 
-.nav-wrapper--custom
-  width: 90%
-
-.header-nav__ul
-  li
-    text-transform: uppercase
-
-/* Burger */
-
-.button-collapse--burger
+.account
+  -webkit-box-shadow: 0px 2px 28.8px 3.2px rgba(0, 0, 0, 0.05)
+  box-shadow: 0px 2px 28.8px 3.2px rgba(0, 0, 0, 0.05)
+  -ms-flex-align: center
+  -ms-flex-pack: end
+  -webkit-align-items: center
+  -webkit-box-align: center
+  -webkit-box-pack: end
+  -webkit-justify-content: flex-end
   align-items: center
   display: -ms-flex
+  display: -ms-flexbox
+  display: -webkit-box
   display: -webkit-flex
   display: flex
-
-.burger
-  display: -ms-flex
-  display: -webkit-flex
-  display: flex
-  flex-direction: column
-  height: 10px
-  justify-content: space-between
-  width: 30px
-
-  .burger__line
-    background: #fff
-    height: 1px
-    width: 100%
-
-/* Take control section */
-
-.take-control
-  background: $light-grey
-  padding: 0
-
-.take-content-wrapper
-  justify-content: center
-
-.parallax-container
-  position: relative
-  z-index: 10
-
-.container--take
-  display: -ms-flex
-  display: -webkit-flex
-  display: flex
-  height: 100%
   justify-content: flex-end
+  margin-left: 0 !important
+  width: 75% !important
 
-.take-title-info
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  flex-direction: column
-  justify-content: center
-  align-items: center
-  height: 100%
-  +col()
-  +size(6)
-  +size-md(8)
-  +size-sm(12)
-
-.title-info__h1,
-.title-info__h2
-  text-align: right
-
-.title-info__h2
+.brand__h1
+  margin: 0
+  padding: 20px 40px
+  text-align: center
   width: 100%
 
-.take-photo
+.account__icon
+  -webkit-box-align: center
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
+  display: -ms-flex
+  display: -webkit-flex
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  height: 50px
+  -webkit-box-pack: center
+  -webkit-justify-content: center
+  -ms-flex-pack: center
+  justify-content: center
+  position: relative
+  width: 50px
+
+  &::after
+    -webkit-box-align: center
+    -webkit-align-items: center
+    -ms-flex-align: center
+    align-items: center
+    background: #459ef6
+    -webkit-border-radius: 100px
+    border-radius: 100px
+    color: #fff
+    content: "5"
+    display: -ms-flex
+    display: -webkit-flex
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    font-size: 0.5em
+    font-weight: bold
+    height: 14px
+    -webkit-box-pack: center
+    -webkit-justify-content: center
+    -ms-flex-pack: center
+    justify-content: center
+    position: absolute
+    right: 10px
+    top: 10px
+    width: 14px
+    z-index: -1
+
+.account__avatar
+  -webkit-box-align: center
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
+  background: #c9e2fa
+  -webkit-border-radius: 100px
+  border-radius: 100px
+  display: -ms-flex
+  display: -webkit-flex
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  height: 30px
+  -webkit-box-pack: center
+  -webkit-justify-content: center
+  -ms-flex-pack: center
+  justify-content: center
+  overflow: hidden
+  position: relative
+  width: 30px
+  margin: 0 20px
+
+.account__name
+  display: -webkit-flex
+  display: -ms-flex
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
+
+.account__h3
+  color: #121212
+  font-size: 0.8em
+  margin: 0
+
+.account__h4
+  font-size: 1em
+  text-transform: capitalize
+  color: #989898
+  font-weight: 300
+  margin: 0
+  margin-right: 20px
+
+.account__img--avatar
+  position: absolute
+  width: 100%
+  z-index: 10
+
+.account__a
+  -webkit-box-align: center
+  -webkit-align-items: center
+  -ms-flex-align: center
+  align-items: center
+  display: -ms-flex
+  display: -webkit-flex
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  height: 100%
+  -webkit-box-pack: center
+  -webkit-justify-content: center
+  -ms-flex-pack: center
+  justify-content: center
+  position: absolute
+  width: 100%
+
+.button-collapse--burger
+  padding: 5px
+  margin: 0 10px
+  display: none
+
+.burger
+  height: 15px
+  width: 20px
+  display: -webkit-flex
+  display: -ms-flex
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-orient: vertical
+  -webkit-box-direction: normal
+  -webkit-flex-direction: column
+  -ms-flex-direction: column
+  flex-direction: column
+  -webkit-justify-content: space-around
+  -ms-flex-pack: distribute
+  justify-content: space-around
+
+.burger__line
+  background: #000
+  height: 1px
+  width: 100%
+
+/* Sidebar */
+
+.main-wrapper
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: row
+  position: relative
+
+.sidebar
+  -webkit-box-shadow: 0px 2px 28.8px 3.2px rgba(0, 0, 0, 0.05)
+  box-shadow: 0px 2px 28.8px 3.2px rgba(0, 0, 0, 0.05)
+  position: absolute
+  top: 0
+  left: 0
+
+.sidebar__h3
+  font-size: 1.1em
+  font-weight: bold
+  margin-top: 50px
+  padding: 0 40px
+  text-transform: capitalize
+
+.sidebar__navigation
+  width: 100%
+
+  li
+    width: 100%
+    display: -webkit-flex
+    display: -ms-flex
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    justify-content: center
+    align-items: center
+
+    a
+      -o-transition: 0.3s
+      -webkit-transition: 0.3s
+      color: #989898
+      display: block
+      padding: 10px 0 10px 70px
+      position: relative
+      text-transform: capitalize
+      transition: 0.3s
+      width: 100%
+
+      &::after
+        background: url('/img/sprite-icons.png') no-repeat
+        content: ""
+        display: inline-block
+        height: 13px
+        left: 40px
+        overflow: hidden
+        position: absolute
+        text-align: left
+        text-indent: -9999px
+        top: 13px
+        width: 13px
+
+      &:first-child::after
+        background-position: -43px -14px
+
+    &:nth-child(2) a::after
+      background-position: -43px -28px
+
+    &:nth-child(3) a::after
+      background-position: -15px -0px
+      width: 13px
+      height: 9px
+
+    &:nth-child(4) a::after
+      background-position: -15px -38px
+      width: 13px
+      height: 11px
+
+    &:nth-child(5) a::after
+      background-position: -15px -10px
+      width: 13px
+      height: 13px
+
+    &:nth-child(6) a::after
+      background-position: -43px -42px
+      width: 13px
+      height: 8px
+
+    &:nth-child(7) a::after
+      background-position: -43px -0px
+      width: 13px
+      height: 13px
+
+    &:hover
+      &:first-child a::after
+        background-position: -29px -14px
+        width: 13px
+        height: 13px
+
+      &:nth-child(2) a::after
+        background-position: -29px -28px
+        width: 13px
+        height: 13px
+
+      &:nth-child(3) a::after
+        background-position: -1px -0px
+        width: 13px
+        height: 9px
+
+      &:nth-child(4) a::after
+        background-position: -1px -38px
+        width: 13px
+        height: 11px
+
+      &:nth-child(5) a::after
+        background-position: -1px -10px
+        width: 13px
+        height: 13px
+
+      &:nth-child(6) a::after
+        background-position: -29px -42px
+        width: 13px
+        height: 8px
+
+      &:nth-child(7) a::after
+        background-position: -29px -0px
+        width: 13px
+        height: 13px
+
+    &:last-child
+      a
+        text-transform: uppercase
+
+    &:hover
+      background: #459ef6
+      -webkit-transition: 0.3s
+      -o-transition: 0.3s
+      transition: 0.3s
+
+      a
+        color: #fff
+
+  &:nth-child(4)
+    padding-bottom: 200px
+
+    li
+      a
+        text-transform: capitalize
+
+        &::after
+          background-position: -15px -24px
+          width: 13px
+          height: 13px
+
+      &:hover a::after
+        background-position: -1px -24px
+        width: 13px
+        height: 13px
+
+.language
+  width: 100%
+  position: relative
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  box-sizing: border-box
+  border-top: 1px solid #e8e8e8
+  padding: 15px 0
+
+  &::after
+    position: absolute
+    content: ""
+    height: 20px
+    width: 2px
+    background: #000
+    left: 52%
+    top: 50%
+    transform: translate(-50%, -50%)
+
+.language__a.active
+  color: $blue
+  transition: 0.5s
+
+  &:hover
+    color: darken($blue, 15%)
+    transition: 0.5s
+
+.language__p
+  margin: 0 15px
+
+  &:first-child
+    position: relative
+
+.side-nav__wrapper
+  position: relative
+
+  .sidebar__navigation
+    li
+      a
+        padding-top: 0
+        padding-bottom: 0
+
+  .language
+    .language__p:first-child
+      margin-right: 0
+
+      &::after
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translate(-50%, -50%)
+
+  .sidebar__navigation:nth-child(4)
+    padding-bottom: 90px
+
+.sidebar__navigation--mobile
+  li
+    a
+      &::after
+        top: 17px
+
+/* Content section */
+
+.content
+  padding: 30px 0px
+  position: absolute
+  right: 0
+  top: 0
+
+.error
+  padding: 5px 50px
+  border: 2px solid #ff0000
+  box-sizing: border-box
+  position: relative
+  margin-bottom: 15px
+
+.error__a
+  color: $blue
+
+.error__a--icon
+  padding: 10px 15px
+  position: absolute
+  right: 0
+  top: 0
+
+/* Info tabs */
+
+.info-tabs
   display: -webkit-flex
   display: -ms-flex
   display: flex
   align-items: center
-  justify-content: center
-  +col()
-  +size(6)
-  +size-md(8)
-  +size-sm(12)
+  flex-wrap: wrap
+  margin-bottom: 30px
 
-  img
-    position: static !important
-    display: block !important
-    min-width: 50px
-    min-height: 50px
-    max-width: 350px
-    max-height: 350px
-    transform: none
+.tabs--custom
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: flex-end
+  width: 35%
 
-/* Need */
+  .indicator
+    bottom: 10px
+    background: $blue
 
-.box
-  height: 2000px
+  .tab--custom
+    padding: 0 20px
+
+    a
+      padding: 0
+      color: $black
+      font-size: 10pt
+
+      &:hover
+        color: lighten($black, 30%)
+
+    a.active
+      color: $blue
+
+.info-tabs__h2
+  font-size: 10pt
+  text-transform: uppercase
+  width: 65%
+  float: left
+
+.tab-wrapper
+  width: 100%
+
+.tab__table
+  padding: 10px 50px 10px 50px
+  -webkit-box-shadow: 0px 2px 28.8px 3.2px rgba(0, 0, 0, 0.05)
+  box-shadow: 0px 2px 28.8px 3.2px rgba(0, 0, 0, 0.05)
+
+.table.bordered > thead > tr
+  border-bottom: 1px solid #948d8d
+
+  thead
+    tr
+      padding: 10px 0
+
+  tbody
+    tr:last-child
+      border: none
+
+.support__block
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+
+.support-content
+  padding: 30px 40px
+  -webkit-box-shadow: 0px 2px 28.8px 3.2px rgba(0, 0, 0, 0.05)
+  box-shadow: 0px 2px 28.8px 3.2px rgba(0, 0, 0, 0.05)
+
+.support__p
+  font-size: 10pt
+
+.support__ul
+  li
+    padding-left: 30px
+    position: relative
+
+    a
+      font-weight: lighter
+      font-size: 10pt
+      text-transform: capitalize
+
+      &::after
+        background: url('/img/sprite-icons.png') no-repeat
+        background-position: -43px -0px
+        content: ""
+        display: inline-block
+        height: 13px
+        left: 0
+        overflow: hidden
+        position: absolute
+        text-align: left
+        text-indent: -9999px
+        top: 30%
+        width: 13px
+
+.support__ul--second
+  li
+    &:first-child
+      a
+        &::after
+          background: url('/img/twitter-logo-silhouette@1X.png') no-repeat
+
+    &:last-child
+      a
+        &::after
+          background: url('/img/mail-black-envelope-symbol@1X.png') no-repeat
+
+/* Copyright */
+
+.copyright__block
+  margin: 50px 0 20px 0
+
+.copyright__p
+  margin: 0
+  font-size: 8pt
+
+.copyright__a
+  color: $blue
