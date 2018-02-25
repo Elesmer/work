@@ -274,7 +274,7 @@ a {
       transition: 0.3s;
       width: 100%; }
       .sidebar__navigation li a::after {
-        background: url("/img/sprite-icons.png") no-repeat;
+        background: url("../img/sprite-icons.png") no-repeat;
         content: "";
         display: inline-block;
         height: 13px;
@@ -513,10 +513,12 @@ a {
 
 .table.bordered > thead > tr {
   border-bottom: 1px solid #948d8d; }
-  .table.bordered > thead > tr thead tr {
-    padding: 10px 0; }
-  .table.bordered > thead > tr tbody tr:last-child {
-    border: none; }
+
+.table thead tr {
+  padding: 10px 0; }
+
+.table tbody tr:last-child {
+  border: none; }
 
 .support__block {
   display: -webkit-flex;
@@ -546,7 +548,7 @@ a {
     font-size: 10pt;
     text-transform: capitalize; }
     .support__ul li a::after {
-      background: url("/img/sprite-icons.png") no-repeat;
+      background: url("../img/sprite-icons.png") no-repeat;
       background-position: -43px -0px;
       content: "";
       display: inline-block;
@@ -556,14 +558,14 @@ a {
       position: absolute;
       text-align: left;
       text-indent: -9999px;
-      top: 30%;
+      top: 3px;
       width: 13px; }
 
 .support__ul--second li:first-child a::after {
-  background: url("/img/twitter-logo-silhouette@1X.png") no-repeat; }
+  background: url("../img/twitter-logo-silhouette@1X.png") no-repeat; }
 
 .support__ul--second li:last-child a::after {
-  background: url("/img/mail-black-envelope-symbol@1X.png") no-repeat; }
+  background: url("../img/mail-black-envelope-symbol@1X.png") no-repeat; }
 
 /* Copyright */
 .copyright__block {
