@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=500" />
+		<meta name="keywords" content="ScrollMagic, example, scrolling, attaching, scrollbar, parallax" />
+		<title>Account</title>
+		<link rel="stylesheet" href="css/normalize.css" type="text/css">
+		<link rel="stylesheet" href="css/animate.css" type="text/css">
+		<link rel="stylesheet" href="css/custom-animations.css" type="text/css">
+		<link rel="stylesheet" href="css/materialize.css" type="text/css">
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<link rel="stylesheet" href="css/media.css" type="text/css">
+		<link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon"> </head>
+
+	<body>
+
+		<header class="header container container--header">
+			<div class="header__wrapper">
+				<div class="brand">
+					<h1 class="brand__h1">Mining pool hub</h1>
+				</div>
+				<div class="account">
+					<div class="account__icon">
+						<a href="#" class="account__a">
+							<img src="img/notification@1X.png" alt="" class="account__img">
+						</a>
+					</div>
+					<div class="account__name">
+						<div class="account__avatar">
+							<a href="" class="account__a">
+								<img class="account__img account__img--avatar" src="img/face1.png" alt="">
+								<h3 class="account__h3">T</h3>
+							</a>
+						</div>
+						<h4 class="account__h4">thomas mrach</h4>
+						<a href="#" data-activates="slide-out" class="button-collapse button-collapse--burger">
+							<div class="burger">
+								<div class="burger__line"></div>
+								<div class="burger__line"></div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<!-- /account -->
+			</div>
+			<!-- /header__wrapper -->
+		</header>
+
+		<div class="container container--main">
+			<div class="main-wrapper">
+				<section class="sidebar">
+					<h3 class="sidebar__h3">information</h3>
+					<ul class="sidebar__navigation sidebar__navigation--account">
+						<li>
+							<a href="#">login</a>
+						</li>
+						<li>
+							<a href="account.html">sign up</a>
+						</li>
+						<li>
+							<a href="#">auto switches</a>
+						</li>
+						<li>
+							<a href="#">faq</a>
+						</li>
+					</ul>
+					<h3 class="sidebar__h3">Pools</h3>
+					<ul class="sidebar__navigation">
+						<li>
+							<a href="#">adzcoin</a>
+						</li>
+						<li>
+							<a href="#">auroracoin (qubit)</a>
+						</li>
+						<li>
+							<a href="#">bitcoin</a>
+						</li>
+					</ul>
+					<div class="language">
+						<p class="language__p">
+							<a href="#" class="language__a active">English</a>
+						</p>
+						<p class="language__p">
+							<a href="#" class="language__a">한국어</a>
+						</p>
+					</div>
+				</section>
+
+				<div id="slide-out" class="side-nav">
+					<div class="side-nav__wrapper">
+						<h3 class="sidebar__h3">information</h3>
+						<ul class="sidebar__navigation sidebar__slide sidebar__navigation--mobile">
+							<li>
+								<a href="#">login</a>
+							</li>
+							<li>
+								<a href="account.html">sign up</a>
+							</li>
+							<li>
+								<a href="#">auto switches</a>
+							</li>
+							<li>
+								<a href="#">faq</a>
+							</li>
+						</ul>
+						<h3 class="sidebar__h3">Pools</h3>
+						<ul class="sidebar__navigation sidebar__navigation--mobile">
+							<li>
+								<a href="#">adzcoin</a>
+							</li>
+							<li>
+								<a href="#">auroracoin (qubit)</a>
+							</li>
+							<li>
+								<a href="#">bitcoin</a>
+							</li>
+						</ul>
+						<div class="language">
+							<p class="language__p">
+								<a href="#" class="language__a active">English</a>
+							</p>
+							<p class="language__p">
+								<a href="#" class="language__a">한국어</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<section class="content">
+					<div class="error error--1 error--first">
+						<p class="error__p">You have not enabled OTP currently. Please enable OTP for security.
+							<a href="#" class="error__a">Enable OTP</a>
+						</p>
+						<a href="#" id="error-close-1" class="error__a error__a--icon">
+							<img src="img/multiply@1X.png" alt="" class="error__icon">
+						</a>
+					</div>
+					<div class="settings-row">
+						<div class="account-details">
+							<h2 class="title__h2">account details</h2>
+							<div class="block block--account">
+								<form action="" class="user-details">
+									<label class="label account__label" for="username">username</label>
+									<input name="username" type="text" class="input">
+									<label class="label account__label" for="user_id">user id</label>
+									<input type="number" name="user_id" type="text" class="input">
+									<label class="label account__label" for="api_key">API key</label>
+									<input name="api_key" type="text" class="input">
+								</form>
+								<div class="user-instruction">
+									<p class="instruction__p"> Use target coin's domain name to query API.</p>
+									<a href="#" class="instruction__a">API reference</a>
+								</div>
+								<div class="email-wrapper">
+									<label class="label account__label" for="user_email">e-mail</label>
+									<input name="user_email" type="email" class="input input--email">
+									<p class="account__p">
+										If you want to make several accounts with one email or want to secure your account with unknown email address, insert like "hello@example.com_secure". You can append any string after underscore(_) and it will be treated as original address when sending emails from pool.
+									</p>
+									<div class="anonymous-wrapper">
+										<p class="anonymous__p">donation percentage</p>
+										<p class="anonymous__label">Donation amount in percent (0.1-100%)</p>
+									</div>
+									<input name="" type="number" class="input">
+								</div>
+								<div class="anonymous-switch">
+									<div class="anonymous-wrapper">
+										<p class="anonymous__p">anonymous account</p>
+										<p class="anonymous__label">Donation amount in percent (0.1-100%)</p>
+										<p class="account__p anonymous__info">Hide username on website from others. Admins can still get your user information.</p>
+										<!-- Switch -->
+										<div class="anonymous-switch__wrapper">
+											<div class="switch switch--custom">
+												<label>
+													<input type="checkbox">
+													<span class="lever lever--custom">
+														<p class="switch-on">on</p>
+														<p class="switch-off">off</p>
+													</span>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="pin-wrapper">
+									<div class="anonymous-wrapper anonymous-wrapper--pin">
+										<p class="anonymous__p">4 digit pin</p>
+										<p class="anonymous__label">The 4 digit PIN you chose when registering </p>
+									</div>
+									<input name="" type="number" class="input">
+								</div>
+								<input type="submit" value="Update account" class="input input--submit">
+							</div>
+						</div>
+						<div class="password-settings">
+							<h2 class="title__h2">change password</h2>
+							<div class="block block--account">
+								<p class="account__p">
+									Note: You will be redirected to login on successful completion of a password change
+								</p>
+								<form action="" class="password__form">
+									<label class="label account__label" for="">current password</label>
+									<input name="" type="password" class="input">
+									<label class="label account__label" for="">new password</label>
+									<input name="" type="password" class="input">
+									<label class="label account__label" for="">repeat new password</label>
+									<input name="" type="password" class="input">
+									<label class="label account__label" for="">4 digit pin</label>
+									<input name="" type="password" class="input">
+									<input type="submit" value="Change password" class="input input--submit">
+								</form>
+							</div>
+							<h2 class="title__h2">reset pin</h2>
+							<div class="block block--account">
+								<form action="" class="reset-pin">
+									<label class="label account__label" for="">current login password</label>
+									<input name="" type="password" class="input">
+									<input type="submit" value="Change password" class="input input--submit">
+								</form>
+							</div>
+              <h2 class="title__h2">reset pin</h2>
+              <div class="block block--account">
+                <form action="" class="reset-pin">
+                  <p class="account__p">
+                    OTP protection enhances your security by requesting one time password everytime you edit important things.
+                  </p>
+                  <input type="submit" value="Enable OTP" class="input input--submit">
+                </form>
+              </div>
+						</div>
+					</div>
+
+          <!-- Copyright -->
+
+          <div class="copyright">
+            <div class="copyright__block">
+              <p class="copyright__p">
+                MPOS by TheSerapher, available on
+                <a href="#" class="copyright__a">GitHub</a>
+              </p>
+            </div>
+            <div class="copyright__block">
+              <p class="copyright__p">
+                Server time : February 14, 2018, 09:45:24 UTC
+              </p>
+            </div>
+            <div class="copyright__block">
+              <p class="copyright__p">
+                Copyright © Sebastian Grewe, Theme by
+                <a href="#" class="copyright__a">MediaLoot</a>
+              </p>
+            </div>
+          </div>
+				</section>
+			</div>
+			<!-- /main-wrapper -->
+		</div>
+		<!-- /container--main -->
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script type="text/javascript" src="js/wow.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+
+</html>

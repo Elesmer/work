@@ -1,90 +1,65 @@
 jQuery(document).ready(function() {
 
-	/* Main carousel */
+	/* Hide */
 
-	var owl = $('.main-owl-carousel');
-
-	$('.main-owl-carousel').owlCarousel({
-		loop: true,
-		margin: 0,
-		// autoplay: true,
-		autoplayTimeout: 3300,
-		autoplayHoverPause: true,
-		nav: false,
-		responsive: {
-			0: {
-				items: 1
-			},
-			600: {
-				items: 1
-			},
-			1000: {
-				items: 1
-			}
-		}
-	})
-
-	// add animate.css class(es) to the elements to be animated
-	function setAnimation(_elem, _InOut) {
-		// Store all animationend event name in a string.
-		// cf animate.css documentation
-		var animationEndEvent = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-
-		_elem.each(function() {
-			var $elem = $(this);
-			var $animationType = 'animated ' + $elem.data('animation-' + _InOut);
-
-			$elem.addClass($animationType).one(animationEndEvent, function() {
-				$elem.removeClass($animationType); // remove animate.css Class at the end of the animations
-			});
-		});
-	}
-
-	// Fired before current slide change
-	owl.on('change.owl.carousel', function(event) {
-		var $currentItem = $('.owl-item', owl).eq(event.item.index);
-		var $elemsToanim = $currentItem.find("[data-animation-out]");
-		setAnimation($elemsToanim, 'out');
+	$("#error-close-1").click(function(){ // class of the button div
+			$(".error--1").hide(); // class/id/classes which will hide
+			return false;
 	});
 
-	// Fired after current slide has been changed
-	owl.on('changed.owl.carousel', function(event) {
+	$("#error-close-2").click(function(){ // class of the button div
+			$(".error--2").hide(); // class/id/classes which will hide
+			return false;
+	});
 
-		var $currentItem = $('.owl-item', owl).eq(event.item.index);
-		var $elemsToanim = $currentItem.find("[data-animation-in]");
-		setAnimation($elemsToanim, 'in');
-	})
+	/* Tabs */
 
-	// Main carousel custom navigation
+	$('#tabs-swipe-demo').tabs();
 
-	var navigation_buttons = owl;
-	navigation_buttons.owlCarousel();
-	// Next slide button
-	$('.main-carousel__svg-wrapper--right').click(function() {
-		navigation_buttons.trigger('next.owl.carousel');
-	})
-	// Prev slide button
-	$('.main-carousel__svg-wrapper--left').click(function() {
-		navigation_buttons.trigger('prev.owl.carousel', [300]);
-	})
+	/* Mobile */
+
+	$('.button-collapse').sideNav({
+		menuWidth: 300, // Default is 300
+		edge: 'right', // Choose the horizontal origin
+		closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+		draggable: true, // Choose whether you can drag to open on touch screens,
+		onOpen: function(el) {}
+	});
 
 	/* Wow */
 
 	new WOW().init();
 
-	/* Phone input mask */
+	/* Dropdown */
 
-	$(".phone").mask("+380 999 999 999");
+	var $container = $('.dropdown-menu'),
+		$list = $('.dropdown-menu ul'),
+		listItem = $list.find('li');
 
-	/* Scroll */
-
-	$('a[href*=#]').bind("click", function(e) {
-		var anchor = $(this);
-		$('html, body').stop().animate({
-			scrollTop: $(anchor.attr('href')).offset().top
-		}, 1000);
-		e.preventDefault();
+	$(".dropdown .title").click(function() {
+		if($container.height() > 0) {
+			closeMenu(this);
+		} else {
+			openMenu(this);
+		}
 	});
-	return false;
+
+	$(".dropdown-menu li").click(function() {
+		closeMenu(this);
+	});
+
+	function closeMenu(el) {
+		$(el).closest('.dropdown').toggleClass("closed").find(".title").text($(el).text());
+		$container.css("height", 0);
+		$list.css("top", 0);
+	}
+
+	function openMenu(el) {
+		$(el).parent().toggleClass("closed");
+
+		$container.css({
+			height: 200
+		})
+	}
 
 });
