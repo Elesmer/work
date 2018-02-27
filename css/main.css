@@ -633,7 +633,7 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
     text-transform: capitalize; }
     .support__ul li a::after {
       background: url("../img/sprite-icons.png") no-repeat;
-      background-position: -43px -0px;
+      background-position: -43px -20px;
       content: "";
       display: inline-block;
       height: 13px;
@@ -844,88 +844,102 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
   box-shadow: 0px 2px 28.8px 3.2px rgba(0, 0, 0, 0.05);
   border: none; }
 
-.dropdown {
-  text-align: left;
-  color: #343C3F;
+/* Select */
+.icon_select_mate {
+  position: absolute;
+  top: 14px;
+  right: 2%;
+  font-size: 16px;
+  height: 15px;
+  -webkit-transition: all 275ms;
+  -o-transition: all 275ms;
+  transition: all 275ms; }
+
+.select_mate {
+  position: relative;
+  float: left;
+  width: 100%;
+  color: #777;
+  font-size: 9pt;
   border: 1px solid #e8e8e8;
-  font-size: 9pt; }
+  -webkit-transition: all 375ms ease-in-out;
+  -o-transition: all 375ms ease-in-out;
+  transition: all 375ms ease-in-out;
+  margin-bottom: 15px; }
 
-.dropdown.closed .dropdown-menu {
-  margin-top: 0px; }
-
-.dropdown-menu ul {
-  margin: 0; }
-
-.dropdown.closed .dropdown-menu li {
-  height: 0px; }
-
-.dropdown.closed .title {
-  border-bottom: none; }
-
-.dropdown.closed .title:after {
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg); }
-
-.dropdown .title {
-  width: 100%;
-  position: relative;
-  height: 40px;
-  padding: 12px;
-  cursor: pointer;
-  border-bottom: 1px solid #e8e8e8; }
-
-.dropdown .title:after {
-  display: block;
-  content: "";
+.select_mate select {
   position: absolute;
-  background-image: url(../img/arrow-down-sign-to-navigate@1X.png);
-  background-repeat: no-repeat;
-  height: 5px;
-  width: 10px;
-  right: 14px;
-  top: 50%;
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  -webkit-transition: 0,.5s;
-  -o-transition: 0,.5s;
-  transition: 0,.5s; }
-
-.dropdown .dropdown-menu {
-  position: relative;
-  overflow-y: scroll;
-  max-height: 200px;
-  -webkit-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  -webkit-box-sizing: "border-box";
-  box-sizing: "border-box"; }
-
-.dropdown ul {
-  position: absolute;
-  top: 0;
-  width: 100%; }
-
-.dropdown ul li {
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  border-bottom: 1px solid #e8e8e8;
-  padding: 0 12px;
-  vertical-align: top;
   overflow: hidden;
-  cursor: pointer;
-  -webkit-transition: margin-top 0.5s, height 0.5s;
-  -o-transition: margin-top 0.5s, height 0.5s;
-  transition: margin-top 0.5s, height 0.5s; }
+  height: 0px;
+  opacity: 0;
+  z-index: -1; }
 
-.dropdown ul li:hover {
-  background-color: #459ef6;
-  color: #fff; }
-
-.dropdown--custom {
+.cont_list_select_mate {
+  position: relative;
+  float: left;
   width: 100%; }
+
+.cont_select_int {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 999;
+  overflow: hidden;
+  height: 0px;
+  width: 100%;
+  background-color: #fff;
+  padding: 0px;
+  margin-bottom: 50px;
+  margin-top: 0px;
+  -webkit-box-shadow: 0px 2px 28.8px 3.2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 2px 28.8px 3.2px rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 375ms ease-in-out;
+  -o-transition: all 375ms ease-in-out;
+  transition: all 375ms ease-in-out; }
+
+.select_mate--custom {
+  margin-bottom: 0;
+  margin-top: 20px; }
+
+.cont_select_int li {
+  position: relative;
+  float: left;
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+  list-style-type: none;
+  padding: 10px 2%;
+  margin: 0px;
+  -webkit-transition: all 275ms ease-in-out;
+  -o-transition: all 275ms ease-in-out;
+  transition: all 275ms ease-in-out;
+  display: block;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.cont_select_int li:last-child {
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  border-bottom: 0px; }
+
+.cont_select_int li:hover {
+  background-color: #459ef6;
+  color: #fff;
+  border-color: #459ef6; }
+
+.cont_select_int .active {
+  background-color: #2d91f5;
+  color: #fff;
+  border-color: #2d91f5; }
+
+.selecionado_opcion {
+  padding: 12px 20px;
+  width: 100%;
+  display: block;
+  margin: 0px;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  cursor: pointer; }
 
 .account__p--exchange {
   margin-top: 20px; }
