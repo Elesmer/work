@@ -845,106 +845,62 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
   border: none; }
 
 /* Select */
-.icon_select_mate {
-  position: absolute;
-  top: 14px;
-  right: 2%;
-  font-size: 16px;
-  height: 15px;
-  -webkit-transition: all 275ms;
-  -o-transition: all 275ms;
-  transition: all 275ms; }
+.input-field--custom {
+  margin-bottom: 0; }
 
-.select_mate {
-  position: relative;
-  float: left;
-  width: 100%;
-  color: #777;
-  font-size: 9pt;
-  border: 1px solid #e8e8e8;
-  -webkit-transition: all 375ms ease-in-out;
-  -o-transition: all 375ms ease-in-out;
-  transition: all 375ms ease-in-out;
-  margin-bottom: 15px; }
-
-.select_mate select {
-  position: absolute;
-  overflow: hidden;
-  height: 0px;
-  opacity: 0;
-  z-index: -1; }
-
-.cont_list_select_mate {
-  position: relative;
-  float: left;
+.input-field {
   width: 100%; }
 
-.cont_select_int {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  z-index: 999;
-  overflow: hidden;
-  height: 0px;
-  width: 100%;
-  background-color: #fff;
-  padding: 0px;
-  margin-top: 0px;
-  -webkit-box-shadow: 0px 2px 28.8px 3.2px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 2px 28.8px 3.2px rgba(0, 0, 0, 0.05);
-  -webkit-transition: all 375ms ease-in-out;
-  -o-transition: all 375ms ease-in-out;
-  transition: all 375ms ease-in-out; }
-  .cont_select_int::after {
+.worker__select-wrapper {
+  width: 60%; }
+
+.select-wrapper {
+  position: relative; }
+  .select-wrapper input.select-dropdown {
+    border: 1px solid #e8e8e8;
+    height: auto;
+    padding: 0 20px;
+    font-size: 9pt; }
+  .select-wrapper span.caret {
+    display: none; }
+  .select-wrapper::after {
+    position: absolute;
     content: "";
-    width: 100%;
-    height: 50px;
-    display: block;
-    float: left; }
+    height: 7px;
+    width: 8px;
+    right: 20px;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    background-image: url(../img/arrow-down-sign-to-navigate@1X.png);
+    background-repeat: no-repeat; }
 
-.select_mate--custom {
-  margin-bottom: 0;
-  margin-top: 20px; }
+.dropdown-content li.active {
+  background: #1485f4; }
+  .dropdown-content li.active span {
+    color: #fff; }
 
-.cont_select_int li {
-  position: relative;
-  float: left;
-  width: 100%;
-  border-bottom: 1px solid #e8e8e8;
-  list-style-type: none;
-  padding: 10px 2%;
-  margin: 0px;
-  -webkit-transition: all 275ms ease-in-out;
-  -o-transition: all 275ms ease-in-out;
-  transition: all 275ms ease-in-out;
-  display: block;
-  cursor: pointer;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+.dropdown-content li.selected {
+  background: transparent; }
 
-.cont_select_int li:last-child {
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
-  border-bottom: 0px; }
+.dropdown-content li.active.selected {
+  background: #1485f4; }
 
-.cont_select_int li:hover {
-  background-color: #459ef6;
-  color: #fff;
-  border-color: #459ef6; }
-
-.cont_select_int .active {
-  background-color: #2d91f5;
-  color: #fff;
-  border-color: #2d91f5; }
-
-.selecionado_opcion {
-  padding: 12px 20px;
-  width: 100%;
-  display: block;
-  margin: 0px;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-  cursor: pointer; }
+.dropdown-content li {
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+  .dropdown-content li:hover {
+    background: #459ef6;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    .dropdown-content li:hover span {
+      color: #fff; }
+  .dropdown-content li span {
+    color: #000;
+    font-size: 9pt; }
 
 .account__p--exchange {
   margin-top: 20px; }
@@ -1126,7 +1082,11 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .workers__a-wrapper {
   display: -webkit-flex;
@@ -1337,9 +1297,6 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
 .lable--transaction {
   max-height: 10px;
   display: block; }
-
-.input--transaction {
-  margin-top: 30px; }
 
 .table--history {
   min-width: 800px; }
