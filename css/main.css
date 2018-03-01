@@ -668,14 +668,12 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
       background-position: -43px -20px;
       content: "";
       display: inline-block;
-      height: 13px;
       left: 0;
       overflow: hidden;
       position: absolute;
       text-align: left;
       text-indent: -9999px;
-      top: 3px;
-      width: 13px; }
+      top: 3px; }
 
 .support__ul--second li:first-child a::after {
   background: url("../img/twitter-logo-silhouette@1X.png") no-repeat; }
