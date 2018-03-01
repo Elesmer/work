@@ -444,14 +444,12 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
         background: url("../img/sprite-icons.png") no-repeat;
         content: "";
         display: inline-block;
-        height: 13px;
         left: 40px;
         overflow: hidden;
         position: absolute;
         text-align: left;
         text-indent: -9999px;
-        top: 13px;
-        width: 13px; }
+        top: 13px; }
     .sidebar__navigation li:hover {
       background: #459ef6;
       -webkit-transition: 0.3s;
