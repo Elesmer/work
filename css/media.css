@@ -22,7 +22,8 @@
 .statistic-row,
 .contributor-row,
 .tansaction-row,
-.wallet-row {
+.wallet-row,
+.balances-row {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -165,7 +166,8 @@
       width: calc(100% - 30px); } }
 
 .auto-switches__insctruction,
-.statistic {
+.statistic,
+.balances-block {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   word-wrap: break-word;

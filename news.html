@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=500" />
+		<meta name="keywords" content="ScrollMagic, example, scrolling, attaching, scrollbar, parallax" />
+		<title>Balances</title>
+		<link rel="stylesheet" href="css/normalize.css" type="text/css">
+		<link rel="stylesheet" href="css/animate.css" type="text/css">
+		<link rel="stylesheet" href="css/custom-animations.css" type="text/css">
+		<link rel="stylesheet" href="css/materialize.css" type="text/css">
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<link rel="stylesheet" href="css/media.css" type="text/css">
+		<link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon"> </head>
+
+	<body>
+
+		<header class="header container container--header">
+			<div class="header__wrapper">
+				<div class="brand">
+					<h1 class="brand__h1">Mining pool hub</h1>
+				</div>
+				<div class="account">
+					<div class="account__icon">
+						<a href="#" class="account__a">
+							<img src="img/notification@1X.png" alt="" class="account__img">
+						</a>
+					</div>
+					<div class="account__name">
+						<div class="account__avatar">
+							<a href="" class="account__a">
+								<img class="account__img account__img--avatar" src="img/face1.png" alt="">
+								<h3 class="account__h3">T</h3>
+							</a>
+						</div>
+						<h4 class="account__h4">thomas mrach</h4>
+						<a href="#" data-activates="slide-out" class="button-collapse button-collapse--burger">
+							<div class="burger">
+								<div class="burger__line"></div>
+								<div class="burger__line"></div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<!-- /account -->
+			</div>
+			<!-- /header__wrapper -->
+		</header>
+
+		<div class="container container--main">
+			<div class="main-wrapper">
+				<section class="sidebar">
+					<h3 class="sidebar__h3">information</h3>
+					<ul class="sidebar__navigation">
+						<li class="li__logout">
+							<a href="#">login</a>
+						</li>
+						<li class="li__edit-account">
+							<a href="account.html">edit account</a>
+						</li>
+						<li class="li__faq">
+							<a href="#">faq</a>
+						</li>
+					</ul>
+					<h3 class="sidebar__h3 sidebar__h3--custom">coinBit pool</h3>
+					<ul class="sidebar__navigation">
+						<li class="li__news">
+							<a href="#">News</a>
+						</li>
+					</ul>
+					<h3 class="sidebar__h3 sidebar__h3--custom sidebar__h3--uppercase">BitCoin-gold pool</h3>
+					<ul class="sidebar__navigation">
+						<li class="li__monitor">
+							<a href="statistic-block.html">Workers</a>
+						</li>
+						<li class="crypta__value">
+							<a href="register.html">Pool</a>
+						</li>
+						<li class="li__graphics">
+							<a href="statistic-block.html">Graphs</a>
+						</li>
+						<li class="li__exchange">
+							<a href="exchange.html">auto exchange</a>
+						</li>
+					</ul>
+					<h3 class="sidebar__h3 sidebar__h3--custom sidebar__h3--uppercase">Statistics</h3>
+					<ul class="sidebar__navigation">
+						<li class="crypta__value">
+							<a href="register.html">Pool</a>
+						</li>
+						<li class="li__blocks">
+							<a href="#">Blocks</a>
+						</li>
+					</ul>
+					<h3 class="sidebar__h3 sidebar__h3--custom sidebar__h3--uppercase">Help</h3>
+					<ul class="sidebar__navigation">
+						<li class="li__monitor">
+							<a href="statistic-block.html">Getting started</a>
+						</li>
+					</ul>
+					<div class="language">
+						<p class="language__p">
+							<a href="#" class="language__a active">English</a>
+						</p>
+						<p class="language__p">
+							<a href="#" class="language__a">한국어</a>
+						</p>
+					</div>
+				</section>
+
+				<div id="slide-out" class="side-nav">
+					<div class="side-nav__wrapper">
+						<h3 class="sidebar__h3">information</h3>
+						<ul class="sidebar__navigation sidebar__navigation--mobile">
+							<li class="li__logout">
+								<a href="#">login</a>
+							</li>
+							<li class="li__edit-account">
+								<a href="account.html">edit account</a>
+							</li>
+							<li class="li__faq">
+								<a href="#">faq</a>
+							</li>
+						</ul>
+						<h3 class="sidebar__h3 sidebar__h3--custom">coinBit pool</h3>
+						<ul class="sidebar__navigation">
+							<li class="li__news">
+								<a href="#">News</a>
+							</li>
+						</ul>
+						<h3 class="sidebar__h3 sidebar__h3--custom sidebar__h3--uppercase">BitCoin-gold pool</h3>
+						<ul class="sidebar__navigation sidebar__navigation--mobile">
+							<li class="li__monitor">
+								<a href="statistic-block.html">Workers</a>
+							</li>
+							<li class="crypta__value">
+								<a href="register.html">Pool</a>
+							</li>
+							<li class="li__graphics">
+								<a href="statistic-block.html">Graphs</a>
+							</li>
+							<li class="li__exchange">
+								<a href="exchange.html">auto exchange</a>
+							</li>
+						</ul>
+						<h3 class="sidebar__h3 sidebar__h3--custom sidebar__h3--uppercase">Statistics</h3>
+						<ul class="sidebar__navigation sidebar__navigation--mobile">
+							<li class="crypta__value">
+								<a href="register.html">Pool</a>
+							</li>
+							<li class="li__blocks">
+								<a href="#">Blocks</a>
+							</li>
+						</ul>
+						<h3 class="sidebar__h3 sidebar__h3--custom sidebar__h3--uppercase">Help</h3>
+						<ul class="sidebar__navigation sidebar__navigation--mobile">
+							<li class="li__monitor">
+								<a href="statistic-block.html">Getting started</a>
+							</li>
+						</ul>
+						<div class="language">
+							<p class="language__p">
+								<a href="#" class="language__a active">English</a>
+							</p>
+							<p class="language__p">
+								<a href="#" class="language__a">한국어</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<section class="content">
+					<div class="error error--1 error--first">
+						<p class="error__p">You have not enabled OTP currently. Please enable OTP for security.
+							<a href="#" class="error__a">Enable OTP</a>
+						</p>
+						<a href="#" id="error-close-1" class="error__a error__a--icon">
+							<img src="img/multiply@1X.png" alt="" class="error__icon">
+						</a>
+					</div>
+					<div class="balances-row">
+						<div class="balances-block">
+							<h2 class="title__h2">BITCOIN CASH (BCC/BCH) POOL, POSTED AUG 3, 2017 AT 11:14 (UTC)</h2>
+							<div class="block">
+								<p class="account__p account__p--balances">Bitcoin Cash Pool</p>
+								<p class="account__p account__p--balances">
+									This is not for mining.</p>
+								<ul class="news__ul">
+									<li>Withdraw only.</li>
+									<li>Auto exchange to other coin would be impossible or too slow. If you want to exchange Bitcoin cash to other coin, withdraw and exchange manually.</li>
+								</ul>
+								<p class="account__p account__p--balances">Coin withdrawal would be delayed due to slow block generation</br> <a href="#" class="news__a">https://blockchair.com/bitcoin-cash/blocks</a></p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Copyright -->
+
+					<div class="copyright">
+						<div class="copyright__block">
+							<p class="copyright__p">
+								MPOS by TheSerapher, available on
+								<a href="#" class="copyright__a">GitHub</a>
+							</p>
+						</div>
+						<div class="copyright__block">
+							<p class="copyright__p">
+								Server time : February 14, 2018, 09:45:24 UTC
+							</p>
+						</div>
+						<div class="copyright__block">
+							<p class="copyright__p">
+								Copyright © Sebastian Grewe, Theme by
+								<a href="#" class="copyright__a">MediaLoot</a>
+							</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			<!-- /main-wrapper -->
+		</div>
+		<!-- /container--main -->
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script type="text/javascript" src="js/wow.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+	</body>
+
+</html>

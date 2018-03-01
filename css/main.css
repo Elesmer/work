@@ -323,13 +323,49 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
   padding: 0 40px;
   text-transform: capitalize; }
 
+.sidebar__h3--custom {
+  font-size: 12pt;
+  text-transform: capitalize; }
+
+.sidebar__h3--uppercase {
+  text-transform: uppercase;
+  font-size: 10pt; }
+
 .sidebar__navigation {
   width: 100%; }
+  .sidebar__navigation .crypta__value a {
+    text-transform: capitalize; }
+    .sidebar__navigation .crypta__value a::after {
+      background-position: -15px -38px;
+      width: 13px;
+      height: 13px; }
+  .sidebar__navigation .crypta__value:hover a::after {
+    background-position: -1px -38px;
+    width: 13px;
+    height: 13px; }
+  .sidebar__navigation .li__news a::after {
+    background: url("../img/sprite-icons-2.png") no-repeat;
+    background-position: -15px -14px;
+    width: 13px;
+    height: 13px; }
+  .sidebar__navigation .li__news:hover a::after {
+    background-position: -1px -14px;
+    width: 13px;
+    height: 13px; }
+  .sidebar__navigation .li__blocks a::after {
+    background: url("../img/sprite-icons-2.png") no-repeat;
+    background-position: -15px -0px;
+    width: 13px;
+    height: 13px; }
+  .sidebar__navigation .li__blocks:hover a::after {
+    background-position: -1px -0px;
+    width: 13px;
+    height: 13px; }
   .sidebar__navigation .li__logout a:after {
     background-position: -43px -34px;
     width: 13px;
     height: 13px; }
-  .sidebar__navigation .li__logout:hover a:after {
+  .sidebar__navigation .li__logout:hover a::after {
     background-position: -29px -34px;
     width: 13px;
     height: 13px; }
@@ -457,18 +493,8 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
       transition: 0.3s; }
       .sidebar__navigation li:hover a {
         color: #fff; }
-  .sidebar__navigation:nth-child(4) {
+  .sidebar__navigation:nth-last-of-type(1) {
     padding-bottom: 200px; }
-    .sidebar__navigation:nth-child(4) .crypta__value a {
-      text-transform: capitalize; }
-      .sidebar__navigation:nth-child(4) .crypta__value a::after {
-        background-position: -15px -38px;
-        width: 13px;
-        height: 13px; }
-    .sidebar__navigation:nth-child(4) .crypta__value:hover a::after {
-      background-position: -1px -38px;
-      width: 13px;
-      height: 13px; }
 
 .language {
   width: 100%;
@@ -671,7 +697,9 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
       position: absolute;
       text-align: left;
       text-indent: -9999px;
-      top: 3px; }
+      top: 3px;
+      height: 13px;
+      width: 13px; }
 
 .support__ul--second li:first-child a::after {
   background: url("../img/twitter-logo-silhouette@1X.png") no-repeat; }
@@ -1321,3 +1349,63 @@ input:not([type]):focus:not([readonly]), input[type=text]:focus:not([readonly]),
 
 .wallet__input-wrapper {
   margin-bottom: 20px; }
+
+/* Balances page */
+.account__p--balances {
+  margin: 40px 0; }
+  .account__p--balances:first-child {
+    margin-top: 0; }
+  .account__p--balances:last-child {
+    margin-bottom: 0; }
+
+.table--balances thead tr th {
+  text-align: center; }
+
+.table--balances tbody tr td {
+  text-align: center;
+  font-weight: lighter; }
+
+.table--balances__a {
+  color: #459ef6; }
+  .table--balances__a:hover {
+    color: #0a6bcb; }
+
+/* News page */
+.news__ul:not(.browser-default) li {
+  list-style-type: decimal;
+  font-weight: lighter;
+  color: #6f6f6f; }
+
+.news__ul {
+  margin-left: 20px; }
+
+.news__a {
+  color: #459ef6; }
+
+/* Gold pool page */
+.pool__p-label {
+  font-weight: bold;
+  text-transform: capitalize; }
+
+.account__p--pool {
+  text-transform: uppercase; }
+
+.pool__p-label--custom {
+  margin: 50px 0; }
+
+.account__p--pool-custom {
+  width: 70%;
+  margin-bottom: 50px; }
+
+.pool__ul li {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.account__p--pool-ul {
+  width: 70px; }
+
+.pool-server {
+  color: #26c533; }
