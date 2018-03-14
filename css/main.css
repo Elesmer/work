@@ -181,7 +181,7 @@ a:hover {
           transform: translate(-50%, -50%);
   top: 50%;
   right: -70px;
-  background-image: url(/img/icons-8-filled-500.png);
+  background-image: url(../img/icons-8-filled-500.png);
   background-repeat: no-repeat;
   -webkit-background-size: 100% 100%;
           background-size: 100%; }
@@ -745,6 +745,10 @@ div.button {
 /* Data table */
 .data-table {
   display: none; }
+
+.share-btn-chart {
+  text-transform: none;
+  font-size: 14px; }
 
 .container {
   max-width: 1170px;
