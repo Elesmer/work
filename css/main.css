@@ -691,7 +691,8 @@ div.button {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: -5px; }
 
 .invite__member-img {
   padding-top: 20px; }
