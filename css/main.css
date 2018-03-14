@@ -913,8 +913,8 @@ div.button {
     padding: 0 20px;
     font-size: 25px; }
   .chart__logo {
-    width: 30%;
-    min-width: 220px;
+    max-width: 222px;
+    min-width: 222px;
     margin-left: 20px;
     margin-bottom: 50px; }
   .chart__button {
