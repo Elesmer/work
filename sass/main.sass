@@ -595,6 +595,7 @@ div.button
 	position: relative
 	flex-direction: column
 	align-items: center
+	margin-bottom: -5px
 
 .invite__member-img
 	padding-top: 20px
@@ -718,6 +719,42 @@ div.button
 .share-btn-chart
 	text-transform: none
 	font-size: 14px
+
+/* Registered page */
+
+.inside-section__awards-buttons-row--custom
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+	.btn
+		text-transform: none
+		margin: 10px 0
+		width: 250px
+
+		&:first-child
+			margin-right: 0
+
+.row--register
+	width: 100%
+
+.chart-buy__h3--custom
+	width: 80%
+	margin: 10px 0
+
+.btn--register-custom
+	background-image: linear-gradient(to right, #009607 0%, #1cde2e)
+
+	&:before
+		background-image: linear-gradient(to right, #009607 0%, #1ef432)
+
+.inside-section__video-block--custom
+	height: calc(100% - 5px)
+
+.inside-section__left--custom
+	background: #000
 
 // Always at the end
 @import "media"
