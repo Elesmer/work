@@ -1,0 +1,324 @@
+.our-team {
+	width: 100%;
+	position: relative;
+	
+	background-color: #fafaf9;
+	padding-bottom: 50px;
+	
+	.heading-title {
+		margin-bottom: 35px;
+	}
+	
+	&__top {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		
+		.img-wrapper {
+			width: 161px;
+			
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				
+				backface-visibility: hidden;
+			}
+		}
+		
+		.caption {
+			width: 270px;
+			font-size: 24px;
+			line-height: 32px;
+			color: #000;
+			text-align: center;
+			
+			margin: 0 55px;
+		}
+	}
+	
+	&__team-img {
+		width: 100%;
+		display: block;
+		
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			
+			backface-visibility: hidden;
+		}
+	}
+	
+	&__quote {
+		position: relative;
+		text-align: center;
+		
+		.quote-ico {
+			font-size: 140px;
+			color: @brand-color;
+			line-height: 1;
+			font-family: 'OpenSans', sans-serif;
+			font-style: italic;
+			font-weight: 400;
+			
+			position: absolute;
+			top: 50%;
+			margin-top: -90px;
+			
+			&.right {
+				right: -80px;
+			}
+			
+			&.left {
+				left: -80px;
+			}
+		}
+		
+		.text {
+			font-size: 18px;
+			line-height: 24px;
+			color: #000;
+			font-style: italic;
+			font-family: 'OpenSans', sans-serif;
+			font-weight: 400;
+		}
+	}
+	
+	&__bottom-form {
+		width: 100%;
+		margin-bottom: 20px;
+		
+		.title {
+			text-align: center;
+			font-weight: 400;
+			font-size: 24px;
+			color: #000;
+			margin-bottom: 25px;
+		}
+	}
+	
+	&__form {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		
+		
+	}
+}
+
+@media @mobile {
+	.our-team {
+		padding-top: 40px;
+		padding-bottom: 70px;
+		
+		&__top {
+			position: relative;
+			z-index: 3;
+			
+			flex-wrap: wrap;
+			
+			.caption {
+				order: 3;
+				margin: 30px auto;
+				font-size: 16px;
+				line-height: 24px;
+				max-width: 80%;
+				
+			}
+			.img-wrapper {
+				order: 1;
+				width: 110px;
+				margin: 0 auto;
+			}
+		}
+		
+		&__team-img {
+			position: relative;
+			z-index: 1;
+			width: 100%;
+			
+			margin-top: -20px;
+		}
+		
+		&__quote {
+			width: 90%;
+			margin: 0 auto;
+			
+			padding-top: 70px;
+			
+			.quote-ico {
+				font-size: 100px;
+				
+				&.left {
+					margin-top: 0;
+					left: 0;
+					
+					top: -30px;
+				}
+				
+				&.right {
+					margin-top: 0;
+					top: auto;
+					left: auto;
+					
+					right: 0;
+					
+					bottom: -60px;
+				}
+			}
+			
+			.text {
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+		
+		&__bottom-form {
+			margin-top: 0;
+			padding-bottom: 20px;
+			
+			.title {
+				font-size: 20px;
+				max-width: 90%;
+				margin: 0 auto;
+				margin-bottom: 20px;
+				
+				br {
+					display: none;
+				}
+			}
+		}
+		
+		&__form {
+			width: 100%;
+			
+			flex-direction: column;
+			display: block;
+			
+			.input-wrapper {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			
+			.submit-button {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+			
+			.bottom-caption {
+				margin-top: 0;
+				
+				max-width: 90%;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+
+
+@media @tablet {
+	.our-team {
+		padding-top: 40px;
+		
+		&__top {
+			position: relative;
+			z-index: 3;
+		}
+		
+		&__team-img {
+			position: relative;
+			z-index: 1;
+			width: 100%;
+			margin-top: -60px;
+		}
+		
+		&__quote {
+			width: 80%;
+			margin: 0 auto;
+		}
+		
+		&__bottom-form {
+			padding-bottom: 50px;
+		}
+		
+		&__form {
+			width: 500px;
+			margin: 0 auto;
+			
+			.input-wrapper {
+				width: 240px;
+			}
+			
+			.submit-button {
+				display: block;
+				width: 240px;
+				
+				margin: 0 auto;
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+
+
+@media @desktop {
+	.our-team {
+		padding-top: 50px;
+		
+		&__top {
+			position: relative;
+			z-index: 3;
+		}
+		
+		&__team-img {
+			position: relative;
+			z-index: 1;
+			width: 994px;
+			margin: 0 auto;
+			margin-top: -80px;
+		}
+		
+		&__quote {
+			width: 675px;
+			margin: 0 auto;
+		}
+		
+		&__form {
+			width: 500px;
+			margin: 0 auto;
+			
+			.input-wrapper {
+				width: 240px;
+			}
+			
+			.submit-button {
+				display: block;
+				width: 240px;
+				
+				margin: 0 auto;
+				margin-top: 30px;
+			}
+		}
+		
+		&__bottom-form {
+			padding-bottom: 50px;
+		}
+	}
+}
+
+
+

@@ -1,0 +1,55 @@
+@@include('template/head.html', {
+	"pagetitle": "Вхід",
+	"bodyclass": ""
+})
+	
+	<div class="login-section">
+		<div class="login-section__center-wrap">
+			<form class="login-section__form">
+				<div class="login-section__title">Вхід</div>
+				
+				<div class="login-section__text-caption">Для входу в систему, будь ласка, введіть ваші дані:</div>
+				
+				<div class="login-section__error-message">Цей номер телефону не був зареєстрованим в системі</div>
+			
+				<div class="login-section__form-row">
+					
+					<div class="input-wrapper">
+						<input type="tel" class="text-input" placeholder="Ваш телефон" required>
+					</div>
+					
+					<div class="input-wrapper">
+						<input type="password" class="text-input" placeholder="Ваш пароль" required>
+					</div>
+					
+					<button type="submit" class="btn submit-button">Увійти</button>
+				</div>
+				
+				<a href="javascript:;" id="forgot-button" class="login-section__forgot-button">Забули пароль?</a>
+			</form>
+			
+			<div class="login-section__forgot-block" id="forgot-password-block">
+				<div class="login-section__text-caption">Під час реєстрації ваш пароль повинен був прийти у SMS з номеру 2050. <br>Будь ласка, переглянте ваші SMS ще раз, щоб знайти пароль.</div>
+			
+				<div class="login-section__accent-caption">Введіть ваш номер телефону, <br>щоб ми відправили вам пароль ще раз</div>
+			
+				<form class="login-section__forgot-form">
+					<div class="login-section__form-row">
+						<div class="input-wrapper">
+							<input type="tel" class="text-input" placeholder="Ваш телефон" required>
+						</div>
+
+						<button type="submit" class="btn submit-button">Відновити пароль</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+@@include('template/page-footer.html', {
+	"inner": false,
+	"login": true
+})
+
+	

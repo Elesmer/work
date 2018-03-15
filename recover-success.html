@@ -1,0 +1,48 @@
+@@include('template/head.html', {
+	"pagetitle": "Пароль відновлено",
+	"bodyclass": ""
+})
+	
+	<div class="login-section">
+		<div class="login-section__center-wrap">
+			<form class="login-section__form">
+				<div class="login-section__title">Вхід</div>
+				
+				<div class="login-section__text-caption">Для входу в систему, будь ласка, введіть ваші дані:</div>
+			
+				<div class="login-section__form-row">
+					
+					<div class="input-wrapper">
+						<input type="tel" class="text-input" placeholder="Ваш телефон" required>
+					</div>
+					
+					<div class="input-wrapper">
+						<input type="password" class="text-input" placeholder="Ваш пароль" required>
+					</div>
+					
+					<button type="submit" class="btn submit-button">Увійти</button>
+				</div>
+				
+				<a href="javascript:;" id="forgot-button" class="login-section__forgot-button">Забули пароль?</a>
+			</form>
+			
+			<div class="login-section__forgot-block active" id="forgot-password-block">
+				<div class="login-section__success-caption">SMS-повідомлення з паролем прийде впродовж 1-2 хвилин.</div>
+			
+				<form class="login-section__forgot-form">
+					<div class="login-section__form-row">
+						<button type="submit" class="btn submit-button btn-success">
+							<span class="item-icon"><img src="img/icons/tick-ico.png" alt=""></span>
+							<span>Відправлено</span>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+@@include('template/page-footer.html', {
+	"inner": false,
+	"login": true
+})

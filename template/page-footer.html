@@ -1,0 +1,136 @@
+	
+	@@if (login === false) {
+		<footer class="page-footer">
+			<div class="container">
+				<nav class="page-footer__nav">
+					@@if (inner === false) {
+						<ul>
+							<li><a href="#first-block" data-toggle="anchor">Головна</a></li>
+							<li><a href="#about-block" data-toggle="anchor">Про форум</a></li>
+							<li><a href="#get-invite-block" data-toggle="anchor">Отримати запрошення</a></li>
+							<li><a href="#for-who-block" data-toggle="anchor">Для кого</a></li>
+							<li><a href="#program-block" data-toggle="anchor">Програма</a></li>
+							<li><a href="#award-block" data-toggle="anchor">Головний приз</a></li>
+							<li><a href="#speakers-block" data-toggle="anchor">Спікери</a></li>
+							<li><a href="#investors-block" data-toggle="anchor">Інформація для інвесторів</a></li>
+							<li><a href="#partners-block" data-toggle="anchor">Інформація для партнерів</a></li>
+						
+							<li><a href="#team-block" data-toggle="anchor">Організатор</a></li>
+							<li><a href="#contacts-block" data-toggle="anchor">Місце проведення</a></li>
+							<li><a href="#contacts-block" data-toggle="anchor">Контакти</a></li>
+						</ul>
+					} 
+					
+					@@if (inner === true) {
+						<ul>
+							<li><a href="start-page.html#first-block">Головна</a></li>
+							<li><a href="start-page.html#about-block">Про форум</a></li>
+							<li><a href="start-page.html#get-invite-block">Отримати запрошення</a></li>
+							<li><a href="start-page.html#for-who-block">Для кого</a></li>
+							<li><a href="start-page.html#program-block">Програма</a></li>
+							<li><a href="start-page.html#award-block">Головний приз</a></li>
+							<li><a href="start-page.html#speakers-block">Спікери</a></li>
+							<li><a href="start-page.html#investors-block">Інформація для інвесторів</a></li>
+							<li><a href="start-page.html#partners-block">Інформація для партнерів</a></li>
+						
+							<li><a href="start-page.html#team-block">Організатор</a></li>
+							<li><a href="start-page.html#contacts-block">Місце проведення</a></li>
+							<li><a href="start-page.html#contacts-block">Контакти</a></li>
+						</ul>
+					}
+				</nav>
+
+				<div class="page-footer__right-cont">
+					<div class="cont-item">
+						<div class="title">Телефон:</div>
+						
+						<a href="tel:+380678277277">+38 (067) 827 72 77</a>
+					</div>
+					
+					<div class="cont-item">
+						<div class="title">E-mail:</div>
+						
+						<a href="tel:+380678277277">vsryzhak@gmail.com</a>
+					</div>
+					
+					<div class="page-footer__social">
+						<ul>
+							<li>
+								<a href="#"><img src="img/icons/instagram-footer.png" alt=""></a>
+							</li>
+							
+							<li>
+								<a href="#" class="telegram-item"><img src="img/icons/telegram-footer.png" alt=""></a>
+							</li>
+							
+							<li>
+								<a href="#"><img src="img/icons/youtube-footer.png" alt=""></a>
+							</li>
+							
+							<li>
+								<a href="#"><img src="img/icons/facebook-footer.png" alt=""></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div class="page-footer__creator">
+					<div class="caption">Розробка і маркетинг</div>
+					
+					<a href="//metodestate.com/" class="creator-logo"><img src="img/metodestate-logo.png" alt=""></a>
+					
+					<div class="copyright">© 2018 Novobudovy PRO</div>
+				</div>
+			</div>
+		</footer>
+	}
+	
+	
+	@@include('popups.html')
+	@@include('scripts.html')
+	
+	
+	
+	@@if (inner === false && login === false) {
+		<script>
+
+			var map;
+			var mapFooter;
+
+
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('contacts_map'), {
+					center: {lat: 49.7748575, lng: 24.0277051}, 
+					scrollwheel: false,
+					zoom: 14,
+					mapTypeControl: false,
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					styles: [{
+						stylers: [{
+							saturation: -100
+						}]
+					}]
+
+				});
+
+				var iconSet = {
+					url: "img/icons/map-marker.png", // url
+					scaledSize: new google.maps.Size(48, 68), // scaled size
+					origin: new google.maps.Point(0,0), // origin
+					anchor: new google.maps.Point(24,68) // anchor
+				};
+
+				var markerMain = new google.maps.Marker({
+					position: new google.maps.LatLng(49.7748575, 24.0277051),
+					map: map,
+					icon: iconSet,
+				});
+			}
+
+		</script>
+
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmF2QzTVp-Gl2Yc7k9VpfLRhZr3dUmMog&callback=initMap"></script>
+	}
+	
+</body>
+</html>

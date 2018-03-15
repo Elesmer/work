@@ -1,0 +1,556 @@
+.for-partners {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	
+	&__top {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		
+		.top-left {
+			
+			.heading-title {
+				color: #fff;
+				text-align: left;
+			}
+			
+			.text {
+				font-weight: 400;
+				font-size: 18px;
+				line-height: 24px;
+				color: #fff;
+			}
+		}
+		
+		.top-right {
+	
+			.img-wrapper {
+				width: 402px;
+				
+				img {
+					display: block;
+					width: 100%;
+					height: auto;
+					
+					backface-visibility: hidden;
+				}
+			}
+			
+			.download-btn {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				width: 245px;
+				background-image: linear-gradient(to right, rgb(0,150,7) 0%, rgb(28,222,46) 100%);
+				
+				&:before {
+					display: none;
+				}
+				
+				.item-icon {
+					width: 14px;
+					height: 20px;
+					flex-shrink: 0;
+					margin-right: 10px;
+					
+					img {
+						display: block;
+						width: 100%;
+						height: 100%;
+						
+						backface-visibility: hidden;
+					}
+				}
+			}
+		}
+	}
+	
+	&__bottom {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	
+	&__gain {
+		
+		.title {
+			font-size: 30px;
+			font-weight: 700;
+			color: #000;
+			margin-bottom: 30px;
+		}
+		
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			
+			li {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
+				
+				font-size: 14px;
+				line-height: 21px;
+				color: #000;
+				font-weight: 300;
+				
+				&:not(:last-child) {
+					margin-bottom: 40px;
+				}
+				
+				.item-icon {
+					flex-shrink: 0;
+					width: 45px;
+					margin-right: 15px;
+					display: block;
+					position: relative;
+					
+					&:before {
+						content: "";
+						display: block;
+						
+						z-index: 1;
+						
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						
+						width: 25px;
+						height: 25px;
+						
+						border-radius: 50%;
+						background-color: @brand-color;
+						
+						
+					}
+					
+					img {
+						position: relative;
+						z-index: 3;
+						display: block;
+						width: 38px;
+						height: auto;
+						
+						backface-visibility: hidden;
+						
+					}
+				}
+			}
+		}
+	}
+	
+	&__right-form {
+		
+		.title {
+			text-transform: uppercase;
+			font-size: 24px;
+			font-weight: 900;
+			color: @brand-color;
+			letter-spacing: 0.025em;
+			
+		}
+	}
+}
+
+@media @mobile {
+	.for-partners {
+		margin-bottom: 0;
+		background-color: @brand-color;
+		
+		&__top {
+			position: relative;
+			padding-top: 40px;
+			width: 100%;
+			
+			margin-bottom: 50px;
+			
+			flex-direction: column;
+			display: block;
+			
+			.top-left {
+				position: relative;
+				z-index: 3;
+				
+				width: 100%;
+				margin-bottom: 30px;
+				
+				.heading-title {
+					margin-bottom: 20px;
+				}
+				
+				.text {
+					font-size: 14px;
+					line-height: 20px;
+				}
+			}
+			
+			.top-right {
+				position: relative;
+				z-index: 3;
+				
+				width: 100%;
+				
+				.img-wrapper {
+					width: 290px;
+					margin: 0 auto;
+					
+					margin-bottom: 40px;
+				}
+				
+				.download-btn {
+					margin: 0 auto;
+					margin-top: -40px;
+				}
+			}
+		}
+		
+		&__bottom {
+			position: relative;
+			z-index: 4;
+			
+			flex-direction: column;
+			display: block;
+			
+			padding-bottom: 40px;
+		}
+		
+		&__gain {
+			box-shadow: 0px 5px 40.02px 5.98px rgba(0, 0, 0, 0.06);
+			border-radius: 3px;
+			background-color: #fff;
+			width: 100%;
+			
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 30px;
+			padding-bottom: 40px;
+			
+			margin-bottom: 40px;
+			
+			.title {
+				font-size: 24px;
+			}
+		}
+		
+		&__right-form {
+			width: 100%;
+			color: #fff;
+			
+			.title {
+				margin-bottom: 30px;
+				color: #fff;
+			}
+			
+			.form-row {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				
+				.input-wrapper,
+				.submit-button {
+					width: 100%;
+					
+					margin-bottom: 20px;
+				}
+				
+				.input-wrapper {
+					
+					.text-input {
+						background-color: #fff;
+					}
+				}
+				
+				.submit-button {
+					background-image: linear-gradient(to right, rgb(0,150,7) 0%, rgb(28,222,46) 100%);
+				}
+			}
+		}
+	}
+}
+
+
+@media @tablet {
+	.for-partners {
+		padding-bottom: 65px;
+		
+		&__top {
+			position: relative;
+			padding-top: 50px;
+			height: 592px;
+			margin-bottom: 50px;
+			
+			.top-left {
+				position: relative;
+				z-index: 3;
+				padding-top: 50px;
+				
+				width: 48%;
+				
+				.heading-title {
+					margin-bottom: 60px;
+				}
+				
+				.text {
+					
+				}
+			}
+			
+			.top-right {
+				position: relative;
+				z-index: 3;
+				
+				width: 48%;
+				
+				.download-btn {
+					position: absolute;
+					right: 0;
+					bottom: -30px;
+				}
+			}
+			
+			&:before {
+				content: "";
+				
+				z-index: 1;
+				
+				display: block;
+				
+				width: 100vw;
+				height: 592px;
+				
+				background-image: linear-gradient( -32deg, rgb(253,175,129) 0%, rgb(255,158,100) 100%);
+				box-shadow: 0px 5px 40.02px 5.98px rgba(0, 0, 0, 0.06);
+  				
+				position: absolute;
+				top: 0;
+				right: 200px
+			}
+			&:after {
+				content: "";
+				display: block;
+				
+				position: absolute;
+				left: -200px;
+				top: 30px;
+				
+				z-index: 2;
+				opacity: 0.2;
+				
+				width: 346px;
+				height: 432px;
+				
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				background-image: url("../img/forum-logo.png");
+			}
+		}
+		
+		&__bottom {
+			position: relative;
+			z-index: 4;
+		}
+		
+		&__gain {
+			box-shadow: 0px 5px 40.02px 5.98px rgba(0, 0, 0, 0.06);
+			border-radius: 3px;
+			background-color: #fff;
+			
+			margin-top: -130px;
+			width: 48%;
+			
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 30px;
+			padding-bottom: 40px;
+		}
+		
+		&__right-form {
+			width: 48%;
+			
+			.title {
+				margin-bottom: 30px;
+			}
+			
+			.form-row {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				
+				.input-wrapper,
+				.submit-button {
+					width: 100%;
+					
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}
+
+
+@media @desktop {
+	.for-partners {
+		padding-bottom: 95px;
+		
+		&__top {
+			position: relative;
+			padding-top: 50px;
+			height: 592px;
+			margin-bottom: 50px;
+			
+			.top-left {
+				position: relative;
+				z-index: 3;
+				padding-top: 50px;
+				
+				width: 466px;
+				
+				.heading-title {
+					margin-bottom: 60px;
+				}
+				
+				.text {
+					
+				}
+			}
+			
+			.top-right {
+				position: relative;
+				z-index: 3;
+				
+				width: 560px;
+				
+				.download-btn {
+					position: absolute;
+					right: 0;
+					bottom: 110px;
+				}
+			}
+			
+			&:before {
+				content: "";
+				
+				z-index: 1;
+				
+				display: block;
+				
+				width: 100vw;
+				height: 592px;
+				
+				background-image: linear-gradient( -32deg, rgb(253,175,129) 0%, rgb(255,158,100) 100%);
+				box-shadow: 0px 5px 40.02px 5.98px rgba(0, 0, 0, 0.06);
+  				
+				position: absolute;
+				top: 0;
+				right: 340px
+			}
+			&:after {
+				content: "";
+				display: block;
+				
+				position: absolute;
+				left: -200px;
+				top: 30px;
+				
+				z-index: 2;
+				opacity: 0.2;
+				
+				width: 346px;
+				height: 432px;
+				
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				background-image: url("../img/forum-logo.png");
+			}
+		}
+		
+		&__bottom {
+			position: relative;
+			z-index: 4;
+		}
+		
+		&__gain {
+			box-shadow: 0px 5px 40.02px 5.98px rgba(0, 0, 0, 0.06);
+			border-radius: 3px;
+			background-color: #fff;
+			
+			margin-top: -150px;
+			width: 545px;
+			
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-top: 40px;
+			padding-bottom: 50px;
+		}
+		
+		&__right-form {
+			width: 520px;
+			
+			.title {
+				margin-bottom: 30px;
+			}
+			
+			.form-row {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -ms-flex;
+				display: -o-flex;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				
+				.input-wrapper,
+				.submit-button {
+					width: 250px;
+				}
+				
+				.input-wrapper:nth-child(1),
+				.input-wrapper:nth-child(2) {
+					margin-bottom: 25px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+

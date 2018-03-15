@@ -1,45 +1,61 @@
-@@include('template/head.html', { "pagetitle": "Дякуємо за реєстрацію", "bodyclass": "" })
+@@include('template/head.html', {
+	"pagetitle": "Сторінки",
+	"bodyclass": ""
+})
 
-<link rel="stylesheet" href="css/main.css">
+	<ul style="padding-top: 80px; padding-left: 50px;">
+		<li><a href="start-page.html">Головна сторінка</a></li>
+		
+		<br>
+		
+		<li><a href="thanks-registration.html">Дякуємо за реєстрацію</a></li>
+		
+		<br>
+		
+		<li><a href="confirm-reg.html">Підтвердження реєстрації</a></li>
+		
+		<br>
+		
+		<li><a href="login.html">Вхід</a></li>
+		
+		<br>
+		
+		<li><a href="login-error.html">Вхід з помилкою</a></li>
+		
+		<br>
+		
+		<li><a href="recover-success.html">Пароль відновлено</a></li>
+		
+		<br>
+		
+		<li><a href="news-list.html">Список новин</a></li>
+		
+		<br>
+		
+		<li><a href="news-item.html">Сторінка новини</a></li>
+		
+		<br>
+		
+		<li><a href="news-item-2.html">Сторінка новини (з банером)</a></li>
+		
+		<br>
+		
+		<li><a href="inside-1.html">Вітаємо, ви зареєстровані!</a></li>
+		
+		<br>
+		
+		<li><a href="inside-2.html">Внутрішня 2</a></li>
+		
+		<br>
+		
+		<li><a href="inside-3.html">Вітаємо! Ви отримали шанс виграти....</a></li>
+		
+		<br>
+		
+		<li><a href="gifts-page.html">Сторінка подарунків</a></li>
+	</ul>
+	
 
-<div class="inside-section">
-	<div class="inside-section__row">
-		<div class="inside-section__left">
-			<div class="inside-section__video-block">
-				<!-- <iframe width="100%" height="100%" src="https://www.youtube.com/embed/_sI_Ps7JSEk?autoplay=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe> -->
-			</div>
-		</div>
 
-		<div class="inside-section__right">
-			<div class="inner-content">
-				<div class="inner-content__text-wrapper">
-					<div class="inside-section__thanks">
-						<span class="name">Дмитро,</span> вітаємо!
-						<br>Ви зареєстровані.</div>
-
-					<div class="inside-section__thanks-subtitle">і можете безкоштовно відвідати Форум</div>
-
-					<div class="inside-section__thanks-text">Окрім розіграшу 100.000 грн готівкою на Форумі Новобудов ми проводимо розіграш 10 цінних призів</div>
-				</div>
-
-				<div class="inside-section__awards-big-img">
-					<img src="img/gifts-big-pict.png" alt="">
-				</div>
-				<div class="row row--registered">
-					<div class="inside-section__awards-buttons-row">
-						<a href="#" class="btn">Виграти інші призи</a>
-
-						<a href="#" class="btn">Виграти 100 тис. грн.</a>
-					</div>
-					<div class="inside-section__awards-buttons-row">
-						<h3 class="chart-buy__h3 chart-buy__h3--custom">Отримайте квиток, щоб відвідати форум</h3>
-						<a href="https://forum.novobudovy.pro/account/terms/" class="btn btn--register-custom">Отримати квиток</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-@@include('template/page-footer.html', { "inner": true, "login": true })
+</body>
+</html>
