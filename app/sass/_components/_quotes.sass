@@ -21,6 +21,7 @@
 
 .program__img
   border-radius: 100px
+  max-width: 135px
 
 // Name
 
@@ -68,13 +69,28 @@
   display: -ms-flex
   display: flex
   width: 100%
-  
+
 .second-quote,
 .first-quote
   display: -webkit-flex
   display: -ms-flex
   display: flex
   flex-wrap: wrap
+
+.first-quote.disabled
+  .program__cv,
+  .quote--left
+    opacity: 0
+
+  .program__time--left
+    &::after,
+    &::before
+      display: none
+
+.second-quote.disabled
+  .program__time--right-number
+    .progress__h3--time
+      opacity: 0
 
 .program__time
   width: 20%
@@ -134,6 +150,13 @@
     top: 50%
     border-radius: 100px
     transform: translate(0%, -50%)
+
+.program__time--left-full
+  width: 100%
+
+  &::after,
+  &::before
+    display: none
 
 .program__time--right-number
   border-right: none

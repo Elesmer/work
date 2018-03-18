@@ -71,7 +71,8 @@
 
 .program__img {
   -webkit-border-radius: 100px;
-          border-radius: 100px; }
+          border-radius: 100px;
+  max-width: 135px; }
 
 .program__name {
   text-transform: capitalize;
@@ -136,6 +137,16 @@
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
+
+.first-quote.disabled .program__cv,
+.first-quote.disabled .quote--left {
+  opacity: 0; }
+
+.first-quote.disabled .program__time--left::after, .first-quote.disabled .program__time--left::before {
+  display: none; }
+
+.second-quote.disabled .program__time--right-number .progress__h3--time {
+  opacity: 0; }
 
 .program__time {
   width: 20%;
@@ -209,6 +220,11 @@
     -webkit-transform: translate(0%, -50%);
         -ms-transform: translate(0%, -50%);
             transform: translate(0%, -50%); }
+
+.program__time--left-full {
+  width: 100%; }
+  .program__time--left-full::after, .program__time--left-full::before {
+    display: none; }
 
 .program__time--right-number {
   border-right: none;
@@ -1812,6 +1828,8 @@ div.button {
     margin-top: 0; } }
 
 @media screen and (max-width: 780px) {
+  .first-quote.disabled {
+    display: none; }
   .first-quote {
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
