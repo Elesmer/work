@@ -2,27 +2,17 @@
 .program
   background: #e8e8e8
 
-.first-quote,
-.second-quote
-  width: 50%
-
-.first-quote
-  min-height: 100px
-  box-sizing: border-box
-  border-right: 1px solid $accent
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-
 .second-quote
   box-sizing: border-box
-  border-left: 1px solid $accent
+
+.progress__h3--time
+  padding: 0
 
 .program__cv
   display: -webkit-flex
   display: -ms-flex
   display: flex
-  width: 95%
+  width: 80%
   background: #fff
   align-items: center
   padding: 20px
@@ -30,8 +20,6 @@
 // Photo
 
 .program__img
-  height: 140px
-  min-width: 140px
   border-radius: 100px
 
 // Name
@@ -49,16 +37,104 @@
 
 .program__name-wrapper
   margin-left: 20px
+  position: relative
 
 // Time
 
-.program__time
+.progress__h3
+  font-size: 25px
+  margin: 0
+
+.quote
   display: -webkit-flex
   display: -ms-flex
   display: flex
   align-items: center
+  justify-content: center
+  flex-direction: column
+  padding: 30px
+  background: #f6f6f6
+  width: 80%
 
-.progress__h3
-  font-size: 30px
-  padding: 0 20px
-  margin: 0
+  .quote__img
+    margin-bottom: 10px
+
+  .program__p
+    width: 80%
+    text-align: center
+
+.quote-wrapper
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  width: 100%
+  
+.second-quote,
+.first-quote
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-wrap: wrap
+
+.program__time
+  width: 20%
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+  justify-content: center
+  border-right: 1px solid $accent
+
+.program__time--right
+  border-left: 1px solid $accent
+  border-right: none
+  position: relative
+
+  &::before
+    content: ""
+    height: 2px
+    width: 100%
+    top: 50%
+    left: 0
+    transform: translate(0%, -50%)
+    background: $accent
+
+  &::after
+    content: ""
+    height: 14px
+    width: 14px
+    background: $accent
+    position: absolute
+    left: -7px
+    top: 50%
+    border-radius: 100px
+    transform: translate(0%, -50%)
+
+.program__time--left
+  border-right: 1px solid $accent
+  border-left: none
+  position: relative
+
+  &::before
+    content: ""
+    height: 2px
+    width: 100%
+    top: 50%
+    right: 0
+    transform: translate(0%, -50%)
+    background: $accent
+
+  &::after
+    content: ""
+    height: 14px
+    width: 14px
+    background: $accent
+    position: absolute
+    right: -7px
+    top: 50%
+    border-radius: 100px
+    transform: translate(0%, -50%)
+
+.program__time--right-number
+  border-right: none
+  border-left: 1px solid $accent

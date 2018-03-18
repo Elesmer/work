@@ -76,6 +76,21 @@
 	+size-sm(6)
 	+size-xs(12)
 
+.who-wisited__item
+	+col()
+	+size(6)
+	+size-sm(12)
+
+.first-quote,
+.second-quote
+	width: 50%
+
+.price-card
+	+col()
+	+size(4)
+	+size-md(6)
+	+size-sm(12)
+
 @media screen and (max-width: 1600px)
 
 	.chart-buy__h3--custom
@@ -132,7 +147,33 @@
 		justify-content: center
 		align-items: center
 
+@media screen and (max-width: 1100px)
+
+	.progress__h3--time
+		font-size: 22px
+
 @media screen and (max-width: 980px)
+
+	.contact__requisites,
+	.contact__map
+		width: 100%
+		background-size: cover
+
+	.contact__map
+		height: 500px
+
+	.price-card
+		margin-bottom: 50px
+
+	.program__cv
+		flex-direction: column
+
+	.program__img
+		margin-bottom: 30px
+
+	.program__name-wrapper
+		margin: 0
+		text-align: center
 
 	.price-chart__p
 		width: 80%
@@ -168,6 +209,67 @@
 		margin-top: 0
 
 @media screen and (max-width: 780px)
+
+	.first-quote
+		order: 2
+
+	.row--mobile-none
+		display: none
+
+	.quote
+		width: 100%
+
+	.quote-wrapper
+		flex-wrap: wrap
+
+	.program__cv
+		width: 100%
+
+	.first-quote,
+	.second-quote
+		width: 100%
+
+	.program__time
+		display: none
+		width: 100%
+
+	.program__time--mobile
+		display: block
+		padding: 20px 0
+		text-align: center
+		border-right: none
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		justify-content: center
+		position: relative
+
+		&::before
+			content: ""
+			width: 2px
+			height: 100%
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translate(-50%, 0%)
+			background: $accent
+
+		.progress__h3--time
+			position: relative
+			z-index: 50
+			background: #fff
+			padding: 10px 15px
+			border-radius: 3px
+
+	.program__data
+		flex-direction: column
+
+	.program__data-number
+		font-size: 18px
+
+	.header__h2-wrapper--program
+		.chart__h2
+			font-size: 30px
 
 	.inner-content--custom
 		justify-content: center
@@ -335,7 +437,29 @@
 
 @media screen and (max-width: 560px)
 
-	.header__h2-wrapper--complete
+	.program__cv--wisited
+		flex-direction: column
+		width: 100%
+
+	.program__name-wrapper
+		text-align: center
+
+	.title__p
+		width: 90%
+
+	.program__data
+		justify-content: center
+
+	.program__data-number
+		text-align: center
+
+		&:last-child
+			margin-left: 0
+
+	.program__button
+		margin: 30px 0
+
+	.header__h2-wrapper--program
 		.chart__h2
 			font-size: 22px
 
@@ -394,3 +518,12 @@
 
 	.chart-buy__h3
 		font-size: 15px
+
+	.chart__button--party
+		margin-bottom: 50px
+
+		.chart__a
+			padding: 0
+
+	.party__img
+		margin-bottom: 20px

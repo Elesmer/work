@@ -7,6 +7,7 @@
 
 @import "_components/buttons"
 @import "_components/quotes"
+@import "_components/cards"
 
 /* Font for coding only */
 
@@ -789,6 +790,9 @@ div.button
 .parallax-container--custom-program
 	height: 600px
 
+	&::after
+		opacity: 0.7
+
 .program__data-number
 	font-family: 'HelveticaNeueCyr-Roman', sans-serif
 	font-size: 24px
@@ -807,7 +811,7 @@ div.button
 		margin-left: 50px
 
 		&::before
-			background-image: url(/img/poin-icon.png)
+			background-image: url(../img/poin-icon.png)
 			height: 27px
 
 	&::before
@@ -819,7 +823,218 @@ div.button
 		top: 50%
 		background-repeat: no-repeat
 		transform: translate(-50%, -50%)
-		background-image: url(/img/clock-icon.png)
+		background-image: url(../img/clock-icon.png)
+
+// Who wisited section
+
+.who-wisited
+	background-image: linear-gradient(132deg, #fdaf81, #ff9e64)
+	box-shadow: 2.5px 4.3px 40px 6px rgba(0, 0, 0, 0.06)
+
+.program__cv--wisited
+	background: transparent
+
+	.program__img
+		width: 135px
+
+	.program__name,
+	.program__p
+		color: #fff
+
+	.program__p
+		font-size: 16px
+
+.who-wisited__h2
+	padding: 90px 0 50px 0
+	margin: 0
+	text-align: center
+	color: #fff
+  font-family: 'HelveticaNeueCyr', sans-serif
+  font-size: 48px
+  font-weight: bold
+  font-style: normal
+  font-stretch: normal
+  line-height: 1.24
+  letter-spacing: normal
+
+.row--wisited
+	padding-bottom: 50px
+
+.who-wisited__h2--dark
+	color: #000
+	margin-bottom: 50px
+
+.who-wisited__h2--contitions
+	margin-bottom: 0
+
+.title__background
+	background-repeat: no-repeat
+	background-image: url(../img/Photo.png)
+	position: relative
+	background-size: cover
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	flex-direction: column
+	align-items: center
+
+	&::after
+		position: absolute
+		content: ""
+		width: 100%
+		height: 100%
+		background: #000
+		opacity: 0.7
+		top: 0
+		left: 0
+
+.title__logo
+	position: relative
+	z-index: 50
+	width: 140px
+	height: 140px
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 100px
+	background: #fff
+	margin-top: -70px
+
+.title__time
+	position: relative
+	z-index: 50
+	font-family: 'HelveticaNeueCyr-Roman', sans-serif
+	font-size: 30.5px
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 0.95
+	letter-spacing: normal
+	text-align: center
+	color: #ffffff
+	margin-bottom: 120px
+	margin-top: 20px
+
+.title__time--register
+	margin-bottom: 20px
+
+.title__p
+	position: relative
+	z-index: 50
+	font-family: 'HelveticaNeueCyr-Roman', sans-serif
+	font-size: 16.5px
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.76
+	letter-spacing: normal
+	text-align: center
+	color: #ffffff
+	width: 50%
+	padding-bottom: 50px
+
+.program__space
+	width: 50%
+	height: 100px
+	border-right: 1px solid $accent
+	box-sizing: border-box
+
+.program__space--left
+	border-right: none
+	border-left: 1px solid $accent
+
+.program__time--mobile
+	display: none
+
+.title__background--food
+	background-image: url(../img/food.png)
+
+.title__background--restaurant
+	background-image: url(../img/restaurant.png)
+
+.chart__button--party
+	width: 280px
+	margin-bottom: 120px
+
+.party__img
+	position: relative
+	z-index: 50
+
+.party__p
+	position: relative
+	z-index: 50
+	font-family: 'HelveticaNeueCyr', sans-serif
+	font-size: 18px
+	font-weight: 300
+	font-style: normal
+	font-stretch: normal
+	line-height: normal
+	letter-spacing: 0.2px
+	text-align: center
+	color: #ffffff
+
+.card__h2--contacts
+	color: #fff
+	margin: 0
+	text-align: left
+
+.contact__requisites
+	padding: 50px
+	background-image: url(../img/photo-arena.png)
+	position: relative
+
+	&::after
+		content: ""
+		height: 100%
+		width: 100%
+		background: #000
+		opacity: 0.7
+		position: absolute
+		top: 0
+		left: 0
+
+.contact__p
+  font-family: 'HelveticaNeueCyr', sans-serif
+  font-size: 24px
+  font-weight: 300
+  font-style: normal
+  font-stretch: normal
+  line-height: 1.5
+  letter-spacing: normal
+  text-align: left
+  color: #ffffff
+
+.contact__title
+	margin-bottom: 50px
+	position: relative
+	z-index: 50
+
+.contact__requisite
+	position: relative
+	z-index: 50
+
+	strong
+		color: #fff
+		font-size: 24px
+
+.contact__p--email
+	margin: 0
+
+.contact__requisites,
+.contact__map
+	width: 50%
+
+.contact__map
+	overflow: hidden
+
+.title__logo--contacts
+	left: 50%
+	transform: translate(-50%, 0%)
+
+.row--contacts
+	padding-bottom: 50px
 
 // Always at the end
 @import "media"
