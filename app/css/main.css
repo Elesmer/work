@@ -1280,7 +1280,10 @@ a {
   .body--custom .program__time--mobile {
     display: none; }
   .body--custom .title__background--food {
-    background-image: url(../img/food.png); }
+    background-image: url(../img/food.png);
+    background-position: 0 -250px;
+    -webkit-background-size: 100% 100%;
+            background-size: 100%; }
   .body--custom .title__background--restaurant {
     background-image: url(../img/restaurant.png); }
   .body--custom .chart__button--party {
