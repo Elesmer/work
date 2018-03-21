@@ -91,10 +91,22 @@
 	+size-md(6)
 	+size-sm(12)
 
+.get-ticket
+	+col()
+	+size(12)
+
+.get-win
+	+col()
+	+size(6)
+	+size-sm(12)
+
 @media screen and (max-width: 1600px)
 
 	.chart-buy__h3--custom
 		font-size: 17px
+
+	.get-ticket__button-white
+		width: 70%
 
 @media screen and (max-width: 1400px)
 
@@ -110,15 +122,37 @@
 			display: flex
 			flex-direction: column
 			align-items: flex-start
-			justify-content: center
+			justify-content: flex-start
+			background: #e8e8e8
 
 	.inner-content--custom
 		.inside-section__thanks,
 		.inside-section__thanks-subtitle,
 		.inside-section__thanks-text
 			width: 100%
+			max-width: 100%
+
+		.inside-section__thanks-subtitle-black
+			font-family: 'HelveticaNeueCyr-Roman', sans-serif
+			font-size: 24px
+			font-weight: normal
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+			text-align: left
+			color: #000
+			margin: 20px 0
 
 @media screen and (max-width: 1239px) and (min-width: 768px)
+
+	.get-ticket__button-white
+		width: 40%
+
+	.inside-section__thanks-subtitle-black
+		margin: 20px 0
+		text-align: center
+		font-size: 20px
 
 	.row--register
 		margin-top: 50px
@@ -130,6 +164,7 @@
 	.inner-content--custom
 		justify-content: center
 		align-items: center
+		background: #e8e8e8
 
 		.inside-section__thanks,
 		.inside-section__thanks-subtitle,
@@ -153,6 +188,9 @@
 		font-size: 22px
 
 @media screen and (max-width: 980px)
+
+	.get-ticket__button-white
+		width: 50%
 
 	.contact__requisites,
 	.contact__map
@@ -209,6 +247,19 @@
 		margin-top: 0
 
 @media screen and (max-width: 780px)
+
+	.get-ticket__button-white
+		width: 70%
+
+	.inside-section__thanks-subtitle-black
+		margin: 20px 0
+		text-align: center
+		font-size: 18px
+
+	.get-ticket
+
+		.get-ticket__p
+			width: 80%
 
 	.parallax--custom
 		img
@@ -450,6 +501,28 @@
 		margin-top: 50px
 
 @media screen and (max-width: 560px)
+
+	.get-win__img-wrapper
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		justify-content: center
+		align-items: center
+
+	.get-ticket__bg-img
+		display: none
+
+	.get-ticket
+		.get-ticket__content-wrapper
+			width: 100%
+
+		.get-ticket__h3,
+		.get-ticket__p
+			width: 100%
+			text-align: center
+
+	.get-ticket__button-white
+		width: 100%
 
 	.parallax--custom
 		img
