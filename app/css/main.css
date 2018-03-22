@@ -52,17 +52,24 @@
   color: #000;
   text-transform: none;
   width: 50%;
-  margin: 30px 0 0 0; }
+  margin: 30px 0 0 0;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
   .body--custom .get-ticket__button-white:hover {
-    background: rgba(255, 255, 255, 0.84);
-    background-image: none; }
+    -webkit-box-shadow: 0 13px 18px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 13px 18px 0 rgba(0, 0, 0, 0.15); }
     .body--custom .get-ticket__button-white:hover::before {
       display: none; }
 
 .body--custom .get-win__btn {
   width: 80%;
   text-transform: none;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .body--custom .get-win__btn:hover {
+    -webkit-box-shadow: 0 13px 18px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 13px 18px 0 rgba(0, 0, 0, 0.15); }
 
 .body--custom .program {
   background: #e8e8e8; }
@@ -358,7 +365,7 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .body--custom .chart__button {
-    background: transparent;
+    background: #fff;
     border: 2px solid #fff;
     font-size: 16px;
     text-align: center;
@@ -384,7 +391,7 @@ a {
     position: relative;
     z-index: 20; }
     .body--custom .chart__button a {
-      color: #fff;
+      color: #000;
       width: 100%;
       height: 100%;
       -webkit-transition: 0.5s;
@@ -410,7 +417,9 @@ a {
       -webkit-transition: 0.5s;
       -o-transition: 0.5s;
       transition: 0.5s;
-      border: 2px solid #fff; }
+      border: 2px solid #fff;
+      -webkit-box-shadow: 0 13px 18px 0 rgba(0, 0, 0, 0.15);
+              box-shadow: 0 13px 18px 0 rgba(0, 0, 0, 0.15); }
       .body--custom .chart__button:hover a {
         color: #111111;
         -webkit-transition: 0.5s;
@@ -521,9 +530,10 @@ a {
     line-height: 2;
     letter-spacing: 0.3px;
     text-align: left;
-    color: #515151; }
+    color: #515151;
+    margin-bottom: 0; }
     .body--custom .chart__inst:last-child {
-      margin-bottom: 30px; }
+      margin-bottom: 15px; }
   .body--custom .chart-buy__money-icon {
     padding: 20px;
     margin: 30px;
@@ -631,6 +641,43 @@ a {
     letter-spacing: -1.7px;
     text-align: left;
     color: #111111; }
+  .body--custom .chart-buy__ticket--mobile {
+    display: none;
+    background: #fff;
+    padding: 30px; }
+  .body--custom .chart-buy__sale--mobile .chart-buy__wrapper {
+    width: 50%;
+    margin: 0; }
+  .body--custom .btn--mobile {
+    width: 100%;
+    margin-top: 20px;
+    text-transform: none;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+  .body--custom .btn--mobile--white {
+    background-image: none;
+    background: transparent;
+    border: 1px solid #000;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    color: #000; }
+    .body--custom .btn--mobile--white:hover {
+      background-image: none; }
+    .body--custom .btn--mobile--white:before {
+      background-image: none; }
+  .body--custom .btn--mobile--disabled {
+    border-color: #d6d6d6;
+    color: #d6d6d6; }
+  .body--custom .chart__a--free--mobile {
+    border-color: #d6d6d6;
+    color: #d6d6d6; }
+    .body--custom .chart__a--free--mobile::after {
+      height: 25px;
+      width: 25px;
+      right: 0;
+      -webkit-background-size: contain;
+              background-size: contain;
+      background-image: url(../img/lock-moblie.png); }
   .body--custom .graphic-wrapper {
     width: 100%;
     display: -webkit-flex;
@@ -759,7 +806,8 @@ a {
             justify-content: center; }
   .body--custom .member-n__p {
     padding: 20px 0;
-    margin: 0; }
+    margin: 0;
+    font-size: 16px; }
   .body--custom .member-n {
     width: 100%;
     display: -webkit-flex;
@@ -1725,6 +1773,21 @@ a {
     .body--custom .get-ticket__button-white {
       width: 70%; } }
   @media screen and (max-width: 1400px) {
+    .body--custom .get-ticket .get-ticket__content-wrapper {
+      width: 100%; }
+    .body--custom .get-ticket .get-ticket__p {
+      font-size: 13px; }
+    .body--custom .get-ticket .get-ticket__button-white {
+      width: 50%; }
+    .body--custom .get-win .get-ticket__content-wrapper {
+      width: 80%; }
+    .body--custom .get-win .get-ticket__p {
+      width: 75%; }
+    .body--custom .get-win .get-win__h3 {
+      margin: 20px;
+      margin-top: 0px;
+      width: 85%;
+      font-size: 17px; }
     .body--custom .chart-buy__h3--custom {
       width: 100%; } }
   @media screen and (min-width: 1240px) {
@@ -1856,6 +1919,13 @@ a {
     .body--custom .chart__button--buy-free {
       margin-top: 0; } }
   @media screen and (max-width: 780px) {
+    .body--custom .row--chart-buy,
+    .body--custom .row--chart,
+    .body--custom .row--chart--numbers {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
     .body--custom .get-ticket__button-white {
       width: 70%; }
     .body--custom .inside-section__thanks-subtitle-black {
@@ -2014,10 +2084,10 @@ a {
     .body--custom .chart-buy__ticket-forum,
     .body--custom .graphic-wrapper,
     .body--custom .member-n {
-      width: 100%; }
+      width: 90%; }
     .body--custom .chart-buy__ticket,
     .body--custom .chart-buy__ticket-forum {
-      margin-top: 0; }
+      margin-top: -50px; }
     .body--custom .chart__button--buy-free {
       margin-bottom: 80px; }
     .body--custom .chart-buy__start {
@@ -2108,6 +2178,13 @@ a {
     .body--custom .row--register {
       margin-top: 50px; } }
   @media screen and (max-width: 560px) {
+    .body--custom .chart-buy__ticket,
+    .body--custom .chart-buy__ticket-forum {
+      display: none; }
+    .body--custom .chart-buy__ticket--mobile {
+      display: block; }
+    .body--custom .btn {
+      font-size: 12px; }
     .body--custom .get-win__img-wrapper {
       display: -webkit-flex;
       display: -ms-flex;
@@ -2126,11 +2203,13 @@ a {
       display: none; }
     .body--custom .get-ticket .get-ticket__content-wrapper {
       width: 100%; }
+    .body--custom .get-ticket .get-ticket__h3 {
+      font-size: 25px; }
     .body--custom .get-ticket .get-ticket__h3,
     .body--custom .get-ticket .get-ticket__p {
       width: 100%;
       text-align: center; }
-    .body--custom .get-ticket__button-white {
+    .body--custom .get-ticket .get-ticket__button-white {
       width: 100%; }
     .body--custom .parallax--custom img {
       width: 200%; }
@@ -2165,9 +2244,7 @@ a {
     .body--custom .chart-buy__money-icon {
       margin-bottom: 80px; }
     .body--custom .chart-buy__h2 {
-      font-size: 30px; }
-    .body--custom .chart-buy__wrapper:first-child {
-      margin-right: 30px; }
+      font-size: 50px; }
     .body--custom .grafico {
       margin: 0; }
     .body--custom .column div {
