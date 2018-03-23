@@ -236,9 +236,6 @@
 		margin: 0
 		text-align: center
 
-	.price-chart__p
-		width: 80%
-
 	.chart__price-chart
 		width: 100%
 
@@ -270,6 +267,9 @@
 		margin-top: 0
 
 @media screen and (max-width: 780px)
+
+	.member-n__columns-n
+		margin: 0
 
 	.row--chart-buy,
 	.row--chart,
@@ -428,7 +428,6 @@
 
 	.chart-buy__ticket,
 	.chart-buy__ticket-forum,
-	.graphic-wrapper,
 	.member-n
 		width: 90%
 
@@ -472,7 +471,6 @@
 
 	.member-n
 		flex-direction: column-reverse
-		padding: 0 20px
 
 	.column__n
 		padding: 20px 0
@@ -530,12 +528,30 @@
 
 @media screen and (max-width: 560px)
 
+	.price-chart__p--number
+		margin-top: 50px
+
+	.graphic-wrapper,
+	.member-n
+		width: 100%
+
+	.member-n
+		padding: 0 20px
+
 	.chart-buy__ticket,
-	.chart-buy__ticket-forum
+	.chart-buy__ticket-forum,
+	.header__h2-wrapper--mobile-none
 		display: none
 
-	.chart-buy__ticket--mobile
+	.chart-buy__ticket--mobile,
+	.header__h2-wrapper--mobile
 		display: block
+
+	.header__h2-wrapper--mobile
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		justify-content: center
 
 	.btn
 		font-size: 12px

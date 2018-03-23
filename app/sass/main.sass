@@ -355,6 +355,7 @@ a
 		justify-content: flex-end
 		background: #fff
 		float: left
+		flex-wrap: wrap
 
 	.container--chart
 		position: relative
@@ -364,7 +365,7 @@ a
 
 	.grafico__wrapper
 		position: relative
-		width: 80%
+		width: 85%
 		margin-right: 60px
 
 	.grafico
@@ -428,14 +429,17 @@ a
 			margin-top: -50px
 
 	.chart__price-chart
-		left: 0
-		padding: 60px 90px
-		position: absolute
-		top: 0
-		width: 50%
+		width: 100%
+		padding-left: calc(15% - 60px)
+		padding-right: 60px
+		padding-top: 60px
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		flex-wrap: wrap
 
 	.price-chart__p
-		width: 100%
+		width: 55%
 		line-height: 1.5
 		letter-spacing: 0.6px
 		font-weight: normal
@@ -443,6 +447,19 @@ a
 		color: #111111
 		font-family: 'HelveticaNeueCyr-Roman', sans-serif
 		font-size: 24px
+
+	.price-chart__p--number
+		float: right
+		text-align: right
+		width: 45%
+		font-family: 'OpenSans', sans-serif
+		font-size: 14px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: normal
+		color: #000
 
 	.price-chart__p--price
 		width: 106px
@@ -461,14 +478,6 @@ a
 	.container--member
 		background: #ffd0b4
 
-	.member-n__p-wrapper
-		width: calc(20% - 60px)
-		display: -webkit-flex
-		display: -ms-flex
-		display: flex
-		align-items: center
-		justify-content: center
-
 	.member-n__p
 		padding: 20px 0
 		margin: 0
@@ -482,11 +491,13 @@ a
 		justify-content: space-between
 
 	.member-n__columns-n
-		width: 80%
+		width: 100%
 		display: -webkit-flex
 		display: -ms-flex
 		display: flex
 		margin-right: 60px
+		margin-left: calc(15% - 60px)
+		padding: 25px 0
 
 	.column__n
 		width: 10%
@@ -578,17 +589,15 @@ a
 		align-items: center
 		background: #fff
 
+		.invite__p--disabled,
+		.invite__h4--plus-disabled
+			color: #dcdcdc
+
 	.invite__sale.done
 		.done-block
 			display: -webkit-flex !important
 			display: -ms-flex !important
 			display: flex !important
-
-		.invite__h4--plus
-			color: #dcdcdc
-
-		.invite__p--desc
-			color: #dcdcdc
 
 	.invite-friends
 		margin: 30px 0
@@ -724,6 +733,13 @@ a
 			padding-right: 0
 			padding-left: 0
 
+	.chart__button--buy--complete-on
+		border-color: transparent
+		background-image: linear-gradient(88deg, #0cff00, #17c700)
+
+		a
+			color: #fff
+
 	.parallax-container--complete
 		background-color: #85ff64
 
@@ -732,6 +748,23 @@ a
 
 	.complete-sign__img
 		max-width: 100px
+
+	.header__h2-wrapper--mobile
+		display: none
+		margin-top: 50px
+
+		.chart__h2
+			text-align: left
+			font-weight: bold
+			font-size: 24px
+			font-weight: lighter
+			padding-left: 0
+			padding-right: 0
+			width: 95%
+
+			strong
+				font-weight: bold
+				font-size: 48px
 
 	.header__h2-wrapper--complete
 		padding-left: 30px

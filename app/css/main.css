@@ -690,7 +690,10 @@ a {
         -ms-flex-pack: end;
             justify-content: flex-end;
     background: #fff;
-    float: left; }
+    float: left;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
   .body--custom .container--chart {
     position: relative;
     text-align: center;
@@ -698,7 +701,7 @@ a {
     margin: 100px 0; }
   .body--custom .grafico__wrapper {
     position: relative;
-    width: 80%;
+    width: 85%;
     margin-right: 60px; }
   .body--custom .grafico {
     height: 300px;
@@ -759,13 +762,21 @@ a {
     font-weight: bold;
     margin-top: -50px; }
   .body--custom .chart__price-chart {
-    left: 0;
-    padding: 60px 90px;
-    position: absolute;
-    top: 0;
-    width: 50%; }
-  .body--custom .price-chart__p {
     width: 100%;
+    padding-left: -webkit-calc(15% - 60px);
+    padding-left: calc(15% - 60px);
+    padding-right: 60px;
+    padding-top: 60px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .body--custom .price-chart__p {
+    width: 55%;
     line-height: 1.5;
     letter-spacing: 0.6px;
     font-weight: normal;
@@ -773,6 +784,18 @@ a {
     color: #111111;
     font-family: 'HelveticaNeueCyr-Roman', sans-serif;
     font-size: 24px; }
+  .body--custom .price-chart__p--number {
+    float: right;
+    text-align: right;
+    width: 45%;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000; }
   .body--custom .price-chart__p--price {
     width: 106px;
     height: 16px;
@@ -788,22 +811,6 @@ a {
     color: #ffa068; }
   .body--custom .container--member {
     background: #ffd0b4; }
-  .body--custom .member-n__p-wrapper {
-    width: -webkit-calc(20% - 60px);
-    width: calc(20% - 60px);
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
   .body--custom .member-n__p {
     padding: 20px 0;
     margin: 0;
@@ -820,13 +827,16 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between; }
   .body--custom .member-n__columns-n {
-    width: 80%;
+    width: 100%;
     display: -webkit-flex;
     display: -ms-flex;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-right: 60px; }
+    margin-right: 60px;
+    margin-left: -webkit-calc(15% - 60px);
+    margin-left: calc(15% - 60px);
+    padding: 25px 0; }
   .body--custom .column__n {
     width: 10%;
     height: 100%;
@@ -921,16 +931,15 @@ a {
         -ms-flex-align: center;
             align-items: center;
     background: #fff; }
+    .body--custom .invite__sale .invite__p--disabled,
+    .body--custom .invite__sale .invite__h4--plus-disabled {
+      color: #dcdcdc; }
   .body--custom .invite__sale.done .done-block {
     display: -webkit-flex !important;
     display: -ms-flex !important;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important; }
-  .body--custom .invite__sale.done .invite__h4--plus {
-    color: #dcdcdc; }
-  .body--custom .invite__sale.done .invite__p--desc {
-    color: #dcdcdc; }
   .body--custom .invite-friends {
     margin: 30px 0; }
   .body--custom .invite__img {
@@ -1071,12 +1080,33 @@ a {
       width: 100%;
       padding-right: 0;
       padding-left: 0; }
+  .body--custom .chart__button--buy--complete-on {
+    border-color: transparent;
+    background-image: -webkit-linear-gradient(2deg, #0cff00, #17c700);
+    background-image: -o-linear-gradient(2deg, #0cff00, #17c700);
+    background-image: linear-gradient(88deg, #0cff00, #17c700); }
+    .body--custom .chart__button--buy--complete-on a {
+      color: #fff; }
   .body--custom .parallax-container--complete {
     background-color: #85ff64; }
     .body--custom .parallax-container--complete::after {
       display: none; }
   .body--custom .complete-sign__img {
     max-width: 100px; }
+  .body--custom .header__h2-wrapper--mobile {
+    display: none;
+    margin-top: 50px; }
+    .body--custom .header__h2-wrapper--mobile .chart__h2 {
+      text-align: left;
+      font-weight: bold;
+      font-size: 24px;
+      font-weight: lighter;
+      padding-left: 0;
+      padding-right: 0;
+      width: 95%; }
+      .body--custom .header__h2-wrapper--mobile .chart__h2 strong {
+        font-weight: bold;
+        font-size: 48px; }
   .body--custom .header__h2-wrapper--complete {
     padding-left: 30px; }
     .body--custom .header__h2-wrapper--complete .chart__h2 {
@@ -1896,8 +1926,6 @@ a {
     .body--custom .program__name-wrapper {
       margin: 0;
       text-align: center; }
-    .body--custom .price-chart__p {
-      width: 80%; }
     .body--custom .chart__price-chart {
       width: 100%; }
     .body--custom .chart__control {
@@ -1919,6 +1947,8 @@ a {
     .body--custom .chart__button--buy-free {
       margin-top: 0; } }
   @media screen and (max-width: 780px) {
+    .body--custom .member-n__columns-n {
+      margin: 0; }
     .body--custom .row--chart-buy,
     .body--custom .row--chart,
     .body--custom .row--chart--numbers {
@@ -2082,7 +2112,6 @@ a {
       margin: 0; }
     .body--custom .chart-buy__ticket,
     .body--custom .chart-buy__ticket-forum,
-    .body--custom .graphic-wrapper,
     .body--custom .member-n {
       width: 90%; }
     .body--custom .chart-buy__ticket,
@@ -2118,8 +2147,7 @@ a {
       -webkit-box-direction: reverse;
       -webkit-flex-direction: column-reverse;
           -ms-flex-direction: column-reverse;
-              flex-direction: column-reverse;
-      padding: 0 20px; }
+              flex-direction: column-reverse; }
     .body--custom .column__n {
       padding: 20px 0;
       margin-left: 15px; }
@@ -2178,11 +2206,30 @@ a {
     .body--custom .row--register {
       margin-top: 50px; } }
   @media screen and (max-width: 560px) {
+    .body--custom .price-chart__p--number {
+      margin-top: 50px; }
+    .body--custom .graphic-wrapper,
+    .body--custom .member-n {
+      width: 100%; }
+    .body--custom .member-n {
+      padding: 0 20px; }
     .body--custom .chart-buy__ticket,
-    .body--custom .chart-buy__ticket-forum {
+    .body--custom .chart-buy__ticket-forum,
+    .body--custom .header__h2-wrapper--mobile-none {
       display: none; }
-    .body--custom .chart-buy__ticket--mobile {
+    .body--custom .chart-buy__ticket--mobile,
+    .body--custom .header__h2-wrapper--mobile {
       display: block; }
+    .body--custom .header__h2-wrapper--mobile {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
     .body--custom .btn {
       font-size: 12px; }
     .body--custom .get-win__img-wrapper {
