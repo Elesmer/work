@@ -2358,3 +2358,6 @@ a {
         padding: 0; }
     .body--custom .party__img {
       margin-bottom: 20px; } }
+  @media screen and (max-width: 350px) {
+    .body--custom .column div {
+      font-size: 8px; } }
