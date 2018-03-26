@@ -10,8 +10,8 @@ var gulp          = require('gulp'),
 		notify        = require("gulp-notify"),
 		rsync         = require('gulp-rsync'),
 		//Custom
-		smartgrid 		= require('smart-grid'),
-		gcmq					= require('gulp-group-css-media-queries');
+		smartgrid 		= require('smart-grid');
+		// gcmq					= require('gulp-group-css-media-queries');
 
 gulp.task('browser-sync', function() {
 	browsersync({
@@ -67,11 +67,11 @@ gulp.task('rsync', function() {
 	}))
 });
 
-gulp.task('gulp-group-css-media-queries', function () {
-    gulp.src('app/css/main.css')
-        .pipe(gcmq())
-        .pipe(gulp.dest('app/css'));
-});
+// gulp.task('gulp-group-css-media-queries', function () {
+//     gulp.src('app/css/main.css')
+//         .pipe(gcmq())
+//         .pipe(gulp.dest('app/css'));
+// });
 
 /* It's principal settings in smart grid project */
 var settings = {
@@ -111,7 +111,7 @@ var settings = {
 
 smartgrid('./app/sass', settings);
 
-gulp.task('watch', ['sass', 'js', 'browser-sync', 'gulp-group-css-media-queries'], function() {
+gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 	gulp.watch('app/sass/**/*.sass', ['sass']);
 	gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['js']);
 	gulp.watch('app/*.html', browsersync.reload)

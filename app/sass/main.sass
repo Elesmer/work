@@ -1,9 +1,12 @@
+// @import "materialize"
 @import "vars"
 @import "fonts"
 @import "libs"
 @import "smart-grid"
 
 /* Components */
+
+@import "materialize"
 
 @import "_components/buttons"
 @import "_components/quotes"
@@ -32,7 +35,8 @@ a
 
 .body--custom
 
-	@import "materialize"
+	a
+		color: #fff
 
 	/* Header */
 
@@ -1225,6 +1229,9 @@ a
 			color: #000
 			margin: 30px
 			width: 70%
+
+	.chart__button--buy--complete-download
+		margin-bottom: 80px
 
 	// Always at the end
 	@import "media"
