@@ -4920,6 +4920,9 @@
     font-weight: normal;
     color: #ccc; }
 
+.body--custom .card__ticket-img {
+  width: 100%; }
+
 /* Font for coding only */
 /* Work styles */
 body {
@@ -5984,8 +5987,8 @@ a {
     display: none; }
   .body--custom .title__background--food {
     background-image: url(../img/image021.jpg);
-    -webkit-background-size: 100% 100%;
-            background-size: 100%; }
+    -webkit-background-size: cover;
+            background-size: cover; }
   .body--custom .title__background--restaurant {
     background-image: url(../img/gala.jpg); }
   .body--custom .chart__button--party {
@@ -6615,7 +6618,12 @@ a {
               align-items: center; } }
   @media screen and (max-width: 1100px) {
     .body--custom .progress__h3--time {
-      font-size: 22px; } }
+      font-size: 22px; }
+    .body--custom .title__background {
+      -webkit-background-size: cover;
+              background-size: cover; }
+    .body--custom .title__background--register {
+      background-position: 0; } }
   @media screen and (max-width: 980px) {
     .body--custom .get-ticket__button-white {
       width: 50%; }

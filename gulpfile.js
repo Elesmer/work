@@ -10,7 +10,8 @@ var gulp          = require('gulp'),
 		notify        = require("gulp-notify"),
 		rsync         = require('gulp-rsync'),
 		//Custom
-		smartgrid 		= require('smart-grid');
+		smartgrid 		= require('smart-grid'),
+		imagemin 			= require('gulp-imagemin');
 		// gcmq					= require('gulp-group-css-media-queries');
 
 gulp.task('browser-sync', function() {
@@ -24,6 +25,12 @@ gulp.task('browser-sync', function() {
 		// tunnel: "projectmane", //Demonstration page: http://projectmane.localtunnel.me
 	})
 });
+
+gulp.task('imagemin', () =>
+    gulp.src('app/img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('app/img-min'))
+);
 
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
