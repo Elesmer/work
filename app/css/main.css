@@ -5972,12 +5972,11 @@ a {
   .body--custom .program__time--mobile {
     display: none; }
   .body--custom .title__background--food {
-    background-image: url(../img/food.png);
-    background-position: 0 -250px;
+    background-image: url(../img/image021.jpg);
     -webkit-background-size: 100% 100%;
             background-size: 100%; }
   .body--custom .title__background--restaurant {
-    background-image: url(../img/restaurant.png); }
+    background-image: url(../img/gala.jpg); }
   .body--custom .chart__button--party {
     width: 280px;
     margin-bottom: 120px;
@@ -6804,8 +6803,7 @@ a {
     .body--custom .chart-buy__ticket-forum,
     .body--custom .member-n {
       width: 90%; }
-    .body--custom .chart-buy__ticket,
-    .body--custom .chart-buy__ticket-forum {
+    .body--custom .chart-buy__ticket {
       margin-top: -50px; }
     .body--custom .chart__button--buy-free {
       margin-bottom: 80px; }
