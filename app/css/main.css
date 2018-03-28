@@ -6226,6 +6226,46 @@ a {
     text-align: left;
     color: #ffffff;
     width: 90%; }
+  .body--custom .text-input {
+    background: #e8e8e8;
+      background-line-height: normal;
+      background-color: #000;
+      background-border-radius: 23.5px;
+      background-border: 1px solid transparent;
+      background-padding-left: 0;
+      background-padding-right: 0;
+      background-width: 100%;
+      background-box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.05); }
+  .body--custom .popup-block__form:not(:last-child) {
+    margin-bottom: 20px; }
+  .body--custom .popup-block__form .form-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+  .body--custom .popup-block__form .input-wrapper {
+    width: 48%;
+    margin-bottom: 20px; }
+    .body--custom .popup-block__form .input-wrapper input {
+      border: none; }
+      .body--custom .popup-block__form .input-wrapper input:focus {
+        border: none; }
   .body--custom .container {
     max-width: 1170px;
     margin: 0 auto;
