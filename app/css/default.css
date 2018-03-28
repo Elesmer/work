@@ -11488,7 +11488,7 @@ li.fancybox-thumbs-loading {
 .gifts-section__video-block {
     position: fixed;
     bottom: 40px;
-    left: 35px;
+    right: 35px;
     z-index: 100;
 }
 .gifts-section__video-block .video-link {

@@ -4911,6 +4911,15 @@
       -ms-flex-pack: center;
           justify-content: center; }
 
+.body--custom .cart__p--number {
+  margin-top: 25px;
+  font-size: 15px; }
+  .body--custom .cart__p--number strong {
+    font-weight: bold; }
+  .body--custom .cart__p--number b {
+    font-weight: normal;
+    color: #ccc; }
+
 /* Font for coding only */
 /* Work styles */
 body {
@@ -5881,7 +5890,6 @@ a {
     margin-bottom: 0; }
   .body--custom .title__background {
     background-repeat: no-repeat;
-    background-image: url(../img/Photo.png);
     position: relative;
     -webkit-background-size: cover;
             background-size: cover;
@@ -5930,6 +5938,9 @@ a {
             border-radius: 100px;
     background: #fff;
     margin-top: -70px; }
+  .body--custom .title__background--register {
+    background-image: url(../img/PRO-70.jpg);
+    background-position: 0 -200px; }
   .body--custom .title__time {
     position: relative;
     z-index: 50;
