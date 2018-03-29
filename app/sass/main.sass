@@ -33,6 +33,51 @@ a
 
 	/* Custom styles */
 
+.text-input
+	background: #e8e8e8
+  line-height: normal
+  color: #000
+  border-radius: 23.5px
+  border: 1px solid transparent
+  padding-left: 0
+  padding-right: 0
+  width: 100%
+  box-shadow: inset 0 0 5px 0 rgba(0,0,0,.05)
+
+.popup-block__form:not(:last-child)
+	margin-bottom: 20px
+
+.popup-block__form
+	.form-row
+		display: flex
+		-webkit-box-orient: horizontal
+		-webkit-box-direction: normal
+		-ms-flex-direction: row
+		flex-direction: row
+		-webkit-box-pack: justify
+		-webkit-justify-content: space-between
+		-moz-box-pack: justify
+		-ms-flex-pack: justify
+		justify-content: space-between
+		-webkit-box-align: center
+		-webkit-align-items: center
+		-moz-box-align: center
+		-ms-flex-align: center
+		align-items: center
+		-webkit-flex-wrap: wrap
+		-ms-flex-wrap: wrap
+		flex-wrap: wrap
+
+	.input-wrapper
+		width: 48%
+		margin-bottom: 20px
+
+		input
+			border: none
+
+			&:focus
+				border: none
+
 .body--custom
 
 	a
@@ -1302,51 +1347,6 @@ a
 		text-align: left
 		color: #ffffff
 		width: 90%
-
-	.text-input
-		background: #e8e8e8
-    line-height: normal
-    color: #000
-    border-radius: 23.5px
-    border: 1px solid transparent
-    padding-left: 0
-    padding-right: 0
-    width: 100%
-    box-shadow: inset 0 0 5px 0 rgba(0,0,0,.05)
-
-	.popup-block__form:not(:last-child)
-		margin-bottom: 20px
-
-	.popup-block__form
-		.form-row
-			display: flex
-			-webkit-box-orient: horizontal
-			-webkit-box-direction: normal
-			-ms-flex-direction: row
-			flex-direction: row
-			-webkit-box-pack: justify
-			-webkit-justify-content: space-between
-			-moz-box-pack: justify
-			-ms-flex-pack: justify
-			justify-content: space-between
-			-webkit-box-align: center
-			-webkit-align-items: center
-			-moz-box-align: center
-			-ms-flex-align: center
-			align-items: center
-			-webkit-flex-wrap: wrap
-			-ms-flex-wrap: wrap
-			flex-wrap: wrap
-
-		.input-wrapper
-			width: 48%
-			margin-bottom: 20px
-
-			input
-				border: none
-
-				&:focus
-					border: none
 
 	.program__img--big
 		width: 100%
