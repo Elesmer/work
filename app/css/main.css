@@ -4940,6 +4940,214 @@ a {
   a:hover {
     text-decoration: none; }
 
+.award__progressbar-desc {
+  width: 100%; }
+
+.progressbar__green-desc {
+  width: 25%; }
+
+.progressbar__green-yellow-desc {
+  width: 15%; }
+
+.progressbar__yellow-orange-desc {
+  width: 25%; }
+
+.progressbar__orange-red-desc {
+  width: 35%; }
+
+.award__progressbar-desc {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.progressbar__unit-number {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .progressbar__unit-number img {
+    max-height: 19px;
+    max-width: 25px; }
+
+.unit__img {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .unit__img img {
+    max-height: 19px;
+    max-width: 25px; }
+
+.progressbar__unit-number--between {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.unit-number__h4 {
+  margin: 0;
+  font-family: 'BebasNeue', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #cfcfcf;
+  margin-left: 5px;
+  text-transform: uppercase; }
+
+.award__users-count .right-caption--custom {
+  opacity: 0.7;
+  font-family: 'OpenSans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(197, 119, 72, 0.7); }
+
+.progressbar__wrapper {
+  position: relative; }
+
+.award__progressbar-desc {
+  margin-bottom: 25px; }
+
+.award__progressbar {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+  float: left; }
+  .award__progressbar .gradient__h4 {
+    margin: 0;
+    color: #fff;
+    font-family: 'HelveticaNeueCyr', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 11.08;
+    letter-spacing: normal;
+    text-align: left;
+    text-transform: uppercase; }
+
+.progressbar__point {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -4px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 0 12.4px 0.7px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 12.4px 0.7px rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 100px;
+          border-radius: 100px;
+  z-index: 500; }
+
+.progressbar__green {
+  width: 25%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#00bf00), to(#a6cf00));
+  background-image: -webkit-linear-gradient(left, #00bf00, #a6cf00);
+  background-image: -o-linear-gradient(left, #00bf00, #a6cf00);
+  background-image: linear-gradient(to right, #00bf00, #a6cf00);
+  float: left;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.progressbar__green-yellow {
+  width: 15%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#a6cf00), to(#ffff00));
+  background-image: -webkit-linear-gradient(left, #a6cf00, #ffff00);
+  background-image: -o-linear-gradient(left, #a6cf00, #ffff00);
+  background-image: linear-gradient(to right, #a6cf00, #ffff00);
+  float: left;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.progressbar__yellow-orange {
+  width: 25%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(1%, #ffff00), to(#ff9000));
+  background-image: -webkit-linear-gradient(left, #ffff00 1%, #ff9000);
+  background-image: -o-linear-gradient(left, #ffff00 1%, #ff9000);
+  background-image: linear-gradient(to right, #ffff00 1%, #ff9000);
+  float: left;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.progressbar__orange-red {
+  width: 35%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ff9000), to(#ff6b23));
+  background-image: -webkit-linear-gradient(left, #ff9000, #ff6b23);
+  background-image: -o-linear-gradient(left, #ff9000, #ff6b23);
+  background-image: linear-gradient(to right, #ff9000, #ff6b23);
+  float: left;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .text-input {
   background: #e8e8e8;
     background-line-height: normal;
@@ -7140,3 +7348,13 @@ a {
   @media screen and (max-width: 350px) {
     .body--custom .column div {
       font-size: 8px; } }
+
+@media screen and (max-width: 780px) {
+  .award__progressbar-desc {
+    display: none; }
+  .award__go-button--custom {
+    margin-top: 70px; } }
+
+@media screen and (max-width: 560px) {
+  .gradient__h4 {
+    display: none; } }
