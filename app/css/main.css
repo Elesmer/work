@@ -4932,12 +4932,6 @@ body {
 .body--tickets {
   background: #f0f0f0; }
 
-p {
-  color: #111111; }
-
-a:hover {
-  text-decoration: none; }
-
 /* Custom styles */
 .gifts-section__nav {
   display: -webkit-flex;
@@ -5272,6 +5266,10 @@ a:hover {
   /* Registered page */
   /* Program page */
   /* New register page */ }
+  .body--custom p {
+    color: #111111; }
+  .body--custom a:hover {
+    text-decoration: none; }
   .body--custom a {
     color: #fff; }
   .body--custom .parallax-container--custom {
@@ -6865,6 +6863,9 @@ a:hover {
     .body--custom .chart-buy__h3--custom {
       width: 100%; } }
   @media screen and (min-width: 1240px) {
+    .body--custom .for-partners__top::before, .body--custom .for-partners__top::after {
+      display: block;
+      opacity: 1; }
     .body--custom .inside-section__right--custom .inner-content {
       display: -webkit-flex;
       display: -ms-flex;
