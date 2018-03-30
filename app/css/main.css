@@ -5433,7 +5433,7 @@ a:hover {
             transform: translate(-50%, -50%);
     top: 50%;
     right: -70px;
-    background-image: url(../img/icons-8-filled-500.png);
+    background-image: url(../img/icons/lock-icon-small.png);
     background-repeat: no-repeat;
     -webkit-background-size: 100% 100%;
             background-size: 100%; }
@@ -6166,7 +6166,7 @@ a:hover {
     .body--custom .program__data-number:last-child {
       margin-left: 50px; }
       .body--custom .program__data-number:last-child::before {
-        background-image: url(../img/poin-icon.png);
+        background-image: url(../img/icons/poin-icon.png);
         height: 27px; }
     .body--custom .program__data-number::before {
       content: "";
@@ -6179,7 +6179,7 @@ a:hover {
       -webkit-transform: translate(0, -50%);
           -ms-transform: translate(0, -50%);
               transform: translate(0, -50%);
-      background-image: url(../img/clock-icon.png); }
+      background-image: url(../img/icons/clock-icon-small.png); }
   .body--custom .who-wisited {
     background-image: -webkit-linear-gradient(318deg, #fdaf81, #ff9e64);
     background-image: -o-linear-gradient(318deg, #fdaf81, #ff9e64);
@@ -6265,7 +6265,7 @@ a:hover {
     background: #fff;
     margin-top: -70px; }
   .body--custom .title__background--register {
-    background-image: url(../img/PRO-70.jpg);
+    background-image: url(../img/backgrounds/register-bg.jpg);
     background-position: 0 -200px; }
   .body--custom .title__time {
     position: relative;
@@ -6309,11 +6309,11 @@ a:hover {
   .body--custom .program__time--mobile {
     display: none; }
   .body--custom .title__background--food {
-    background-image: url(../img/image021.jpg);
+    background-image: url(../img/backgrounds/dinner-bg.jpg);
     -webkit-background-size: cover;
             background-size: cover; }
   .body--custom .title__background--restaurant {
-    background-image: url(../img/gala.jpg); }
+    background-image: url(../img/backgrounds/restourant-bg.jpg); }
   .body--custom .chart__button--party {
     width: 280px;
     margin-bottom: 120px;
@@ -6347,7 +6347,7 @@ a:hover {
     text-align: left; }
   .body--custom .contact__requisites {
     padding: 50px;
-    background-image: url(../img/photo-arena.png);
+    background-image: url(../img/backgrounds/contact-bg.png);
     position: relative; }
     .body--custom .contact__requisites::after {
       content: "";
@@ -6501,7 +6501,7 @@ a:hover {
   .body--custom .close-conf__image {
     width: 50%;
     position: relative;
-    background-image: url(../img/1.png);
+    background-image: url(../img/backgrounds/close-conf-bg.png);
     -webkit-background-size: cover;
             background-size: cover;
     padding: 55px;
@@ -6593,7 +6593,7 @@ a:hover {
   .body--custom .chart__a--exit {
     background: #d0d0d0; }
     .body--custom .chart__a--exit::after {
-      background-image: url(../img/exit-icon.png);
+      background-image: url(../img/icons/exit-icon.png);
       -webkit-background-size: 22px 22px;
               background-size: 22px;
       background-position: 20px 33px; }
