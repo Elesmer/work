@@ -33,6 +33,34 @@ a
 
 /* Custom styles */
 
+.gifts-section__nav
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	justify-content: space-between
+
+.gift__exit
+	width: 165px
+
+	.gift-exit__a
+		width: 100%
+		text-align: center
+		display: block
+		padding: 15px
+		font-family: 'HelveticaNeueCyr', sans-serif
+		font-size: 16px
+		font-weight: 300
+		font-style: normal
+		font-stretch: normal
+		line-height: normal
+		letter-spacing: 0.4px
+		text-align: center
+		color: #000
+		background: #fff
+
+		&::before
+			display: none
+
 .cabinet__wrapper
 	margin-left: 25px
 	display: -webkit-flex
@@ -55,6 +83,11 @@ a
 		line-height: normal
 		letter-spacing: normal
 		text-align: center
+		transition: 0.5s
+
+		&:hover
+			border-color: transparent
+			transition: 0.5s
 
 	.btn
 		margin: 0
@@ -1524,6 +1557,47 @@ a
 
 	.program__img--big
 		width: 100%
+
+	.row--exit
+		width: 100%
+		float: left
+
+	.exit-button-wrapper
+		width: 100%
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		float: left
+		margin: 30px 0
+
+		.chart__button--exit
+			width: 50%
+			border: none
+			background: #d0d0d0
+
+			&:hover
+				border: none
+
+			a
+				font-family: 'HelveticaNeueCyr', sans-serif
+				font-size: 16px
+				font-weight: 300
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: 0.4px
+				text-align: center
+				color: #323232
+
+	.chart__a--exit
+		background: #d0d0d0
+
+		&::after
+			background-image: url(../img/exit-icon.png)
+			background-size: 22px
+			background-position: 20px 33px
 
 	// Always at the end
 	@import "media"

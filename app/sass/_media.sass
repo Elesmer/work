@@ -91,7 +91,8 @@
 	+size-md(6)
 	+size-sm(12)
 
-.get-ticket
+.get-ticket,
+.exit-button-wrapper
 	+col()
 	+size(12)
 
@@ -274,6 +275,12 @@
 		margin-top: 0
 
 @media screen and (max-width: 780px)
+
+	.exit-button-wrapper
+		.chart__button--exit
+			width: 80%
+			margin-right: 0
+			margin-bottom: 0
 
 	.close-conf__image,
 	.close-conf__info
@@ -554,6 +561,17 @@
 		margin-top: 50px
 
 @media screen and (max-width: 560px)
+
+	.exit-button-wrapper
+		.chart__button--exit
+			margin-left: 0
+			margin-bottom: 0
+
+		.chart__a--exit
+			width: 90%
+
+			&::after
+				right: -115px
 
 	.close-conf__h3,
 	.close-conf__h2

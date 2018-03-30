@@ -4939,6 +4939,37 @@ a:hover {
   text-decoration: none; }
 
 /* Custom styles */
+.gifts-section__nav {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.gift__exit {
+  width: 165px; }
+  .gift__exit .gift-exit__a {
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 15px;
+    font-family: 'HelveticaNeueCyr', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: #000;
+    background: #fff; }
+    .gift__exit .gift-exit__a::before {
+      display: none; }
+
 .cabinet__wrapper {
   margin-left: 25px;
   display: -webkit-flex;
@@ -4968,7 +4999,15 @@ a:hover {
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
-    text-align: center; }
+    text-align: center;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
+    .cabinet__wrapper .cabinet__a:hover {
+      border-color: transparent;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s; }
   .cabinet__wrapper .btn {
     margin: 0; }
 
@@ -6515,6 +6554,49 @@ a:hover {
     width: 90%; }
   .body--custom .program__img--big {
     width: 100%; }
+  .body--custom .row--exit {
+    width: 100%;
+    float: left; }
+  .body--custom .exit-button-wrapper {
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    float: left;
+    margin: 30px 0; }
+    .body--custom .exit-button-wrapper .chart__button--exit {
+      width: 50%;
+      border: none;
+      background: #d0d0d0; }
+      .body--custom .exit-button-wrapper .chart__button--exit:hover {
+        border: none; }
+      .body--custom .exit-button-wrapper .chart__button--exit a {
+        font-family: 'HelveticaNeueCyr', sans-serif;
+        font-size: 16px;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.4px;
+        text-align: center;
+        color: #323232; }
+  .body--custom .chart__a--exit {
+    background: #d0d0d0; }
+    .body--custom .chart__a--exit::after {
+      background-image: url(../img/exit-icon.png);
+      -webkit-background-size: 22px 22px;
+              background-size: 22px;
+      background-position: 20px 33px; }
   .body--custom .container {
     max-width: 1170px;
     margin: 0 auto;
@@ -6738,7 +6820,8 @@ a:hover {
       .body--custom .price-card {
         width: -webkit-calc(100% - 30px);
         width: calc(100% - 30px); } }
-  .body--custom .get-ticket {
+  .body--custom .get-ticket,
+  .body--custom .exit-button-wrapper {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     word-wrap: break-word;
@@ -6914,6 +6997,10 @@ a:hover {
     .body--custom .chart__button--buy-free {
       margin-top: 0; } }
   @media screen and (max-width: 780px) {
+    .body--custom .exit-button-wrapper .chart__button--exit {
+      width: 80%;
+      margin-right: 0;
+      margin-bottom: 0; }
     .body--custom .close-conf__image,
     .body--custom .close-conf__info {
       width: 100%; }
@@ -7199,6 +7286,13 @@ a:hover {
     .body--custom .row--register {
       margin-top: 50px; } }
   @media screen and (max-width: 560px) {
+    .body--custom .exit-button-wrapper .chart__button--exit {
+      margin-left: 0;
+      margin-bottom: 0; }
+    .body--custom .exit-button-wrapper .chart__a--exit {
+      width: 90%; }
+      .body--custom .exit-button-wrapper .chart__a--exit::after {
+        right: -115px; }
     .body--custom .close-conf__h3,
     .body--custom .close-conf__h2 {
       text-align: center; }
