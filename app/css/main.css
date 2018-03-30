@@ -4935,10 +4935,42 @@ body {
 p {
   color: #111111; }
 
-a {
-  /* Custom styles */ }
-  a:hover {
-    text-decoration: none; }
+a:hover {
+  text-decoration: none; }
+
+/* Custom styles */
+.cabinet__wrapper {
+  margin-left: 25px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .cabinet__wrapper .cabinet__a {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+    display: block;
+    width: 60%;
+    font-family: 'OpenSans', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center; }
+  .cabinet__wrapper .btn {
+    margin: 0; }
 
 .award__progressbar-desc {
   width: 100%; }
@@ -7250,7 +7282,7 @@ a {
       margin: 100px 0 20px 0; }
     .body--custom .header__h2-wrapper--program .chart__h2 {
       font-size: 22px;
-      padding: 0 0 150px 0;
+      padding: 0 0 80px 0;
       width: 100%; }
     .body--custom .forum-new-build {
       width: 100%; }
@@ -7285,13 +7317,13 @@ a {
           -ms-flex-align: center;
               align-items: center; }
       .body--custom .row-header .chart__logo {
-        background-image: url(../img/logo-small.png);
+        background-image: url(../img/logo-white.png);
         background-repeat: no-repeat;
         -webkit-background-size: contain;
                 background-size: contain;
         background-position: 50% 0;
         margin-bottom: 0;
-        min-width: 30%; }
+        min-width: 60%; }
         .body--custom .row-header .chart__logo img {
           display: none; }
     .body--custom .chart__button {
