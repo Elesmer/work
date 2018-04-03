@@ -6714,7 +6714,10 @@ body {
         text-align: center;
         font-size: 20px; }
   .body--custom .take-number__input:focus {
-    background: #cfcfcf !important; }
+    background: #cfcfcf !important;
+    border: none !important;
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important; }
   .body--custom .btn--take-number {
     width: -webkit-calc(60% + 40px);
     width: calc(60% + 40px);
