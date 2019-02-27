@@ -1,72 +1,73 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-	<head>
+<head>
+	<meta charset="utf-8">
+	<title>Pages navigation</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/triangle.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/favicon.png">
+	<!-- Template Basic Images End -->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=cyrillic" rel="stylesheet">
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	<link href="libs/uikit/uikit.min.css" rel="stylesheet">
+	<link href="css/main.min.css" rel="stylesheet">
+</head>
 
-		<meta charset="utf-8">
+<body class="">
+	<style>
+		body * {
+			font-family: 'Ubuntu', sans-serif !important;
+		}
 
-		<title>Novobudovy</title>
-		<meta name="description" content="">
+		h1 {
+			font-weight: bold;
+		}
 
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		.uk-button {
+			background: #fff;
+			color: #222;
+		}
 
-		<!-- Template Basic Images Start -->
-		<meta property="og:image" content="path/to/image.jpg">
-		<link rel="icon" href="img/favicon/favicon.ico">
-		<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
-		<!-- Template Basic Images End -->
+		.uk-button:hover {
+			background: #85c83b;
+			border-color: #85c83b;
+			color: #fff;
+		}
 
-		<!-- Custom Browsers Color Start -->
-		<meta name="theme-color" content="#000">
-		<!-- Custom Browsers Color End -->
+		.index-image-wrapper {
+			width: 100%;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+			justify-content: center;
+		}
 
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/animate.css">
-		<!-- <link rel="stylesheet" href="css/materialize.css"> -->
-		<link rel="stylesheet" href="css/main.css">
-
-	</head>
-
-	<body class="body--custom">
-
-		<!-- Custom HTML -->
-
-		<div class="container">
-
-			<!-- If big project -->
-
-			<style>
-				.big-project-ul {
-					list-style-type: georgian;}
-				.big-project-li {
-					padding-left: 10px;position: relative;padding: 20px 0;}
-				.big-project-a {
-					text-transform: uppercase;font-weight: bold;color: #121212 !important;padding-bottom: 2px;border-bottom: 1px dotted #121212;transition: 0.5s;}
-				.big-project-a:hover {
-					border-bottom: 1px dotted transparent;transition: 0.5s;}
-			</style>
-
-			<ul class="big-project-ul">
-				<li class="big-project-li"><a href="ticket.html" class="big-project-a">Квиток</a></li>
-				<li class="big-project-li"><a href="registered-old.html" class="big-project-a">Зареєстрований! (Стара сторінка)</a></li>
-				<li class="big-project-li"><a href="registered-new.html" class="big-project-a">Зареєстрований! (Нова сторінка)</a></li>
-				<li class="big-project-li"><a href="complete-2-fiends.html" class="big-project-a">Зареєстровано 2 друга</a></li>
-				<li class="big-project-li"><a href="complete-4-friends.html" class="big-project-a">Зареєстровано 4 друга</a></li>
-				<li class="big-project-li"><a href="program.html" class="big-project-a">Сторінка програми</a></li>
-				<li class="big-project-li"><a href="block-for-main.html" class="big-project-a">Блок для головної сторінки</a></li>
-				<li class="big-project-li"><a href="progressbar-main.html" class="big-project-a">[ГОЛОВНА] Новий блок з прогрессбаром на головній</a></li>
-				<li class="big-project-li"><a href="first-screen-main.html" class="big-project-a">[ГОЛОВНА] Кнопка вийти з кабінету головна</a></li>
-				<li class="big-project-li"><a href="gift-page-new.html" class="big-project-a">[СТОРІНКА ПОДАРУНКУ] Кнопка вийти з кабінету головна</a></li>
-				<li class="big-project-li"><a href="100k-exit-button.html" class="big-project-a">[СТОРІНКА 100K] Кнопка вийти з кабінету</a></li>
-				<li class="big-project-li"><a href="take-number.html" class="big-project-a">Сторінка "Залиште свій номер"</a></li>
-			</ul>
-
+		.index-image-wrapper img {
+			width: 60%;
+		}
+	</style>
+	<!-- Custom HTML -->
+	<div class="uk-container">
+		<div class="index-image-wrapper">
+			<img src="https://raw.githubusercontent.com/Elesmer/Elesmera-start-templete/master/app/img/preview.jpg" alt="">
 		</div>
-
-		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-		<script src="js/scripts.min.js"></script>
-
-	</body>
+		<ul class="uk-list">
+			<li>
+				<a class="uk-button uk-button-default uk-button-large" href="#">Link</a>
+			</li>
+		</ul>
+	</div>
+	<script src="js/scripts.min.js"></script>
+</body>
 
 </html>
