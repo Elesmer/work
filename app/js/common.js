@@ -2,7 +2,6 @@ jQuery(document).ready(function($) {
 
   // About us carousel init
 
-
   $('.about-us__carousel').owlCarousel({
     loop: true,
     items: 1,
@@ -10,7 +9,6 @@ jQuery(document).ready(function($) {
     dots: false,
     autoplay: true
   });
-
 
   // About us carousel nav
 
@@ -22,4 +20,10 @@ jQuery(document).ready(function($) {
   $('.about-us__prev').click(function() {
     aboutUsCarouselNav.trigger('prev.owl.carousel', [300]);
   })
+
+  // Orders tabs init
+
+  $('.order__tabs').tabs({
+    // swipeable: true
+  });
 });

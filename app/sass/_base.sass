@@ -56,5 +56,71 @@ section
 p
 	font-size: 1.125rem
 
+a
+	outline: none
+
 .container
+	width: 1400px
 	max-width: 1400px
+
+.container-large
+	width: 90%
+	max-width: 1600px
+
+.grid
+	display: grid
+
+.link
+	color: $heading-c
+	text-transform: uppercase
+	position: relative
+	padding-right: 30px
+	font-family: $os-c
+	font-size: 1.125rem
+
+	&:hover
+		&::after
+			right: -5px
+
+	&::after
+		transition: 0.5s
+		content: ''
+		position: absolute
+		height: 15px
+		width: 15px
+		top: calc(50% - 30px)
+		right: 0
+		background-repeat: no-repeat
+		background-position: 50% 50%
+		background-image: url('../img/link-arrow.png')
+
+.link--button
+	padding: 12px 80px 12px 45px
+	border: 2px solid $grey
+	line-height: 24px
+	background-color: transparent
+	box-shadow: none
+	border-radius: none
+
+	&:active,
+	&:focus
+		background-color: transparent
+		box-shadow: none
+
+	&:hover
+		background-color: transparent
+		border-color: $heading-c
+		box-shadow: none
+
+		&::after
+			right: 35px
+
+	&::after
+		right: 40px
+		top: 35%
+
+.carousel
+	height: 630px !important
+
+.waves-effect.waves-accent .waves-ripple
+  background-color: rgba($grey, .8)
