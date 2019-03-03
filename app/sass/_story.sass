@@ -1,0 +1,88 @@
+.story
+  position: relative
+
+  &::after
+    content: ''
+    height: 100%
+    background: $light-grey
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    max-width: 800px
+
+.container--story
+  position: relative
+  z-index: 20
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+
+.story__content
+  margin-top: 50px
+  width: 100%
+  grid-template-columns: 50% 50%
+  grid-column-gap: 130px
+
+.story__img
+  max-height: 600px
+
+  img
+    max-width: 100%
+    height: auto
+    object-fit: cover
+
+.story__info
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
+  position: relative
+
+.story__quote
+  margin: 0
+  font-family: $theano
+  font-size: 18.75rem
+  line-height: 0
+  color: $light-grey
+
+.story__p
+  font-family: $os
+  font-size: 2.0625rem
+  line-height: 50px
+  font-weight: 300
+  color: #6a6a74
+  margin: 0 250px 0 0
+
+  strong,
+  b
+    font-family: $os
+    font-weight: lighter
+    font-style: normal
+    font-style: none
+    position: relative
+    background: -moz-linear-gradient(top, hsla(55,84%,57%,0) 0%, hsla(55,84%,57%,0) 49%, hsla(55,84%,57%,1) 52%, hsla(55,84%,57%,1) 100%)
+    background: -webkit-linear-gradient(top, hsla(55,84%,57%,0) 0%,hsla(55,84%,57%,0) 49%,hsla(55,84%,57%,1) 52%,hsla(55,84%,57%,1) 100%)
+    background: linear-gradient(to bottom, hsla(55,84%,57%,0) 0%,hsla(55,84%,57%,0) 49%,hsla(55,84%,57%,1) 52%,hsla(55,84%,57%,1) 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00edde34', endColorstr='#edde34',GradientType=0 )
+
+.story__name
+  h4
+    font-weight: 400
+    color: $heading-c
+    letter-spacing: 2.4px
+    font-size: 1.5rem
+    font-family: $os-c
+    margin: 50px 0 0 0
+
+  h5
+    font-family: $os
+    font-size: 0.9375rem
+    font-weight: 300
+    line-height: 30px
+    color: #979da3
+    margin: 0

@@ -1,0 +1,26 @@
+.videos
+  .tab__link-wrapper
+    margin-top: 30px
+
+.videos__wrapper
+  grid-template-columns: 1fr 1fr 1fr
+  grid-column-gap: 40px
+  width: 100%
+  margin-top: 40px
+
+.videos__item
+  .tab-item
+    max-height: 280px
+
+  h5
+    color: $heading-c
+    font-weight: 700
+    line-height: 28px
+    font-size: 1.0625rem
+    font-family: $os
+    margin-top: 25px
+    max-width: 420px
+    transition: color .5s
+
+    &:hover
+      color: lighten($heading-c, 10%)

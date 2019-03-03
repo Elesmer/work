@@ -1,3 +1,8 @@
+@media only screen and (max-width : 1600px)
+  .videos__item
+    .tab-item
+      height: 200px
+
 @media only screen and (max-width : 1400px)
   .about-us__prev
     left: -35px
@@ -12,10 +17,68 @@
   .container-large
     width: 90%
 
+  .story
+    &::after
+      width: 30%
+
 @media only screen and (max-width : 1200px)
-	/**/
+  .story
+    &::after
+      display: none
+
+  .story__content
+    grid-template-columns: repeat(auto-fill, minmax(250px, 100%))
+
+  .story__quote
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%, 0%)
+    line-height: 19.75rem
+
+  .story__p
+    margin-top: 150px
+    margin-right: 0
+    text-align: center
+
+  .story__name
+    margin: 0 auto
+
+  .story__img
+    max-height: 500px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: center
 
 @media only screen and (max-width : 960px)
+  .videos__wrapper
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+
+  .write-wrapper
+    grid-template-columns: repeat(auto-fill , minmax(100%, 100%))
+
+  .write
+    .submit
+      margin: 30px 0
+
+  .write__man
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    order: 2
+    position: relative
+
+    img
+      position: static
+
+  html
+    font-size: 14px
+
+  .order__tab-content .link
+    margin-top: 30px
 
   section
     padding: 40px 0
@@ -34,7 +97,23 @@
         &:hover
           transform: none
 
+  .story__p
+    margin-top: 130px
+
 @media only screen and (max-width : 640px)
+
+  .story__p
+    margin-top: 120px
+
+  .container
+    width: 90%
+
+  .write-form
+    grid-template-columns: repeat(auto-fit, minmax(100px, 100%))
+
+  .write__textarea
+    grid-column-start: 1
+    grid-column-end: 1
 
   h2
     font-size: 2.2rem
@@ -49,9 +128,3 @@
   h2
     line-height: 50px
     margin-top: 15px
-
-@media only screen and (max-width : 480px)
-	/**/
-
-@media only screen and (max-width : 320px)
-  /**/

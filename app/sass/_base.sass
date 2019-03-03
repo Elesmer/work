@@ -2,7 +2,7 @@
 	color: #666
 
 ::selection
-	background-color: $accent
+	background-color: $yellow
 	color: #fff
 
 html
@@ -52,6 +52,8 @@ h2
 
 section
 	padding: 110px 0
+	float: left
+	width: 100%
 
 p
 	font-size: 1.125rem
@@ -76,7 +78,6 @@ a
 	position: relative
 	padding-right: 30px
 	font-family: $os-c
-	font-size: 1.125rem
 
 	&:hover
 		&::after
@@ -101,6 +102,7 @@ a
 	background-color: transparent
 	box-shadow: none
 	border-radius: none
+	font-size: 1.125rem
 
 	&:active,
 	&:focus
@@ -124,3 +126,54 @@ a
 
 .waves-effect.waves-accent .waves-ripple
   background-color: rgba($grey, .8)
+
+.submit
+	background-color: $yellow
+	border: none
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	position: relative
+	box-sizing: border-box
+	max-width: 150px
+	margin-top: 40px
+	cursor: pointer
+	transition: background-color .5s
+
+	&:hover
+		background-color: rgba($yellow, .9)
+
+		&::after
+			right: 35px
+
+	&::after
+		content: ''
+		height: 30px
+		width: 30px
+		position: absolute
+		background-image: url('../img/write/paper-plane.png')
+		background-repeat: no-repeat
+		right: 40px
+		top: 30%
+		transition: right .5s
+
+input[type="submit"]
+	padding: 20px 80px 20px 20px
+	min-width: 150px
+	display: block
+	font-size: 1.125rem
+	background-color: transparent
+	color: $heading-c
+	font-family: $os-c
+	position: relative
+	z-index: 100
+	cursor: pointer
+	text-transform: uppercase
+	outline: none
+	border: none
+
+input[type="submit"]:-moz-focusring
+	outline: none
+
+.float-left
+	text-align: left
