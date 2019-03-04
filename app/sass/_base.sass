@@ -73,7 +73,6 @@ a
 	display: grid
 
 .link
-	color: $heading-c
 	text-transform: uppercase
 	position: relative
 	padding-right: 30px
@@ -87,15 +86,15 @@ a
 		transition: 0.5s
 		content: ''
 		position: absolute
-		height: 15px
+		height: 100%
 		width: 15px
-		top: calc(50% - 30px)
 		right: 0
 		background-repeat: no-repeat
 		background-position: 50% 50%
 		background-image: url('../img/link-arrow.png')
 
 .link--button
+	color: $heading-c
 	padding: 12px 80px 12px 45px
 	border: 2px solid $grey
 	line-height: 24px
@@ -119,7 +118,7 @@ a
 
 	&::after
 		right: 40px
-		top: 35%
+		top: 0
 
 .carousel
 	height: 630px !important
