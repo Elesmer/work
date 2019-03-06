@@ -1,0 +1,36 @@
+.contact
+  padding: 25px 0
+  background-image: url('../img/contacts/houseBig.jpg')
+  background-repeat: no-repeat
+  position: relative
+  background-size: cover
+
+  &::after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($heading-c, .9)
+
+.contacts__header
+  grid-template-columns: auto auto auto
+  grid-gap: 14.323vw
+
+.contacts__nav
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr))
+
+.contacts__name
+  h2
+    margin: 0
+    font-family: $didot
+    text-transform: uppercase
+    line-height: 100px
+    font-size: 1.875rem
+    letter-spacing: 6px
+    color: #fff
+
+.contact__content
+  position: relative
+  z-index: 50
