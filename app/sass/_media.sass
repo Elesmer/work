@@ -36,6 +36,10 @@
     &::after
       display: none
 
+  .articles__wrapper
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+    grid-row-gap: 40px
+
   .story__content
     grid-template-columns: repeat(auto-fill, minmax(250px, 100%))
 
@@ -62,6 +66,12 @@
     justify-content: center
 
 @media only screen and (max-width : 960px)
+  .article__img-wrapper
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
   .news__carousel-nav
     grid-template-columns: 75px 75px
     position: static

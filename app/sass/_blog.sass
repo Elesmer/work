@@ -1,0 +1,52 @@
+.blog
+  .tab__link-wrapper
+    margin-top: 60px
+
+.articles__wrapper
+  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-column-gap: 40px
+
+.article
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1)
+  transition: box-shadow .5s
+
+  &:hover
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2)
+
+    img
+      transform: scale(1.1)
+
+.article__img-wrapper
+  height: 240px
+  max-height: 240px
+  overflow: hidden
+  position: relative
+
+  img
+    position: absolute
+    object-fit: fill
+    height: 100%
+    width: auto
+    transition: transform 1s
+
+.article__info
+  padding: 40px 30px
+  float: left
+
+  .date-heading
+    margin-top: 0
+
+  h3
+    font-size: 1.0625rem
+    text-align: left
+    font-family: $os
+    text-transform: none
+    line-height: 28px
+    color: $heading-c
+    font-weight: bold
+    letter-spacing: 0
+    max-width: 280px
+    transition: .5s
+
+    &:hover
+      color: lighten($heading-c, 10%)
