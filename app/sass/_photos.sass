@@ -1,5 +1,5 @@
 .photos
-  padding-top: 0
+  padding: 0
 
 .gallery
   grid-template-columns: 1fr 1fr 1fr 1fr
@@ -17,13 +17,31 @@
 
 .gallery__item
   overflow: hidden
+  position: relative
 
-  &:hover
-    img
-      transform: scale(1.1)
+  .modal-trigger
+    position: relative
+    height: 100%
+    width: 100%
+    float: left
+
+    &:hover
+      &::after
+        opacity: 1
+        transition: opacity .5s
+
+    &::after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background: rgba($accent, .7)
+      opacity: 0
 
   img
     width: 100%
     object-fit: cover
     height: 100%
-    transition: transform .5s
+    float: left

@@ -25,6 +25,9 @@
       min-height: 200px
 
 @media only screen and (max-width : 1400px)
+  .footer__content-wrapper
+    grid-template-columns: 48% auto
+
   .news__carousel-item
     .news__info
       padding: 50px
@@ -53,6 +56,10 @@
       width: 30%
 
 @media only screen and (max-width : 1200px)
+  .footer__content-wrapper
+    grid-template-columns: repeat(auto-fit, minmax(280px, 100%))
+    grid-row-gap: 20px
+
   .map
     height: 400px
 
@@ -121,6 +128,21 @@
     justify-content: center
 
 @media only screen and (max-width : 960px)
+  .copyright
+    text-align: center
+
+  .gallery__item
+    margin: 0
+    float: left
+
+    img
+      transform: none !important
+      height: 100% !important
+      width: 100% !important
+
+  .gallery
+    grid-template-columns: repeat(auto-fill, minmax(1fr, 50%))
+
   .article-content
     .container
       iframe
@@ -238,6 +260,62 @@
     margin-top: 130px
 
 @media only screen and (max-width : 640px)
+  .footer__newsletter-form
+    grid-template-columns: repeat(auto-fill, minmax(200px, 100%))
+
+  .footer__newsletter-form
+    input:not([type]), input[type="text"]:not(.browser-default), input[type="password"]:not(.browser-default), input[type="email"]:not(.browser-default), input[type="url"]:not(.browser-default), input[type="time"]:not(.browser-default), input[type="date"]:not(.browser-default), input[type="datetime"]:not(.browser-default), input[type="datetime-local"]:not(.browser-default), input[type="tel"]:not(.browser-default), input[type="number"]:not(.browser-default), input[type="search"]:not(.browser-default), textarea.materialize-textarea
+      border-right: 1px solid #fff !important
+      margin-bottom: 15px
+
+    .submit
+      margin: 0
+      max-width: 100%
+
+    input[type="submit"]
+      padding: 20px 80px 20px 20px
+      width: 100%
+
+  .footer__nav
+    flex-direction: column
+    justify-content: center
+
+  .footer__branding
+    margin: 0
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+
+  .footer__ul
+    margin: 0
+    margin-bottom: 20px
+
+    li
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      justify-content: center
+
+      a
+        padding: 5px 0
+        text-align: center
+
+  .footer__address
+    align-items: center
+
+  .footer__newsletter
+    margin-top: 20px
+
+    h2,
+    p
+      text-align: center
+
+  .gallery
+    grid-template-columns: 1fr 1fr
+
   .article-content
     .container iframe
       max-height: 250px

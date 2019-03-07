@@ -1,0 +1,140 @@
+.footer
+  padding: 70px 0 0 0
+  background-color: $heading-c
+  float: left
+  width: 100%
+
+  .contacts__name--footer
+    h2
+      line-height: 1.875rem
+
+.footer__content-wrapper
+  grid-template-columns: 55% auto
+  grid-column-gap: 150px
+
+.copyright
+  color: #797e8c
+  font-size: 0.875rem
+  max-width: 200px
+  margin: 30px 0
+
+.footer__nav
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+
+.footer__branding
+  margin-right: 70px
+
+.footer__ul
+  margin: 0 70px 0 0
+
+  li
+    a
+      color: #fff
+      font-family: $os
+      font-size: 1.0625rem
+      font-weight: 400
+      line-height: 33px
+      transition: color .5s
+
+      &:hover
+        color: darken(#fff, 30%)
+
+.footer__address
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+
+  p
+    margin: 0 0 30px 0
+    color: #fff
+    font-size: 1rem
+    font-weight: 400
+    line-height: 24px
+    font-family: $os
+    max-width: 280px
+
+  .contacts__phone
+    margin-bottom: 20px
+
+  .contacts__mail,
+  .contacts__phone
+    padding-left: 0
+
+    &::before
+      display: none
+
+.footer__newsletter
+  h2
+    color: #fff
+    font-size: 1.875rem
+    line-height: 1.875rem
+    font-family: $didot
+    text-align: left
+    margin: 0
+
+  p
+    color: #fff
+    font-size: 1rem
+    margin: 15px 0 30px 0
+    font-family: $os
+
+.footer__newsletter-form
+  grid-template-columns: auto 190px
+
+  input[type="submit"]
+    padding: 0px 80px 0px 20px
+
+  .submit
+    margin: 0
+    max-width: 190px
+    float: left
+
+    &::after
+      right: 30px
+
+    &:hover
+      &::after
+        right: 25px
+
+  input:not([type]), input[type="text"]:not(.browser-default), input[type="password"]:not(.browser-default), input[type="email"]:not(.browser-default), input[type="url"]:not(.browser-default), input[type="time"]:not(.browser-default), input[type="date"]:not(.browser-default), input[type="datetime"]:not(.browser-default), input[type="datetime-local"]:not(.browser-default), input[type="tel"]:not(.browser-default), input[type="number"]:not(.browser-default), input[type="search"]:not(.browser-default), textarea.materialize-textarea
+    border: 1px solid #fff
+    border-right: none
+    height: 18px
+    padding: 20px 25px
+    margin: 0
+    width: auto
+    box-shadow: none !important
+
+    &::placeholder
+      color: #fff
+      opacity: .3
+      transition: opacity .5s
+
+    &:focus
+      &::placeholder
+        opacity: 1
+
+  input:not([type]):focus:not([readonly]), input[type="text"]:not(.browser-default):focus:not([readonly]), input[type="password"]:not(.browser-default):focus:not([readonly]), input[type="email"]:not(.browser-default):focus:not([readonly]), input[type="url"]:not(.browser-default):focus:not([readonly]), input[type="time"]:not(.browser-default):focus:not([readonly]), input[type="date"]:not(.browser-default):focus:not([readonly]), input[type="datetime"]:not(.browser-default):focus:not([readonly]), input[type="datetime-local"]:not(.browser-default):focus:not([readonly]), input[type="tel"]:not(.browser-default):focus:not([readonly]), input[type="number"]:not(.browser-default):focus:not([readonly]), input[type="search"]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly])
+    border-color: #fff
+
+.dev
+  width: 100%
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: center
+  background-color: #0c1731
+  margin-top: 50px
+
+  p
+    color: #797e8c
+    font-size: 1rem
+    font-family: $os
+
+  a
+    color: #005aff
+    font-size: 1rem
+    font-family: $os
