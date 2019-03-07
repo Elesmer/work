@@ -3,6 +3,8 @@
   padding-bottom: 0
   position: relative
   height: 100%
+  background-size: cover
+  background-attachment: fixed
 
   .submit
     margin-bottom: 80px
@@ -46,11 +48,12 @@
 
   &:focus
     &::placeholder
-      color: #fff
+      color: darken(#e6e6e6, 20%)
 
   &::placeholder
-    color: rgba(#fff, .3)
+    color: #e6e6e6
     font-family: $os
+    opacity: 1
 
 .write__man
   position: relative

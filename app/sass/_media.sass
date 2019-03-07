@@ -1,18 +1,36 @@
+@media only screen and (max-width : 1650px)
+  .contacts__nav
+    li
+      a
+        font-size: 1.3rem
+
 @media only screen and (max-width : 1600px)
+  .contacts__header
+    grid-gap: 4.323vw
+
+  .contacts__name
+    h2
+      font-size: 1.3rem
+
   .videos__item
     .tab-item
       height: 200px
 
+  .contact__link
+    min-width: 180px
+    font-size: .7rem
+
   .team__item
     .tab-item
-      min-height: 200px  
+      min-height: 200px
 
 @media only screen and (max-width : 1400px)
   .news__carousel-item
-    grid-template-columns: repeat(auto-fill, minmax(250px, 100%))
+    .news__info
+      padding: 50px
 
-  .news__info
-    order: 2
+    .news__img
+      background-position: 50% 50%
 
   .news__img
     min-height: 500px
@@ -35,6 +53,39 @@
       width: 30%
 
 @media only screen and (max-width : 1200px)
+  .map
+    height: 400px
+
+  .contacts__footer
+    h4
+      margin: 100px 0 0 0
+
+    h2
+      margin: 40px 0
+
+  .contact__link
+    font-size: 1rem
+
+  .contacts__header
+    grid-template-columns: repeat(auto-fit, minmax(280px, 100%))
+
+  .contacts__name
+    justify-content: center
+
+  .contacts__name
+    h2
+      line-height: 40px
+
+  .contact__button
+    justify-content: center
+    margin-top: 20px
+
+  .news__carousel-item
+    grid-template-columns: repeat(auto-fill, minmax(250px, 100%))
+
+    .news__info
+      order: 2
+
   .story,
   .news
     &::after
@@ -70,6 +121,48 @@
     justify-content: center
 
 @media only screen and (max-width : 960px)
+  .article-content
+    .container
+      iframe
+        max-height: 300px
+
+      blockquote,
+      q
+        padding-left: 75px
+
+        &::after
+          height: 90px
+          width: 60px
+
+  .contacts__footer
+    h2
+      font-size: 3rem
+      line-height: 4rem
+
+  .map
+    height: 300px
+
+  .contact-form
+    width: 100%
+
+  .contacts__ul
+    margin: 0
+    flex-direction: column
+
+    li
+      margin: 15px 0
+
+  .contacts__nav
+    margin: 0
+    grid-template-columns: repeat(auto-fit,minmax(50px,100%))
+
+    li
+      margin: 10px 0
+
+  .news__carousel-item
+    .news__info
+      padding: 20px
+
   .article__img-wrapper
     img
       width: 100%
@@ -79,7 +172,7 @@
   .news__carousel-nav
     grid-template-columns: 75px 75px
     position: static
-    margin-top: 20px
+    margin-top: 40px
 
     .news__prev,
     .news__next
@@ -94,7 +187,7 @@
       line-height: 30px
 
   .news__img
-    min-height: 200px
+    min-height: 300px
 
   .videos__wrapper
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
@@ -145,6 +238,40 @@
     margin-top: 130px
 
 @media only screen and (max-width : 640px)
+  .article-content
+    .container iframe
+      max-height: 250px
+
+  .double-img
+    grid-template-columns: repeat(auto-fill, minmax(200px, 100%))
+
+  .date-heading--article
+    margin-bottom: 30px
+    text-align: center
+
+  .contacts__footer
+    h2
+      margin-bottom: 0
+
+  .contact-form
+    .contacts__button-submit
+      grid-column-start: 1
+      grid-column-end: 1
+
+  .contacts__footer
+    h4,
+    h2
+      text-align: center
+
+    h4
+      margin-top: 50px
+
+  .contacts__ul
+    li
+      justify-content: center
+
+  .contacts__social
+    justify-content: center
 
   .story__img
     max-height: 250px
