@@ -1,0 +1,97 @@
+.achivments
+  background-color: $accent
+  background-repeat: no-repeat
+  background-size: cover
+  background-attachment: fixed
+
+  h2
+    color: #fff
+
+.ProgressBar,
+.ProgressBar-contentCircle
+  display: table
+  height: 234px
+  width: 234px
+  position: relative
+
+.ProgressBar-circle,
+.ProgressBar-background
+  fill: none
+  stroke: #fff
+  stroke-width: 4
+  stroke-linecap: round
+  stroke-dasharray: 0
+  stroke-dashoffset: 0
+  position: relative
+  z-index: 10
+
+.ProgressBar-background
+  stroke: rgba(#fff, .5)
+  stroke-width: 4
+  z-index: 0
+
+.ProgressBar-percentage
+  color: #389ba6
+  font-size: 40px
+  text-align: center
+  width: 100%
+  vertical-align: middle
+
+.achivments__list
+  width: 100%
+  grid-template-columns: repeat(3, 1fr)
+  justify-items: center
+  grid-gap: 40px
+  float: left
+  height: auto
+
+  li
+    float: left
+    position: relative
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.circle__info
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+  .ProgressBar-percentage
+    font-size: 3.125rem
+    font-family: $os-c
+    color: #fff
+    font-weight: 400
+    text-transform: uppercase
+    text-align: center
+
+  p
+    font-family: $os
+    color: #fff
+    font-size: 1.0625rem
+    margin: 0
+    font-weight: 700
+    text-align: center
+
+.ProgressBar-circle--blue
+  stroke: #08b1ff
+
+.ProgressBar-circle--yellow
+  stroke: $yellow
+
+.circle__desc
+  max-width: 350px
+  text-align: center
+  color: #fff
+  font-family: $os
+  font-size: 1rem
+  margin: 30px 0 0 0

@@ -56,6 +56,12 @@
       width: 30%
 
 @media only screen and (max-width : 1200px)
+  .achivments__list
+    grid-template-columns: 1fr 1fr
+
+    li:last-child
+      grid-column: 1 / -1
+
   .footer__content-wrapper
     grid-template-columns: repeat(auto-fit, minmax(280px, 100%))
     grid-row-gap: 20px
@@ -258,6 +264,11 @@
 
   .story__p
     margin-top: 130px
+
+@media only screen and (max-width : 750px)
+
+  .achivments__list
+    grid-template-columns: 1fr
 
 @media only screen and (max-width : 640px)
   .footer__newsletter-form

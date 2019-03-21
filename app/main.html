@@ -24,6 +24,56 @@
 </head>
 
 <body class="">
+	<section style="background-image: url('img/achivments/achivmentsBg.jpg');" class="achivments">
+		<div class="container">
+			<h3>information</h3>
+			<h2>Achievement in Numbers</h2>
+			<ul class="List achivments__list grid">
+				<li class="List-item">
+					<div class="ProgressBar ProgressBar--animateAll" data-progress="75">
+						<svg class="ProgressBar-contentCircle">
+							<!-- on défini le l'angle et le centre de rotation du cercle -->
+							<circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="83" cy="117" r="110" />
+							<circle transform="rotate(90, 100, 100)" class="ProgressBar-circle ProgressBar-circle--blue" cx="117" cy="83" r="110" />
+							<div class="circle__info">
+								<span class="ProgressBar-percentage">10</span>
+								<p>Сonferences</p>
+							</div>
+						</svg>
+					</div>
+					<p class="circle__desc">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+				</li>
+				<li class="List-item">
+					<div class="ProgressBar ProgressBar--animateAll-2" data-progress="90">
+						<svg class="ProgressBar-contentCircle">
+							<!-- on défini le l'angle et le centre de rotation du cercle -->
+							<circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="83" cy="117" r="110" />
+							<circle transform="rotate(90, 100, 100)" class="ProgressBar-circle" cx="117" cy="83" r="110" />
+							<div class="circle__info">
+								<span class="ProgressBar-percentage">2000</span>
+								<p>Meetings</p>
+							</div>
+						</svg>
+					</div>
+					<p class="circle__desc">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+				</li>
+				<li class="List-item">
+					<div class="ProgressBar ProgressBar--animateAll-3" data-progress="75">
+						<svg class="ProgressBar-contentCircle">
+							<!-- on défini le l'angle et le centre de rotation du cercle -->
+							<circle transform="rotate(-90, 100, 100)" class="ProgressBar-background" cx="83" cy="117" r="110" />
+							<circle transform="rotate(90, 100, 100)" class="ProgressBar-circle ProgressBar-circle--yellow" cx="117" cy="83" r="110" />
+							<div class="circle__info">
+								<span class="ProgressBar-percentage">500</span>
+								<p>Customer satisfaction</p>
+							</div>
+						</svg>
+					</div>
+					<p class="circle__desc">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+				</li>
+			</ul>
+		</div>
+	</section>
 	<section class="about-us">
 		<div class="container container--about-us">
 			<h3>reviews</h3>
@@ -633,6 +683,73 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script src="js/scripts.min.js"></script>
+	<script type="text/javascript">
+		(function($) {
+			$.fn.bekeyProgressbar = function(options) {
+				options = $.extend({
+					animate: true,
+					animateText: true
+				}, options);
+				var $this = $(this);
+				var $progressBar = $this;
+				var $progressCount = $progressBar.find('.ProgressBar-percentage--count');
+				var $circle = $progressBar.find('.ProgressBar-circle');
+				var percentageProgress = $progressBar.attr('data-progress');
+				var percentageRemaining = (100 - percentageProgress);
+				var percentageText = $progressCount.parent().attr('data-progress');
+				//Calcule la circonférence du cercle
+				var radius = $circle.attr('r');
+				var diameter = radius * 2;
+				var circumference = Math.round(Math.PI * diameter);
+				//Calcule le pourcentage d'avancement
+				var percentage = circumference * percentageRemaining / 100;
+				$circle.css({
+					'stroke-dasharray': circumference,
+					'stroke-dashoffset': percentage
+				})
+				//Animation de la barre de progression
+				if (options.animate === true) {
+					$circle.css({
+						'stroke-dashoffset': circumference
+					}).animate({
+						'stroke-dashoffset': percentage
+					}, 3000)
+				}
+				//Animation du texte (pourcentage)
+				if (options.animateText == true) {
+					$({
+						Counter: 0
+					}).animate({
+						Counter: percentageText
+					}, {
+						duration: 3000,
+						step: function() {
+							$progressCount.text(Math.ceil(this.Counter) + '%');
+						}
+					});
+				} else {
+					$progressCount.text(percentageText + '%');
+				}
+			};
+		})(jQuery);
+		$(document).ready(function() {
+			$('.ProgressBar--animateNone').bekeyProgressbar({
+				animate: false,
+				animateText: false
+			});
+			$('.ProgressBar--animateCircle').bekeyProgressbar({
+				animate: true,
+				animateText: false
+			});
+			$('.ProgressBar--animateText').bekeyProgressbar({
+				animate: false,
+				animateText: true
+			});
+			$('.ProgressBar--animateAll').bekeyProgressbar();
+			$('.ProgressBar--animateAll-2').bekeyProgressbar();
+			$('.ProgressBar--animateAll-3').bekeyProgressbar();
+		})
+	</script>
 </body>
 
 </html>
