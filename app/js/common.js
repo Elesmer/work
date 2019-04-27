@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+  //Full page scroll
+
   $(".main").onepage_scroll({
      sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
      easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
@@ -11,9 +13,29 @@ $(document).ready(function () {
      afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
      loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
      keyboard: true,                  // You can activate the keyboard controls
-     responsiveFallback: 600,        
+     responsiveFallback: 600,
      direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
   });
+
+  // Owl carousel
+
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: true,
+      responsive:{
+          0:{
+              items: 1
+          },
+          600:{
+              items: 3
+          },
+          1000:{
+              items: 1
+          }
+      }
+    })
 
 });
 
