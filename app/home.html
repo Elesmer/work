@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Page name</title>
+	<title>Home</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -43,7 +43,7 @@
 					<div class="uk-navbar-left uk-visible@m">
 						<ul class="nav">
 							<li class="active"><a href="#">Кофемашины</a></li>
-							<li><a href="#">Стоимость аренды</a></li>
+							<li><a onclick="$('.main').moveTo(2);" href="#">Стоимость аренды</a></li>
 							<li><a href="#">Наше кофе</a></li>
 							<li><a href="#">Контакты</a></li>
 						</ul>
@@ -164,21 +164,86 @@
 		<section class="section section__pacets">
 			<div class="uk-container">
 				<h2 class="page__heading">Пакеты по аренде оборудования</h2>
-				<ul class="pacets-list">
-					<li>
+				<ul class="pacets-list grid">
+					<li class="price-item uk-box-shadow-small uk-box-shadow-hover-medium">
 						<div class="pacet-head">
 							<p>аренда при заказе кофе</p>
 							<h3>бесплатно</h3>
 						</div>
 						<ul class="pacet-services">
 							<li>
-								<p>от 10 кг.</p>
+								<p class="weight">от 10 кг.</p>
 								<h4>320 грн.</h4>
 							</li>
+							<li>
+								<p class="weight">от 15 кг.</p>
+								<h4>270 грн.</h4>
+							</li>
+							<li>
+								<p class="weight">от 20 кг.</p>
+								<h4>245 грн.</h4>
+							</li>
+							<li>
+								<p class="weight">от 30 кг.</p>
+								<h4>220 грн.</h4>
+							</li>
 						</ul>
-						<a href="#" class="link-button">Заказать звонок</a>
+						<a href="#" class="link-button">Заказать</a>
+					</li>
+					<li class="price-item uk-box-shadow-small uk-box-shadow-hover-medium">
+						<div class="pacet-head">
+							<p>Платная аренда</p>
+							<h3>от 1500 грн.</h3>
+						</div>
+						<p class="pacet-info">Обязательное условие работа с нашим кофе</p>
+						<ul class="pacet-services">
+							<li>
+								<p>Кофемашина + кофемолка с бункером – 1500 грн.</p>
+							</li>
+							<li>
+								<p>Кофемашина + кофемолка прямого помола – от 1800 грн.</p>
+							</li>
+							<li>
+								<p>Кофемашина PRO + кофемолка прямого помола – от 2000 грн.</p>
+							</li>
+						</ul>
+						<a href="#" class="link-button">Заказать</a>
+					</li>
+					<li class="price-item uk-box-shadow-small uk-box-shadow-hover-medium">
+						<div class="pacet-head">
+							<p>Аренда оборудования</p>
+							<h3>от 500 грн.</h3>
+						</div>
+						<ul class="pacet-services">
+							<li class="with-desc">
+								<p>Кофемашина + кофемолка с бункером – 500 грн.</p>
+								<p class="desc">(от 10 кг. кофе  – 270,00 грн.)</p>
+							</li>
+							<li class="with-desc">
+								<p>Кофемашина PRO + кофемолка с бункером - 750 грн</p>
+								<p class="desc">(от 10 кг. кофе - 230,00 грн.)</p>
+							</li>
+							<li class="with-desc">
+								<p>Кофемашина PRO + кофемолка прямого помола – 900 грн.</p>
+								<p class="desc">(от 10 кг. кофе - 230 грн.)</p>
+							</li>
+						</ul>
+						<a href="#" class="link-button">Заказать</a>
+					</li>
+					<li class="price-item uk-box-shadow-small uk-box-shadow-hover-medium">
+						<div class="pacet-head">
+							<p>Аренда оборудования</p>
+							<h3>от 500 грн.</h3>
+						</div>
+						<p class="paced-rule">Аренда на индивидуальных условиях. Стоимость аренды зависит от класса оборудования, его технических характеристик и возможностей, объёмов закупки кофе Caffein.</p>
+						<a href="#" class="link-button">Заказать</a>
 					</li>
 				</ul>
+			</div>
+		</section>
+		<section class="section section__equipment">
+			<div class="uk-container">
+				<h2 class="page__heading">Пакеты по аренде оборудования</h2>
 			</div>
 		</section>
 	</div>
