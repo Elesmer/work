@@ -1,54 +1,45 @@
-jQuery(document).ready(function($) {
+$(document).ready(function () {
 
-  // About us carousel init
-
-  $('.about-us__carousel').owlCarousel({
-    loop: true,
-    items: 1,
-    nav: false,
-    dots: false,
-    autoplay: true
+  $(".main").onepage_scroll({
+     sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
+     easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
+                                      // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+     animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
+     pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+     updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+     beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+     afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+     loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+     keyboard: true,                  // You can activate the keyboard controls
+     responsiveFallback: 600,        
+     direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
   });
 
-  // About us carousel nav
+});
 
-  var aboutUsCarouselNav = $('.about-us__carousel');
-  aboutUsCarouselNav.owlCarousel();
-  $('.about-us__next').click(function() {
-    aboutUsCarouselNav.trigger('next.owl.carousel');
-  })
-  $('.about-us__prev').click(function() {
-    aboutUsCarouselNav.trigger('prev.owl.carousel', [300]);
-  })
+// Resize sticky header
+$(window).scroll(function() {
+  if ($(this).scrollTop() > 250) {
+    $('header').addClass("sticky");
+  } else {
+    $('header').removeClass("sticky");
+  }
+});
 
-  // Orders tabs init
+/* To top button */
 
-  $('.order__tabs').tabs({
-    // swipeable: true
-  });
+var offset = 300,
+    //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+    offset_opacity = 1200,
+    //duration of the top scrolling animation (in ms)
+    scroll_top_duration = 700,
+    //grab the "back to top" link
+    $back_to_top = $('.js-back-to-top');
 
-  // News carousel init
-
-  $('.news__carousel').owlCarousel({
-    loop: true,
-    items: 1,
-    nav: false,
-    dots: false
-    // autoplay: true
-  });
-
-  // News carousel navigation
-
-  var newsCraouselNav = $('.news__carousel');
-  newsCraouselNav.owlCarousel();
-  $('.news__next').click(function() {
-    newsCraouselNav.trigger('next.owl.carousel');
-  })
-  $('.news__prev').click(function() {
-    newsCraouselNav.trigger('prev.owl.carousel', [300]);
-  })
-
-  // Modals init
-
-  $('.modal').modal();
+//hide or show the "back to top" link
+$(window).scroll(function(){
+    ( $(this).scrollTop() > offset ) ? $back_to_top.addClass('back-to-top-is-visible') : $back_to_top.removeClass('back-to-top-is-visible back-to-top-fade-out');
+    if( $(this).scrollTop() > offset_opacity ) {
+        $back_to_top.addClass('back-to-top-fade-out');
+    }
 });

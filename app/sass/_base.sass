@@ -2,13 +2,11 @@
 	color: #666
 
 ::selection
-	background-color: $yellow
+	background-color: $accent
 	color: #fff
 
-html
-	font-size: 16px
-
 body
+	font-size: 16px
 	min-width: 320px
 	position: relative
 	line-height: 1.65
@@ -33,151 +31,23 @@ b, strong
 .grid
 	display: grid
 
-h3
-	font-size: 1.125rem
-	color: $grey
-	font-family: $os-c
+.link-button
+	background-color: $accent
+	padding: 12px 28px
+	font-family: $cyr
 	text-transform: uppercase
-	letter-spacing: 1.8px
-	text-align: center
-	margin: 0
-
-h2
-	color: $heading-c
-	font-family: $didot
-	font-size: 3.125rem
-	line-height: 100px
-	margin: 0 0 50px 0
-	text-align: center
-
-section
-	padding: 110px 0
-	float: left
-	width: 100%
-
-textarea
-	resize: none
-	box-shadow: none
-	outline: none
-
-p
-	font-size: 1.125rem
-
-a
-	outline: none
-
-.container
-	width: 1400px
-	max-width: 1400px
-
-.container-large
-	width: 90%
-	max-width: 1600px
-
-.grid
-	display: grid
-
-.link
-	text-transform: uppercase
-	position: relative
-	padding-right: 30px
-	font-family: $os-c
-
-	&:hover
-		&::after
-			right: -5px
-
-	&::after
-		transition: 0.5s
-		content: ''
-		position: absolute
-		height: 100%
-		width: 15px
-		right: 0
-		background-repeat: no-repeat
-		background-position: 50% 50%
-		background-image: url('../img/link-arrow.png')
-
-.link--button
-	color: $heading-c
-	padding: 12px 80px 12px 45px
-	border: 2px solid $grey
-	line-height: 24px
-	background-color: transparent
-	box-shadow: none
-	border-radius: none
-	font-size: 1.125rem
-
-	&:active,
-	&:focus
-		background-color: transparent
-		box-shadow: none
-
-	&:hover
-		background-color: transparent
-		border-color: $heading-c
-		box-shadow: none
-
-		&::after
-			right: 35px
-
-	&::after
-		right: 40px
-		top: 0
-
-.carousel
-	height: 630px !important
-
-.waves-effect.waves-accent .waves-ripple
-  background-color: rgba($grey, .8)
-
-.submit
-	background-color: $yellow
-	border: none
-	display: -webkit-flex
-	display: -ms-flex
-	display: flex
-	position: relative
-	box-sizing: border-box
-	max-width: 150px
-	margin-top: 40px
-	cursor: pointer
+	font-size: 15px
+	font-weight: bold
+	color: $white
 	transition: background-color .5s
 
 	&:hover
-		background-color: rgba($yellow, .9)
+		background-color: darken($accent, 10%)
+		text-decoration: none
 
-		&::after
-			right: 35px
+.uk-container
+	max-width: 1270px
 
-	&::after
-		content: ''
-		height: 30px
-		width: 30px
-		position: absolute
-		background-image: url('../img/write/paper-plane.png')
-		background-repeat: no-repeat
-		right: 40px
-		top: 30%
-		transition: right .5s
-
-input[type="submit"]
-	padding: 20px 80px 20px 20px
-	min-width: 150px
-	display: block
-	font-size: 1.125rem
-	background-color: transparent
-	color: $heading-c
-	font-family: $os-c
-	position: relative
-	z-index: 100
-	cursor: pointer
-	text-transform: uppercase
+a
+	text-decoration: none
 	outline: none
-	border: none
-
-input[type="submit"]:-moz-focusring
-	outline: none
-
-.float-left
-	text-align: left

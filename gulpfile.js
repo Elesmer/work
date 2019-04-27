@@ -65,10 +65,11 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function() {
   return gulp.src([
-      // 'app/libs/jquery/dist/jquery.min.js',
-			// 'app/libs/uikit/uikit.min.js',
-			// 'app/libs/uikit/uikit-icons.min.js',
-			'app/libs/owlcarousel/owl.carousel.min.js',
+      'app/libs/jquery/dist/jquery.min.js',
+			'app/libs/uikit/uikit.min.js',
+			'app/libs/uikit/uikit-icons.min.js',
+			'app/libs/onePageScroll/jquery.onepage-scroll.js',
+			'app/libs/owlCarousel/owl.carousel.min.js',
       'app/js/common.js', // Always at the end
     ])
     .pipe(concat('scripts.min.js'))

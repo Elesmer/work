@@ -17,6 +17,7 @@
 	<!-- Custom Browsers Color End -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 	<link href="libs/uikit/uikit.min.css" rel="stylesheet">
+	<link href="libs/onePageScroll/onepage-scroll.css" rel="stylesheet">
 	<link href="css/main.min.css" rel="stylesheet">
 </head>
 
@@ -27,7 +28,9 @@
 			<nav class="uk-container">
 				<div class="uk-navbar uk-light">
 					<div class="uk-navbar-left">
-						<a class="uk-navbar-item uk-logo" href="#">Logo</a>
+						<a class="uk-navbar-item uk-logo logo" href="#">
+							<img src="img/header/Logo.png" alt="">
+						</a>
 					</div>
 					<div class="uk-navbar-right uk-hidden@m">
 						<div class="burger" type="button" uk-toggle="target: #offcanvas-reveal">
@@ -35,20 +38,20 @@
 							<div class="burger-line"></div>
 						</div>
 					</div>
+					<div class="uk-navbar-left uk-visible@m">
+						<ul class="nav">
+							<li class="active"><a href="#">Кофемашины</a></li>
+							<li><a href="#">Стоимость аренды</a></li>
+							<li><a href="#">Наше кофе</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
 					<div class="uk-navbar-right uk-visible@m">
 						<div class="number">
-							<a href="#">+380730654513</a>
+							<a href="#">+38 (044) 334-64-78</a>
+							<a href="#">+38 (068) 686-55-22</a>
 						</div>
-						<ul class="uk-navbar-nav">
-							<li class="uk-active"><a href="#">Active</a></li>
-							<li><a href="#">Item</a></li>
-							<li><a href="#">Parent</a></li>
-							<li><a href="#">Item</a></li>
-							<li><a href="#">Parent</a></li>
-							<li><a href="#">Item</a></li>
-							<li><a href="#">Parent</a></li>
-							<li><a href="#">Item</a></li>
-						</ul>
+						<a href="#" class="link-button">Заказать звонок</a>
 					</div>
 				</div>
 			</nav>
@@ -68,9 +71,17 @@
 				<li><a href="#">Item</a></li>
 			</ul>
 		</div>
+
 	</div>
 	<!-- HTML here -->
-	
+
+	<div class="main">
+    <section style="background-image: url('img/header/headerBg.png');" class="section section__header">
+    	
+    </section>
+    <section class="yellow">...</section>
+  </div>
+
 	<!-- To top -->
 	<a uk-totop uk-scroll class="js-back-to-top back-to-top"></a>
 	<script src="js/scripts.min.js"></script>
