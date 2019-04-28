@@ -85,7 +85,7 @@
 	</div>
 	<!-- HTML here -->
 	<div class="main">
-		<!-- <section class="section section__header">
+		<!-- <section class="section section--header">
 			<div class="owl-carousel header-carousel owl-theme">
 				<div style="background-image: url('img/header/headerBg.png');" class="item">
 					<div class="uk-container">
@@ -170,7 +170,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="section section__pacets">
+		<section class="section section--pacets">
 			<div class="uk-container">
 				<h2 class="page__heading">Пакеты по аренде оборудования</h2>
 				<ul class="pacets-list grid">
@@ -250,7 +250,7 @@
 				</ul>
 			</div>
 		</section>
-		<section class="section section__equipment">
+		<section class="section section--equipment">
 			<div class="uk-container">
 				<h2 class="page__heading">Аренда оборудования</h2>
 				<h4 class="page__heading-desc">Варианты комплектации:</h4>
@@ -271,7 +271,7 @@
 							</div>
 						</div>
 						<div class="equip-carousel-wrapper">
-							<div class="owl-carousel equip-carousel">
+							<div class="owl-carousel equip-carousel equip-carousel--1">
 								<div class="item">
 									<img src="img/equipment/1.png" alt="">
 								</div>
@@ -283,12 +283,12 @@
 								</div>
 							</div>
 							<div class="equip-carousel-nav">
-								<div class="equip-left-nav">
+								<div class="left equip-left-nav">
 									<svg class="scroll__arrow" width="45" height="45" viewBox="0 0 64 64">
 										<use xlink:href="#arrow-left-1"></use>
 									</svg>
 								</div>
-								<div class="equip-right-nav">
+								<div class="right equip-right-nav">
 									<svg class="scroll__arrow" width="45" height="45" viewBox="0 0 64 64">
 										<use xlink:href="#arrow-right-1"></use>
 									</svg>
@@ -308,7 +308,7 @@
 							</div>
 						</div>
 						<div class="equip-carousel-wrapper">
-							<div class="owl-carousel equip-carousel">
+							<div class="owl-carousel equip-carousel equip-carousel--2">
 								<div class="item">
 									<img src="img/equipment/1.png" alt="">
 								</div>
@@ -320,12 +320,12 @@
 								</div>
 							</div>
 							<div class="equip-carousel-nav">
-								<div class="equip-left-nav">
+								<div class="left equip-left-nav2">
 									<svg class="scroll__arrow" width="45" height="45" viewBox="0 0 64 64">
 										<use xlink:href="#arrow-left-1"></use>
 									</svg>
 								</div>
-								<div class="equip-right-nav">
+								<div class="right equip-right-nav2">
 									<svg class="scroll__arrow" width="45" height="45" viewBox="0 0 64 64">
 										<use xlink:href="#arrow-right-1"></use>
 									</svg>
@@ -335,8 +335,8 @@
 					</li>
 				</ul>
 			</div>
-		</section> -->
-		<section style="background-image: url('img/repeir/coffeefocus.png');" class="section section-repeir">
+		</section>
+		<section style="background-image: url('img/repeir/coffeefocus.png');" class="section section--repeir">
 			<div class="uk-container">
 				<div class="repeir-content">
 					<h2 class="page__heading page__heading--white">Сервисный центр по ремонту кофейного оборудования</h2>
@@ -346,7 +346,7 @@
 						<div class="repeir-form-wrapper">
 							<h3 class="repeir-box__h3">Какая у вас проблема? Задайте мне вопрос?</h3>
 							<form action="#" class="repeir-form">
-								<input class="text-input" placeholder="Номер телефона" type="text">
+								<input id="phone" class="text-input" placeholder="Номер телефона" type="text">
 								<input value="Заказать звонок" class="submit-input link-button" type="submit">
 							</form>
 						</div>
@@ -357,6 +357,244 @@
 								<a href="#" class="telegram"></a>
 								<a href="#" class="messenger"></a>
 							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section style="background-image: url('img/repeir/coffee.png');" class="section section--proposition">
+			<div class="uk-container">
+				<div class="propisition-content-wrapper">
+					<h2 class="page__heading page__heading--white">Что мы предлагаем?</h2>
+					<div class="propositions-grid grid">
+						<div class="proposition">
+							<div class="proposition-img-wrapper">
+								<img src="img/propositions/calendar.png" alt="" class="proposition__img">
+							</div>
+							<p class="proposition__p">Долгосрочная аренда профессионального кофейного оборудования идеального состояния</p>
+						</div>
+						<div class="proposition">
+							<div class="proposition-img-wrapper">
+								<img src="img/propositions/truck.png" alt="" class="proposition__img">
+							</div>
+							<p class="proposition__p">Бесплатная установка и доставка кофейного оборудования</p>
+						</div>
+						<div class="proposition">
+							<div class="proposition-img-wrapper">
+								<img src="img/propositions/cup.png" alt="" class="proposition__img">
+							</div>
+							<p class="proposition__p">Кофе собственного производства, дегустация бесплатно</p>
+						</div>
+						<div class="proposition">
+							<div class="proposition-img-wrapper">
+								<img src="img/propositions/settings.png" alt="" class="proposition__img">
+							</div>
+							<p class="proposition__p">Бесплатное плановое обслуживание и техническая поддержка</p>
+						</div>
+						<div class="proposition">
+							<div class="proposition-img-wrapper">
+								<img src="img/propositions/timer.png" alt="" class="proposition__img">
+							</div>
+							<p class="proposition__p">Предоставляем оборудование на период ремонта кофемашины</p>
+						</div>
+						<div class="proposition">
+							<div class="proposition-img-wrapper">
+								<img src="img/propositions/comment.png" alt="" class="proposition__img">
+							</div>
+							<p class="proposition__p">Персональный менеджер для консультаций и сопровождения заказов</p>
+						</div>
+						<div class="proposition">
+							<div class="proposition-img-wrapper">
+								<img src="img/propositions/heat.png" alt="" class="proposition__img">
+							</div>
+							<p class="proposition__p">Бесплатное профессиональное обучение персонала в нашей школе бариста</p>
+						</div>
+						<div class="proposition">
+							<div class="proposition-img-wrapper">
+								<img src="img/propositions/key.png" alt="" class="proposition__img">
+							</div>
+							<p class="proposition__p">Все необходимое для открытия кофейного бизнеса вы можете получить у нас</p>
+						</div>
+						<div class="proposition">
+							<div class="proposition-img-wrapper">
+								<img src="img/propositions/eye.png" alt="" class="proposition__img">
+							</div>
+							<p class="proposition__p">Собственный выставочный зал с ассортиментом до 50 единиц кофейного  оборудования</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+		<section class="section section--popular">
+			<div class="uk-container">
+				<h2 class="page__heading">Популярное кофе</h2>
+				<div class="owl-carousel popular-carousel">
+					<div class="popular-item">
+						<div class="popular-img-wrapper">
+							<img src="img/popular/1.png" alt="">
+						</div>
+						<div class="pupular-item-content">
+							<h2 class="pupular__h2">Кофе Vending Blend</h2>
+							<ul class="popular__list">
+								<li class="popular-list__item">
+									<p>Кислинка</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+								<li class="popular-list__item">
+									<p>Горчинка</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+								<li class="popular-list__item">
+									<p>Крепость</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+									</div>
+								</li>
+							</ul>
+							<p class="popular__sort">20% арабика, 80% робуста</p>
+							<h2 class="popular__price">195 грн.</h2>
+						</div>
+					</div>
+					<div class="popular-item">
+						<div class="popular-img-wrapper">
+							<img src="img/popular/2.png" alt="">
+						</div>
+						<div class="pupular-item-content">
+							<h2 class="pupular__h2">Кофе Арабика Brazil Santos</h2>
+							<ul class="popular__list">
+								<li class="popular-list__item">
+									<p>Кислинка</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+								<li class="popular-list__item">
+									<p>Горчинка</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+								<li class="popular-list__item">
+									<p>Крепость</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+									</div>
+								</li>
+							</ul>
+							<p class="popular__sort">100% арабика</p>
+							<h2 class="popular__price">275 грн.</h2>
+						</div>
+					</div>
+					<div class="popular-item">
+						<div class="popular-img-wrapper">
+							<img src="img/popular/3.png" alt="">
+						</div>
+						<div class="pupular-item-content">
+							<h2 class="pupular__h2">Кофе Арабика Honduras SHG EP</h2>
+							<ul class="popular__list">
+								<li class="popular-list__item">
+									<p>Кислинка</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+								<li class="popular-list__item">
+									<p>Горчинка</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+								<li class="popular-list__item">
+									<p>Крепость</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+							</ul>
+							<p class="popular__sort">100% арабика</p>
+							<h2 class="popular__price">345 грн.</h2>
+						</div>
+					</div>
+					<div class="popular-item">
+						<div class="popular-img-wrapper">
+							<img src="img/popular/4.png" alt="">
+						</div>
+						<div class="pupular-item-content">
+							<h2 class="pupular__h2">Кофе Арабика Ethiopia Yirgacheffe Gr.2 , Helen Gebrenigus</h2>
+							<ul class="popular__list">
+								<li class="popular-list__item">
+									<p>Кислинка</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+								<li class="popular-list__item">
+									<p>Горчинка</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+								<li class="popular-list__item">
+									<p>Крепость</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+							</ul>
+							<p class="popular__sort">100% арабика</p>
+							<h2 class="popular__price">475 грн.</h2>
 						</div>
 					</div>
 				</div>

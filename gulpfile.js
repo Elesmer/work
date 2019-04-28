@@ -70,10 +70,11 @@ gulp.task('scripts', function() {
 			'app/libs/uikit/uikit-icons.min.js',
 			'app/libs/onePageScroll/jquery.onepage-scroll.js',
 			'app/libs/owlCarousel/owl.carousel.min.js',
+			'app/libs/maskInput/jquery.mask.js',
       'app/js/common.js', // Always at the end
     ])
     .pipe(concat('scripts.min.js'))
-    // .pipe(uglify()) // Mifify js (opt.)
+    .pipe(uglify()) // Mifify js (opt.)
     .pipe(gulp.dest('app/js'))
     .pipe(browserSync.reload({
       stream: true

@@ -39,7 +39,7 @@ $(document).ready(function() {
 
   // Equip carousel
 
-  $('.equip-carousel').owlCarousel({
+  $('.equip-carousel--1').owlCarousel({
     loop: true,
     margin: 0,
     nav: false,
@@ -58,13 +58,64 @@ $(document).ready(function() {
 
   // Custom nav
 
-  var equip_c = $('.equip-carousel');
-  equip_c.owlCarousel();
+  var equip_c2 = $('.equip-carousel--1');
+  equip_c2.owlCarousel();
   $('.equip-left-nav').click(function() {
-    equip_c.trigger('next.owl.carousel');
+    equip_c2.trigger('next.owl.carousel');
   })
   $('.equip-right-nav').click(function() {
+    equip_c2.trigger('prev.owl.carousel', [300]); // в квадратных скобках скорость переключения
+  })
+
+  // Second equip owlCarousel
+
+  $('.equip-carousel--2').owlCarousel({
+    loop: true,
+    margin: 0,
+    nav: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 1
+      }
+    }
+  })
+
+  var equip_c = $('.equip-carousel--2');
+  equip_c.owlCarousel();
+  $('.equip-left-nav2').click(function() {
+    equip_c.trigger('next.owl.carousel');
+  })
+  $('.equip-right-nav2').click(function() {
     equip_c.trigger('prev.owl.carousel', [300]); // в квадратных скобках скорость переключения
+  })
+
+  // Phone mask
+
+  $("#phone").inputmask("+(380) 999-99-99-99");
+
+  // Popular carousel
+
+  $('.popular-carousel').owlCarousel({
+    loop: false,
+    margin: 30,
+    nav: false,
+    responsive: {
+      0: {
+        items: 1
+      },
+      600: {
+        items: 1
+      },
+      1000: {
+        items: 4
+      }
+    }
   })
 
 });
@@ -95,3 +146,5 @@ $(window).scroll(function() {
     $back_to_top.addClass('back-to-top-fade-out');
   }
 });
+
+// Input mask
