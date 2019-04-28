@@ -3,10 +3,10 @@
 	html
 		font-size: 14px
 
-	.owl-dots
-		display: none
-
 	.header-carousel
+		.owl-dots
+			display: none
+
 		.item
 			.uk-container
 				h2
@@ -39,11 +39,70 @@
     .number
       margin-right: 30px
 
+	.onepage-wrapper
+		height: auto
+
+	.section
+		padding: 50px 0
+
+	.section--header
+		padding: 0
+
+	.header-carousel .item
+		padding: 50px 0
+
+	.pacets-list
+		grid-template-columns: repeat(2,295px)
+
+	.section--equipment
+		.uk-container
+			width: 85%
+
+	.right
+		right: -50px
+
+	.left
+		left: -50px
+
+	.owl-carousel .owl-item img
+		width: 95%
+
+	.switch-head
+		align-items: flex-start
+		flex-direction: column
+
+	.equip-right
+		margin-top: 20px
+
+	.equip-switch
+		.owl-dots
+			display: none
+
 @media only screen and (max-width : 960px)
 	/**/
 
 @media only screen and (max-width : 640px)
-	/**/
+
+	.equip-switch
+		.owl-dots
+			display: -webkit-flex
+			display: -ms-flex
+			display: flex
+			justify-content: center
+			padding: 20px 0
+
+		.owl-dot
+			background: #e6e6e6 !important
+			height: 11px
+			width: 11px
+			border-radius: 100%
+			margin-right: 10px
+
+			&:last-child
+				margin-right: 0
+
+		.owl-dot.active
+			background: $accent !important
 
 @media only screen and (max-width : 480px)
 	/**/

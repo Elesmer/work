@@ -45,10 +45,10 @@
 					</div>
 					<div class="uk-navbar-left uk-visible@l">
 						<ul class="nav">
-							<li class="active"><a href="#">Кофемашины</a></li>
+							<li><a onclick="$('.main').moveTo(3);" href="#">Кофемашины</a></li>
 							<li><a onclick="$('.main').moveTo(2);" href="#second" uk-scroll>Стоимость аренды</a></li>
-							<li><a href="#">Наше кофе</a></li>
-							<li><a href="#">Контакты</a></li>
+							<li><a onclick="$('.main').moveTo(6);" href="#">Наше кофе</a></li>
+							<li><a onclick="$('.main').moveTo(7);" href="#">Контакты</a></li>
 						</ul>
 					</div>
 					<div class="uk-navbar-right uk-visible@m">
@@ -58,28 +58,23 @@
 						</div>
 						<a href="#" class="link-button">Заказать звонок</a>
 					</div>
-					<div class="coffee-burger uk-hidden@l">
-						<div class="burger" type="button" uk-toggle="target: #offcanvas-reveal">
-							<div class="burger-line"></div>
-							<div class="burger-line"></div>
-						</div>
+					<div type="button" uk-toggle="target: #offcanvas-reveal" class="coffee-burger uk-hidden@l">
+						<div class="line-burger"></div>
+						<div class="line-burger"></div>
+						<div class="line-burger"></div>
 					</div>
 				</div>
 			</nav>
 		</div>
 	</header>
 	<div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
-		<div class="uk-offcanvas-bar">
+		<div class="uk-offcanvas-bar coffee-menu">
 			<button class="uk-offcanvas-close" type="button" uk-close></button>
-			<ul class="uk-list">
-				<li><a href="#">Active</a></li>
-				<li><a href="#second">Item</a></li>
-				<li><a href="#">Parent</a></li>
-				<li><a href="#">Item</a></li>
-				<li><a href="#">Parent</a></li>
-				<li><a href="#">Item</a></li>
-				<li><a href="#">Parent</a></li>
-				<li><a href="#">Item</a></li>
+			<ul class="uk-list mobile-menu">
+				<li><a onclick="$('.main').moveTo(1);" href="#">Кофемашины</a></li>
+				<li><a onclick="$('.main').moveTo(2);" href="#second">Стоимость аренды</a></li>
+				<li><a onclick="$('.main').moveTo(3);" href="#">Наше кофе</a></li>
+				<li><a onclick="$('.main').moveTo(4);" href="#">Контакты</a></li>
 			</ul>
 		</div>
 	</div>
@@ -170,7 +165,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="section section--pacets">
+		<section id="second" class="section section--pacets">
 			<div class="uk-container">
 				<h2 class="page__heading">Пакеты по аренде оборудования</h2>
 				<ul class="pacets-list grid">

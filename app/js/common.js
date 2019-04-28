@@ -42,6 +42,7 @@ $(document).ready(function() {
   $('.equip-carousel--1').owlCarousel({
     loop: true,
     margin: 0,
+    dots: true,
     nav: false,
     responsive: {
       0: {
@@ -72,6 +73,7 @@ $(document).ready(function() {
   $('.equip-carousel--2').owlCarousel({
     loop: true,
     margin: 0,
+    dots: true,
     nav: false,
     responsive: {
       0: {
@@ -110,9 +112,9 @@ $(document).ready(function() {
         items: 1
       },
       600: {
-        items: 1
+        items: 2
       },
-      1000: {
+      1200: {
         items: 4
       }
     }
@@ -129,15 +131,16 @@ $(document).ready(function() {
     popular_c.trigger('next.owl.carousel', [300]); // в квадратных скобках скорость переключения
   })
 
-});
+  // Smoth scroll
 
-// Resize sticky header
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 250) {
-    $('header').addClass("sticky");
-  } else {
-    $('header').removeClass("sticky");
-  }
+  $(document).on('click', 'a[href^="#"]', function (event) {
+      event.preventDefault();
+
+      $('html, body').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+  });
+
 });
 
 /* To top button */

@@ -29,9 +29,10 @@ header
           width: 55%
 
   .burger-line
-    height: 1px
+    height: 2px
     background: $white
-    width: 55%
+    width: 100%
+    max-width: 23px
     margin: 5px 0
     transition: width .5s
 
@@ -112,3 +113,24 @@ header.sticky
       &:hover
         text-decoration: none
         color: #ccc
+
+.coffee-burger
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  width: 23px
+  height: 14px
+  flex-direction: column
+  justify-content: space-between
+  cursor: pointer
+
+.mobile-menu
+  a
+    font-family: $hr
+
+    &:hover
+      underline: none
+      text-decoration: none
+
+.coffee-menu
+  background-color: #000
