@@ -13,7 +13,7 @@ $(document).ready(function() {
     afterMove: function(index) {}, // This option accepts a callback function. The function will be called after the page moves.
     loop: false, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
     keyboard: true, // You can activate the keyboard controls
-    responsiveFallback: 600,
+    responsiveFallback: 1200,
     direction: "vertical" // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
   });
 
@@ -29,7 +29,7 @@ $(document).ready(function() {
         items: 1
       },
       600: {
-        items: 3
+        items: 1
       },
       1000: {
         items: 1
@@ -61,10 +61,10 @@ $(document).ready(function() {
   var equip_c2 = $('.equip-carousel--1');
   equip_c2.owlCarousel();
   $('.equip-left-nav').click(function() {
-    equip_c2.trigger('next.owl.carousel');
+    equip_c2.trigger('prev.owl.carousel');
   })
   $('.equip-right-nav').click(function() {
-    equip_c2.trigger('prev.owl.carousel', [300]); // в квадратных скобках скорость переключения
+    equip_c2.trigger('next.owl.carousel', [300]); // в квадратных скобках скорость переключения
   })
 
   // Second equip owlCarousel
@@ -89,10 +89,10 @@ $(document).ready(function() {
   var equip_c = $('.equip-carousel--2');
   equip_c.owlCarousel();
   $('.equip-left-nav2').click(function() {
-    equip_c.trigger('next.owl.carousel');
+    equip_c.trigger('prev.owl.carousel');
   })
   $('.equip-right-nav2').click(function() {
-    equip_c.trigger('prev.owl.carousel', [300]); // в квадратных скобках скорость переключения
+    equip_c.trigger('next.owl.carousel', [300]); // в квадратных скобках скорость переключения
   })
 
   // Phone mask
@@ -116,6 +116,17 @@ $(document).ready(function() {
         items: 4
       }
     }
+  })
+
+  // Custom nav for popular carousel
+
+  var popular_c = $('.popular-carousel');
+  popular_c.owlCarousel();
+  $('.equip-left-nav--popular').click(function() {
+    popular_c.trigger('prev.owl.carousel');
+  })
+  $('.equip-right-nav--popular').click(function() {
+    popular_c.trigger('next.owl.carousel', [300]); // в квадратных скобках скорость переключения
   })
 
 });

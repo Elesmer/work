@@ -43,16 +43,10 @@
 							<img src="img/header/Logo.png" alt="">
 						</a>
 					</div>
-					<div class="uk-navbar-right uk-hidden@m">
-						<div class="burger" type="button" uk-toggle="target: #offcanvas-reveal">
-							<div class="burger-line"></div>
-							<div class="burger-line"></div>
-						</div>
-					</div>
-					<div class="uk-navbar-left uk-visible@m">
+					<div class="uk-navbar-left uk-visible@l">
 						<ul class="nav">
 							<li class="active"><a href="#">Кофемашины</a></li>
-							<li><a onclick="$('.main').moveTo(2);" href="#">Стоимость аренды</a></li>
+							<li><a onclick="$('.main').moveTo(2);" href="#second" uk-scroll>Стоимость аренды</a></li>
 							<li><a href="#">Наше кофе</a></li>
 							<li><a href="#">Контакты</a></li>
 						</ul>
@@ -64,6 +58,12 @@
 						</div>
 						<a href="#" class="link-button">Заказать звонок</a>
 					</div>
+					<div class="coffee-burger uk-hidden@l">
+						<div class="burger" type="button" uk-toggle="target: #offcanvas-reveal">
+							<div class="burger-line"></div>
+							<div class="burger-line"></div>
+						</div>
+					</div>
 				</div>
 			</nav>
 		</div>
@@ -72,8 +72,8 @@
 		<div class="uk-offcanvas-bar">
 			<button class="uk-offcanvas-close" type="button" uk-close></button>
 			<ul class="uk-list">
-				<li class="uk-active"><a href="#">Active</a></li>
-				<li><a href="#">Item</a></li>
+				<li><a href="#">Active</a></li>
+				<li><a href="#second">Item</a></li>
 				<li><a href="#">Parent</a></li>
 				<li><a href="#">Item</a></li>
 				<li><a href="#">Parent</a></li>
@@ -85,7 +85,7 @@
 	</div>
 	<!-- HTML here -->
 	<div class="main">
-		<!-- <section class="section section--header">
+		<section class="section section--header">
 			<div class="owl-carousel header-carousel owl-theme">
 				<div style="background-image: url('img/header/headerBg.png');" class="item">
 					<div class="uk-container">
@@ -424,7 +424,7 @@
 					</div>
 				</div>
 			</div>
-		</section> -->
+		</section>
 		<section class="section section--popular">
 			<div class="uk-container">
 				<h2 class="page__heading">Популярное кофе</h2>
@@ -597,10 +597,160 @@
 							<h2 class="popular__price">475 грн.</h2>
 						</div>
 					</div>
+					<div class="popular-item">
+						<div class="popular-img-wrapper">
+							<img src="img/popular/4.png" alt="">
+						</div>
+						<div class="pupular-item-content">
+							<h2 class="pupular__h2">Кофе Арабика Ethiopia Yirgacheffe Gr.2 , Helen Gebrenigus</h2>
+							<ul class="popular__list">
+								<li class="popular-list__item">
+									<p>Кислинка</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+								<li class="popular-list__item">
+									<p>Горчинка</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+								<li class="popular-list__item">
+									<p>Крепость</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+							</ul>
+							<p class="popular__sort">100% арабика</p>
+							<h2 class="popular__price">475 грн.</h2>
+						</div>
+					</div>
+					<div class="popular-item">
+						<div class="popular-img-wrapper">
+							<img src="img/popular/4.png" alt="">
+						</div>
+						<div class="pupular-item-content">
+							<h2 class="pupular__h2">Кофе Арабика Ethiopia Yirgacheffe Gr.2 , Helen Gebrenigus</h2>
+							<ul class="popular__list">
+								<li class="popular-list__item">
+									<p>Кислинка</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+								<li class="popular-list__item">
+									<p>Горчинка</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+								<li class="popular-list__item">
+									<p>Крепость</p>
+									<div class="raiting grid">
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block active"></div>
+										<div class="raiting-block"></div>
+										<div class="raiting-block"></div>
+									</div>
+								</li>
+							</ul>
+							<p class="popular__sort">100% арабика</p>
+							<h2 class="popular__price">475 грн.</h2>
+						</div>
+					</div>
+				</div>
+				<div class="equip-carousel-nav equip-carousel-nav--popular">
+					<div class="left equip-left-nav equip-left-nav--popular">
+						<svg class="scroll__arrow" width="45" height="45" viewBox="0 0 64 64">
+							<use xlink:href="#arrow-left-1"></use>
+						</svg>
+					</div>
+					<div class="right equip-right-nav--popular">
+						<svg class="scroll__arrow" width="45" height="45" viewBox="0 0 64 64">
+							<use xlink:href="#arrow-right-1"></use>
+						</svg>
+					</div>
 				</div>
 			</div>
 		</section>
+		<section class="section section--contacts">
+			<div class="uk-container">
+				<h2 class="page__heading">Контакты</h2>
+				<h4 class="page__heading-desc">Мы готовы лично обсуждать формат и условия взаимовыгодного сотрудничества с нашими партнерами. Если у вас возникли вопросы задавайте их нашим сотрудникам</h4>
+				<div class="contacts-blocks grid">
+					<div class="contact-block uk-box-shadow-small uk-box-shadow-hover-medium">
+						<div class="contact-avatar">
+							<img class="uk-border-circle" src="img/contacts/man.png" width="200" height="200" alt="Border circle">
+							<div class="contact__name">
+								<h3 class="contact__h3">Андрей Кулаков</h3>
+								<p class="contact__p">Руководитель сервисного отдела</p>
+								<div class="socials grid">
+									<a href="#" class="viber"></a>
+									<a href="#" class="telegram"></a>
+									<a href="#" class="messenger"></a>
+								</div>
+							</div>
+						</div>
+						<p class="contact__info">Мой опыт в ремонте оборудования больше 20 лет, на сегодняшний день могу отремонтировать и запустить в работу любое железо. Попробуйте удивить нас Вашей проблемой.</p>
+						<p class="contact__info">Пишите в удобный для Вас мессенджер обсудим и решим вашу проблему.</p>
+					</div>
+					<div class="contact-block uk-box-shadow-small uk-box-shadow-hover-medium">
+						<div class="contact-avatar">
+							<img class="uk-border-circle" src="img/contacts/girl.png" width="200" height="200" alt="Border circle">
+							<div class="contact__name">
+								<h3 class="contact__h3">Анастасия Иванова</h3>
+								<p class="contact__p">Руководитель сервисного отдела</p>
+								<div class="socials grid">
+									<a href="#" class="viber"></a>
+									<a href="#" class="telegram"></a>
+									<a href="#" class="messenger"></a>
+								</div>
+							</div>
+						</div>
+						<p class="contact__info">Прошла путь от Бариста до специалиста по открытию новых сетевых заведений, с нуля. Обучаю и адаптирую персонал для кофейного бизнеса. 10 лет опыта работы в компании Caffein. Знаю все тонкости кофейного бизнеса и
+							смогу Вам помочь подобрать подходящее кофейное оборудование. Пишите в удобный для вас мессенджер и мы обсудим все вопросы.</p>
+					</div>
+				</div>
+				<footer>
+					<div class="footer__address grid">
+						<p class="address__p">г.Киев, пр.Отрадный, 95</p>
+						<p><a href="#">(044) 334-64-78</a>, <a href="#">(068) 686-55-22</a></p>
+						<a href="#" class="footer__email">info@caffein.ua</a>
+					</div>
+				</footer>
+			</div>
+		</section>
 	</div>
+	<a href="#" id="popup__toggle" onclick="return true;">
+		<div class="circlephone" style="transform-origin: center;"></div>
+		<div class="circle-fill" style="transform-origin: center;"></div>
+		<div class="img-circle" style="transform-origin: center;">
+			<div class="img-circleblock" style="transform-origin: center;"></div>
+		</div>
+	</a>
 	<script src="js/scripts.min.js"></script>
 </body>
 
