@@ -39,6 +39,12 @@
       position: absolute
       bottom: 20px
       background-color: $accentD
+      min-width: 90px
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      align-items: center
+      justify-content: center
 
       &:hover
         background-color: darken($accentD, 10%)
@@ -58,12 +64,11 @@
       width: calc(100% - 60px)
 
       p
-        font-family: $cond
-        font-weight: lighter
+        font-family: $hr
         text-transform: uppercase
         letter-spacing: 2.6px
         color: $accent
-        font-size: 0.7125rem
+        font-size: 0.8125rem
         margin: 0
 
       h3
@@ -98,13 +103,19 @@
 
     .weight
       font-size: 0.9375rem
+      font-family: $hr
       color: $text
       font-weight: normal
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      align-items: center
+      justify-content: center
 
     .desc
       margin-top: 5px
       font-size: 0.875rem
-      font-family: $cyr
+      font-family: $hr
       font-weight: normal
 
     p
@@ -123,6 +134,7 @@
   font-size: 1rem
   color: #9b9b9b
   line-height: 22px
+  font-family: $hr
 
 .paced-rule
   padding: 35px 25px

@@ -1,0 +1,154 @@
+.section__equipment
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+  justify-content: center
+
+.uk-active
+	background-color: #f7f7f7
+
+.homepage-button-tab
+  padding: 10px 20px
+  margin-right: $gutter
+  border: 1px solid #e6e6e6
+  border-bottom: none
+
+.homepage-button-tab.uk-active
+  border-color: transparent
+
+.uk-tab > .uk-active > a
+  border-color: #f7f7f7
+  text-align: left
+  font-family: $cyr
+  font-size: 0.9375rem
+  font-weight: bold
+  color: #292929
+
+.uk-tab
+  margin-left: 0px
+
+  a
+    text-align: left
+    font-family: $hr
+    font-size: 0.9375rem
+    font-weight: lighter
+    color: #8f8f8f
+
+.no-margin-bottom
+  margin-bottom: 0px !important
+
+.uk-tab::before
+  border-bottom: 0px
+
+.equip-switch
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+
+.switch-head
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 20px
+
+.page__heading--equip
+  color: $color
+  font-size: 1.875rem
+
+.equip__h4
+  color: $accent
+  font-family: $hr
+  text-transform: uppercase
+  font-size: 0.9375rem
+  letter-spacing: 0.6px
+  margin: 10px 0 0 0
+
+.equip-right
+  grid-template-columns: 1fr 1fr
+  grid-gap: 15px
+
+.link-button--rent,
+.link-button--buy
+  padding-left: 60px
+  position: relative
+  float: left
+
+  &::after
+    content: ''
+    position: absolute
+    left: 20px
+    height: 28px
+    width: 28px
+    background-repeat: no-repeat
+
+.link-button--rent
+  &::after
+    background-image: url('../img/icons/calendar.png')
+
+.link-button--buy
+  background-color: $dark-grey
+  transition: background-color .5s
+
+  &:hover
+    background-color: lighten($dark-grey, 20%)
+
+  &::after
+    background-image: url('../img/icons/cart.png')
+
+.page__heading-desc
+  font-family: $h
+  font-size: 1.1875rem
+  color: $text
+  margin: 5px 0 0 0
+  text-align: center
+
+.equip-carousel
+  background-color: $white
+  border: 1px solid #e6e6e6
+  border-top: none
+  width: calc(100% - 2px)
+
+  .item
+    padding: 15px 0
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    align-items: center
+    justify-content: center
+
+  img
+    width: 100%
+    max-width: 700px
+    height: auto
+
+.equip-carousel-wrapper
+  position: relative
+//
+// .equip-carousel-nav
+//   position: absolute
+
+.equip-left-nav,
+.equip-right-nav
+  position: absolute
+  top: 50%
+  z-index: 5
+  transform: translate(0%, -50%)
+  cursor: pointer
+
+  svg
+    transition: fill .5s
+
+  &:hover
+    svg
+      fill: $accent
+
+
+.equip-left-nav
+  left: 0
+
+.equip-right-nav
+  right: 0
