@@ -45,18 +45,18 @@
 					</div>
 					<div class="uk-navbar-left uk-visible@l">
 						<ul class="nav">
-							<li><a onclick="$('.main').moveTo(3);" href="#">Кофемашины</a></li>
+							<li><a onclick="$('.main').moveTo(3);" href="#third">Кофемашины</a></li>
 							<li><a onclick="$('.main').moveTo(2);" href="#second" uk-scroll>Стоимость аренды</a></li>
-							<li><a onclick="$('.main').moveTo(6);" href="#">Наше кофе</a></li>
-							<li><a onclick="$('.main').moveTo(7);" href="#">Контакты</a></li>
+							<li><a onclick="$('.main').moveTo(6);" href="#sixth">Наше кофе</a></li>
+							<li><a onclick="$('.main').moveTo(7);" href="#seventh">Контакты</a></li>
 						</ul>
 					</div>
-					<div class="uk-navbar-right uk-visible@m">
+					<div class="uk-navbar-right">
 						<div class="number">
 							<a href="#">+38 (044) 334-64-78</a>
 							<a href="#">+38 (068) 686-55-22</a>
 						</div>
-						<a href="#" class="link-button">Заказать звонок</a>
+						<a href="#" class="link-button uk-visible@m">Заказать звонок</a>
 					</div>
 					<div type="button" uk-toggle="target: #offcanvas-reveal" class="coffee-burger uk-hidden@l">
 						<div class="line-burger"></div>
@@ -71,15 +71,16 @@
 		<div class="uk-offcanvas-bar coffee-menu">
 			<button class="uk-offcanvas-close" type="button" uk-close></button>
 			<ul class="uk-list mobile-menu">
-				<li><a onclick="$('.main').moveTo(1);" href="#">Кофемашины</a></li>
+				<li><a onclick="$('.main').moveTo(3);" href="#third">Кофемашины</a></li>
 				<li><a onclick="$('.main').moveTo(2);" href="#second">Стоимость аренды</a></li>
-				<li><a onclick="$('.main').moveTo(3);" href="#">Наше кофе</a></li>
-				<li><a onclick="$('.main').moveTo(4);" href="#">Контакты</a></li>
+				<li><a onclick="$('.main').moveTo(6);" href="#sixth">Наше кофе</a></li>
+				<li><a onclick="$('.main').moveTo(7);" href="#seventh">Контакты</a></li>
 			</ul>
 		</div>
 	</div>
 	<!-- HTML here -->
 	<div class="main">
+		<div class="ankor" id="first"></div>
 		<section class="section section--header">
 			<div class="owl-carousel header-carousel owl-theme">
 				<div style="background-image: url('img/header/headerBg.png');" class="item">
@@ -165,7 +166,8 @@
 				</div>
 			</div>
 		</section>
-		<section id="second" class="section section--pacets">
+		<div class="ankor" id="second"></div>
+		<section class="section section--pacets">
 			<div class="uk-container">
 				<h2 class="page__heading">Пакеты по аренде оборудования</h2>
 				<ul class="pacets-list grid">
@@ -245,11 +247,12 @@
 				</ul>
 			</div>
 		</section>
+		<div class="ankor" id="third"></div>
 		<section class="section section--equipment">
 			<div class="uk-container">
 				<h2 class="page__heading">Аренда оборудования</h2>
 				<h4 class="page__heading-desc">Варианты комплектации:</h4>
-				<ul class="uk-margin-medium-top uk-child-width-1-4 no-margin-bottom" uk-toggle="cls: uk-child-width-1-4; mode: media; media: @m" uk-tab>
+				<ul class="uk-margin-medium-top mobile-jc uk-child-width-1-4 no-margin-bottom" uk-toggle="cls: uk-child-width-1-4; mode: media; media: @m" uk-tab>
 					<li class="homepage-button-tab"><a href="#">для HoReCa</a></li>
 					<li class="homepage-button-tab"><a href="#">для офиса/магазина</a></li>
 				</ul>
@@ -313,6 +316,9 @@
 								<div class="item">
 									<img src="img/equipment/1.png" alt="">
 								</div>
+								<div class="item">
+									<img src="img/equipment/1.png" alt="">
+								</div>
 							</div>
 							<div class="equip-carousel-nav">
 								<div class="left equip-left-nav2">
@@ -331,6 +337,7 @@
 				</ul>
 			</div>
 		</section>
+		<div class="ankor" id="fourth"></div>
 		<section style="background-image: url('img/repeir/coffeefocus.png');" class="section section--repeir">
 			<div class="uk-container">
 				<div class="repeir-content">
@@ -357,6 +364,7 @@
 				</div>
 			</div>
 		</section>
+		<div class="ankor" id="fifth"></div>
 		<section style="background-image: url('img/repeir/coffee.png');" class="section section--proposition">
 			<div class="uk-container">
 				<div class="propisition-content-wrapper">
@@ -420,6 +428,7 @@
 				</div>
 			</div>
 		</section>
+		<div class="ankor" id="sixth"></div>
 		<section class="section section--popular">
 			<div class="uk-container">
 				<h2 class="page__heading">Популярное кофе</h2>
@@ -691,6 +700,7 @@
 				</div>
 			</div>
 		</section>
+		<div class="ankor" id="seventh"></div>
 		<section class="section section--contacts">
 			<div class="uk-container">
 				<h2 class="page__heading">Контакты</h2>

@@ -111,7 +111,7 @@ $(document).ready(function() {
       0: {
         items: 1
       },
-      600: {
+      768: {
         items: 2
       },
       1200: {
@@ -133,13 +133,13 @@ $(document).ready(function() {
 
   // Smoth scroll
 
-  $(document).on('click', 'a[href^="#"]', function (event) {
-      event.preventDefault();
-
-      $('html, body').animate({
-          scrollTop: $($.attr(this, 'href')).offset().top
-      }, 500);
-  });
+  // $(document).on('click', 'a[href^="#"]', function (event) {
+  //     event.preventDefault();
+  //
+  //     $('html, body').animate({
+  //         scrollTop: $($.attr(this, 'href')).offset().top
+  //     }, 500);
+  // });
 
 });
 
@@ -160,5 +160,3 @@ $(window).scroll(function() {
     $back_to_top.addClass('back-to-top-fade-out');
   }
 });
-
-// Input mask

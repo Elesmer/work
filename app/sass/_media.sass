@@ -78,10 +78,151 @@
 		.owl-dots
 			display: none
 
+	.section--proposition
+		background-position: -500px -100px
+
+@media only screen and (max-width : 1000px)
+
+	.section--proposition
+		background-image: none !important
+		background-color: #000
+
+		.uk-container
+			align-items: center
+
 @media only screen and (max-width : 960px)
-	/**/
+
+	.uk-container
+		padding-left: 20px
+		padding-right: 20px
+
+	#popup__toggle
+		display: none
+
+	.propositions-grid
+		grid-template-columns: repeat(2, 210px)
+
+	.contact-avatar
+		flex-direction: column
+		align-items: center
+
+	.contact__name
+		margin-top: 20px
+		margin-left: 0
+		align-items: center
+
+	.contact__p
+		margin: 0
+
+	.equip-carousel-nav--popular
+		.right
+			right: 0
+
+		.left
+			left: 0
+
+	.contact-block
+		padding: 20px
+
+@media only screen and (max-width : 768px)
+
+	.contacts-blocks,
+	.repeir-box
+		grid-template-columns: 100%
+
+	.repeir-form-wrapper
+		padding: 40px 40px 0 40px
+		align-items: center
+
+	.repeir-avatar
+		padding: 20px 40px 40px 40px
+
+	.repeir-content,
+	.repeir-box,
+	.header-carousel .item .uk-container .header-content,
+
+		width: 100%
+		max-width: 100%
+
+	.text-input
+		max-width: 300px
+		max-height: 37px
+
+	.footer__address
+		grid-template-columns: 1fr
+		grid-template-rows: 0 0
+
+		p,
+		a
+			text-align: center
 
 @media only screen and (max-width : 640px)
+
+	.uk-tab a,
+	.uk-tab > .uk-active > a
+		font-size: .9375rem
+
+	.homepage-button-tab
+		margin-right: 15px
+
+		&:last-child
+			margin-right: 0
+
+	.link-button--buy::after,
+	.link-button--rent::after
+		height: 19px
+		width: 19px
+		background-size: contain
+		top: 50%
+		transform: translate(0, -50%)
+		left: 10px
+
+	.link-button--buy,
+	.link-button--rent
+		padding-left: 40px
+		padding-right: 15px
+		text-align: center
+
+	.equip-right
+		grid-template-columns: repeat(2, minmax(130px, 150px))
+		margin-top: 30px
+
+	.equip__h4
+		display: none
+
+	.equip-carousel-wrapper
+		.equip-carousel-nav
+			display: none
+
+	.equip-carousel
+		border: none
+
+	.section--equipment .uk-container
+		width: calc(100% - 40px)
+
+	.pacets-list
+		grid-template-columns: 100%
+
+	.repeir-box
+		background-color: #f7f7f7
+
+	.repeir-box__h3
+		text-align: center
+		font-size: 1.3rem
+
+	.submit-input
+		margin-top: 10px
+		max-width: 150px
+		height: 35px
+		font-size: 0.85rem
+
+	.repeir-form
+		display: grid
+		justify-items: center
+		width: 100%
+
+	.text-input
+		width: calc(100% - 40px)
 
 	.equip-switch
 		.owl-dots
@@ -104,8 +245,102 @@
 		.owl-dot.active
 			background: $accent !important
 
+	.page__heading
+		font-size: 2.3rem
+
+	.equip-left
+		.page__heading
+			font-size: 1.6em
+
+	.propisition-content-wrapper .page__heading
+		text-align: center
+
+	.header-list
+		margin: 0
+
+		li:last-child
+			margin: 0
+
+@media only screen and (max-width : 500px)
+
+	.propositions-grid
+		grid-template-columns: 1fr
+
+	.proposition
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	.proposition__p
+		text-align: center
+
+	.left,
+	.right
+		top: 35%
+
+	.section--popular
+		padding-bottom: 0
+
+	.uk-navbar-right
+		margin: 0
+
+	.uk-navbar
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		justify-content: space-between
+
+	.uk-navbar-item
+		padding: 0
+
+	.coffee-burger
+		margin-left: 0
+
+	.raiting
+		grid-template-columns: repeat(5, 35px)
+
 @media only screen and (max-width : 480px)
-	/**/
+
+	.header-carousel .item .uk-container h2
+		line-height: 36px
+
+	.switch-head
+		align-items: center
+
+	.uk-tab a,
+	.uk-tab > .uk-active > a
+		font-size: .8375rem
+
+	.homepage-button-tab
+		padding: 10px
+
+	header .number
+		margin-right: 0
+
+	.header-carousel .item .uk-container h2
+		font-size: 2.3rem
+
+	.pacet-services li p
+		font-size: 0.9rem
+
+	.section--equipment .uk-container
+		width: 100%
+		padding: 0
+
+	.mobile-jc
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		justify-content: space-betweena
+
+	.link-button--buy,
+	.link-button--rent
+		font-size: .9rem
+
+	.section--repeir
+		background-position: 50% 0
 
 @media only screen and (max-width : 320px)
   /**/
