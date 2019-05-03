@@ -1,0 +1,88 @@
+.modal-wrapper
+  padding: 70px
+  background-color: #fff
+  max-width: 640px
+  width: calc(640px - 160px)
+
+  .page__heading
+    color: #1b2237
+
+  .page__heading-desc
+    font-size: 1.25rem
+    color: #585a5f
+
+.modal-form
+  margin-top: 30px
+  grid-template-columns: 1fr
+  grid-row-gap: 20px
+
+.modal-input
+  padding: 17px 20px 15px 20px
+  color: #1f273f
+  border: 1px solid #dadada
+  background-color: $white
+  opacity: 1
+
+  &::placeholder
+    color: #1f273f
+    font-family: $h
+    font-weight: lighter
+
+.ss-main .ss-single-selected
+  height: 100%
+  padding: 0 25px
+  padding: 17px 20px 15px 20px
+  border-radius: 0
+  border-right: 0
+  background-color: #f9f9f9
+
+  .placeholder
+    i
+      font-size: 1.5rem
+
+.ss-option
+  min-height: 30px
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+
+.ss-main .ss-content
+  width: calc(100% + 1px)
+
+.ss-search
+  display: none !important
+
+.modal__select-wrapper
+  grid-template-columns: 100px auto
+
+.ss-main .ss-single-selected .ss-arrow span.arrow-up,
+.ss-main .ss-single-selected .ss-arrow span.arrow-down
+  border: none
+  background-image: url('../img/icons/arrow.png')
+  width: 13px
+  height: 9px
+  padding: 0
+
+.ss-main .ss-single-selected .ss-arrow span.arrow-down
+  transform: rotate(0deg)
+  margin-top: 2px
+
+.ss-main .ss-single-selected .ss-arrow span.arrow-up
+  transform: rotate(-180deg)
+  margin-top: -2px
+
+.ss-main .ss-content .ss-list .ss-option.ss-highlighted,
+.ss-main .ss-content .ss-list .ss-option:hover
+  background-color: $accent
+
+.link-button--modal
+  max-width: 235px
+  width: calc(235px - 56px)
+  margin: 0 auto
+  text-align: center
+  margin-top: 30px
+
+input
+  border-radius: 0
+  -webkit-appearance: none

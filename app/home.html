@@ -20,6 +20,9 @@
 	<link href="libs/onePageScroll/onepage-scroll.css" rel="stylesheet">
 	<link href="libs/owlCarousel/owl.carousel.min.css" rel="stylesheet">
 	<link href="libs/owlCarousel/owl.theme.default.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.20.0/slimselect.min.js"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.20.0/slimselect.min.css" rel="stylesheet">
+	</link>
 	<link href="css/main.min.css" rel="stylesheet">
 </head>
 
@@ -32,6 +35,26 @@
 		<svg width="64" height="64" viewBox="0 0 64 64">
 			<path id="arrow-right-1" d="M17.919 55.738c-0.858 0.867-0.858 2.266 0 3.133s2.243 0.867 3.101 0l25.056-25.302c0.858-0.867 0.858-2.269 0-3.133l-25.056-25.306c-0.858-0.867-2.243-0.867-3.101 0s-0.858 2.266 0 3.133l22.848 23.738-22.848 23.738z" />
 		</svg>
+	</div>
+	<!-- This is the modal -->
+	<div id="modal" class="uk-flex-top" uk-modal>
+		<div class="uk-modal-dialog uk-margin-auto-vertical">
+			<div class="modal-wrapper">
+				<h2 class="page__heading">Заголовок формы</h2>
+				<p class="page__heading-desc">Здесь пример текста что человек получит книгу если заполнит форму бла бла бла</p>
+				<form class="modal-form grid" action="#">
+					<input class="modal-input" placeholder="Имя" type="text">
+					<input class="modal-input" placeholder="Фамилия" type="text">
+					<input class="phone-input modal-input" placeholder="Номер телефона" type="text">
+					<input class="modal-input" placeholder="E-mail" type="text">
+					<div class="modal__select-wrapper grid">
+						<select id="slim-select" class="modal-select"></select>
+						<input placeholder="Адрес соцсети" class="modal-input" type="text">
+					</div>
+					<a href="#" class="link-button link-button--modal">Отправить</a>
+				</form>
+			</div>
+		</div>
 	</div>
 	<!-- Header -->
 	<header>
@@ -58,7 +81,7 @@
 						</div>
 						<a href="#" class="link-button uk-visible@m">Заказать звонок</a>
 					</div>
-					<div type="button" uk-toggle="target: #offcanvas-reveal" class="coffee-burger uk-hidden@l">
+					<div uk-toggle="target: #offcanvas-reveal" class="coffee-burger uk-hidden@l">
 						<div class="line-burger"></div>
 						<div class="line-burger"></div>
 						<div class="line-burger"></div>
@@ -69,7 +92,7 @@
 	</header>
 	<div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
 		<div class="uk-offcanvas-bar coffee-menu">
-			<button class="uk-offcanvas-close" type="button" uk-close></button>
+			<button class="uk-offcanvas-close" uk-close></button>
 			<ul class="uk-list mobile-menu">
 				<li><a onclick="$('.main').moveTo(3);" href="#third">Кофемашины</a></li>
 				<li><a onclick="$('.main').moveTo(2);" href="#second">Стоимость аренды</a></li>
@@ -194,7 +217,7 @@
 								<h4>220 грн.</h4>
 							</li>
 						</ul>
-						<a href="#" class="link-button">Заказать</a>
+						<a uk-toggle="target: #modal" href="#" class="link-button">Заказать</a>
 					</li>
 					<li class="price-item uk-box-shadow-small uk-box-shadow-hover-medium">
 						<div class="pacet-head">
@@ -252,7 +275,7 @@
 			<div class="uk-container">
 				<h2 class="page__heading">Аренда оборудования</h2>
 				<h4 class="page__heading-desc">Варианты комплектации:</h4>
-				<ul class="uk-margin-medium-top mobile-jc uk-child-width-1-4 no-margin-bottom" uk-toggle="cls: uk-child-width-1-4; mode: media; media: @m" uk-tab>
+				<ul class="uk-margin-medium-top mobile-jc uk-child-width-1-4 no-margin-bottom" uk-toggle="cls: uk-child-width-1-4; mode: media; media: @m" uk-tab="swiping: false;">
 					<li class="homepage-button-tab"><a href="#">для HoReCa</a></li>
 					<li class="homepage-button-tab"><a href="#">для офиса/магазина</a></li>
 				</ul>
@@ -348,7 +371,7 @@
 						<div class="repeir-form-wrapper">
 							<h3 class="repeir-box__h3">Какая у вас проблема? Задайте мне вопрос?</h3>
 							<form action="#" class="repeir-form">
-								<input id="phone" class="text-input" placeholder="Номер телефона" type="text">
+								<input id="phone" class="phone-input text-input" placeholder="Номер телефона" type="text">
 								<input value="Заказать звонок" class="submit-input link-button" type="submit">
 							</form>
 						</div>
@@ -422,7 +445,7 @@
 							<div class="proposition-img-wrapper">
 								<img src="img/propositions/eye.png" alt="" class="proposition__img">
 							</div>
-							<p class="proposition__p">Собственный выставочный зал с ассортиментом до 50 единиц кофейного  оборудования</p>
+							<p class="proposition__p">Собственный выставочный зал с ассортиментом до 50 единиц кофейного оборудования</p>
 						</div>
 					</div>
 				</div>
@@ -753,7 +776,7 @@
 		<div class="circlephone" style="transform-origin: center;"></div>
 		<div class="circle-fill" style="transform-origin: center;"></div>
 		<div class="img-circle" style="transform-origin: center;">
-			<div class="img-circleblock" style="transform-origin: center;"></div>
+			<div uk-toggle="target: #modal" class="img-circleblock" style="transform-origin: center;"></div>
 		</div>
 	</a>
 	<script src="js/scripts.min.js"></script>

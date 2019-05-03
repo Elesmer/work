@@ -13,7 +13,7 @@ $(document).ready(function() {
     afterMove: function(index) {}, // This option accepts a callback function. The function will be called after the page moves.
     loop: false, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
     keyboard: true, // You can activate the keyboard controls
-    responsiveFallback: 1200,
+    responsiveFallback: 1450,
     direction: "vertical" // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
   });
 
@@ -99,7 +99,7 @@ $(document).ready(function() {
 
   // Phone mask
 
-  $("#phone").inputmask("+(380) 999-99-99-99");
+  $(".phone-input").inputmask("+(380) 999-99-99-99");
 
   // Popular carousel
 
@@ -142,6 +142,17 @@ $(document).ready(function() {
   // });
 
 });
+
+// Custom select`
+
+new SlimSelect({
+  select: '#slim-select',
+  valuesUseText: false,
+  data: [
+    {innerHTML: '<i class="fab fa-facebook-f"></i>', text: 'Facebook'},
+    {innerHTML: '<i class="fab fa-vk"></i>', text: 'Vk'}
+  ]
+})
 
 /* To top button */
 

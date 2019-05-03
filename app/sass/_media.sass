@@ -1,3 +1,21 @@
+@media only screen and (max-width : 1460px)
+	.modal-wrapper
+		padding: 30px
+
+	.uk-modal-dialog
+		width: auto
+
+	.modal-wrapper
+		width: auto
+
+	.modal-input
+		width: calc(100% - 40px)
+		padding: 15px 20px 13px 20px
+
+	.modal-wrapper
+		.page__heading-desc
+			font-size: 1rem
+
 @media only screen and (max-width : 1367px)
 
 	html
@@ -124,6 +142,9 @@
 	.contact-block
 		padding: 20px
 
+	.switcher-coffe a
+		font-size: 1rem
+
 @media only screen and (max-width : 768px)
 
 	.contacts-blocks,
@@ -157,6 +178,17 @@
 			text-align: center
 
 @media only screen and (max-width : 640px)
+
+	.modal__select-wrapper
+		grid-template-columns: 1fr
+
+	.ss-main .ss-single-selected
+		border-right: 1px solid #dcdee2
+		padding: 15px 20px 13px 20px
+		border-bottom: 0
+
+	.link-button--modal
+		margin-top: 0
 
 	.uk-tab a,
 	.uk-tab > .uk-active > a
@@ -303,6 +335,9 @@
 
 @media only screen and (max-width : 480px)
 
+	.ss-main .ss-single-selected
+		width: calc(100% + 2px)
+
 	.header-carousel .item .uk-container h2
 		line-height: 36px
 
@@ -314,7 +349,10 @@
 		font-size: .8375rem
 
 	.homepage-button-tab
-		padding: 10px
+		padding: 15px
+
+	.switcher-coffe a
+		font-size: .9rem
 
 	header .number
 		margin-right: 0
@@ -333,7 +371,7 @@
 		display: -webkit-flex
 		display: -ms-flex
 		display: flex
-		justify-content: space-betweena
+		justify-content: space-between
 
 	.link-button--buy,
 	.link-button--rent
@@ -343,4 +381,7 @@
 		background-position: 50% 0
 
 @media only screen and (max-width : 320px)
-  /**/
+
+	.link-button--modal
+		width: 150px
+		max-width: 150px

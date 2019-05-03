@@ -71,6 +71,7 @@ gulp.task('scripts', function() {
 			'app/libs/onePageScroll/jquery.onepage-scroll.js',
 			'app/libs/owlCarousel/owl.carousel.min.js',
 			'app/libs/maskInput/jquery.mask.js',
+			// 'app/libs/niceSelect/jquery.nice-select.min.js',
       'app/js/common.js', // Always at the end
     ])
     .pipe(concat('scripts.min.js'))
