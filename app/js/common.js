@@ -13,7 +13,7 @@ $(document).ready(function() {
     afterMove: function(index) {}, // This option accepts a callback function. The function will be called after the page moves.
     loop: false, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
     keyboard: true, // You can activate the keyboard controls
-    responsiveFallback: 1450,
+    responsiveFallback: 1200,
     direction: "vertical" // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
   });
 
