@@ -44,6 +44,7 @@ $(document).ready(function() {
     margin: 0,
     dots: true,
     nav: false,
+    lazyLoad: true,
     responsive: {
       0: {
         items: 1
@@ -75,11 +76,12 @@ $(document).ready(function() {
     margin: 0,
     dots: true,
     nav: false,
+    lazyLoad: true,
     responsive: {
       0: {
         items: 1
       },
-      600: {
+      600: {g
         items: 1
       },
       1000: {
