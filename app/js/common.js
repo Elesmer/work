@@ -39,7 +39,7 @@ $(document).ready(function() {
 
   // Equip carousel
 
-  $('.equip-carousel--1').owlCarousel({
+  var firstEquipCarousel = $('.equip-carousel--1').owlCarousel({
     loop: true,
     margin: 0,
     dots: true,
@@ -81,7 +81,7 @@ $(document).ready(function() {
       0: {
         items: 1
       },
-      600: {g
+      600: {
         items: 1
       },
       1000: {
@@ -150,9 +150,14 @@ $(document).ready(function() {
 new SlimSelect({
   select: '#slim-select',
   valuesUseText: false,
-  data: [
-    {innerHTML: '<i class="fab fa-facebook-f"></i>', text: 'Facebook'},
-    {innerHTML: '<i class="fab fa-vk"></i>', text: 'Vk'}
+  data: [{
+      innerHTML: '<i class="fab fa-facebook-f"></i>',
+      text: 'Facebook'
+    },
+    {
+      innerHTML: '<i class="fab fa-vk"></i>',
+      text: 'Vk'
+    }
   ]
 })
 

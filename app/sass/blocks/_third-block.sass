@@ -111,9 +111,10 @@
   background-color: $white
   border: 1px solid #e6e6e6
   border-top: none
-  width: calc(100% - 2px)
+  width: 100%
 
   .item
+    width: 100%
     padding: 15px 0
     display: -webkit-flex
     display: -ms-flex
@@ -126,10 +127,17 @@
     max-width: 700px
     height: auto
 
+.owl-stage-outer
+  width: 100%
+
 .equip-carousel-wrapper
   position: relative
   width: 100%
   float: left
+
+.equip-switch
+  float: left
+  width: 100%
 
 .left,
 .right
@@ -145,7 +153,6 @@
   &:hover
     svg
       fill: $accent
-
 
 .left
   left: 0
