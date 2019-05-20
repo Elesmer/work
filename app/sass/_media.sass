@@ -5,7 +5,7 @@
 		line-height: 3rem
 
 	.page__heading-desc
-		line-height: 1rem
+		line-height: 1.5rem
 		margin-top: 10px
 
 	.homepage-button-tab
@@ -104,6 +104,26 @@
 		margin-top: 30px
 
 @media only screen and (max-width : 1200px)
+
+	.carousel-item__wrapper
+		grid-template-columns: 100%
+
+	.carousel__img-wrapper
+		img
+			width: 20% !important
+
+	.equip-switch--rest
+		.switch__table
+			min-height: auto
+			max-height: auto
+			max-width: 100%
+			overflow: hidden
+			overflow-x: scroll
+
+			.switch__ul
+				min-width: 1180px
+				position: relative
+
 	header
     .number
       margin-right: 30px
@@ -150,7 +170,17 @@
 	.section--proposition
 		background-position: -500px -100px
 
+	.carousel-item__wrapper
+		padding: 20px
+
 @media only screen and (max-width : 1000px)
+
+	.carousel__img-wrapper
+		img
+			width: 50% !important
+
+	.switch__ul
+		min-width: auto
 
 	.section--proposition
 		background-image: none !important
@@ -159,7 +189,40 @@
 		.uk-container
 			align-items: center
 
+	.carousel-item__wrapper
+		padding: 0px
+
+	.carousel__img-wrapper
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		justify-content: center
+		margin: 20px 0
+
+	.carousel-table__h2
+		text-align: center
+
+	.switch__table
+		max-height: 800px
+		min-height: auto
+
+	.switch__list li p
+		text-align: center
+
+	.switch__ul
+		display: grid
+		grid-template-columns: 100%
+
+	.office__country
+		grid-template-columns: 100%
+		margin: 20px
+
 @media only screen and (max-width : 960px)
+
+	.carousel__img-wrapper
+		img
+			width: 50% !important
+			height: auto !important
 
 	.uk-container
 		padding-left: 20px
@@ -198,6 +261,36 @@
 
 @media only screen and (max-width : 768px)
 
+	.logo img
+		object-fit: contain !important
+
+	.section--repeir
+		margin-top: 20px
+
+	.mobile-jc
+		li
+			padding: 10px
+			padding-right: 0
+			padding-left: 0
+			border-left: 0
+			border-right: 0
+			margin: 0
+			width: 100%
+
+	.page__heading--rest
+		font-size: 1.2rem !important
+
+	.section--equipment
+		padding-bottom: 0
+
+	.switch__ul
+		margin: 0
+
+		.switch__li
+		  &:nth-child(4)
+		    .switch__ul-head-ico
+		    	margin: 10px 0
+
 	.contacts-blocks,
 	.repeir-box
 		grid-template-columns: 100%
@@ -229,6 +322,15 @@
 			text-align: center
 
 @media only screen and (max-width : 640px)
+
+	.header-carousel .item .uk-container h2
+		margin: 0 0 15px
+		font-size: 2.5rem
+
+	.after_main_text
+		margin: 0 0 10px 0
+		font-size: 1rem
+		line-height: 23px
 
 	.modal__select-wrapper
 		grid-template-columns: 1fr
