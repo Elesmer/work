@@ -105,12 +105,21 @@
 
 @media only screen and (max-width : 1200px)
 
-	.carousel-item__wrapper
-		grid-template-columns: 100%
+	.video-bg-wrapper
+		background-image: url('../img/productPage/2-layers.png')
+
+		.video-bacground
+			display: none
+
+	.rest-table-wrapper
+		overflow: hidden
+		overflow-x: scroll
 
 	.carousel__img-wrapper
-		img
-			width: 20% !important
+		width: 20%
+
+	.carousel-item__wrapper
+		grid-template-columns: 100%
 
 	.equip-switch--rest
 		.switch__table
@@ -176,8 +185,8 @@
 @media only screen and (max-width : 1000px)
 
 	.carousel__img-wrapper
-		img
-			width: 50% !important
+		width: 50%
+		margin: 30px auto
 
 	.switch__ul
 		min-width: auto
@@ -197,7 +206,6 @@
 		display: -ms-flex
 		display: flex
 		justify-content: center
-		margin: 20px 0
 
 	.carousel-table__h2
 		text-align: center
@@ -206,23 +214,60 @@
 		max-height: 800px
 		min-height: auto
 
-	.switch__list li p
-		text-align: center
-
 	.switch__ul
 		display: grid
 		grid-template-columns: 100%
+
+	.switch__ul--rest
+		grid-template-columns: 17% 20% 33% 30%
 
 	.office__country
 		grid-template-columns: 100%
 		margin: 20px
 
+	.switch__marked-list
+		li
+			p
+				text-align: left
+
 @media only screen and (max-width : 960px)
 
-	.carousel__img-wrapper
-		img
-			width: 50% !important
-			height: auto !important
+	.coffee-burger--product
+		margin-right: 0px
+
+	.uk-navbar-left--product
+		width: 100%
+		justify-content: center
+
+	.product-phone-wrapper
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		flex-direction: column
+
+		li
+			padding: 2px 0
+
+			&::before
+				display: none
+
+	.new-header .product-logo
+		position: static
+
+	.section-rent .uk-container
+		width: calc(100% - 40px)
+
+	.rent-carousel-item img
+		width: 100% !important
+
+	.page__heading--equip
+		line-height: 2rem
+
+	.equip-carousel-nav--popular
+		display: block
+
+	.equip-carousel-nav--rent
+		display: none
 
 	.uk-container
 		padding-left: 20px
@@ -259,7 +304,23 @@
 	.switcher-coffe a
 		font-size: 1rem
 
+	.equip-carousel-nav--machine,
+	.equip-carousel-nav--rent
+		display: block
+
 @media only screen and (max-width : 768px)
+
+	.pacet-services
+		li
+			p,
+			.desc,
+			.paced-rule
+				font-size: 1.2rem
+				text-align: center
+
+	.paced-rule
+		font-size: 1.2rem
+		text-align: center
 
 	.logo img
 		object-fit: contain !important
@@ -321,7 +382,14 @@
 		a
 			text-align: center
 
+	.new-header .product-logo
+		position: static
+
 @media only screen and (max-width : 640px)
+
+	.carousel__img-wrapper
+		width: 100%
+		margin: 30px auto
 
 	.header-carousel .item .uk-container h2
 		margin: 0 0 15px
@@ -446,6 +514,25 @@
 		li:last-child
 			margin: 0
 
+	.equip-carousel-nav--machine,
+	.equip-carousel-nav--rent
+		display: block !important
+
+		.left,
+		.right
+			top: 15%
+
+		.left
+			left: 0
+
+		.right
+			right: 0
+
+	.equip-carousel-nav--rent
+		.left,
+		.right
+			top: 55%
+
 @media only screen and (max-width : 500px)
 
 	.propositions-grid
@@ -460,6 +547,7 @@
 
 	.proposition__p
 		text-align: center
+		font-size: 1.2rem
 
 	.left,
 	.right
@@ -488,6 +576,11 @@
 
 @media only screen and (max-width : 480px)
 
+	.pacet-services li .desc,
+	.pacet-services li .paced-rule,
+	.pacet-services li p
+		font-size: 1.1rem
+
 	.ss-main .ss-single-selected
 		width: calc(100% + 2px)
 
@@ -513,9 +606,6 @@
 	.header-carousel .item .uk-container h2
 		font-size: 2.3rem
 
-	.pacet-services li p
-		font-size: 0.9rem
-
 	.section--equipment .uk-container
 		width: 100%
 		padding: 0
@@ -529,9 +619,6 @@
 	.link-button--buy,
 	.link-button--rent
 		font-size: .9rem
-
-	.section--repeir
-		background-position: 50% 0
 
 @media only screen and (max-width : 320px)
 

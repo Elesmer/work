@@ -1,0 +1,139 @@
+.product-page
+
+  .onepage-pagination
+    display: none
+
+.product-content
+  position: absolute
+  z-index: 50
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+  float: left
+
+.new-header
+  background-color: transparent
+  height: 70px
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+
+  .uk-navbar-left,
+  .uk-navbar-right
+    position: relative
+
+  .product-logo
+    height: 90px
+    width: 68px
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    align-items: center
+    justify-content: center
+
+    img
+      height: 100%
+
+  .uk-container
+    width: 100%
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    position: relative
+    height: 100%
+
+.new-header.sticky
+  height: 90px
+  background-color: #000
+
+  .product-logo
+    height: 90px
+
+    img
+      position: relative
+      height: 100%
+
+.video-bg-wrapper
+  position: relative
+  width: 100%
+  height: 100vh
+  min-height: 100vh
+  overflow: hidden
+
+.product-phone-wrapper
+  list-style: none
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  margin: 0
+  padding: 0
+
+  li
+    position: relative
+    padding: 0 20px
+
+    &:last-child
+      &::before
+        display: none
+
+    &::before
+      content: "|"
+      position: absolute
+      right: 0
+      color: $accent
+
+    a
+      color: #fff
+      text-decoration: none
+      font-family: $cyr
+      font-size: 0.9375rem
+      font-weight: bold
+
+      &:hover
+        color: #ccc
+
+.product-phone-wrapper--menu
+  margin-left: 0
+
+  li
+    a
+      text-transform: uppercase
+      font-size: 0.8125rem
+      font-family: $hr
+      letter-spacing: 0.26px
+      font-weight: 400
+
+.product-header-buttons
+  grid-template-columns: 1fr 1fr
+  grid-gap: 15px
+  margin-left: 20px
+
+.link-button--pdf
+  font-size: 0.75rem
+  padding-right: 10px
+
+  &::after
+    top: 50%
+    transform: translate(0, -40%)
+    background-image: url('../img/productPage/productIcons/pdf.png')
+
+.link-button--download
+  padding-right: 10px
+  background-color: #fff
+  color: #1b2237
+  font-size: 0.75rem
+
+  &:hover
+    background-color: #ccc
+    color: #1b2237
+
+  &::after
+    top: 50%
+    transform: translate(0, -40%)
+    background-image: url('../img/productPage/productIcons/download.png')
+
+.coffee-burger--product
+  margin-left: 0
+  margin-right: 30px

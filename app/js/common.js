@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+  // Product page
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 50) {
+      $('.new-header').addClass("sticky");
+    } else {
+      $('.new-header').removeClass("sticky");
+    }
+  });
+
   //Full page scroll
   var windowHeight = window.innerHeight;
   $(".main").onepage_scroll({
@@ -117,13 +127,13 @@ $(document).ready(function() {
   // Custom nav
 
   var equip_c2 = $('.equip-carousel--1');
-  equip_c2.owlCarousel();
-  $('.equip-left-nav').click(function() {
-    equip_c2.trigger('prev.owl.carousel');
-  })
-  $('.equip-right-nav').click(function() {
-    equip_c2.trigger('next.owl.carousel', [300]); // в квадратных скобках скорость переключения
-  })
+    equip_c2.owlCarousel();
+    $('.equip-left-nav-custom').click(function() {
+      equip_c2.trigger('prev.owl.carousel');
+    })
+    $('.equip-right-nav-custom').click(function() {
+      equip_c2.trigger('next.owl.carousel', [300]); // в квадратных скобках скорость переключения
+    })
 
   // Second equip owlCarousel
 

@@ -54,6 +54,7 @@
 					</div>
 					<a href="#" class="link-button link-button--modal">Отправить</a>
 				</form>
+				<div class="hide-block"></div>
 			</div>
 		</div>
 	</div>
@@ -100,11 +101,12 @@
 				<li><a onclick="$('.main').moveTo(6);" href="#sixth">Наше кофе</a></li>
 				<li><a onclick="$('.main').moveTo(7);" href="#seventh">Контакты</a></li>
 			</ul>
+			<a href="#" uk-toggle="target: #modal" class="link-button">Заказать звонок</a>
 		</div>
 	</div>
 	<!-- HTML here -->
 	<div class="main">
-		<!-- <div class="ankor" id="first"></div>
+		<div class="ankor" id="first"></div>
 		<section class="section section--header">
 			<div class="owl-carousel header-carousel owl-theme">
 				<div style="background-image: url('img/header/headerBg.png');" class="item">
@@ -270,10 +272,9 @@
 					</li>
 				</ul>
 			</div>
-		</section> -->
+		</section>
 		<div class="ankor" id="third"></div>
 		<section class="section section-rent">
-			<!-- Update 20.05 -->
 			<div class="uk-container">
 				<h2 class="page__heading">Аренда оборудования для HoReCa </h2>
 				<h4 class="page__heading-desc page__heading-desc--rent">Варианты комплектации:</h4>
@@ -505,7 +506,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="equip-carousel-nav">
+							<div class="equip-carousel-nav equip-carousel-nav--machine">
 								<div class="left equip-left-nav">
 									<svg class="scroll__arrow" width="45" height="45" viewBox="0 0 64 64">
 										<use xlink:href="#arrow-left-1"></use>
@@ -520,42 +521,98 @@
 						</div>
 					</li>
 					<li class="equip-switch">
-						<div class="switch-head">
+						<!-- Update today -->
+						<div class="switch-head switch-head--rest">
 							<div class="equip-left">
-								<h3 class="page__heading page__heading--equip">Оборудование для HoReCa</h3>
-								<h4 class="equip__h4">отеля / кафе / ресторана</h4>
-							</div>
-							<div class="equip-right grid">
-								<a href="#" class="link-button link-button--rent">Аренда</a>
-								<a href="#" class="link-button link-button--buy">Купить</a>
+								<h3 class="page__heading page__heading--equip">Комплексное решение по аренде оборудования для ресторанов</h3>
+								<h4 class="equip__h4">Профессиональная кофемашина + кофемолка прямого помола</h4>
 							</div>
 						</div>
-						<div class="equip-carousel-wrapper">
-							<div class="owl-carousel equip-carousel equip-carousel--2">
-								<div class="item">
-									<img src="img/equipment/1.png" alt="">
-								</div>
-								<div class="item">
-									<img src="img/equipment/1.png" alt="">
-								</div>
-								<div class="item">
-									<img src="img/equipment/1.png" alt="">
-								</div>
-								<div class="item">
-									<img src="img/equipment/1.png" alt="">
-								</div>
-							</div>
-							<div class="equip-carousel-nav">
-								<div class="left equip-left-nav2">
-									<svg class="scroll__arrow" width="45" height="45" viewBox="0 0 64 64">
-										<use xlink:href="#arrow-left-1"></use>
-									</svg>
-								</div>
-								<div class="right equip-right-nav2">
-									<svg class="scroll__arrow" width="45" height="45" viewBox="0 0 64 64">
-										<use xlink:href="#arrow-right-1"></use>
-									</svg>
-								</div>
+						<!-- Update today -->
+						<div class="rest-table-wrapper">
+							<div class="switch__table switch__table--rest">
+								<ul class="switch__ul switch__ul--rest">
+									<li class="switch__li">
+										<ul class="switch__list">
+											<li class="switch__ul-head-item">
+												<div class="switch__icon-wrapper">
+													<img src="img/popular/coffee-bag-of-brazilian-beans.png" alt="" class="switch__ul-head-ico">
+												</div>
+												<h2 class="switch__ul-head-h2">объем Кофе, кг</h2>
+											</li>
+											<li class="switch__first">
+												<p>5 кг</p>
+											</li>
+											<li class="switch__second">
+												<p>10 кг</p>
+											</li>
+											<li class="switch__third">
+												<p>15 кг</p>
+											</li>
+										</ul>
+									</li>
+									<li class="switch__li">
+										<ul class="switch__list">
+											<li class="switch__ul-head-item">
+												<div class="switch__icon-wrapper">
+													<img src="img/popular/coin-stack.png" alt="" class="switch__ul-head-ico">
+												</div>
+												<h2 class="switch__ul-head-h2">Стоимость аренды</h2>
+											</li>
+											<li class="switch__first">
+												<p>1800 грн.</p>
+											</li>
+											<li class="switch__second">
+												<p>1000 грн.</p>
+											</li>
+											<li class="switch__third">
+												<p><strong>Бесплатно</strong></p>
+											</li>
+										</ul>
+									</li>
+									<li class="switch__li">
+										<ul class="switch__list">
+											<li class="switch__ul-head-item">
+												<div class="switch__icon-wrapper">
+													<img src="img/popular/gift.png" alt="" class="switch__ul-head-ico">
+												</div>
+												<h2 class="switch__ul-head-h2">Подарок от Caffein</h2>
+											</li>
+											<li class="switch__first">
+												<p>12 комплектов посуды, 2 кг сахара (стик)</p>
+											</li>
+											<li class="switch__second">
+												<p>12 комплектов посуды, 2 кг сахара (стик)</p>
+											</li>
+											<li class="switch__third">
+												<p>20 комплектов посуды, 4 кг сахара (стик)</p>
+											</li>
+										</ul>
+									</li>
+									<li class="switch__li">
+										<ul class="switch__list">
+											<li class="switch__ul-head-item">
+												<div class="switch__icon-wrapper">
+													<img src="img/popular/gift.png" alt="" class="switch__ul-head-ico">
+												</div>
+												<h2 class="switch__ul-head-h2">Подарок от Caffein</h2>
+											</li>
+											<li>
+												<ul class="switch__marked-list">
+													<li>
+														<p><strong>450 грн.</strong> Italian Blend (60/40 %)</p>
+													</li>
+													<li>
+														<p><strong>550 грн.</strong> Аrabica Premium (100 %) (Colombia, Honduras, India)</p>
+													</li>
+													<li>
+														<p>Индивидуальный купаж</p>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</li>
