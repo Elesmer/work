@@ -226,7 +226,7 @@
   font-family: $cond
   font-weight: 400
   line-height: 43px
-  width: 900px
+  max-width: 900px
   text-align: center
 
 .product-content__second
@@ -237,3 +237,95 @@
   justify-content: center
   flex-direction: column
   align-items: center
+
+.product-if-wrapper
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  grid-gap: 60px
+  margin: 50px 0
+
+.product-if__item
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+
+.if-item__img
+  min-width: 42px
+
+.if-item__p-wrapper
+  margin-left: 15px
+
+  p
+    color: #fff
+    font-family: $hr
+    font-size: 1.125rem
+    font-weight: 400
+    line-height: 28px
+
+.product-if__description
+  color: #d3d3d3
+  font-family: $hr
+  font-size: 1.0625rem
+  font-weight: lighter
+  line-height: 28px
+  text-align: center
+  max-width: 905px
+
+  strong
+    font-weight: 700
+
+.product-buttons-wrapper
+  grid-template-columns: auto auto
+  grid-gap: 20px
+
+.product-button
+  background-color: $accent
+  padding: 15px 25px
+  color: #fff
+  text-transform: uppercase
+  font-size: 0.8125rem
+  text-align: center
+  transition: background-color .5s, color .5s
+
+  &:hover
+    color: #ccc
+    background-color: darken($accent, 10%)
+    text-decoration: none
+
+.product-button--white
+  background-color: #fff
+  opacity: 0.9
+  color: #090a11
+
+  &:hover
+    background-color: #ccc
+    color: #090a11
+
+.product-section--third
+  background-image: url('../img/productPage/coffee_image.png')
+  padding: 150px 0
+
+.product__half-grid
+  grid-template-columns: 50% 50%
+
+.product__first-half,
+.product__second-half
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+
+  .page__heading--product-h2
+    text-align: left
+    max-width: 650px
+
+.product__what-is
+  margin: 30px 0
+
+.product__what-img
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  height: 110px
+  width: 110px
+  align-items: center
+  justify-content: center
