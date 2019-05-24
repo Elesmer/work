@@ -3,6 +3,9 @@
   .onepage-pagination
     display: none
 
+.product-section
+  position: relative
+
 .product-content
   position: absolute
   z-index: 50
@@ -32,9 +35,7 @@
     display: flex
     align-items: center
     justify-content: center
-
-    img
-      height: 100%
+    float: left
 
   .uk-container
     width: 100%
@@ -51,15 +52,24 @@
   .product-logo
     height: 90px
 
-    img
-      position: relative
-      height: 100%
+.product__wrapper
+  position: relative
+  z-index: 50
+  height: 100vh
+  min-height: 800px
+  width: 100%
+  background-color: rgba(#000000, 0.31)
+
+  .uk-container
+    height: 100%
 
 .video-bg-wrapper
-  position: relative
+  position: absolute
+  top: 0
+  left: 0
   width: 100%
   height: 100vh
-  min-height: 100vh
+  min-height: 800px
   overflow: hidden
 
 .product-phone-wrapper
@@ -137,3 +147,93 @@
 .coffee-burger--product
   margin-left: 0
   margin-right: 30px
+
+.product-first-block-content
+  width: 100%
+  height: 100%
+  z-index: 50
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+
+  .uk-container
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.page__heading--product
+  font-size: 3.75rem
+  color: #fff
+  max-width: 930px
+  line-height: 60px
+  text-align: center
+
+.product-desc
+  font-family: $cond
+  color: #fff
+  font-size: 1.875rem
+  font-weight: 400
+  left: 28px
+  margin: 50px 0 0 0
+  text-align: center
+
+.product-services
+  justify-content: center
+  width: 100%
+  grid-template-columns: repeat(auto-fill, minmax(150px, 215px))
+  grid-gap: 30px
+  margin-top: 30px
+
+.product-services__item
+  background-color: #10121c
+  opacity: 0.9
+  padding: 20px
+  height: calc(215px - 40px)
+
+.product-item__ico
+  height: 40px
+  width: 40px
+  display: -webkit-flex
+  display: -ms-flex
+  margin: 0 auto
+  margin-top: 10px
+  display: flex
+  align-items: center
+  justify-content: center
+
+.product-item__p
+  font-family: $hr
+  font-weight: 400
+  font-size: 1rem
+  line-height: 24px
+  color: #fff
+  text-align: center
+  margin: 15px 0 0 0
+
+.product-section--second
+  background-color: #090a11
+  padding: 100px 0
+  width: 100%
+
+.page__heading--product-h2
+  color: #f4f4f4
+  font-size: 2.5rem
+  font-family: $cond
+  font-weight: 400
+  line-height: 43px
+  width: 900px
+  text-align: center
+
+.product-content__second
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  width: 100%
+  justify-content: center
+  flex-direction: column
+  align-items: center
