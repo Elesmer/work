@@ -79,6 +79,31 @@
 					<a href="#">Контакты</a>
 				</li>
 			</ul>
+			<div class="offcanvas-product-wrapper">
+				<a href="#" target="_blank" class="link-button link-button--rent link-button--pdf">Презентация</a>
+				<a target="_blank" class="link-button link-button--buy link-button--download">скачать КП</a>
+			</div>
+		</div>
+	</div>
+	<!-- This is the modal -->
+	<div id="modal" class="uk-flex-top modal-product" uk-modal>
+		<div class="uk-modal-dialog uk-margin-auto-vertical">
+			<div class="modal-wrapper">
+				<a href="#" uk-icon="icon: close; ratio: 1.1" class="uk-modal-close modal-close--product"></a>
+				<h2 class="page__heading">Заказать обжарку на Roka Coffee Roaster</h2>
+				<form class="modal-form grid" action="#">
+					<input class="modal-input" placeholder="Имя" type="text">
+					<input class="phone-input modal-input" placeholder="Номер телефона" type="text">
+					<input class="modal-input" placeholder="E-mail" type="text">
+					<a href="#" class="product-button">Отправить</a>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="modal-media-video" class="uk-flex-top prdoduct-modal-video" uk-modal>
+		<div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+			<a href="#" uk-icon="icon: close; ratio: 1.1" class="uk-modal-close modal-close--product uk-modal-close-outside"></a>
+			<video src="img/productPage/video.mp4" controls playsinline uk-video></video>
 		</div>
 	</div>
 	<section class="product-section product-section--first">
@@ -93,7 +118,7 @@
 				<div class="product-first-block-content">
 					<h1 class="page__heading page__heading--product">Сделайте свой собственный продукт нашими руками!</h1>
 					<h3 class="product-desc">Обеспечиваем полный цикл услуг:</h3>
-					<div class="grid product-services">
+					<div class="grid product-services wow softFadeInUp">
 						<div class="product-services__item">
 							<div class="product-item__ico">
 								<img src="img/productPage/productIcons/coffeGrains.png" alt="">
@@ -130,7 +155,7 @@
 		</div>
 	</section>
 	<section class="product-section product-section--second">
-		<div class="uk-container">
+		<div class="uk-container wow softFadeInUp">
 			<div class="product-content__second">
 				<h2 class="page__heading--product-h2">Можно быть не одним из многочисленных дистрибуторов, а одним из топовых производителей.</h2>
 				<div class="product-if-wrapper grid">
@@ -159,93 +184,123 @@
 						</div>
 					</div>
 				</div>
-				<p class="product-if__description"><strong>Roka Coffee Roaster</strong> – доступная инвестиция для выхода вашего бизнеса на другой уровень. С качественным оборудованием кофейному производству легко стать успешным бизнесом и приносить хорошую прибыль. Хороший продукт – это всегда залог лояльности клиентов и больших объемов реализации.</p>
+				<p class="product-if__description"><strong>Roka Coffee Roaster</strong> – доступная инвестиция для выхода вашего бизнеса на другой уровень. С качественным оборудованием кофейному производству легко стать успешным бизнесом и приносить хорошую
+					прибыль. Хороший продукт – это всегда залог лояльности клиентов и больших объемов реализации.</p>
 				<div class="product-buttons-wrapper grid">
 					<a href="#" class="product-button">Заказать обжарку на Roka Coffee Roaster</a>
-					<a href="#" class="product-button product-button--white">КУПИТЬ Roka Coffee Roaster</a>
+					<a href="#" uk-toggle="target: #modal" class="product-button product-button--white">КУПИТЬ Roka Coffee Roaster</a>
 				</div>
 			</div>
 		</div>
 	</section>
 	<section class="product-section product-section--third">
-		<div class="grid product__half-grid">
-			<div class="product__first-half"></div>
-			<div class="product__second-half">
+		<div class="grid product__half-grid product__half-grid--second">
+			<div class="product__first-half product__first-half--none"></div>
+			<div class="product__second-half wow softFadeInLeft">
 				<h2 class="page__heading--product-h2">Мы создали единственный в Украине ростер с уникальной технологией воздушной обжарки кофе</h2>
-				<div class="product__what-is">
+				<div class="product__what-is grid">
 					<div class="product__what-img">
 						<img src="img/productPage/roka.png" alt="">
 					</div>
+					<p class="product-if__description"><strong>Roka Coffee Roaster</strong> - это наше патентное изобретение. Ростер исключает перегрев и выбраковку зерна, обеспечивает глубокий прогрев и оптимальную степень обжарки, после которой кофе
+						приобретает равномерный окрас с глубоким вкусом и полным раскрытием потенциала зерна, чего невозможно достичь на барабанном ростере.</p>
+				</div>
+				<h3 class="product-desc product-desc--what">Почему выгодно заказывать обжарку у нас?</h3>
+				<ul class="product__list">
+					<li>
+						<p>Ростер обжаривает <strong>60 килограмм кофе в час</strong></p>
+					</li>
+					<li>
+						<p>Обжарка 1 тоны кофе на <strong>барабанном ростере - 18 000 грн.</strong></p>
+					</li>
+					<li>
+						<p>Обжарки 1 тоны кофе ростером <strong>Roka Coffee Roaster - 12 000 грн.</strong></p>
+					</li>
+					<li>
+						<p><strong>Экономия - 225 $</strong> на обжарке 1 тонны кофе на нашем ростере.</p>
+					</li>
+				</ul>
+				<div class="what-button-wrapper">
+					<a href="#modal-media-video" uk-toggle class="product-button">посмотреть Roka Coffee Roaster</a>
 				</div>
 			</div>
 		</div>
 	</section>
-	<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto maiores placeat, libero culpa, aliquam beatae vero omnis, mollitia facere quod incidunt, qui neque. Ex, nisi sint iure, perspiciatis eius voluptates at porro tenetur modi, iusto
-		sapiente suscipit excepturi. Vel totam veniam non quibusdam ad beatae dignissimos, obcaecati. Ipsa omnis ea, earum officiis exercitationem reprehenderit eos, quam tempora reiciendis commodi architecto. Adipisci nulla eum, recusandae facilis
-		distinctio. Consequatur corporis, distinctio. Corrupti, animi aperiam consectetur quod. Repellendus ut nihil aspernatur autem consequuntur debitis quo recusandae cum fugit natus! Rerum at temporibus consectetur repellat doloremque possimus, neque
-		sit dolorum. Animi vitae, laborum, molestiae omnis sapiente optio iusto ducimus possimus culpa repellendus, facilis. Ipsam tenetur sint blanditiis obcaecati minima praesentium adipisci repellat dolore perferendis maxime iure recusandae, hic
-		dolorem quia, expedita quae cum quis veritatis quos iusto eius libero. Quis enim velit quos nisi, in iure dolorum doloremque amet inventore consectetur aspernatur nobis laboriosam, repudiandae explicabo facere similique reprehenderit
-		necessitatibus, quasi est tenetur natus maiores quae quas. Voluptatibus quaerat illo quidem id sunt, blanditiis, culpa iusto vel possimus maxime maiores pariatur, incidunt odio autem? Id quaerat voluptatem aperiam officiis earum libero, dolorem
-		placeat quisquam vitae itaque necessitatibus sequi assumenda magnam aliquid unde in, accusamus reprehenderit, molestias modi nulla! Deserunt impedit iste enim eveniet accusamus. Dolores quis fugit, modi iste excepturi ex magnam tempora?
-		Necessitatibus quasi non eligendi repudiandae praesentium eos deleniti, dignissimos pariatur ipsam delectus quod sint reprehenderit saepe molestias obcaecati assumenda, adipisci perferendis eaque optio cupiditate at asperiores iste. Cum
-		aspernatur placeat numquam incidunt, obcaecati nisi officiis, maxime beatae voluptates consectetur, accusantium. Ab tempora, libero quos delectus, dolorem sunt, facere accusantium commodi nulla eos rerum ipsam! Itaque, sunt est veniam ut minima
-		doloremque blanditiis veritatis magni porro laudantium ipsa sed corporis illo voluptates recusandae odio pariatur a sit, esse iste omnis. Sit delectus distinctio, neque molestiae ex libero quasi asperiores, commodi expedita consectetur sequi
-		perspiciatis numquam. Exercitationem commodi velit, vel explicabo magnam facere dolorem magni impedit maiores quasi. Illum, eos, illo odit minima ut, sequi animi iste sunt molestiae voluptates corporis veritatis, optio praesentium. Consectetur,
-		assumenda perspiciatis! Eveniet in suscipit pariatur laudantium, harum dolores eum fugit reiciendis officiis, quo nobis fugiat ipsam nemo incidunt, soluta, doloremque facere natus. Numquam ratione ullam odio optio debitis cumque odit sapiente
-		quis a ex, aliquam laudantium magnam illum! Impedit, ab dicta perspiciatis distinctio fugiat explicabo recusandae incidunt voluptatum aut. Pariatur explicabo voluptatibus repellat aut, beatae debitis voluptates eos minima assumenda atque
-		similique sunt doloribus obcaecati incidunt ipsum corporis, placeat ab nobis totam, iure. Optio enim explicabo architecto voluptas cumque quasi animi? Iusto quis a similique? Hic, veritatis nulla molestias corrupti maxime et ex ea animi error
-		assumenda illum voluptatibus quo vero aliquam ipsam illo numquam repudiandae. Magnam aspernatur amet sunt itaque quas reiciendis, dolore veniam. Saepe voluptatem, blanditiis nemo mollitia, explicabo iusto adipisci minus deleniti voluptates porro
-		sint ratione harum nihil perspiciatis ipsa nesciunt facere, quam omnis expedita eligendi dolorem, quae eaque! Iste rem odit porro aliquid possimus sit, cumque eveniet doloribus totam illum quis, fugit optio ipsum, cum quibusdam suscipit quos
-		laudantium qui ad quae dolor veniam a? Ipsum, beatae temporibus id culpa, ipsa sed ab fuga, doloribus placeat expedita tempora laboriosam blanditiis sequi earum reprehenderit dolorum magni ullam optio laudantium cum eos praesentium eligendi
-		voluptas! Error, nobis eos excepturi vero molestias consequuntur, veritatis. Et consequatur vitae deserunt asperiores, quidem reprehenderit blanditiis expedita in consectetur ratione ullam voluptatibus molestias est architecto, perferendis quis
-		modi repudiandae tenetur officia, deleniti dolor eveniet impedit optio. Fugiat omnis libero quae autem officiis voluptatum sequi, dolorum explicabo quo doloremque repellendus rerum cum. Nemo qui eaque atque, fuga consequatur magnam, consectetur
-		ea tenetur dicta consequuntur? Sequi cum eveniet modi aliquid fuga unde illum sit cupiditate ad. Rem explicabo a labore officia nisi expedita aliquam deserunt repudiandae. Dolorum doloremque voluptatibus iure nihil corporis expedita? Eos
-		consequuntur, omnis aut est eius corporis ullam repudiandae et inventore explicabo, neque suscipit blanditiis. Esse itaque ipsum commodi quis. Repellat suscipit, accusamus nemo cupiditate iusto vero quia. Voluptate optio laborum rerum, error, eos
-		ullam veritatis veniam fuga, quae nam molestiae. Tenetur accusantium assumenda saepe modi voluptate blanditiis repudiandae! Ipsam minus, iste ad! Explicabo sapiente placeat ducimus dolores fuga. Magni libero quod quia delectus. Deleniti ex
-		dolorem aliquam eius iure! Corrupti quod deleniti quo, ratione, aperiam nostrum sit delectus quisquam, deserunt adipisci aut vel commodi nam distinctio officia dolorem architecto necessitatibus velit. Aliquam sed repellat, deleniti, soluta
-		tempora error assumenda, vel facilis ipsam ut adipisci suscipit eum? Quas autem dicta iure, repellat placeat maxime cumque odio hic ullam. Nobis, necessitatibus consequuntur ad distinctio accusantium a eaque laudantium, magnam repellat enim
-		laborum. Vel numquam atque voluptate repudiandae veniam eveniet magnam corporis sint iste officia, amet pariatur ipsa, nam quos laborum eos temporibus, quas sunt reprehenderit. Quaerat cupiditate, unde reprehenderit rerum dignissimos libero
-		quisquam! Asperiores, vero minus debitis, provident animi sint! Odit id aspernatur doloremque illum fugit architecto dolore recusandae nesciunt voluptate, unde laboriosam dolorem officia possimus quam nisi reprehenderit. Quidem numquam omnis
-		adipisci minus similique quam voluptates, culpa modi facere commodi fugiat tenetur incidunt, eveniet nisi perferendis provident et, tempore laborum exercitationem accusamus labore, maiores voluptatem pariatur inventore. Molestiae ducimus, laborum
-		qui dignissimos, tenetur quaerat numquam. Veritatis nihil voluptas distinctio quae iste repudiandae, ea dolore excepturi alias! Architecto, rerum quasi ex libero voluptatum temporibus enim sapiente, modi assumenda est nam aut optio quidem nihil
-		magnam nesciunt eos vel consequatur eius et culpa odio! Distinctio quasi, expedita sapiente illum voluptas, temporibus doloremque vel libero officia repellat eveniet voluptates laudantium ratione cupiditate et minus ex amet asperiores nesciunt
-		eius itaque consequuntur minima corporis. Dolorum animi qui dicta. Consectetur cupiditate saepe officia voluptatum repudiandae doloremque ipsum earum quos dolor, temporibus inventore delectus veniam, dolorum maiores error odit ut. Magni, sit.
-		Aliquam, modi ullam neque repudiandae, sint illum soluta officia omnis. Nostrum doloribus praesentium quasi neque, ducimus? Soluta recusandae, quae aspernatur eveniet facere omnis magni, unde libero, rem temporibus iste quo iure accusantium eos
-		ipsa! Officia cum labore, hic, voluptates iure perspiciatis libero, minima aut fugit aspernatur praesentium adipisci laudantium doloribus excepturi quae sint ab repellat saepe inventore? Ratione nisi magnam ullam voluptatem consequuntur unde in
-		est iure quam voluptas minus obcaecati ipsum aliquid deleniti eaque, necessitatibus, autem nostrum ab. Tempore itaque dolores quibusdam fuga architecto. Earum nam nisi repellendus recusandae unde? Modi nihil, necessitatibus nulla? Libero ratione,
-		doloremque eum quaerat eligendi blanditiis, adipisci fugit inventore? Non quaerat, vero provident saepe dolore, dolores, maiores eos fugiat ratione facilis ad? Repellendus corporis cum quibusdam, et incidunt, amet tempore beatae modi. Incidunt
-		quo, placeat rerum voluptas at deserunt omnis obcaecati esse aperiam quia! Architecto suscipit nulla, delectus cupiditate obcaecati deleniti laborum eos consequatur ullam! Et cumque distinctio explicabo ut voluptates, aperiam sit adipisci odio
-		cupiditate debitis voluptatibus repellendus quibusdam hic perferendis iste perspiciatis, animi ducimus. Cupiditate, voluptatum, quos! Ipsam ducimus quasi mollitia porro, odio autem soluta adipisci cupiditate illum eaque numquam a similique.
-		Molestiae temporibus iusto dignissimos optio maxime animi cupiditate, fuga repellat eaque hic veniam quia numquam eveniet explicabo natus. Laboriosam molestias officiis laborum voluptatem unde reiciendis, voluptates enim id aperiam similique odit
-		minima delectus repellat magni, necessitatibus placeat, consectetur provident labore, alias ex assumenda velit impedit eaque beatae. Adipisci, temporibus vel doloremque iusto asperiores earum laborum necessitatibus eligendi, dolorum. Placeat
-		delectus quisquam minus tenetur ad consequatur sed id neque dolorem soluta dolorum earum eveniet blanditiis, mollitia expedita nihil molestias quasi velit magnam tempore labore rem qui iste reprehenderit temporibus! Debitis libero dicta officiis
-		provident quis, quaerat deserunt distinctio. Beatae quisquam ducimus ut nostrum dolor est, blanditiis accusantium officia libero magni, corrupti vitae labore. Earum repellat molestias magnam dolores iure ducimus, libero porro doloribus. Aliquid
-		minima ipsum vitae eveniet velit mollitia commodi illo, libero voluptatibus necessitatibus dolores, vel maxime fugiat ullam veritatis sed ipsam id, dignissimos asperiores quam error modi quos? Odio modi incidunt sit culpa possimus quibusdam,
-		perferendis commodi velit, natus cupiditate quasi nobis blanditiis dolorem molestias accusantium laudantium adipisci? Quidem minus eligendi qui, minima facilis modi error voluptatum eaque natus odio impedit commodi. Cupiditate veritatis quisquam
-		maxime at! Ipsa earum minima nisi repellendus numquam ex quidem soluta aliquam itaque quos. Minus nostrum perferendis, explicabo neque magni velit quaerat. Illo vitae harum velit accusantium modi labore qui voluptatem nulla maiores nemo eaque ad
-		enim asperiores delectus libero, eum assumenda ipsam quam ducimus architecto, doloribus quisquam. Possimus quidem odit perspiciatis iusto. At corrupti perferendis veritatis quaerat harum voluptates. Vel incidunt aut velit est in magni voluptatum
-		distinctio nesciunt. Temporibus natus molestias provident incidunt, quibusdam consequatur, iusto, optio eligendi eaque excepturi laborum esse quisquam ipsum? Minima voluptatem nesciunt doloribus, vero et fugiat esse vel in. Omnis pariatur modi
-		perspiciatis nemo inventore totam esse sed atque ea. Tempore enim maxime magni iusto soluta officiis ad dolores aut, quod odit quam ipsam explicabo libero, nobis reiciendis praesentium corporis dignissimos eveniet in ullam. Magnam dolorum
-		laboriosam qui aut suscipit dicta quod quaerat amet error nihil obcaecati quasi explicabo non dolores, molestias at saepe deserunt cumque quia rerum corporis aspernatur voluptate repellat! Id atque aliquid ipsam a nam possimus perspiciatis,
-		quidem laborum culpa cupiditate officia vero ad provident recusandae iusto facere dolorum deleniti obcaecati autem. Vel repellat reiciendis, magni aliquam porro odit ab laudantium. Porro quo veritatis nam voluptatum veniam earum dolores
-		laboriosam laudantium, dicta impedit quidem aliquid inventore, ipsum minima, modi doloremque voluptas, mollitia cum. Quo maiores accusantium natus ea dolor reiciendis est culpa, impedit praesentium iste ipsam voluptatibus inventore autem beatae
-		cupiditate voluptatum assumenda, dicta facilis eum magnam ipsa atque provident! Voluptatum tempore asperiores, laboriosam delectus quaerat. At obcaecati eum iusto ea quas ipsam, sequi. Rem vero quibusdam, quae aperiam excepturi ratione magni,
-		similique ipsa et, necessitatibus doloremque quidem maiores corporis qui repellat neque ullam blanditiis. Placeat doloribus soluta, quod expedita vitae a dolores, aut repudiandae voluptate et quibusdam delectus unde modi laborum nihil officia
-		ullam. Facilis reiciendis eveniet tenetur pariatur laborum cum, debitis officia ut placeat quos esse quibusdam dicta ad animi, doloremque sunt, aspernatur ipsa. Nulla praesentium veritatis suscipit eligendi nihil eum quo unde sit iusto sed,
-		labore ullam autem quam. Iure, rerum dolorem, pariatur nobis ab mollitia repudiandae expedita dolor a sapiente quibusdam ex libero culpa excepturi! Dolore nostrum animi pariatur vitae labore quasi mollitia aperiam, officiis ut dolor impedit sequi
-		laboriosam tempora! Perferendis dolor, amet facilis reiciendis sed error omnis optio cupiditate totam. Optio corrupti, rerum natus repudiandae iusto ad dolore eaque! Accusantium sint recusandae dolorem excepturi quod molestiae, ratione eius
-		fugit, similique nostrum officiis minima sit obcaecati pariatur animi unde quos dolorum quisquam saepe voluptatum. Necessitatibus molestiae quam nam dolor facilis, vel ducimus ex suscipit, ratione architecto fugiat accusantium vero accusamus
-		optio ea id perspiciatis sit voluptatum officiis recusandae, quo nihil corrupti corporis provident sunt. Sit laudantium ab architecto aperiam qui ducimus soluta, voluptates asperiores magnam eum omnis facilis nesciunt quod temporibus laborum
-		officiis ex eveniet delectus minus ea, quas distinctio quo! Laudantium soluta provident ut eveniet natus non quibusdam illum similique sunt quos, iure, cumque. Reiciendis eveniet facilis quas, omnis itaque perspiciatis provident, commodi
-		eligendi! Consectetur aliquam velit odio corporis, doloribus praesentium! Itaque facere vero natus architecto eaque. Ipsam officia cumque perferendis est, iure quia dignissimos earum. Et cumque dignissimos, ratione quis sequi architecto,
-		molestias nesciunt accusamus molestiae amet, sunt eos reprehenderit, consequuntur vitae nemo inventore illum! Velit reiciendis doloribus at! Aperiam, ex, labore. Quo at nam nesciunt vero quaerat autem quibusdam hic nisi incidunt a unde, maiores
-		odit aspernatur molestiae, est sequi, officiis. Illo tempore, repellendus repudiandae non doloribus voluptatem saepe impedit, porro animi omnis, velit atque. Enim, doloribus, eius maiores suscipit accusantium nam quas laborum quod iure nobis sunt
-		consectetur. Non voluptas hic enim, doloribus quae aut quisquam alias molestiae, voluptatibus porro esse maxime aspernatur molestias odio nobis ab asperiores nemo cum, doloremque vero voluptatem fugit aliquam dicta repellat. Hic in sed possimus
-		quam consectetur quod similique repudiandae quasi sunt, atque accusantium vitae alias provident eaque enim quibusdam sit excepturi porro vero ullam voluptatibus animi modi. Laborum iste quasi eum earum neque molestias libero ab ad aperiam modi
-		odio architecto consequatur rem repellat blanditiis a autem cum sunt nobis ratione voluptatibus, tenetur, aut iure! Eius, dolore nemo dolorum nam eveniet.</h2>
-	</div>
-	<!-- To top -->
-	<a uk-totop uk-scroll class="js-back-to-top back-to-top"></a>
+	<section class="product-section product-section--fourth">
+		<div class="grid product__half-grid product__half-grid--first">
+			<div class="product__first-half wow softFadeInRight">
+				<div class="product__advantage-wrapper">
+					<h2 class="page__heading--product-h2">Преимущества обжарки кофе в Caffein:</h2>
+					<ul class="product__list product__list--big">
+						<li>
+							<p>Возможность создания собственного бренда и самостоятельного выбора ценовой ниши для вашего продукта в любой момент времени</p>
+						</li>
+						<li>
+							<p>Лучший вариант обжаривания кофе в коммерческих масштабах и отличный способ отстроиться от конкурентов за счет применения уникальном технологии обжарки</p>
+						</li>
+						<li>
+							<p>Возможность собирать свой купаж с зеленого кофе</p>
+						</li>
+						<li>
+							<p>Вы можете приобрести у нас Roka Coffee Roaster. И убедиться, что зерно можно обжаривать с максимальным сбережением его природных свойств с технологией бесконтактного обжаривание в воздушном потоке. Вы сможете контролировать степень
+								обжарки, наблюдать как зерно приобретает равномерный окрас с полным раскрытием потенциала зерна.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="product__second-half product__second-half--none"></div>
+		</div>
+	</section>
+	<section class="section section--contacts section--contacts--product">
+		<div class="uk-container wow softFadeInUp">
+			<h2 class="page__heading">Контакты</h2>
+			<h4 class="page__heading-desc">Если у вас возникли вопросы пишите нам в мессенджеры. Наши руководители помогут найти для Вас лучшее решение.</h4>
+			<div class="contacts-blocks grid">
+				<div class="contact-block uk-box-shadow-small uk-box-shadow-hover-medium">
+					<div class="contact-avatar">
+						<img class="uk-border-circle" src="https://caffein.ua/arenda-cofemashyn/wp-content/uploads/2019/05/girl.png" alt="" data-pagespeed-url-hash="847111865" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" width="200"
+							height="200">
+						<div class="contact__name">
+							<h3 class="contact__h3">Анастасия Иванова</h3>
+							<p class="contact__p">Руководитель отдела продаж</p>
+							<div class="socials grid">
+								<a target="_blank" href="https://www.facebook.com/caffeincoffeemachine-2267493316856763/?..." class="viber"></a>
+								<a href="tg://resolve?domain=Anastasia_Caffeinbot" class="telegram"></a>
+								<a target="_blank" href="https://www.facebook.com/caffeincoffeemachine-2267493316856763/?..." class="messenger"></a>
+							</div>
+						</div>
+					</div>
+					<p class="contact__info">Прошла путь от бариста до специалиста по открытию новых сетевых заведений с нуля. Обучаю и адаптирую персонал для кофейного бизнеса. 10 лет опыта работы в компании Caffein. Знаю все тонкости кофейного бизнеса и
+						смогу Вам помочь подобрать подходящее кофейное оборудование. Пишите в удобный для Вас мессенджер и мы обсудим все вопросы.</p>
+				</div>
+				<div class="contact-block uk-box-shadow-small uk-box-shadow-hover-medium">
+					<div class="contact-avatar">
+						<img class="uk-border-circle" src="https://caffein.ua/arenda-cofemashyn/wp-content/uploads/2019/05/IMG-8990-3.jpg" alt="" data-pagespeed-url-hash="869668481" onload="pagespeed.CriticalImages.checkImageForCriticality(this);" width="200"
+							height="200">
+						<div class="contact__name">
+							<h3 class="contact__h3">Андрей Кулаков</h3>
+							<p class="contact__p">Руководитель сервисного отдела</p>
+							<div class="socials grid">
+								<a target="_blank" href="https://www.facebook.com/caffeincoffeemachine-2267493316856763/?..." class="viber"></a>
+								<a href="tg://resolve?domain=Anastasia_Caffeinbot" class="telegram"></a>
+								<a target="_blank" href="https://www.facebook.com/caffeincoffeemachine-2267493316856763/?..." class="messenger"></a>
+							</div>
+						</div>
+					</div>
+					<p class="contact__info">Мой опыт в ремонте оборудования больше 20 лет, на сегодняшний день могу отремонтировать и запустить в работу любое железо. Попробуйте удивить нас Вашей поломкой. Пишите в удобный для Вас мессенджер обсудим и решим
+						вашу проблему.</p>
+				</div>
+			</div>
+			<footer>
+				<div class="footer__address grid">
+					<p class="address__p">г.Киев, пр.Отрадный, 95</p>
+					<p><a href="#">(044) 334-64-78</a>, <a href="#">(068) 686-55-22</a></p>
+					<a href="#" class="footer__email">info@caffein.ua</a>
+				</div>
+			</footer>
+		</div>
+	</section>
+	<script src="js/wow.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 </body>
 

@@ -108,6 +108,28 @@
 
 @media only screen and (max-width : 1200px)
 
+	.product-section--third,
+	.product-section--fourth
+		background-size: auto 110%
+		background-position: 50% 50%
+
+	.product__first-half--none,
+	.product__second-half--none
+		display: none
+
+	.video-bg-wrapper
+		width: 100%
+
+	.product__half-grid--second,
+	.product__half-grid--first
+		grid-template-columns: 100%
+
+		grid-template-columns: 100%
+
+		.product__first-half,
+		.product__second-half
+			padding: 0 30px
+
 	.product-first-block-content
 		margin-top: 150px
 		padding-bottom: 50px
@@ -245,6 +267,10 @@
 
 @media only screen and (max-width : 960px)
 
+	.prdoduct-modal-video
+	  .modal-close--product
+	    right: 0
+
 	.page__heading--product
 		line-height: 3rem
 
@@ -326,6 +352,28 @@
 
 @media only screen and (max-width : 768px)
 
+	.prdoduct-modal-video
+	  video
+	    max-width: 100%
+
+	.what-button-wrapper
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		justify-content: center
+
+	.product__half-grid--second .product__first-half,
+	.product__half-grid--second .product__second-half
+		padding: 0 20px
+
+	.product__first-half .page__heading--product-h2,
+	.product__second-half .page__heading--product-h2
+		text-align: center
+
+	.product-if__description,
+	.product__list li p
+		color: #fff
+
 	.pacet-services
 		li
 			p,
@@ -406,10 +454,19 @@
 
 @media only screen and (max-width : 640px)
 
+	.product__what-is
+		grid-template-columns: 100%
+		justify-items: center
+
+		p
+			text-align: center
+
 	.product-buttons-wrapper
 		grid-template-columns: 1fr
 
-	.product-section--second
+	.product-section--second,
+	.product-section--third,
+	.product-section--fourth
 		padding: 50px 0
 
 	.carousel__img-wrapper

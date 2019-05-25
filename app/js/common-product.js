@@ -10,4 +10,8 @@ $(document).ready(function() {
     }
   });
 
+  // Wow init
+
+  new WOW().init();
+
 });

@@ -1,4 +1,7 @@
 .product-page
+  width: 100%
+  float: left
+  background-color: #000
 
   .onepage-pagination
     display: none
@@ -194,6 +197,10 @@
   opacity: 0.9
   padding: 20px
   height: calc(215px - 40px)
+  transition: transform .5s
+
+  &:hover
+    transform: scale(1.03)
 
 .product-item__ico
   height: 40px
@@ -248,8 +255,15 @@
   display: -ms-flex
   display: flex
 
+  &:hover
+    .if-item__img
+      opacity: 1
+      transform: scale(1.05)
+
 .if-item__img
   min-width: 42px
+  opacity: .9
+  transition: .5s
 
 .if-item__p-wrapper
   margin-left: 15px
@@ -301,8 +315,25 @@
     color: #090a11
 
 .product-section--third
+  background-attachment: fixed
+
+.product-section--third,
+.product-section--fourth,
+.section--contacts--product
+  width: 100%
+  float: left
   background-image: url('../img/productPage/coffee_image.png')
   padding: 150px 0
+  background-size: auto 115%
+  background-repeat: no-repeat
+
+.section--contacts--product
+  background-image: url('../img/productPage/2-layers.png')
+  background-size: cover
+
+.product-section--fourth
+  background-image: url('../img/productPage/fourth.png')
+  padding: 200px 0
 
 .product__half-grid
   grid-template-columns: 50% 50%
@@ -320,6 +351,18 @@
 
 .product__what-is
   margin: 30px 0
+  grid-template-columns: 110px auto
+  grid-gap: 25px
+
+.product__first-half
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: flex-end
+
+  .page__heading--product-h2
+    max-width: 700px
+    line-height: 43px
 
 .product__what-img
   display: -webkit-flex
@@ -327,5 +370,131 @@
   display: flex
   height: 110px
   width: 110px
+  min-width: 110px
   align-items: center
   justify-content: center
+
+  &:hover
+    img
+      opacity: 1
+
+  img
+    opacity: .8
+    transition: .5s
+
+.product__half-grid
+  p
+    text-align: left
+    max-width: 600px
+    margin: 0
+    line-height: 24px
+
+.product-desc--what
+  margin: 0
+  text-align: left
+
+.product__list
+  list-style: none
+  padding: 0
+
+  li
+    position: relative
+    padding-left: 30px
+    margin: 5px 0
+
+    &::after
+      content: '■'
+      color: $accent
+      position: absolute
+      top: 0
+      left: 0
+
+    p
+      color: #d3d3d3
+      font-size: 1.125rem
+      font-family: $hr
+      line-height: 28px
+
+      strong
+        color: #fff
+
+.what-button-wrapper
+  margin-top: 20px
+
+.product__list--big
+  li
+    padding-left: 40px
+    margin: 30px 0
+
+    &::after
+      font-size: 1.2rem
+
+.section--contacts--product
+  *
+    color: #fff
+
+  .contact-block
+    background-color: #090a11
+
+  .contact__p
+    color: #d3d3d3
+
+  .page__heading-desc
+    margin-top: 30px
+    font-family: $hr
+    color: #d3d3d3
+    line-height: 30px
+
+  .footer__address
+    a
+      color: #fff
+
+      &:hover
+        color: #ccc
+
+.modal-product
+  .modal-wrapper
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+  .product-button
+    max-width: 300px
+    width: 150px
+
+  .modal-input
+    width: calc(100% - 40px)
+
+  .page__heading
+    font-size: 2.5rem
+    max-width: 400px
+
+  .modal-form
+    justify-items: center
+
+  .modal-close--product
+    position: absolute
+    top: -25px
+    right: 0
+    font-size: 1.5rem
+    color: #fff
+
+.prdoduct-modal-video
+  video
+    max-width: 700px
+
+  .modal-close--product
+    right: 20px
+
+.offcanvas-product-wrapper
+  display: grid
+  grid-gap: 20px
+
+  .link-button--download
+    color: #1b2237
+
+    &:hover
+      color: #1b2237
