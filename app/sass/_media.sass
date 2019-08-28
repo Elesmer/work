@@ -1,16 +1,79 @@
+@media only screen and (max-width : 1440px)
+	/* First block */
+
+	html
+		font-size: 13px
+
+	.hipster-container
+		margin-right: 30px
+		top: 35%
+
 @media only screen and (max-width : 1200px)
-	header
-    .number
-      margin-right: 30px
+	/* First block */
+
+	.h1-wrapper
+		width: 60%
 
 @media only screen and (max-width : 960px)
-	/**/
+	/* First block */
+
+	html
+		font-size: 12px
+
+	.hipster-container
+		display: none
+
+	.h1-wrapper
+		width: 100%
 
 @media only screen and (max-width : 640px)
-	/**/
+	/* First block */
+
+	h1,
+	.h1
+		text-align: center
+
+	p
+		text-align: center
+		width: 100%
+		max-width: 100%
+
+	.first-content
+		p
+			max-width: 100%
+
+	.logo-wrapper
+		img
+			left: -20px
+
+	.first-content
+		.uk-container
+			justify-content: center
+			align-items: center
+
+		.header-button
+			width: 130px
+
+	.firstBlock__triangle
+	  &::before
+	    position: absolute
+	    pointer-events: none
+	    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none' viewBox='0 0 100 80' fill='rgb(255, 255, 255)' fill-opacity='1'%3E%3Cpolygon points='0,80 100,80 100,0'%3E%3C/polygon%3E%3C/svg%3E")
+	    background-position: center center
+	    background-repeat: no-repeat
+	    background-size: 100% 100%
+	    content: ''
+	    height: 50px
+	    bottom: 0
+	    right: 0
+	    left: 0
+	    width: 100%
+	    z-index: 1
 
 @media only screen and (max-width : 480px)
-	/**/
+
+	html
+		font-size: 10px
 
 @media only screen and (max-width : 320px)
   /**/

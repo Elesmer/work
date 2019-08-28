@@ -22,6 +22,17 @@
 </head>
 
 <body class="">
+	<!-- Off canvas menu -->
+	<div id="offcanvas-overlay" uk-offcanvas="overlay: true">
+		<div class="uk-offcanvas-bar">
+			<button class="uk-offcanvas-close dark" type="button" uk-close></button>
+			<ul class="offcanvas-list">
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contacts</a></li>
+			</ul>
+		</div>
+	</div>
 	<!-- Custom HTML -->
 	<section class="firstBlock">
 		<header class="header">
@@ -34,7 +45,7 @@
 							<div class="uk-navbar-left logo-wrapper">
 								<img src="img/firstBlock/CreativeSpark-logo-white.svg" alt="">
 							</div>
-							<div class="uk-navbar-right">
+							<div class="uk-navbar-right uk-visible@m">
 								<ul class="uk-navbar-nav header-nav">
 									<li><a href="#">About</a></li>
 									<li><a href="#">Services</a></li>
@@ -42,20 +53,37 @@
 								</ul>
 								<a href="#" class="header-button uk-box-shadow-small">Get a quote</a>
 							</div>
+							<div class="uk-navbar-right uk-hidden@m">
+								<a class="burger" uk-toggle="target: #offcanvas-overlay">
+									<div class="burger-line"></div>
+									<div class="burger-line"></div>
+								</a>
+							</div>
 						</nav>
 					</div>
 				</div>
 			</div>
 		</header>
-		<div class="first-content">
+		<!-- Content of first block -->
+		<div class="first-content firstBlock__triangle">
 			<div class="uk-container">
 				<div class="h1-wrapper">
 					<h1 class="uk-h1 h1">Spark it with the right people</h1>
 				</div>
-				<p></p>
+				<p>We specialize in development for the web. Starting from developing your one-time projects and up to building your offshore teams.</p>
+				<a href="#" class="header-button uk-box-shadow-small green-bg">Get a quote</a>
+				<div class="hipster-container">
+					<div class="hipster-wrapper">
+						<!-- Hipster image -->
+						<img class="hipster" src="img/firstBlock/Hipster.svg" alt="Hi!">
+						<!-- Steam image -->
+						<img class="steam" src="img/firstBlock/steam.svg" alt="">
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
+	<div class="test"></div>
 	<script src="js/scripts.min.js"></script>
 </body>
 
