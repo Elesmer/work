@@ -1,15 +1,14 @@
 header
   position: fixed
   width: 100%
-  height: 76px
-  background-color: #050609
+  height: 120px
+  background: $accent
   display: -webkit-flex
   display: -ms-flex
   display: flex
   align-items: center
   -webkit-transition: all 0.4s ease
   transition: all 0.4s ease
-  z-index: 500
 
   .burger
     background-color: transparent
@@ -29,10 +28,9 @@ header
           width: 55%
 
   .burger-line
-    height: 2px
+    height: 1px
     background: $white
-    width: 100%
-    max-width: 23px
+    width: 55%
     margin: 5px 0
     transition: width .5s
 
@@ -46,95 +44,8 @@ header.sticky
   width: 100%
 
 .number
-  margin-right: $gutter
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  flex-direction: column
+  margin-right: 50px
 
   a
-    transition: color .5s
-    font-family: $hr
-    font-weight: 400
-    font-size: 1rem
-    line-height: 1.6rem
-
     &:hover
       text-decoration: none
-      color: #ccc
-
-.logo
-  height: 100%
-  float: left
-  width: auto
-
-  img
-    height: 75%
-    width: auto
-    float: left
-    max-height: 76px
-
-.nav
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  list-style: none
-  min-height: 50px
-  color: $white
-  font-family: $cyr
-  font-size: 18px
-  text-transform: none
-  margin: 0
-  float: left
-  padding: 0
-  margin-left: 35px
-
-  li.active
-    a
-      color: #ccc
-
-  li
-    margin-right: $gutter
-    display: -webkit-flex
-    display: -ms-flex
-    display: flex
-    justify-content: flex-start
-    align-items: center
-
-    &:last-child
-      margin-right: 0
-
-    a
-      font-size: 18px
-      color: $white
-      font-family: $cyr
-      transition: color .5s
-
-      &:hover
-        text-decoration: none
-        color: #ccc
-
-.coffee-burger
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  width: 23px
-  height: 14px
-  flex-direction: column
-  justify-content: space-between
-  cursor: pointer
-
-.mobile-menu
-  a
-    font-family: $hr
-
-    &:hover
-      underline: none
-      text-decoration: none
-
-.coffee-menu
-  background-color: #000
-
-.ankor
-  position: relative
-  top: -60px

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="134px" height="132px" viewBox="0 0 134 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>icon5</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <ellipse id="path-1" cx="33" cy="32" rx="33" ry="32"></ellipse>
+        <filter x="-90.9%" y="-70.3%" width="281.8%" height="287.5%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.07 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feOffset dx="0" dy="15" in="SourceAlpha" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="17.5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.196078431   0 0 0 0 0.196078431   0 0 0 0 0.364705882  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M31.3304429,42.9795454 L28.8525115,42.2535143 C28.5925318,42.1796806 28.4462933,41.9048552 28.5194125,41.6423355 L34.0642919,22.3553379 C34.1374111,22.0928182 34.4095774,21.9451508 34.6695571,22.0189845 L37.1474885,22.7450157 C37.4074682,22.8188494 37.5537067,23.0936747 37.4805875,23.3561945 L31.9357081,42.643192 C31.8585267,42.9057117 31.5904226,43.057481 31.3304429,42.9795454 L31.3304429,42.9795454 Z M26.6995547,38.3772461 L28.4666042,36.473978 C28.6534646,36.2729863 28.641278,35.9530404 28.4341067,35.7684562 L24.7537692,32.499265 L28.4341067,29.2300738 C28.641278,29.0454896 28.6575268,28.7255436 28.4666042,28.524552 L26.6995547,26.6212838 C26.5167565,26.424394 26.2080306,26.4120884 26.0089837,26.6007744 L20.1553785,32.1383003 C19.9482072,32.3310883 19.9482072,32.6633398 20.1553785,32.8561277 L26.0089837,38.3977555 C26.2080306,38.5864416 26.5167565,38.5782378 26.6995547,38.3772461 L26.6995547,38.3772461 Z M39.9910163,38.4018574 L45.8446215,32.8602296 C46.0517928,32.6674417 46.0517928,32.3351901 45.8446215,32.1424022 L39.9910163,26.5966726 C39.7960316,26.4120884 39.4873057,26.4202921 39.3004453,26.6171819 L37.5333958,28.5204501 C37.3465354,28.7214418 37.358722,29.0413877 37.5658933,29.2259719 L41.2462308,32.499265 L37.5658933,35.7684562 C37.358722,35.9530404 37.3424732,36.2729863 37.5333958,36.473978 L39.3004453,38.3772461 C39.4832435,38.5782378 39.7919694,38.5864416 39.9910163,38.4018574 Z" id="path-3"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-wide" transform="translate(-918.000000, -1500.000000)">
+            <g id="Services" transform="translate(0.000000, 1316.000000)">
+                <g id="icon5" transform="translate(952.000000, 203.000000)">
+                    <g id="Oval" fill-rule="nonzero">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#F7C0B4" xlink:href="#path-1"></use>
+                    </g>
+                    <mask id="mask-4" fill="white">
+                        <use xlink:href="#path-3"></use>
+                    </mask>
+                    <use id="code" fill="#FA755A" fill-rule="nonzero" xlink:href="#path-3"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

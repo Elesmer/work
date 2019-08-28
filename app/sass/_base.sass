@@ -15,7 +15,7 @@ body
 	color: $text
 
 	*
-		font-family: $default-font
+		font-family: $default-font !important
 
 	input, textarea
 		border: #666 1px solid
@@ -28,55 +28,13 @@ body
 b, strong
 	font-weight: bold
 
-img
-	object-fit: cover !important
-
-// Chevrons
-
-.svg-wrap
-	position: absolute
-	width: 0px
-	height: 0px
-	overflow: hidden
-
 .grid
 	display: grid
 
-.link-button
-	background-color: $accent
-	padding: 12px 28px
-	font-family: $cyr
-	text-transform: uppercase
-	font-size: 15px
-	font-weight: bold
+.h1
+	font-size: 3.2rem
+	font-weight: 900
 	color: $white
-	transition: background-color .5s
 
-	&:hover
-		background-color: darken($accent, 10%)
-		text-decoration: none
-		color: $white
-
-.uk-container
-	max-width: 1270px
-
-a,
-button
-	text-decoration: none
-	outline: none !important
-
-.coffee-burger
-	height: 100%
-	display: -webkit-flex
-	display: -ms-flex
-	display: flex
-	align-items: center
-	float: right
-	margin: auto 0 auto 30px
-	background: transparent
-	outline: none
-
-.line-burger
-	height: 2px
-	width: 100%
-	background-color: #fff
+p
+	

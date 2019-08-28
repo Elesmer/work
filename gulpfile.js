@@ -66,16 +66,9 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
   return gulp.src([
       'app/libs/jquery/dist/jquery.min.js',
-			'app/libs/owlCarousel/owl.carousel.min.js',
 			'app/libs/uikit/uikit.min.js',
 			'app/libs/uikit/uikit-icons.min.js',
-			'app/libs/onePageScroll/jquery.onepage-scroll.js',
-			'app/libs/maskInput/jquery.mask.js',
-			'app/libs/slick/slick.min.js',
-			// 'app/libs/swiper/swiper.min.js',
-			// 'app/libs/niceSelect/jquery.nice-select.min.js',
-      // 'app/js/common.js', // Always at the end
-      'app/js/common-product.js', // Always at the end
+      'app/js/common.js', // Always at the end
     ])
     .pipe(concat('scripts.min.js'))
     // .pipe(uglify()) // Mifify js (opt.)
@@ -110,8 +103,7 @@ gulp.task('rsync', function() {
 if (gulpversion == 3) {
   gulp.task('watch', ['styles', 'scripts', 'browser-sync'], function() {
     gulp.watch('app/' + syntax + '/**/*.' + syntax + '', ['styles']);
-    // gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['scripts']);
-    gulp.watch(['libs/**/*.js', 'app/js/common-product.js'], ['scripts']);
+    gulp.watch(['libs/**/*.js', 'app/js/common.js'], ['scripts']);
     gulp.watch('app/*.html', ['code'])
   });
   gulp.task('default', ['watch']);
@@ -120,8 +112,7 @@ if (gulpversion == 3) {
 if (gulpversion == 4) {
   gulp.task('watch', function() {
     gulp.watch('app/' + syntax + '/**/*.' + syntax + '', gulp.parallel('styles'));
-    // gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
-    gulp.watch(['libs/**/*.js', 'app/js/common-product.js'], gulp.parallel('scripts'));
+    gulp.watch(['libs/**/*.js', 'app/js/common.js'], gulp.parallel('scripts'));
     gulp.watch('app/*.html', gulp.parallel('code'))
   });
   gulp.task('default', gulp.parallel('watch', 'img', 'styles', 'scripts', 'browser-sync'));

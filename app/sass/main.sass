@@ -3,95 +3,9 @@
 @import "fonts"
 @import "libs"
 @import "base"
-@import "sticky-header"
+// @import "sticky-header"
 // @import "totop"
 
-@import "blocks/first-block"
-@import "blocks/second-block"
-@import "blocks/third-block"
-@import "blocks/fourth-block"
-@import "blocks/fifth-block"
-@import "blocks/sixth-block"
-@import "blocks/seventh-block"
-@import "modal"
-@import "product-page"
-
-div.wpcf7-mail-sent-ok
-  border: none !important
-
-.equip-carousel-nav--popular
-	display: none
-
-.thanks-page-content
-  height: calc(100vh - 76px)
-  background-size: cover
-  margin-top: 76px
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  align-items: center
-  justify-content: center
-
-.amoforms-footer-copyright,
-.amo-brand__link-holder
-  display: none !important
-
-.thanks-content
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  flex-direction: column
-  align-items: center
-
-  .link-button
-    margin-top: 40px
-    padding: 20px
-    padding-right: 75px
-    position: relative
-
-    &::after
-      position: absolute
-      content: ''
-      width: 36px
-      height: 28px
-      background-image: url('../img/popular/next.png')
-      top: 50%
-      right: 20px
-      transition: all .5s
-      transform: translate(0%, -50%)
-
-    &:hover
-      &::after
-        right: 15px
-
-  h1
-    color: #fff
-    font-size: 5rem
-    text-transform: uppercase
-    font-family: $cond
-    text-align: center
-    margin: 0
-
-  p
-    color: #fff
-    letter-spacing: 0.4px
-    line-height: 34px
-    font-size: 1.25rem
-    font-family: $cyr
-    max-width: 450px
-    text-align: center
-    font-weight: 300
-    margin: 0
-    margin-top: 40px
-
-.soc_center
-  grid-template-columns: 26px 26px
-
-input
-  -webkit-appearance: none
-
-.popular-img-wrapper
-  img
-    object-fit: contain !important
-
+@import "header"
+@import "firstBlock"
 @import "media"

@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Pages navigation</title>
+	<title>Home</title>
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -12,70 +12,50 @@
 	<link rel="icon" href="img/favicon/triangle.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/favicon.png">
 	<!-- Template Basic Images End -->
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700&amp;subset=cyrillic" rel="stylesheet">
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap" rel="stylesheet">
 	<link href="libs/uikit/uikit.min.css" rel="stylesheet">
 	<link href="css/main.min.css" rel="stylesheet">
 </head>
 
 <body class="">
-	<style>
-		body * {
-			font-family: 'Ubuntu', sans-serif !important;
-		}
-
-		h1 {
-			font-weight: bold;
-		}
-
-		.uk-button {
-			background: #fff;
-			color: #222;
-		}
-
-		.uk-button:hover {
-			background: #85c83b;
-			border-color: #85c83b;
-			color: #fff;
-		}
-
-		.index-image-wrapper {
-			width: 100%;
-			display: -webkit-flex;
-			display: -ms-flex;
-			display: flex;
-			-ms-align-items: center;
-			align-items: center;
-			justify-content: center;
-		}
-
-		.index-image-wrapper img {
-			width: 60%;
-		}
-	</style>
 	<!-- Custom HTML -->
-	<div class="uk-container">
-		<div class="index-image-wrapper">
-			<img src="https://raw.githubusercontent.com/Elesmer/Elesmera-start-templete/master/app/img/preview.jpg" alt="">
+	<section class="firstBlock">
+		<header class="header">
+			<div class="uk-container">
+				<div class="uk-position-relative">
+					<!-- bg -->
+					<!-- <img src="images/light.jpg" alt=""> -->
+					<div class="uk-position-top custom-margin">
+						<nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+							<div class="uk-navbar-left logo-wrapper">
+								<img src="img/firstBlock/CreativeSpark-logo-white.svg" alt="">
+							</div>
+							<div class="uk-navbar-right">
+								<ul class="uk-navbar-nav header-nav">
+									<li><a href="#">About</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="#">Contacts</a></li>
+								</ul>
+								<a href="#" class="header-button uk-box-shadow-small">Get a quote</a>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="first-content">
+			<div class="uk-container">
+				<div class="h1-wrapper">
+					<h1 class="uk-h1 h1">Spark it with the right people</h1>
+				</div>
+				<p></p>
+			</div>
 		</div>
-		<ul class="uk-list">
-			<li>
-				<a class="uk-button uk-button-default uk-button-large" href="home.html">Home</a>
-			</li>
-			<li>
-				<a class="uk-button uk-button-default uk-button-large" href="thanks.html">Thanks</a>
-			</li>
-			<li>
-				<a class="uk-button uk-button-default uk-button-large" href="product.html">Your product</a>
-			</li>
-			<li>
-				<a class="uk-button uk-button-default uk-button-large" href="thanks-product.html">Your product thanks page</a>
-			</li>
-		</ul>
-	</div>
+	</section>
 	<script src="js/scripts.min.js"></script>
 </body>
 

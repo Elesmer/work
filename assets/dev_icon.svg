@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="252px" height="252px" viewBox="0 0 252 252" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>dev_ion</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="91" cy="91" r="91"></circle>
+        <filter x="-33.2%" y="-25.0%" width="166.5%" height="166.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="5" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.07 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter2"></feMorphology>
+            <feOffset dx="0" dy="15" in="shadowSpreadOuter2" result="shadowOffsetOuter2"></feOffset>
+            <feGaussianBlur stdDeviation="17.5" in="shadowOffsetOuter2" result="shadowBlurOuter2"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter2" in2="SourceAlpha" operator="out" result="shadowBlurOuter2"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.196078431   0 0 0 0 0.196078431   0 0 0 0 0.364705882  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter2" result="shadowMatrixOuter2"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="shadowMatrixOuter2"></feMergeNode>
+            </feMerge>
+        </filter>
+        <path d="M87.6608859,111.959091 L82.705023,110.507029 C82.1850637,110.359361 81.8925865,109.80971 82.0388251,109.284671 L93.1285837,70.7106759 C93.2748223,70.1856364 93.8191548,69.8903017 94.3391141,70.037969 L99.294977,71.4900314 C99.8149363,71.6376987 100.107413,72.1873494 99.9611749,72.7123889 L88.8714163,111.286384 C88.7170534,111.811423 88.1808452,112.114962 87.6608859,111.959091 L87.6608859,111.959091 Z M78.3991094,102.754492 L81.9332083,98.947956 C82.3069291,98.5459726 82.2825561,97.9060807 81.8682134,97.5369123 L74.5075385,90.9985299 L81.8682134,84.4601475 C82.2825561,84.0909791 82.3150535,83.4510873 81.9332083,83.0491039 L78.3991094,79.2425676 C78.033513,78.848788 77.4160612,78.8241768 77.0179673,79.2015489 L65.310757,90.2766006 C64.8964143,90.6621765 64.8964143,91.3266796 65.310757,91.7122555 L77.0179673,102.795511 C77.4160612,103.172883 78.033513,103.156476 78.3991094,102.754492 L78.3991094,102.754492 Z M104.982033,102.803715 L116.689243,91.7204592 C117.103586,91.3348834 117.103586,90.6703803 116.689243,90.2848044 L104.982033,79.1933451 C104.592063,78.8241768 103.974611,78.8405842 103.600891,79.2343639 L100.066792,83.0409002 C99.6930709,83.4428835 99.7174439,84.0827754 100.131787,84.4519438 L107.492462,90.9985299 L100.131787,97.5369123 C99.7174439,97.9060807 99.6849465,98.5459726 100.066792,98.947956 L103.600891,102.754492 C103.966487,103.156476 104.583939,103.172883 104.982033,102.803715 Z" id="path-4"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-wide" transform="translate(-1158.000000, -2369.000000)">
+            <g id="Team" transform="translate(435.000000, 2276.000000)">
+                <g id="4" transform="translate(758.000000, 113.000000)">
+                    <g id="dev_ion">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="Mask" fill-rule="nonzero">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                            <use stroke="#F5F5F5" stroke-width="1" fill="#FFFFFF" xlink:href="#path-1"></use>
+                        </g>
+                        <mask id="mask-5" fill="white">
+                            <use xlink:href="#path-4"></use>
+                        </mask>
+                        <use id="code" fill="#32325D" fill-rule="nonzero" xlink:href="#path-4"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
