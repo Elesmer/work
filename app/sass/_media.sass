@@ -6,7 +6,7 @@
 
 	.hipster-container
 		margin-right: 30px
-		top: 35%
+		top: 15%
 
 @media only screen and (max-width : 1200px)
 	/* First block */
@@ -26,12 +26,22 @@
 	.h1-wrapper
 		width: 100%
 
+	.h2,
+	h2,
+	.uk-h2
+		font-size: 2.2rem
+
 @media only screen and (max-width : 640px)
 	/* First block */
 
 	h1,
 	.h1
 		text-align: center
+
+	.h2,
+	h2,
+	.uk-h2
+		font-size: 2rem
 
 	p
 		text-align: center
@@ -70,10 +80,30 @@
 	    width: 100%
 	    z-index: 1
 
+	// Third block
+
+	.services-card__list
+		p
+			text-align: left
+
+	.services-card__icon
+		margin: 0 auto
+
+@media only screen and (max-width : 780px)
+
+	// Third block
+	// 
+	// .services-cards
+	//   grid-template-columns: 100%
+
 @media only screen and (max-width : 480px)
 
 	html
 		font-size: 10px
+
+	.services-card__icon
+		height: 50px
+		width: 50px
 
 @media only screen and (max-width : 320px)
   /**/
