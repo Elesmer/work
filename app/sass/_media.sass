@@ -64,7 +64,8 @@
 		.header-button
 			width: 130px
 
-	.firstBlock__triangle
+	.firstBlock__triangle,
+	.thirdBlock__triangle
 	  &::before
 	    position: absolute
 	    pointer-events: none
@@ -82,6 +83,9 @@
 
 	// Third block
 
+	.thirdBlock
+		padding-bottom: 100px
+
 	.services-card__list
 		p
 			text-align: left
@@ -89,12 +93,14 @@
 	.services-card__icon
 		margin: 0 auto
 
-@media only screen and (max-width : 780px)
+	// Fourth block
 
-	// Third block
-	// 
-	// .services-cards
-	//   grid-template-columns: 100%
+	.team-member__post
+		h4
+			font-size: 1.6rem
+
+		p
+			font-size: 1.3rem	
 
 @media only screen and (max-width : 480px)
 
