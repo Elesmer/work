@@ -20,8 +20,10 @@ body
 	input, textarea
 		border: #666 1px solid
 		outline: none
-		&:focus:required:invalid
-			border-color: red
+		// &:focus:invalid
+		// 	box-shadow: 0 5px 8px rgb(198, 103, 48) !important
+		&:focus:invalid
+			border: 1px solid rgb(198, 103, 48) !important
 		&:required:valid
 			border-color: green
 
@@ -80,3 +82,42 @@ button:active,
 button:active
 	text-decoration: none !important
 	outline: none !important
+
+// Notification
+
+.uk-notification-message-primary
+	background-color: darken(#fdb19f, 10%)
+	border-right: 5px solid darken(#fdb19f, 20%)
+	font-family: $default-font
+	text-transform: uppercase
+	font-weight: bold
+	display: -webkit-flex
+	display: -ms-flex
+	display: flex
+	align-items: center
+	font-size: 2rem
+
+	div
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		align-items: center
+
+	svg
+		path
+			fill: $white !important
+
+	p
+		font-size: 1rem
+		margin: 0
+		margin-left: 30px
+		color: $white
+
+.uk-notification-close
+	top: auto
+	color: $white
+
+	&:hover,
+	&:focus,
+	&:active
+		color: $white

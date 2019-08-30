@@ -29,12 +29,20 @@
   display: -ms-flex
   display: flex
   justify-content: center
-  position: relative
-  top: -350px
+  position: absolute
+  // top: -350px
   z-index: 50
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -5%)
+
+.help-block
+  height: 400px
+  width: 100%
+  background-color: $white
 
 .contact-form
-  width: 100%
+  width: calc(100% - 130px)
   max-width: 700px
   border-radius: 4px
   background-color: #f4f5f7
@@ -68,6 +76,29 @@
   .uk-form-icon:not(.uk-form-icon-flip) ~ .uk-input
     padding-left: 60px !important
 
+  .submit
+    background-color: $accent
+    text-transform: uppercase
+    font-weight: bold
+    color: #f4f5f7
+    width: 100%
+    text-align: center
+    cursor: pointer
+    transition: all .5s
+    height: 70px
+    outline: none
+
+    &:hover
+      background-color: darken($accent, 10%)
+
+    &:focus,
+    &:active,
+    &:visited
+      outline: none
+
+.contact-form--success
+  position: relative
+
 .textarea
   border: none
   resize: none
@@ -76,3 +107,75 @@
 
   &:focus
     box-shadow: 0 5px 8px rgba(0,0,0,.08)
+
+.success-block
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #f4f5f7
+  border-radius: 4px
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  font-size: 10rem
+  color: $accent
+  display: none
+
+  h2
+    color: $accent
+    margin-top: 40px
+
+.success-block--done
+  display: flex
+
+// Social bar
+
+.footer
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  align-items: center
+  background-color: $white
+  width: 100%
+
+.social-links
+  width: 100%
+  justify-content: center
+  grid-template-columns: repeat(auto-fit, 30px)
+  grid-gap: 40px
+
+  a
+    height: 40px
+    width: 40px
+    background-color: #8696a8
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 100px
+    color: $white
+    transition: .5s
+
+    &:hover
+      background-color: darken(#8696a8, 10%)
+
+.mail-link
+  color: #8696a8
+  margin-top: 20px
+  text-decoration: none
+  transition: color .5s
+
+  &:hover
+    text-decoration: none
+    color: darken(#8696a8, 10%)
+
+.copyright
+  font-size: 1.1rem
+  margin: 10px 0 50px 0
