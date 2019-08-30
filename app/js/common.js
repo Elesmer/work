@@ -21,6 +21,9 @@ $(document).ready(function() {
   });
 });
 
+// Wow init
+new WOW().init();
+
 // // Resize sticky header
 // $(window).scroll(function() {
 //   if ($(this).scrollTop() > 250) {
