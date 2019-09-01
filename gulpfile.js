@@ -68,6 +68,7 @@ gulp.task('scripts', function() {
       'app/libs/jquery/dist/jquery.min.js',
 			'app/libs/uikit/uikit.min.js',
 			'app/libs/uikit/uikit-icons.min.js',
+			'app/libs/inputMask/inputmask.min.js',
       'app/js/common.js', // Always at the end
     ])
     .pipe(concat('scripts.min.js'))
