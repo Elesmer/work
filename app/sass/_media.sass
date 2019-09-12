@@ -1,16 +1,41 @@
 @media only screen and (max-width : 1200px)
-	header
-    .number
-      margin-right: 30px
+	/**/
 
 @media only screen and (max-width : 960px)
 	/**/
 
 @media only screen and (max-width : 640px)
-	/**/
+	html
+		font-size: 13px
+
+	.content__button
+		padding: 15px 30px
+		padding-left: 60px
+
+		&:hover
+			&::before
+				left: 30px
+
+		&::before
+			left: 40px
+
+	.header
+		min-height: 110px
+		display: -webkit-flex
+		display: -ms-flex
+		display: flex
+		align-items: center
+		justify-content: center
+
+	.header-wrapper
+	  grid-template-columns: 100%
+
+	.man
+		display: none
 
 @media only screen and (max-width : 480px)
-	/**/
+	html
+		font-size: 10px
 
 @media only screen and (max-width : 320px)
   /**/

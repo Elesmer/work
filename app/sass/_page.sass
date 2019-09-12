@@ -50,3 +50,44 @@
   align-items: center
   justify-content: center
   flex-direction: column
+
+.content__h1
+  max-width: 700px
+  color: $text
+  font-family: 'Calibri'
+  font-size: 2rem
+  font-weight: 400
+  line-height: 2.4rem
+  text-align: center
+  letter-spacing: 0.25px
+  margin: 0 20px 50px 20px
+
+.content__button
+  color: $white
+  font-size: 2rem
+  font-weight: bold
+  padding: 20px 50px
+  padding-left: 90px
+  border-radius: 100px
+  background-color: $accent
+  transition: background-color .5s
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+  position: relative
+  margin: 0 20px
+
+  &:hover
+    background-color: darken($accent, 5%)
+
+    &::before
+      left: 60px
+
+  &::before
+    content: '>>'
+    position: absolute
+    top: 50%
+    left: 70px
+    transform: translate(-50%, -50%)
+    transition: .5s
