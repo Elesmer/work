@@ -1,0 +1,58 @@
+body
+  // background-color: $accent
+  background-color: lighten($accent, 5%)
+  min-height: 100vh
+
+.logo
+  width: 100%
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: center
+  margin: 100px 0
+
+  img
+    max-height: 250px
+    border-radius: 100%
+
+.payorno
+  width: 100%
+  padding: 0
+  display: grid
+  grid-template-columns: 50% 50%
+  grid-gap: 50px
+  float: left
+
+  li
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+
+    a
+      border-radius: 8px
+      width: 100%
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      justify-content: center
+      align-items: center
+      text-align: center
+      float: left
+      padding: 15px 0 !important
+      transition: all .5s !important
+      color: $milk !important
+      font-weight: bold
+      border: 2px solid $milk
+
+      &:hover
+        border: 2px solid $milk
+        background-color: $milk !important
+        color: $target !important
+
+    &.uk-active
+      a
+        background-color: $target !important
+        border-color: $target
+
+        &:hover
+          color: $milk !important
