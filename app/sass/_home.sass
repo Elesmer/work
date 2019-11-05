@@ -110,3 +110,103 @@ body
         &:hover
           background-color: darken($milk, 3%)
           color: $target
+
+// Cards
+
+.cards__list
+  padding-left: 0
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+  flex-direction: column
+
+  li
+    width: 100%
+
+.card
+  border-radius: 8px
+  overflow: hidden
+  transition: all .5s
+  margin-bottom: 50px
+  display: grid !important
+  grid-template-columns: repeat(auto-fill, calc(50% - 20px))
+  grid-gap: 20px
+
+  &::before
+    display: none
+
+  h3
+    margin: 0
+    color: $white
+
+  &.success
+    background-color: $green
+    position: relative
+
+    &:hover
+      background-color: darken($green, 5%)
+
+    &::before
+      display: block !important
+      position: absolute
+      content: ''
+      left: 0
+      top: 0
+      width: 10px
+      height: 100%
+      background-color: darken($green, 15%)
+      z-index: 3
+
+    &::after
+      font-family: "Font Awesome 5 Free"
+      font-weight: 900
+      content: "\f00c"
+      font-size: 20rem
+      position: absolute
+      top: -180px
+      z-index: 1
+      left: -30px
+      color: darken($green, 10%)
+
+  &.unsuccess
+    background-color: $red
+    position: relative
+
+    &:hover
+      background-color: darken($red, 5%)
+
+    &::before
+      display: block !important
+      position: absolute
+      content: ''
+      left: 0
+      top: 0
+      width: 10px
+      height: 100%
+      background-color: darken($red, 15%)
+      z-index: 3
+
+    &::after
+      font-family: "Font Awesome 5 Free"
+      font-weight: 900
+      content: "\f00d"
+      font-size: 20rem
+      position: absolute
+      top: -180px
+      z-index: 1
+      left: -50px
+      color: darken($red, 10%)
+
+.card__content
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+  position: relative
+  z-index: 2
+  color: $white
+
+  i
+    font-size: 2rem
+    margin-right: 20px
