@@ -16,17 +16,18 @@ body
     border-radius: 100%
 
 .payorno
-  width: 100%
+  width: calc(100% - 50px)
   padding: 0
   display: grid
   grid-template-columns: 50% 50%
   grid-gap: 50px
-  float: left
+  margin: 0 !important
 
   li
     display: -webkit-flex
     display: -ms-flex
     display: flex
+    padding: 0
 
     a
       border-radius: 8px
@@ -56,3 +57,56 @@ body
 
         &:hover
           color: $milk !important
+
+// Season swiatcher
+
+.season__switcher
+  float: left
+  width: 100%
+
+  li
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    flex-direction: column
+
+  .uk-subnav,
+  .uk-switcher
+    width: 100%
+
+  .uk-subnav
+    grid-template-columns: repeat(auto-fill, minmax(10%, 1fr))
+    margin: 0 !important
+    grid-gap: 20px
+
+    li
+      display: -webkit-flex
+      display: -ms-flex
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 0
+
+      &.uk-active
+        a
+          background-color: $target
+          color: $milk
+
+          &:hover
+            background-color: $target
+            color: $milk
+
+      a
+        padding: 10px 0
+        border-radius: 8px
+        background-color: $milk
+        width: 100%
+        text-align: center
+        color: $target
+        font-weight: bold
+        letter-spacing: .5px
+        transition: all .5s
+
+        &:hover
+          background-color: darken($milk, 3%)
+          color: $target
