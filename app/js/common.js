@@ -3,15 +3,6 @@ $(document).ready(function () {
 
 });
 
-// Resize sticky header
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 250) {
-    $('header').addClass("sticky");
-  } else {
-    $('header').removeClass("sticky");
-  }
-});
-
 /* To top button */
 
 var offset = 300,
@@ -29,3 +20,16 @@ $(window).scroll(function(){
         $back_to_top.addClass('back-to-top-fade-out');
     }
 });
+
+$('.cards__list').each(function(){
+  $('.card .bet-number__h2', this).each(function(i){
+    $(this).text('# ' + (i+1))
+
+    if (i >= 99) {
+  $(this).css('font-size', '3rem')
+  }
+  if (i >= 999) {
+    $(this).css('font-size', '2rem')
+  }
+  })
+})
