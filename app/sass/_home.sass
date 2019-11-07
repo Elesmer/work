@@ -57,6 +57,7 @@ body
 
         &:hover
           color: $milk !important
+          background-color: darken($target,5%) !important
 
 // Season swiatcher
 
@@ -198,6 +199,16 @@ body
       left: -50px
       color: darken($red, 10%)
 
+.game-name
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+
+.bet-number
+  h2
+    color: $milk
+
 .card__content
   display: -webkit-flex
   display: -ms-flex
@@ -210,3 +221,25 @@ body
   i
     font-size: 2rem
     margin-right: 20px
+
+// Stats
+
+.stats
+  display: grid
+  width: 100%
+  margin: 25px 0
+  grid-template-columns: repeat(auto-fill, minmax(calc(33.33% - 15px), 1fr))
+  grid-gap: 15px
+
+.stat
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+
+  h4
+    color: $milk
+    margin: 0 0 0 10px
+
+  i
+    color: $target
