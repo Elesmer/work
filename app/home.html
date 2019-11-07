@@ -22,24 +22,24 @@
 
 <body class="">
 	<div class="uk-container">
-		<div class="telegram" uk-tooltip="title: Перейти в телеграм; pos: left">
+		<div uk-scrollspy="cls:slideInRight animated" class="telegram" uk-tooltip="title: Перейти в телеграм канал; pos: left">
 			<a href="#">
 				<div class="telegram-icon__wrapper" >
 					<i class="fab fa-telegram"></i>
 				</div>
 			</a>
 		</div>
-		<div class="logo">
+		<div class="logo" uk-scrollspy="cls:fadeInDown animated">
 			<div class="logo-wrapper">
 				<img class="uk-box-shadow-large uk-box-shadow-hover-xlarge" src="img/berglogo.png" alt="">
 			</div>
 		</div>
-		<h1 class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque.</h1>
+		<h1 class="title" uk-scrollspy="cls:fadeIn animated">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque.</h1>
 		<ul class="uk-subnav uk-subnav-pill payorno" uk-switcher="animation: uk-animation-slide-left-medium, uk-animation-slide-right-medium">
-			<li><a href="#">Платные прогнозы</a></li>
-			<li><a href="#">Бесплатные прогнозы</a></li>
+			<li uk-scrollspy="cls:softFadeInRight animated"><a href="#">Платные прогнозы</a></li>
+			<li uk-scrollspy="cls:softFadeInLeft animated"><a href="#">Бесплатные прогнозы</a></li>
 		</ul>
-		<ul class="uk-switcher uk-margin season__switcher">
+		<ul uk-scrollspy="cls:softFadeInUp animated" class="uk-switcher uk-margin season__switcher">
 			<li>
 				<h2 class="h1 uk-h1">Сезоны</h2>
 				<!-- Seasons -->
@@ -73,7 +73,7 @@
 							</div>
 						</div>
 						<ul class="cards__list">
-							<li class="card uk-card uk-card-default uk-card-body uk-box-shadow-hover-xlarge grid success">
+							<li uk-scrollspy="cls:softFadeInUp animated" class="card uk-card uk-card-default uk-card-body uk-box-shadow-hover-xlarge grid success" >
 								<div class="bet-number">
 									<h2 class="bet-number__h2"></h2>
 								</div>
@@ -97,7 +97,7 @@
 									<h3>1,9</h3>
 								</div>
 							</li>
-							<li class="card uk-card uk-card-default uk-card-body uk-box-shadow-hover-xlarge grid unsuccess">
+							<li uk-scrollspy="cls:softFadeInUp animated" class="card uk-card uk-card-default uk-card-body uk-box-shadow-hover-xlarge grid unsuccess">
 								<div class="bet-number">
 									<h2 class="bet-number__h2"></h2>
 								</div>
@@ -121,7 +121,7 @@
 									<h3>1,9</h3>
 								</div>
 							</li>
-							<li class="card uk-card uk-card-default uk-card-body uk-box-shadow-hover-xlarge grid unsuccess">
+							<li uk-scrollspy="cls:softFadeInUp animated" class="card uk-card uk-card-default uk-card-body uk-box-shadow-hover-xlarge grid unsuccess">
 								<div class="bet-number">
 									<h2 class="bet-number__h2"></h2>
 								</div>
