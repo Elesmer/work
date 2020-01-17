@@ -1,0 +1,65 @@
+@import "verityBlockTitle"
+
+.section--verity
+  background-color: $accentBg
+  position: relative
+
+.background-lines
+  grid-template-columns: repeat(3, 1fr)
+  height: 100%
+  min-height: 100vh
+  overflow: hidden
+  padding: 0 10%
+
+.background__line
+  height: 100%
+  border-left: 1px solid #000
+  position: relative
+  z-index: 4
+
+  &:last-child
+    border-right: 1px solid #000
+
+  &:nth-child(2)
+    box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.75)
+
+  &.active
+    box-shadow: 0px 0px 15px 15px rgba(0,0,0,0.75)
+    scale: 1.01
+    position: relative
+    z-index: 5
+
+.block
+  background-color: red
+  height: 300px
+  width: 300px
+
+.testblock
+  height: 200vh
+  width: 100%
+  background-color: green
+  float: left
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: center
+  align-items: flex-end
+
+.about
+  height: 100vh
+  overflow: hidden
+  overflow-y: scroll
+  position: relative
+
+.slide
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+  justify-content: center
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  height: 100%
+  width: 100%
