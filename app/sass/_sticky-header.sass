@@ -1,52 +1,96 @@
-header
+.header__nav
   position: fixed
-  width: 100%
-  height: 120px
-  background: $accent
+  top: 30px
+  right: 10%
+  z-index: 200
+
+.header__nav-wrapper
+  position: relative
   display: -webkit-flex
   display: -ms-flex
   display: flex
-  align-items: center
-  -webkit-transition: all 0.4s ease
-  transition: all 0.4s ease
-  z-index: 3000
+  flex-direction: column
+  align-items: flex-end
 
-  .burger
-    background-color: transparent
-    height: 50px
-    width: 50px
-    display: -webkit-flex
-    display: -ms-flex
-    display: flex
-    align-items: flex-start
-    flex-direction: column
-    justify-content: center
-    cursor: pointer
+.lang__wrapper
+  margin-top: 20px
 
-    &:hover
-      .burger-line
-        &:last-child
-          width: 55%
+.rolling-button--lang
+  margin: 10px 0
+  font-size: .9rem
 
-  .burger-line
-    height: 1px
-    background: $white
-    width: 55%
-    margin: 5px 0
-    transition: width .5s
+  &:first-child
+    margin-top: 0
 
-    &:last-child
-      width: 30%
+// Burger
+
+.burger
+  position: relative
+  background-color: transparent
+  height: 30px
+  width: 100px
+  padding-right: 5px
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: flex-end
+  flex-direction: column
+  justify-content: center
+  cursor: pointer
+  overflow: hidden
+
+  &:hover
+    &::before
+      margin-top: -50px
+
+    &::after
+      margin-top: -4px
+
+    .burger-line
+      &:last-child
+        width: 25px
+
+  &::before
+    content: 'menu'
+    color: #fff
+    font-family: $default-font
+    position: absolute
+    margin-right: 35px
+    margin-top: -5px
+    font-weight: bold
+    transition: .35s
+
+  &::after
+    content: 'menu'
+    color: #fff
+    font-family: $default-font
+    position: absolute
+    margin-right: 35px
+    margin-top: 50px
+    font-weight: bold
+    transition: .5s
+
+.burger-line
+  height: 1px
+  background: $white
+  width: 25px
+  margin: 5px 0
+  transition: width .5s
+
+  &:last-child
+    width: 15px
+
+.header__logo
+  position: fixed
+  z-index: 200
+  top: 30px
+  left: 10%
+
+.header__logo-img
+  min-width: 150px
 
 header.sticky
   height: 90px
 
 .header__content
   width: 100%
-
-.number
-  margin-right: 50px
-
-  a
-    &:hover
-      text-decoration: none
