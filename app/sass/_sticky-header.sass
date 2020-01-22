@@ -2,7 +2,19 @@
   position: fixed
   top: 30px
   right: 10%
-  z-index: 200
+  z-index: 40
+
+  &.active
+    *
+      color: $accentBg
+
+    .burger
+      &::after,
+      &::before
+        color: $accentBg
+
+    .burger-line
+      background-color: $accentBg
 
 .header__nav-wrapper
   position: relative
@@ -44,7 +56,7 @@
       margin-top: -50px
 
     &::after
-      margin-top: -4px
+      margin-top: 0
 
     .burger-line
       &:last-child
@@ -56,9 +68,9 @@
     font-family: $default-font
     position: absolute
     margin-right: 35px
-    margin-top: -5px
-    font-weight: bold
     transition: .35s
+    text-transform: uppercase
+    font-size: .9rem
 
   &::after
     content: 'menu'
@@ -67,12 +79,13 @@
     position: absolute
     margin-right: 35px
     margin-top: 50px
-    font-weight: bold
     transition: .5s
+    text-transform: uppercase
+    font-size: .9rem
 
 .burger-line
   height: 1px
-  background: $white
+  background-color: $white
   width: 25px
   margin: 5px 0
   transition: width .5s

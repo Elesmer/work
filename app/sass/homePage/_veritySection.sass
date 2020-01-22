@@ -3,6 +3,7 @@
 .section--verity
   background-color: $accentBg
   position: relative
+  box-shadow: inset 0px -40px 43px -35px rgba(0,0,0,0.75)
 
 .background-lines
   grid-template-columns: repeat(3, 1fr)
@@ -19,34 +20,52 @@
 
   &:last-child
     border-right: 1px solid #000
+    border-left: none
 
   &:nth-child(2)
-    box-shadow: 0px 3px 15px 5px rgba(0,0,0,0.75)
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75)
 
-  &.active
-    box-shadow: 0px 0px 15px 15px rgba(0,0,0,0.75)
-    scale: 1.01
-    position: relative
-    z-index: 5
-
-.block
-  background-color: red
-  height: 300px
-  width: 300px
-
-.testblock
-  height: 200vh
-  width: 100%
-  background-color: green
-  float: left
-  display: -webkit-flex
-  display: -ms-flex
-  display: flex
-  justify-content: center
-  align-items: flex-end
-
-.about
+.scroll-block
   height: 100vh
   overflow: hidden
   overflow-y: scroll
   position: relative
+
+// Skip back button
+
+.skip-back__container
+  position: absolute
+  left: 50%
+  top: 0
+  transform: translate(-50%, 0)
+  z-index: 50
+
+.skip-back__container--skip
+  top: auto
+  bottom: 30px
+
+.skip-back__button
+  position: relative
+  height: 100px
+  z-index: 200
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  justify-content: center
+  overflow: hidden
+  position: relative
+
+.rolling-button--skip,
+.rolling-button--back
+  transform: rotate(-90deg)
+
+.rolling-button--back
+  position: relative
+
+  *
+    color: $accentBg
+
+.test
+  width: 200px
+  height: 2000px

@@ -206,33 +206,55 @@
 		<div class="uk-container uk-uk-container-expand">
 			<div class="background-lines grid">
 				<div class="background__line"></div>
-				<div class="background__line"></div>
+				<div class="background__line background__line--central"></div>
 				<div class="background__line"></div>
 			</div>
 			<div class="verity__slogan-wrapper">
 				<h2 id="text" class="verity__slogan text">Jumbuck</h2>
-				<!-- <h2 class="verity__slogan content__title">Jumbuck</h2> -->
 			</div>
-			<p class="verity__p"></p>
-		</div>
-	</section>
-	<section class="section section--verity about">
-		<div class="uk-container uk-uk-container-expand">
-			<a id="toSecond" href="#" class="uk-button">Back to the preview</a>
-			<a href="#" class="rolling-button">
-				<div class="roll-hover-btn__label">
-					<p class="roll-hover-btn__label-p">Меню</p>
+			<!-- Skip button -->
+			<div class="skip-back__container skip-back__container--skip">
+				<div class="skip-back__button">
+					<a id="js-toThird" href="#" class="rolling-button rolling-button--skip">
+						<div class="roll-hover-btn__label">
+							<p class="roll-hover-btn__label-p">skip</p>
+						</div>
+						<div class="roll-hover-btn__label roll-hover-btn__label_active">
+							<p class="roll-hover-btn__label-p">skip</p>
+						</div>
+					</a>
 				</div>
-				<div class="roll-hover-btn__label roll-hover-btn__label_active">
-					<p class="roll-hover-btn__label-p">Меню</p>
-				</div>
-			</a>
-			<div class="testblock">
-				<div id="block" class="block"></div>
 			</div>
 		</div>
 	</section>
-	<div class="overlay"></div>
+	<section class="section section--about">
+		<div class="scroll-block">
+			<!-- Back button -->
+			<div class="skip-back__container skip-back__container--back">
+				<div class="skip-back__button">
+					<a id="js-toSecond" href="#" class="rolling-button rolling-button--back">
+						<div class="roll-hover-btn__label">
+							<p class="roll-hover-btn__label-p">back</p>
+						</div>
+						<div class="roll-hover-btn__label roll-hover-btn__label_active">
+							<p class="roll-hover-btn__label-p">back</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="uk-container uk-uk-container-expand">
+				<a href="#" class="rolling-button">
+					<div class="roll-hover-btn__label">
+						<p class="roll-hover-btn__label-p">Меню</p>
+					</div>
+					<div class="roll-hover-btn__label roll-hover-btn__label_active">
+						<p class="roll-hover-btn__label-p">Меню</p>
+					</div>
+				</a>
+				<div class="test"></div>
+			</div>
+		</div>
+	</section>
 	<!-- To top -->
 	<!-- <a uk-totop uk-scroll id="back-button" class="js-back-to-top back-to-top"></a> -->
 	<!-- ScrollMagic -->

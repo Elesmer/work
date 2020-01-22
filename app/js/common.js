@@ -12,6 +12,9 @@ const word = new Word(text, options);
 
 // Second block shapes animation end
 
+// Header navigation element detection
+var headerNav = document.querySelector(".header__nav")
+
 $(document).ready(function() {
 
   // Full screen scroll init
@@ -22,6 +25,38 @@ $(document).ready(function() {
     setHeights: false,
     before: function(index, section) {
       if (index == 1) {
+
+        // Back button animation
+        anime({
+          targets: '.skip-back__container--back',
+          translateY: '-100',
+          // translateX: '-50%',
+          easing: 'easeInOutQuad',
+          duration: 700
+        });
+
+        // Skip button animation
+        anime({
+          targets: '.skip-back__container--skip',
+          translateY: '30',
+          translateX: '-50%',
+          easing: 'easeInOutQuad',
+          duration: 700
+        });
+
+        // Verity section central line shadow add
+        anime({
+          targets: '.background__line--central',
+          boxShadow: '0px 0px 15px 10px rgba(0,0,0,0.75)',
+          scale: 1.03,
+          easing: 'easeInOutQuad',
+          duration: 700,
+          delay: 1000
+        });
+        // Remove active class for nav element
+        headerNav.classList.remove('active');
+
+        // Animation for verity section
         word.show({
           lettersAnimationOpts: {
             duration: 500,
@@ -58,6 +93,10 @@ $(document).ready(function() {
           }
         });
       } else if (index == 0) {
+        // Remove active class for nav element
+        headerNav.classList.remove('active');
+
+        // Animation for verity section
         word.hide({
           lettersAnimationOpts: {
             duration: () => anime.random(800,1000),
@@ -73,6 +112,29 @@ $(document).ready(function() {
           }
         });
       } else if (index == 2) {
+
+        // Back button animation
+        anime({
+          targets: '.skip-back__container--back',
+          translateY: '10',
+          translateX: '-35%',
+          easing: 'easeInOutQuad',
+          duration: 700
+        });
+
+        // Skip button animation
+        anime({
+          targets: '.skip-back__container--skip',
+          translateY: '100',
+          translateX: '-50%',
+          easing: 'easeInOutQuad',
+          duration: 700
+        });
+
+        // Remove active class for nav element
+        headerNav.classList.add('active');
+
+        // Animation for verity section
         word.hide({
           lettersAnimationOpts: {
             duration: () => anime.random(800,1000),
@@ -133,14 +195,19 @@ $(document).ready(function() {
 
   // Back to second section button
 
-  $("#toSecond").click(function() {
+  $("#js-toSecond").click(function() {
     $.scrollify.enable();
     $.scrollify.previous();
   });
 
+  // To third section button
+
+  $("#js-toThird").click(function() {
+    $.scrollify.next();
+    $.scrollify.disable();
+  });
+
 });
-
-
 
 /* Figures animation */
 
@@ -256,13 +323,13 @@ let layeredAnimation = (function() {
 
 // Menu and logo animation
 
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 250) {
-    $('header').addClass("sticky");
-  } else {
-    $('header').removeClass("sticky");
-  }
-});
+// $(window).scroll(function() {
+//   if ($(this).scrollTop() > 250) {
+//     $('header').addClass("sticky");
+//   } else {
+//     $('header').removeClass("sticky");
+//   }
+// });
 
 // End menu and logo animation
 
