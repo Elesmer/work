@@ -35,6 +35,13 @@
 //   opacity: 1
 // });
 
+// Back to home section
+
+$("#js-homeLink").click(function() {
+  $.scrollify.move("#home");
+});
+
+
 // Second block shapes animation
 
 let options = {
@@ -66,6 +73,25 @@ $(document).ready(function() {
       if (index == 0) {
 
         // Header logo pixels animation
+
+        anime({
+          targets: [
+            '#logo_three_t',
+            '#logo_three_h',
+            '#logo_three_r',
+            '#logo_three_e',
+            '#logo_three_e_2',
+            '#logo_pixels_p',
+            '#logo_pixels_i',
+            '#logo_pixels_x',
+            '#logo_pixels_e',
+            '#logo_pixels_l',
+            '#logo_pixels_s'
+          ],
+          easing: 'easeInOutQuad',
+          duration: 100,
+          opacity: 1
+        });
 
         anime({
           targets: [
@@ -294,6 +320,13 @@ $(document).ready(function() {
           }
         });
         $.scrollify.disable();
+
+        // Back to home section
+
+        $("#js-homeLink").click(function() {
+          $.scrollify.enable();
+          $.scrollify.move("#home");
+        });
       }
     }
   });
