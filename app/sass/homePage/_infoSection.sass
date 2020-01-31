@@ -1,0 +1,92 @@
+.section--info
+  background-color: $accentBg
+  background-color: #e1e1e1
+  position: relative
+  z-index: 6
+
+.info__content-wrapper
+  position: relative
+  width: 100%
+  height: auto
+  float: left
+
+.info__content
+  position: absolute
+  height: 100%
+  top: 20%
+  left: 0
+  padding: 0 10%
+  z-index: 10
+
+.info__sub-title
+  margin: 0 5px
+  font-family: Montserrat, sans-serif
+  font-size: 1rem
+  position: relative
+
+  &::before
+    content: ''
+    display: block
+    height: 1px
+    width: 5%
+    background-color: $accentBg
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translate(-120%, -50%)
+
+.info__title
+  font-family: Montserrat, sans-serif
+  font-size: 4rem
+  font-weight: bold
+  max-width: 60%
+  line-height: 1.2
+  margin: 20px 0
+
+// Bg text
+
+.info__bg-text
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-size: 10rem
+  text-transform: uppercase
+  font-weight: 900
+  color: rgba(171, 171, 171, 0.1)
+
+// Bullits
+
+.info__bullits
+  float: left
+  width: 100%
+  grid-template-columns: repeat(3, 1fr)
+  margin: 50px 0
+
+.info__bullit
+  padding-top: 30px
+  position: relative
+  float: left
+
+  &:before
+    transform: rotate(-90deg)
+    position: absolute
+    top: 0
+    width: auto
+    padding-left: 7px
+    border-left: 1px solid $accentBg
+
+  &:nth-child(1)
+    &::before
+      content: '01'
+
+  &:nth-child(2)
+    &::before
+      content: '02'
+
+  &:nth-child(3)
+    &::before
+      content: '03'
+
+.info__bullit-p
+  margin-left: 30px

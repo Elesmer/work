@@ -25,6 +25,16 @@
   &:nth-child(2)
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75)
 
+.background-lines--light
+  .background__line
+    border-color: rgba(0, 0, 0, 0.095)
+
+    &:nth-child(2)
+      box-shadow: none
+
+    &:last-child
+      border-left: 1px solid rgba(0, 0, 0, 0.095)
+
 .scroll-block
   height: 100vh
   overflow: hidden
@@ -43,6 +53,7 @@
 .skip-back__container--skip
   top: auto
   bottom: 30px
+  color: red
 
 .skip-back__button
   position: relative
@@ -59,6 +70,7 @@
 .rolling-button--skip,
 .rolling-button--back
   transform: rotate(-90deg)
+  font-weight: 700
 
 .rolling-button--back
   position: relative
