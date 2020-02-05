@@ -1,8 +1,12 @@
+.lol
+	position: relative
+	z-index: 50000
+
 ::placeholder
 	color: #666
 
 ::selection
-	background-color: $accent
+	background-color: $accentBg
 	color: #fff
 
 body
@@ -30,6 +34,10 @@ body
 		&:required:valid
 			border-color: green
 
+a
+	&:hover
+		text-decoration: none
+
 b,
 strong
 	font-weight: bold
@@ -50,3 +58,54 @@ strong
 	width: 0px
 	height: 0px
 	overflow: hidden
+
+// Section styles
+
+.section--wrapper
+	position: relative
+	z-index: 10
+
+.section--dark
+	background-color: $accentBg
+
+.section--light
+	background-color: #f0ebeb
+
+// Bg text
+
+.bg-text
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-size: 10rem
+  text-transform: uppercase
+  font-weight: 900
+  color: rgba(171, 171, 171, 0.1)
+
+// Titles and subtitles
+
+.sub-title
+  margin: 0 5px
+  font-family: Montserrat, sans-serif
+  font-size: 1rem
+  position: relative
+
+  &::before
+    content: ''
+    display: block
+    height: 1px
+    width: 5%
+    background-color: $accentBg
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translate(-120%, -50%)
+
+.main-title
+  font-family: Montserrat, sans-serif
+  font-size: 4rem
+  font-weight: bold
+  max-width: 60%
+  line-height: 1.2
+  margin: 20px 0

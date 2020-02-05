@@ -41,6 +41,8 @@ $("#js-homeLink").click(function() {
   $.scrollify.move("#home");
 });
 
+// Slogan definition
+$('.verity__slogan').text('perfection.')
 
 // Second block shapes animation
 
@@ -62,6 +64,18 @@ let headerNav = document.querySelector(".header__nav")
 let headerLogo = document.querySelector(".header__logo")
 
 $(document).ready(function() {
+
+  // Verity section about button start
+
+  $("#js-verity__about-us-trigger").click(function() {
+    $.scrollify.disable();
+  });
+
+  $("#js-verity__about-us-close").click(function() {
+    $.scrollify.enable();
+  });
+
+  // Verity section about button start
 
   // Full screen scroll init
 
@@ -115,22 +129,24 @@ $(document).ready(function() {
         // Remove active class for nav element
         headerNav.classList.remove('active');
 
-        // Animation for verity section
-        word.hide({
-          lettersAnimationOpts: {
-            duration: () => anime.random(800,1000),
-            opacity: 0,
-          },
-          shapesAnimationOpts: {
-            duration: () => anime.random(800,1000),
-            opacity: {
-              value: 0,
-              duration: 200,
-              easing: 'linear'
-            }
-          }
-        });
+        // Verity title text change start
+
+        setTimeout(() => {
+          $('.verity__slogan').text('perfection.')
+        },300)
+
+        // Verity title text change END
+
       } else if (index == 1) {
+
+        // Verity about us button
+        anime({
+          targets: '#js-verity__about-us-trigger',
+          opacity: '1',
+          easing: 'easeInOutSine',
+          duration: 200,
+          delay: 1200
+        });
 
         // Header logo animation
         anime({
@@ -239,6 +255,25 @@ $(document).ready(function() {
             }
           }
         });
+
+        // Verity title text change start
+
+        setTimeout(() => {
+          const title = document.querySelector('.verity__slogan');
+          $('.verity__slogan').text('precision.')
+          charming(title);
+          animateTitles();
+        },1300)
+
+        setTimeout(() => {
+          const title = document.querySelector('.verity__slogan');
+          $('.verity__slogan').text('pixels.')
+          charming(title);
+          animateTitles();
+        },2300)
+
+        // Verity title text change END
+
       } else if (index == 2) {
 
         // Header logo animation
@@ -327,6 +362,14 @@ $(document).ready(function() {
           $.scrollify.enable();
           $.scrollify.move("#home");
         });
+
+        // Verity title text change start
+
+        setTimeout(() => {
+          $('.verity__slogan').text('perfection.')
+        },300)
+
+        // Verity title text change END
       }
     }
   });

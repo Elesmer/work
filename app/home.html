@@ -271,7 +271,7 @@
 			</div>
 		</div>
 	</section>
-	<section data-section-name="about-us" class="section section--verity">
+	<section data-section-name="about-us" class="section section--verity section--dark">
 		<div class="uk-container uk-uk-container-expand">
 			<div class="background-lines grid">
 				<div class="background__line"></div>
@@ -279,7 +279,21 @@
 				<div class="background__line"></div>
 			</div>
 			<div class="verity__slogan-wrapper">
-				<h2 id="text" class="verity__slogan text">Jumbuck</h2>
+				<h2 id="text" class="verity__slogan verity__slogan-per text"></h2>
+			</div>
+			<a id="js-verity__about-us-trigger" href="#verity__about-us-modal" class="verity__more-button" uk-toggle>about us</a>
+			<div id="verity__about-us-modal" class="uk-modal-full" uk-modal>
+				<div class="uk-modal-dialog">
+					<button id="js-verity__about-us-close" class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+					<div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle" uk-grid>
+						<div class="uk-background-cover" style="background-image: url('images/photo.jpg');" uk-height-viewport></div>
+						<div class="uk-padding-large">
+							<h1>Headline</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!-- Skip button -->
 			<div class="skip-back__container skip-back__container--skip">
@@ -296,8 +310,8 @@
 			</div>
 		</div>
 	</section>
-	<section data-section-name="info" class="section section--info">
-		<div class="scroll-block">
+	<section data-section-name="info" class="section section--wrapper">
+		<div class="scroll-block section--light">
 			<!-- Back button -->
 			<div class="skip-back__container skip-back__container--back">
 				<div class="skip-back__button">
@@ -320,6 +334,32 @@
 						<p class="roll-hover-btn__label-p">Меню</p>
 					</div>
 				</a> -->
+				<div class="info__content-wrapper">
+					<div class="background-lines background-lines--light grid">
+						<div class="background__line"></div>
+						<div class="background__line"></div>
+						<div class="background__line"></div>
+					</div>
+					<h4 class="bg-text">Design</h4>
+					<div class="info__content">
+						<h3 class="sub-title">Наша задача</h3>
+						<h2 class="main-title">UI/UX с Маркетингом</h2>
+						<div class="info__bullits three-lines grid">
+							<div class="info__bullit">
+								<p class="info__bullit-p">Удачный дизайн - это когда он работает на вас.</p>
+							</div>
+							<div class="info__bullit">
+								<p class="info__bullit-p">Исследуя целевую аудиторию, продумывая подход к каждому потребителю,мы получаем работающий на вас продукт.</p>
+							</div>
+							<div class="info__bullit">
+								<p class="info__bullit-p">Сделать красиво - это только 1/10 нашей задачи. Сайт не только ваша визитка, а это коммуникация, которая должна работать.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /uk-container -->
+			<section class="section section--contacts section--dark">
 				<div class="uk-container">
 					<div class="info__content-wrapper">
 						<div class="background-lines background-lines--light grid">
@@ -327,26 +367,24 @@
 							<div class="background__line"></div>
 							<div class="background__line"></div>
 						</div>
-						<h4 class="info__bg-text">Design</h4>
-						<div class="info__content">
-							<h3 class="info__sub-title">Наша задача</h3>
-							<h2 class="info__title">UI/UX с Маркетингом</h2>
-							<div class="info__bullits grid">
-								<div class="info__bullit">
-									<p class="info__bullit-p">Удачный дизайн - это когда он работает на вас.</p>
+						<h4 class="bg-text">Contact</h4>
+						<div class="info__content info__content--contact info__content--light">
+							<h3 class="sub-title">Контакты</h3>
+							<h2 class="main-title">Напишите нам</h2>
+							<div class="contact__wrapper three-lines grid">
+								<div class="contact-form"></div>
+								<div class="contact-form">
+									<a class="contact__a" href="#">Контактная форма</a>
 								</div>
-								<div class="info__bullit">
-									<p class="info__bullit-p">Исследуя целевую аудиторию, продумывая подход к каждому потребителю,мы получаем работающий на вас продукт.</p>
-								</div>
-								<div class="info__bullit">
-									<p class="info__bullit-p">Сделать красиво - это только 1/10 нашей задачи. Сайт не только ваша визитка, а это коммуникация, которая должна работать.</p>
+								<div class="contact-presentation">
+									<a class="contact__a" href="#">Наша презентация</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="test"></div>
-			</div>
+			</section>
+			<!-- /section--contacts -->
 		</div>
 	</section>
 	<!-- To top -->

@@ -21,21 +21,53 @@
   cursor: default
   display: flex
   flex-direction: row
-  flex-wrap: wrap
-  font-family: 'Josefin Sans', sans-serif
-  font-size: 13rem
+  flex-wrap: nowrap
+  font-size: 10rem
   font-weight: 700
   grid-area: title
   justify-content: center
-  letter-spacing: -0.05em
+  letter-spacing: 1px
   margin: 0
   position: absolute
-  text-transform: lowercase
+  text-transform: uppercase
+  font-weight: 900
   user-select: none
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
 
+  span
+    text-transform: uppercase
+    font-weight: 900
+    text-align: center
+    letter-spacing: 2px
+
 .shapes
   max-height: 100vh
   width: 100%
+
+// Verity about us button
+
+.verity__more-button
+  position: absolute
+  bottom: 13.5%
+  left: 50%
+  transform: translate(-50%, -50%)
+  z-index: 10
+  opacity: 0
+  transition: all .5s
+  border-bottom: 2px dotted $white
+  background: linear-gradient(120deg, #ff4d4d, #333, #9f9b9b)
+  font-weight: 900
+  font-size: 1.5rem
+  text-transform: uppercase
+  background-size: 400% 400%
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  -moz-animation: gradient 5s ease-in-out infinite
+  -webkit-animation: gradient 5s ease-in-out infinite
+  animation: gradient 5s ease-in-out infinite
+
+  &:hover
+    text-decoration: none
+    border-color: transparent
