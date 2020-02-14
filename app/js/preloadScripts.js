@@ -51,6 +51,7 @@ let
   scripts_total_count = scripts.length
   scrips_loaded_count = 0,
   perc_display = document.getElementById('js-progressbar')
+  preloaderBlock = document.getElementById('js-preloader')
 
 for(let i = 0; i < scripts_total_count; i++) {
   script_clone = new Image();
@@ -67,8 +68,17 @@ function script_loaded() {
   preloadImages = true;
 }
 
+// If we not have images
+
+if (scrips_loaded_count <= 0) {
+  perc_display.style.width = '50%'
+  preloadImages = true;
+}
+
 document.body.onload = function () {
   preloadScripts = true;
+
+  // Check if all images and scripts were loaded
   if (preloadScripts == true && preloadImages == true) {
     anime({
       targets: '#js-progress',
@@ -104,7 +114,7 @@ document.body.onload = function () {
     ],
       easing: 'easeInOutQuart',
       delay: 300,
-      duration: 5000,
+      duration: 2500,
     });
     let morphing2 = anime({
       targets: '#js-progress-svg .polymorph2',
@@ -120,8 +130,14 @@ document.body.onload = function () {
      ],
       easing: 'easeInOutQuart',
       delay: 300,
-      duration: 5000,
+      duration: 2500,
     });
+
+    setTimeout(
+      function(){
+        preloaderBlock.classList.add('done')
+      }, 3000
+    );
   }
 }
 
