@@ -1,93 +1,128 @@
 /* Preloader */
 
-let firstPixelAnime = anime({
-  targets: '.preloader .d',
-  keyframes: [
-    {translateY: 8.36},
-    {translateX: 8.33},
-    {translateY: 0},
-    {translateX: 0}
-  ],
-  duration: 10000,
-  easing: 'easeOutElastic(1, .8)',
-  loop: true
-});
+// let firstPixelAnime = anime({
+//   targets: '.preloader .d',
+//   keyframes: [
+//     {translateY: 8.36},
+//     {translateX: 8.33},
+//     {translateY: 0},
+//     {translateX: 0}
+//   ],
+//   duration: 10000,
+//   easing: 'easeOutElastic(1, .8)',
+//   loop: true
+// });
 
-let secondPixelAnime = anime({
-  targets: '.preloader .c',
-  keyframes: [
-    {translateX: -8.36},
-    {translateY: 8.33},
-    {translateX: 0},
-    {translateY: 0}
-  ],
-  duration: 10000,
-  easing: 'easeOutElastic(1, .8)',
-  loop: true
-});
+// let secondPixelAnime = anime({
+//   targets: '.preloader .c',
+//   keyframes: [
+//     {translateX: -8.36},
+//     {translateY: 8.33},
+//     {translateX: 0},
+//     {translateY: 0}
+//   ],
+//   duration: 10000,
+//   easing: 'easeOutElastic(1, .8)',
+//   loop: true
+// });
 
-let thirdPixelAnime = anime({
-  targets: '.preloader .b',
-  keyframes: [
-    {translateY: -8.33},
-    {translateX: -8.33},
-    {translateY: 0},
-    {translateX: 0}
-  ],
-  duration: 10000,
-  easing: 'easeOutElastic(1, .8)',
-  loop: true
-});
+// let thirdPixelAnime = anime({
+//   targets: '.preloader .b',
+//   keyframes: [
+//     {translateY: -8.33},
+//     {translateX: -8.33},
+//     {translateY: 0},
+//     {translateX: 0}
+//   ],
+//   duration: 10000,
+//   easing: 'easeOutElastic(1, .8)',
+//   loop: true
+// });
 
-// let preloadCheck = document.getElementById('js-preloader');
-let preloader = document.getElementById('js-loader');
+// End preloader logo animation
 
-document.body.onload = function() {
+// Preloader
 
-  setTimeout(function() {
+let preloadScripts = false,
+    preloadImages = false;
 
-    let firstPixel = document.getElementById('firstPixel');
-    let secondPixel = document.getElementById('secondPixel');
-    let thirdPixel = document.getElementById('thirdPixel');
+let
+  scripts = document.images
+  scripts_total_count = scripts.length
+  scrips_loaded_count = 0,
+  perc_display = document.getElementById('js-progressbar')
 
-    anime.remove(['.preloader .d','.preloader .c','.preloader .b']);
+for(let i = 0; i < scripts_total_count; i++) {
+  script_clone = new Image();
+  script_clone.onload = script_loaded;
+  script_clone.onerror = script_loaded;
+  script_clone.src = scripts[i].src;
+};
 
-    anime({
-      targets: '.preloader #firstPixel',
-      translateX: -60,
-      translateY: -250,
-      // rotate: function() { return anime.random(-100, 200); },
-      duration:  1000,
-      direction: 'normal',
-      scale: 0.5,
-      delay: 200,
-      easing: 'cubicBezier(.5, .05, .1, .3)'
-    });
+function script_loaded() {
+  scrips_loaded_count++;
 
-    anime({
-      targets: '.preloader #secondPixel',
-      translateX: -60,
-      translateY: -250,
-      // rotate: function() { return anime.random(-100, 200); },
-      duration:  1000,
-      direction: 'normal',
-      scale: 0.5,
-      delay: 300,
-      easing: 'cubicBezier(.5, .05, .1, .3)'
-    });
+  perc_display.style.width = (( (100 / scripts_total_count) * scrips_loaded_count ) << 0).toString() + '%';
 
-    anime({
-      targets: '.preloader #thirdPixel',
-      translateX: -60,
-      translateY: -250,
-      // rotate: function() { return anime.random(-100, 200); },
-      duration:  1000,
-      direction: 'normal',
-      scale: 0.5,
-      easing: 'cubicBezier(.5, .05, .1, .3)'
-    });
-
-  }, 2000);
-
+  preloadImages = true;
 }
+
+document.body.onload = function () {
+  preloadScripts = true;
+  if (preloadScripts == true && preloadImages == true) {
+    anime({
+      targets: '#js-progress',
+      easing: 'easeInOutQuart',
+      delay: 0,
+      duration: 0,
+      opacity: 0,
+    });
+    anime({
+      targets: '#js-progress-svg .polymorph',
+      easing: 'easeInOutQuart',
+      duration: 0,
+      opacity: 1,
+    });
+    anime({
+      targets: '#js-progress-svg .polymorph2',
+      easing: 'easeInOutQuart',
+      duration: 0,
+      opacity: 1,
+    });
+
+    let morphing = anime({
+      targets: '#js-progress-svg .polymorph',
+      d: [{
+        value: 'M74 1H76'
+      },
+      {
+        value: 'M75 57L75 59'
+      },
+      {
+        value: 'M75 57L75 92'
+      },
+    ],
+      easing: 'easeInOutQuart',
+      delay: 300,
+      duration: 5000,
+    });
+    let morphing2 = anime({
+      targets: '#js-progress-svg .polymorph2',
+      d: [{
+        value: 'M74 1L76 1'
+      },
+       {
+        value: 'M75 57L75 59'
+      },
+       {
+        value: 'M75 57L75 92'
+      },
+     ],
+      easing: 'easeInOutQuart',
+      delay: 300,
+      duration: 5000,
+    });
+  }
+}
+
 // End preloader

@@ -44,12 +44,134 @@
       bottom: 5px
       width: 50%
 
+    &::after
+      bottom: 5px
+      width: 50%
+
   &::before
     content: ''
     position: absolute
     height: 2px
     background-color: $white
+    width: 90%
+    left: 0
+    bottom: 10px
+    transition: all .5s
+    z-index: 2
+
+  &::after
+    content: ''
+    position: absolute
+    height: 2px
+    background-color: lighten($accentBg, 20%)
     width: 100%
     left: 0
     bottom: 10px
     transition: all .5s
+
+// Form
+
+.form-wrapper
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: $accentBg
+  z-index: 50
+
+.form__logo-wrapper
+  width: 100%
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: center
+
+  svg
+    max-width: 150px
+
+.form
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  height: 100vh
+  width: 70%
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  margin: 0 auto
+
+.form__inputs-wrapper
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  width: 100%
+
+.form__input
+  padding: 20px 20px 20px 15%
+  background-color: transparent
+  box-shadow: none
+  border: none
+  color: #fff
+  text-transform: uppercase
+  font-weight: bold
+  border-bottom: 2px solid #fff
+  position: relative
+  font-size: 1.2rem
+
+  .form__input
+    &.done + label
+      border-color: green
+
+  &::before
+    content: ''
+    position: absolute
+    height: 2px
+    width: 150px
+    bottom: 0
+    background-color: #333
+
+  &:focus + label
+    border-color: #333
+    width: 15%
+
+.form__input-item
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-direction: column
+  position: relative
+  margin: 15px 0
+
+.form__label
+  color: $white
+  position: absolute
+  top: 50%
+  left: 0
+  font-weight: bold
+  transform: translate(0, -50%)
+  border-bottom: 2px solid #fff
+  padding: 18px 0
+  z-index: 3
+  width: 0
+  transition: .5s
+
+.form__input-item--textarea
+  position: relative
+
+.form__label--textarea
+  position: absolute
+  top: 30px
+
+.form__textarea
+  background-color: transparent
+  border: none
+  color: #fff
+  border-bottom: 2px solid #fff
+  padding: 20px 20px 20px 15%
+  resize: none
+
+  &:focus + label
+    border-color: #333
+    width: 15%

@@ -53,7 +53,6 @@ let options = {
 }
 
 let text = document.getElementById('text')
-
 const word = new Word(text, options);
 
 // Second block shapes animation end
@@ -102,8 +101,9 @@ $(document).ready(function() {
             '#logo_pixels_l',
             '#logo_pixels_s'
           ],
-          easing: 'easeInOutQuad',
           duration: 100,
+          easing: 'easeInOutQuad',
+          fill: ['rgba(0,0,0,0)', '#fff'],
           opacity: 1
         });
 
@@ -113,9 +113,10 @@ $(document).ready(function() {
             '#logo_pixel_two',
             '#logo_pixel_three'
           ],
-          fill: ['rgba(0,0,0,0)', '#fff'],
+          duration: 100,
           easing: 'easeInOutQuad',
-          duration: 100
+          fill: ['rgba(0,0,0,0)', '#fff'],
+          opacity: 1
         });
 
         // Header logo animation
@@ -300,10 +301,10 @@ $(document).ready(function() {
             '#logo_pixels_l',
             '#logo_pixels_s'
           ],
-          easing: 'easeInOutQuad',
-          duration: 200,
           delay: 300,
-          opacity: 0
+          duration: 200,
+          easing: 'easeInOutQuad',
+          opacity: 0,
         });
 
         anime({
@@ -312,10 +313,10 @@ $(document).ready(function() {
             '#logo_pixel_two',
             '#logo_pixel_three'
           ],
-          fill: ['#fff', '#121212'],
-          easing: 'easeInOutQuad',
+          delay: 300,
           duration: 200,
-          delay: 300
+          easing: 'easeInOutQuad',
+          fill: ['#fff', '#121212'],
         });
 
         // Back button animation

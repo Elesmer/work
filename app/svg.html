@@ -25,36 +25,31 @@
 	<!-- HTML here -->
 	<style>
 		.svg-container {
-			width: 40%;
+			width: 20%;
+			padding: 100px;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+			justify-content: center;
 		}
 
-		.pathTrack {
-			height: 20px;
-			width: 20px;
-			background-color: red;
+		#morph {
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+			justify-content: center;
 		}
-
-		.st0 {
-  fill: #a3d5d3;
-}
-
-.st1 {
-  fill: #D5A3D1;
-}
-
-.animation {
-  width: 400px;
-  height: 400px;
-  display: inline-block;
-}
 	</style>
 	<div class="uk-container">
 		<div class="svg-container">
-			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1200 1200" xml:space="preserve">
-		     <g>
-		       <path class="st0 morph-path1" d="M11.37,2.89h47a28,28,0,0,1,28,28v47a0,0,0,0,1,0,0h-36a39,39,0,0,1-39-39v-36A0,0,0,0,1,11.37,2.89Z"/>
-		     </g>
-		   </svg>
+			<div id="js-progress-svg">
+				<svg width="150" height="92" viewBox="0 0 150 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="polymorph" d="M0 1H75" stroke="white" stroke-width="1" />
+					<path class="polymorph2" d="M150 1L75 0.999993" stroke="white" stroke-width="1" />
+				</svg>
+			</div>
 		</div>
 	</div>
 	<!-- To top -->
@@ -62,52 +57,38 @@
 	<script src="libs/anime/anime.min.js"></script>
 	<script src="js/scripts.min.js"></script>
 	<script>
-	// var path = anime.path('.uk-container path');
-	//
-	// anime({
-	//   targets: '.uk-container .pathTrack',
-	//   translateX: path('x'),
-	//   translateY: path('y'),
-	//   rotate: path('angle'),
-	//   easing: 'linear',
-	//   duration: 2000,
-	//   loop: true
-	// });
-
-	// Animated path
-
-	let shapes = [
-	    {
-	        d: "M4.09,131.91c23.82,23,48.71,38.63,79.25,50,26.25-1.25,30.67-50.78,53.25-45.75,18,4,62.58,24.27,78.75,14.75,14.31-8.37,21.79-7.55,25.5-24,4-17.67,9.15-24.82-1-40.5,20.5-29,25.1-64.56,7.5-68.5-29.29-6.56-78.56,22.33-106.25,10.75l-2.5,0c-10.61-4.52-21.12-9.23-30.25-16.3l14,10.79c-1.77-1.44-3.45-2.93-5.09-4.51C104.34,6.19,85.84,4.91,67.84,4.91c-16.92,0-47.6-11.69-59.25,1-12.07,13.15,4.18,42.87,5,61.25C14.4,85.29-9.25,119,4.09,131.91Z"
-	    },
-	    {
-	        d: "M36.45,2.89h11a28,28,0,0,1,28,28v47a0,0,0,0,1,0,0h-36a39,39,0,0,1-39-39v0a36,36,0,0,1,36-36Z"
-	    }
-	]
-
-	let shapes2 = [
-	    {
-	        d: "M181.5,471.5c18.2-78.7,33.4-140.4,90-181c74.4-53.3,188.2-47,263,0c86.2,54.2,79.1,136.3,139,146c75.8,12.2,111.1-115.3,205-119c86.6-3.4,171.8,100.5,199,194c46.1,158.4-56.7,346.2-178,378c-120.6,31.6-173.7-113.2-357-115c-175-1.7-244.9,129.2-324,85C109.3,798.4,172.7,509.4,181.5,471.5z"
-	    },
-	    {
-	        d: "M207.5,399.5c18.7-45.4,67.8-164.7,186-189c115.6-23.7,243.9,54.6,266,144c19.8,80.1-56.2,126.7-31,181c41.2,88.9,262.8,3.5,335,98c65.9,86.2,4.1,317.8-165,394c-173.8,78.4-387.9-40.5-415-154c-17-71.1,44.6-118.5,13-176c-39.8-72.4-157.2-33-205-109C154.2,529.1,188.4,445.9,207.5,399.5z"
-	    }
-	]
-
-
-	var morph1 = anime({
-	    targets: '.morph-path1',
-	    d: [
-	        {value: shapes[0].d},
-	        {value: shapes[1].d}
-	    ],
-	    duration: 5000,
-	    direction: 'alternate',
-	    autoplay: true,
-	    easing: 'linear',
-	    elasticity: 100,
-	    loop: true
-	});
+		let morphing = anime({
+			targets: '#js-progress-svg .polymorph',
+			d: [{
+				value: 'M74 1H76'
+			},
+			{
+				value: 'M75 57L75 59'
+			},
+			{
+				value: 'M75 57L75 92'
+			},
+		],
+			easing: 'easeInOutQuart',
+			delay: 0,
+			duration: 5000,
+		});
+		let morphing2 = anime({
+			targets: '#js-progress-svg .polymorph2',
+			d: [{
+				value: 'M74 1L76 1'
+			},
+			 {
+				value: 'M75 57L75 59'
+			},
+			 {
+				value: 'M75 57L75 92'
+			},
+		 ],
+			easing: 'easeInOutQuart',
+			delay: 0,
+			duration: 5000,
+		});
 	</script>
 </body>
 
