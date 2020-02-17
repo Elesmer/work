@@ -1,39 +1,104 @@
 // Brand logo animation
-// anime({
-//   targets: [
-//     '#logo_pixel_three'
-//   ],
-//   delay: 50,
-//   translateX: -1.5,
-//   fill: ['#fff', '#121212'],
-//   direction: 'alternate',
-//   duration: 300,
-//   loop: 1,
-//   opacity: 1
-// });
-// anime({
-//   targets: [
-//     '#logo_pixel_two'
-//   ],
-//   delay: 1000,
-//   fill: ['#fff', '#ff4d4d'],
-//   direction: 'alternate',
-//   duration: 100,
-//   loop: 1,
-//   opacity: 1
-// });
-// anime({
-//   targets: [
-//     '#logo_pixel_one'
-//   ],
-//   delay: 1000,
-//   fill: ['#fff', '121212'],
-//   direction: 'alternate',
-//   translateX: 1,
-//   duration: 100,
-//   loop: 1,
-//   opacity: 1
-// });
+anime({
+  targets: [
+    '#logo_pixel_three'
+  ],
+  delay: 50,
+  translateX: -1.5,
+  fill: ['#fff', '#121212'],
+  direction: 'alternate',
+  duration: 300,
+  loop: 1,
+  opacity: 1
+});
+anime({
+  targets: [
+    '#logo_pixel_two'
+  ],
+  delay: 1000,
+  fill: ['#fff', '#ff4d4d'],
+  direction: 'alternate',
+  duration: 100,
+  loop: 1,
+  opacity: 1
+});
+anime({
+  targets: [
+    '#logo_pixel_one'
+  ],
+  delay: 1000,
+  fill: ['#fff', '121212'],
+  direction: 'alternate',
+  translateX: 1,
+  duration: 100,
+  loop: 1,
+  opacity: 1
+});
+
+// TweenMax scroll block animations start
+
+let controller = new ScrollMagic.Controller({
+    vertical: true,
+    addIndicators: true
+});
+
+// Info bg text
+
+let sceneInfo = new ScrollMagic.Scene({
+  triggerElement: "#js-info-trigger"
+})
+.on("enter", function () {
+  anime({
+    delay: 800,
+    duration: 600,
+    easing: 'easeInQuad',
+    opacity: 1,
+    targets: '.bg-text',
+  });
+})
+.on("leave", function () {
+  anime({
+    delay: 0,
+    duration: 800,
+    easing: 'easeInQuad',
+    opacity: 0,
+    targets: '.bg-text',
+  });
+})
+.addTo(controller);
+
+let sceneContacts = new ScrollMagic.Scene({
+  triggerElement: "#js-contacts-trigger",
+  triggerHook: '0',
+  duration: 0
+})
+.on("enter", function () {
+  anime({
+    delay: 0,
+    duration: 0,
+    easing: 'easeInOutQuad',
+    fill: ['rgba(0,0,0,0)', '#fff'],
+    targets: '.header__logo-img .b',
+  });
+
+  // Add active class for nav element
+  headerNav.classList.remove('active');
+})
+.on("leave", function () {
+  anime({
+    delay: 0,
+    duration: 0,
+    easing: 'easeInOutQuad',
+    fill: ['rgba(0,0,0,0)', '#121212'],
+    targets: '.header__logo-img .b',
+  });
+
+  // Add active class for nav element
+  headerNav.classList.add('active');
+})
+.addTo(controller);
+
+// TweenMax scroll block animations end
 
 // Back to home section
 
@@ -64,18 +129,6 @@ let headerLogo = document.querySelector(".header__logo")
 
 $(document).ready(function() {
 
-  // Verity section about button start
-
-  $("#js-verity__about-us-trigger").click(function() {
-    $.scrollify.disable();
-  });
-
-  $("#js-verity__about-us-close").click(function() {
-    $.scrollify.enable();
-  });
-
-  // Verity section about button start
-
   // Full screen scroll init
 
   $.scrollify({
@@ -84,40 +137,6 @@ $(document).ready(function() {
     setHeights: false,
     before: function(index, section) {
       if (index == 0) {
-
-        // Header logo pixels animation
-
-        anime({
-          targets: [
-            '#logo_three_t',
-            '#logo_three_h',
-            '#logo_three_r',
-            '#logo_three_e',
-            '#logo_three_e_2',
-            '#logo_pixels_p',
-            '#logo_pixels_i',
-            '#logo_pixels_x',
-            '#logo_pixels_e',
-            '#logo_pixels_l',
-            '#logo_pixels_s'
-          ],
-          duration: 100,
-          easing: 'easeInOutQuad',
-          fill: ['rgba(0,0,0,0)', '#fff'],
-          opacity: 1
-        });
-
-        anime({
-          targets: [
-            '#logo_pixel_one',
-            '#logo_pixel_two',
-            '#logo_pixel_three'
-          ],
-          duration: 100,
-          easing: 'easeInOutQuad',
-          fill: ['rgba(0,0,0,0)', '#fff'],
-          opacity: 1
-        });
 
         // Header logo animation
         anime({
@@ -142,7 +161,7 @@ $(document).ready(function() {
 
         // Verity about us button
         anime({
-          targets: '#js-verity__about-us-trigger',
+          targets: '#js-home-about-us-link',
           opacity: '1',
           easing: 'easeInOutSine',
           duration: 200,
@@ -160,35 +179,19 @@ $(document).ready(function() {
         });
 
         anime({
-          targets: [
-            '#logo_three_t',
-            '#logo_three_h',
-            '#logo_three_r',
-            '#logo_three_e',
-            '#logo_three_e_2',
-            '#logo_pixels_p',
-            '#logo_pixels_i',
-            '#logo_pixels_x',
-            '#logo_pixels_e',
-            '#logo_pixels_l',
-            '#logo_pixels_s'
-          ],
-          easing: 'easeInOutQuad',
+          delay: 100,
           duration: 400,
-          delay: 300,
-          opacity: 1
+          easing: 'easeInOutQuad',
+          fill: ['rgba(0,0,0,0)', '#fff'],
+          targets: '.header__logo-img .b',
         });
 
         anime({
-          targets: [
-            '#logo_pixel_one',
-            '#logo_pixel_two',
-            '#logo_pixel_three'
-          ],
-          fill: ['rgba(0,0,0,0)', '#fff'],
-          easing: 'easeInOutQuad',
           delay: 200,
-          duration: 400
+          duration: 400,
+          easing: 'easeInOutQuad',
+          opacity: 1,
+          targets: '.header__logo-img .word',
         });
 
         // Back button animation
@@ -288,19 +291,7 @@ $(document).ready(function() {
         });
 
         anime({
-          targets: [
-            '#logo_three_t',
-            '#logo_three_h',
-            '#logo_three_r',
-            '#logo_three_e',
-            '#logo_three_e_2',
-            '#logo_pixels_p',
-            '#logo_pixels_i',
-            '#logo_pixels_x',
-            '#logo_pixels_e',
-            '#logo_pixels_l',
-            '#logo_pixels_s'
-          ],
+          targets: '.header__logo-img .word',
           delay: 300,
           duration: 200,
           easing: 'easeInOutQuad',
@@ -308,11 +299,7 @@ $(document).ready(function() {
         });
 
         anime({
-          targets: [
-            '#logo_pixel_one',
-            '#logo_pixel_two',
-            '#logo_pixel_three'
-          ],
+          targets: '.header__logo-img .b',
           delay: 300,
           duration: 200,
           easing: 'easeInOutQuad',

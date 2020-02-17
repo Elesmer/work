@@ -88,18 +88,14 @@ document.body.onload = function () {
       opacity: 0,
     });
     anime({
-      targets: '#js-progress-svg .polymorph',
+      targets: [
+        '#js-progress-svg .polymorph',
+        '#js-progress-svg .polymorph2',
+      ],
       easing: 'easeInOutQuart',
       duration: 0,
       opacity: 1,
     });
-    anime({
-      targets: '#js-progress-svg .polymorph2',
-      easing: 'easeInOutQuart',
-      duration: 0,
-      opacity: 1,
-    });
-
     let morphing = anime({
       targets: '#js-progress-svg .polymorph',
       d: [{

@@ -77,8 +77,12 @@
   left: 0
   width: 100%
   height: 100%
-  background-color: $accentBg
   z-index: 50
+
+.contacts-modal
+  .uk-modal-dialog
+    height: 100%
+    background-color: $accentBg
 
 .form__logo-wrapper
   width: 100%
@@ -162,7 +166,10 @@
 
 .form__label--textarea
   position: absolute
-  top: 30px
+  bottom: 0
+  top: auto
+  z-index: 5
+  transform: none
 
 .form__textarea
   background-color: transparent
@@ -171,7 +178,68 @@
   border-bottom: 2px solid #fff
   padding: 20px 20px 20px 15%
   resize: none
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 1.2rem
+  height: 100px
 
   &:focus + label
     border-color: #333
     width: 15%
+
+.modal-close-button
+  background-color: transparent
+  transition: .5s
+
+// Add button
+
+.half__block
+  width: 100%
+  float: left
+  grid-template-columns: 1fr 1fr
+  margin: 30px 0
+
+.uk-tooltip
+  text-transform: uppercase
+  font-weight: bold
+
+.submit__wrapper
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  justify-content: flex-end
+  position: relative
+  align-items: center
+
+.verity__more-button--contacts
+  opacity: 1
+  position: static
+  transform: none
+  border: 2px solid #fff
+  padding: 13px 20px
+  font-size: 1.2rem
+  cursor: pointer
+  border-radius: 10px
+
+  &:hover
+    border-color: rgba(#fff, .3)
+
+  &:disabled
+    animation: none
+    background: #fff
+    -webkit-background-clip: text
+    opacity: .6
+    border-color: transparent
+    cursor: not-allowed
+
+.add-file
+  max-width: 50px
+
+.add-file-icon
+  fill: #fff
+
+.js-upload
+  transition: .5s
+
+  &:hover
+    opacity: .8
