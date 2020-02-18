@@ -100,7 +100,7 @@ let sceneInfo = new ScrollMagic.Scene({
   })
 
   anime({
-    delay: 2500,
+    delay: 2300,
     duration: 1500,
     targets: '.info__bullits .info__bullit:nth-child(2)',
       translateY: [0, -15],
@@ -110,7 +110,7 @@ let sceneInfo = new ScrollMagic.Scene({
   })
 
   anime({
-    delay: 3000,
+    delay: 2600,
     duration: 1500,
     targets: '.info__bullits .info__bullit:nth-child(3)',
     translateY: [0, -15],
