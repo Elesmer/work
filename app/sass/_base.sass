@@ -2,8 +2,8 @@
 	color: #666
 
 ::selection
-	background-color: #fff
-	color: $accentBg
+	background-color: #333
+	color: #ff4d4d
 
 body
 	font-size: 16px
@@ -80,31 +80,38 @@ strong
 	text-transform: uppercase
 	font-weight: 900
 	color: rgba(171, 171, 171, 0.1)
+
+.bg-text--contacts,
+.bg-text--info
 	opacity: 0
 
 // Titles and subtitles
 
 .sub-title
-  margin: 0 5px
-  font-family: Montserrat, sans-serif
-  font-size: 1rem
-  position: relative
+	margin: 0 5px
+	font-family: Montserrat, sans-serif
+	font-size: 1rem
+	position: relative
 
-  &::before
-    content: ''
-    display: block
-    height: 1px
-    width: 5%
-    background-color: $accentBg
-    position: absolute
-    top: 50%
-    left: 0
-    transform: translate(-120%, -50%)
+	&::before
+		content: ''
+		display: block
+		height: 1px
+		width: 5%
+		background-color: $accentBg
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translate(-120%, -50%)
+
+.sub-title--contacts,
+.main-title--contacts
+	opacity: 0
 
 .main-title
-  font-family: Montserrat, sans-serif
-  font-size: 4rem
-  font-weight: bold
-  max-width: 60%
-  line-height: 1.2
-  margin: 20px 0
+	font-family: Montserrat, sans-serif
+	font-size: 4rem
+	font-weight: bold
+	max-width: 60%
+	line-height: 1.2
+	margin: 20px 0

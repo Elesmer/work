@@ -42,30 +42,87 @@ let controller = new ScrollMagic.Controller({
     addIndicators: true
 });
 
-// Info bg text
+// Info section animations
 
 let sceneInfo = new ScrollMagic.Scene({
   triggerElement: "#js-info-trigger"
 })
 .on("enter", function () {
+
+  // Info bg text
   anime({
+    targets: '.bg-text--info',
     delay: 800,
     duration: 600,
-    easing: 'easeInQuad',
-    opacity: 1,
-    targets: '.bg-text',
+    opacity: [0, 1],
+    easing: 'easeInCubic',
   });
-})
-.on("leave", function () {
+
+  // Info section lines
   anime({
     delay: 0,
-    duration: 800,
-    easing: 'easeInQuad',
-    opacity: 0,
-    targets: '.bg-text',
+    duration: 2000,
+    easing: 'easeInOutQuad',
+    height: ['0%', '100%'],
+    targets: '.background-lines--info .background__line',
   });
+
+  // Info sub title
+  anime({
+    delay: 1000,
+    duration: 1200,
+    easing: 'easeInOutQuad',
+    translateY: [0, -10],
+    opacity: [0, 1],
+    targets: '.sub-title--services',
+  });
+
+  // Info title
+  anime({
+    delay: 1500,
+    duration: 1200,
+    easing: 'easeInOutQuad',
+    translateY: [0, -10],
+    opacity: [0, 1],
+    targets: '.main-title--services',
+  });
+
+  // Bullits
+
+  anime({
+    delay: 2000,
+    duration: 1000,
+    targets: '.info__bullits .info__bullit:nth-child(1)',
+    translateY: [0, -15],
+    opacity: [0, 1],
+    scale: [0.9, 1],
+    easing: 'easeInOutQuad',
+  })
+
+  anime({
+    delay: 2500,
+    duration: 1500,
+    targets: '.info__bullits .info__bullit:nth-child(2)',
+      translateY: [0, -15],
+    opacity: [0, 1],
+    scale: [0.9, 1],
+    easing: 'easeInOutQuad',
+  })
+
+  anime({
+    delay: 3000,
+    duration: 1500,
+    targets: '.info__bullits .info__bullit:nth-child(3)',
+    translateY: [0, -15],
+    opacity: [0, 1],
+    scale: [0.9, 1],
+    easing: 'easeInOutQuad',
+  })
+
 })
 .addTo(controller);
+
+// Contacts section
 
 let sceneContacts = new ScrollMagic.Scene({
   triggerElement: "#js-contacts-trigger",
@@ -73,6 +130,8 @@ let sceneContacts = new ScrollMagic.Scene({
   duration: 0
 })
 .on("enter", function () {
+
+  // Header logo color change
   anime({
     delay: 0,
     duration: 0,
@@ -95,6 +154,110 @@ let sceneContacts = new ScrollMagic.Scene({
 
   // Add active class for nav element
   headerNav.classList.add('active');
+})
+.addTo(controller);
+
+let contactsSceneTrigger = new ScrollMagic.Scene({
+  triggerElement: "#js-contacts-trigger"
+})
+.on("enter", function () {
+
+  // Contacts bg text
+  anime({
+    targets: '.bg-text--contacts',
+    delay: 800,
+    duration: 600,
+    opacity: 1,
+    easing: 'easeInCubic',
+  });
+
+  // Contacts title
+  anime({
+    delay: 300,
+    duration: 1200,
+    easing: 'easeInOutQuad',
+    translateY: -10,
+    opacity: 1,
+    targets: '.main-title--contacts',
+  });
+
+  // Contacts subtitle
+  anime({
+    delay: 100,
+    duration: 1200,
+    easing: 'easeInOutQuad',
+    translateY: -10,
+    opacity: 1,
+    targets: '.sub-title--contacts',
+  });
+
+  // Contacts form wrapper
+  anime({
+    delay: 1000,
+    duration: 1200,
+    easing: 'easeInOutQuad',
+    translateY: -10,
+    opacity: 1,
+    targets: '.contact__wrapper .contact-form',
+  });
+
+  // Contacts presentation wrapper
+  anime({
+    delay: 1300,
+    duration: 1200,
+    easing: 'easeInOutQuad',
+    translateY: -10,
+    opacity: 1,
+    targets: '.contact__wrapper .contact-presentation',
+  });
+})
+.on("leave", function () {
+  // Contacts bg text
+  anime({
+    targets: '.bg-text--contacts',
+    duration: 800,
+    opacity: 0,
+    easing: 'easeInCubic',
+  });
+
+  // Contacts subtitle
+  anime({
+    duration: 800,
+    translateY: 0,
+    opacity: 0,
+    easing: 'easeInOutQuad',
+    targets: '.sub-title--contacts',
+  });
+
+  // Contacts title
+  anime({
+    duration: 800,
+    delay: 200,
+    translateY: 0,
+    easing: 'easeInOutQuad',
+    opacity: 0,
+    targets: '.main-title--contacts',
+  });
+
+  // Contacts form wrapper
+  anime({
+    duration: 800,
+    delay: 200,
+    easing: 'easeInOutQuad',
+    translateY: 0,
+    opacity: 0,
+    targets: '.contact__wrapper .contact-form',
+  });
+
+  // Contacts presentation wrapper
+  anime({
+    duration: 800,
+    delay: 200,
+    easing: 'easeInOutQuad',
+    translateY: 0,
+    opacity: 0,
+    targets: '.contact__wrapper .contact-presentation',
+  });
 })
 .addTo(controller);
 
