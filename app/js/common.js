@@ -54,7 +54,7 @@ let sceneInfo = new ScrollMagic.Scene({
     targets: '.bg-text--info',
     delay: 800,
     duration: 600,
-    opacity: [0, 1],
+    opacity: 1,
     easing: 'easeInCubic',
   });
 
@@ -63,7 +63,7 @@ let sceneInfo = new ScrollMagic.Scene({
     delay: 0,
     duration: 2000,
     easing: 'easeInOutQuad',
-    height: ['0%', '100%'],
+    height: '100%',
     targets: '.background-lines--info .background__line',
   });
 
@@ -72,8 +72,8 @@ let sceneInfo = new ScrollMagic.Scene({
     delay: 1000,
     duration: 1200,
     easing: 'easeInOutQuad',
-    translateY: [0, -10],
-    opacity: [0, 1],
+    translateY: -10,
+    opacity: 1,
     targets: '.sub-title--services',
   });
 
@@ -82,8 +82,8 @@ let sceneInfo = new ScrollMagic.Scene({
     delay: 1500,
     duration: 1200,
     easing: 'easeInOutQuad',
-    translateY: [0, -10],
-    opacity: [0, 1],
+    translateY: -10,
+    opacity: 1,
     targets: '.main-title--services',
   });
 
@@ -93,9 +93,9 @@ let sceneInfo = new ScrollMagic.Scene({
     delay: 2000,
     duration: 1000,
     targets: '.info__bullits .info__bullit:nth-child(1)',
-    translateY: [0, -15],
-    opacity: [0, 1],
-    scale: [0.9, 1],
+    translateY: -15,
+    opacity: 1,
+    scale: 1,
     easing: 'easeInOutQuad',
   })
 
@@ -103,9 +103,9 @@ let sceneInfo = new ScrollMagic.Scene({
     delay: 2200,
     duration: 1500,
     targets: '.info__bullits .info__bullit:nth-child(2)',
-      translateY: [0, -15],
-    opacity: [0, 1],
-    scale: [0.9, 1],
+      translateY: -15,
+    opacity: 1,
+    scale: 1,
     easing: 'easeInOutQuad',
   })
 
@@ -116,6 +116,117 @@ let sceneInfo = new ScrollMagic.Scene({
     translateY: [0, -15],
     opacity: [0, 1],
     scale: [0.9, 1],
+    easing: 'easeInOutQuad',
+  })
+
+  // Why bg text
+  anime({
+    targets: '.bg-text--why',
+    delay: 1800,
+    duration: 600,
+    opacity: [0, 1],
+    easing: 'easeInCubic',
+  });
+
+  // Why title
+  anime({
+    targets: '.main-title--why',
+    delay: 2400,
+    duration: 1200,
+    easing: 'easeInOutQuad',
+    translateY: -10,
+    opacity: [0, 1],
+  });
+
+  // Why subtitle
+  anime({
+    targets: '.sub-title--why',
+    delay: 2200,
+    duration: 1200,
+    easing: 'easeInOutQuad',
+    translateY: -10,
+    opacity: [0, 1],
+  });
+
+  // Why paragraph
+  anime({
+    targets: '.why-important__p',
+    delay: 2600,
+    duration: 1200,
+    easing: 'easeInOutQuad',
+    translateY: -10,
+    opacity: [0, 1],
+  });
+
+})
+.on("leave", function () {
+  // Info bg text
+  anime({
+    targets: '.bg-text--info',
+    delay: 0,
+    duration: 100,
+    opacity: 0,
+    easing: 'easeInCubic',
+  });
+
+  // Info section lines
+  anime({
+    delay: 0,
+    duration: 100,
+    easing: 'easeInOutQuad',
+    height: '0%',
+    targets: '.background-lines--info .background__line',
+  });
+
+  // Info sub title
+  anime({
+    delay: 0,
+    duration: 100,
+    easing: 'easeInOutQuad',
+    translateY: 0,
+    opacity: 0,
+    targets: '.sub-title--services',
+  });
+
+  // Info title
+  anime({
+    delay: 0,
+    duration: 100,
+    easing: 'easeInOutQuad',
+    translateY: 0,
+    opacity: 0,
+    targets: '.main-title--services',
+  });
+
+  // Bullits
+
+  anime({
+    delay: 0,
+    duration: 100,
+    targets: '.info__bullits .info__bullit:nth-child(1)',
+    translateY: 0,
+    opacity: 0,
+    scale: 0.9,
+    easing: 'easeInOutQuad',
+  })
+
+  anime({
+    delay: 0,
+    duration: 100,
+    targets: '.info__bullits .info__bullit:nth-child(2)',
+    translateY: 0,
+    opacity: 0,
+    scale: 0.9,
+    easing: 'easeInOutQuad',
+  })
+
+  anime({
+    delay: 0,
+    duration: 100,
+    targets: '.info__bullits .info__bullit:nth-child(3)',
+    translateY: 0,
+    opacity: 0,
+    scale: 0.9,
     easing: 'easeInOutQuad',
   })
 
@@ -211,54 +322,6 @@ let contactsSceneTrigger = new ScrollMagic.Scene({
     targets: '.contact__wrapper .contact-presentation',
   });
 })
-.on("leave", function () {
-  // Contacts bg text
-  anime({
-    targets: '.bg-text--contacts',
-    duration: 800,
-    opacity: 0,
-    easing: 'easeInCubic',
-  });
-
-  // Contacts subtitle
-  anime({
-    duration: 800,
-    translateY: 0,
-    opacity: 0,
-    easing: 'easeInOutQuad',
-    targets: '.sub-title--contacts',
-  });
-
-  // Contacts title
-  anime({
-    duration: 800,
-    delay: 200,
-    translateY: 0,
-    easing: 'easeInOutQuad',
-    opacity: 0,
-    targets: '.main-title--contacts',
-  });
-
-  // Contacts form wrapper
-  anime({
-    duration: 800,
-    delay: 200,
-    easing: 'easeInOutQuad',
-    translateY: 0,
-    opacity: 0,
-    targets: '.contact__wrapper .contact-form',
-  });
-
-  // Contacts presentation wrapper
-  anime({
-    duration: 800,
-    delay: 200,
-    easing: 'easeInOutQuad',
-    translateY: 0,
-    opacity: 0,
-    targets: '.contact__wrapper .contact-presentation',
-  });
-})
 .addTo(controller);
 
 // TweenMax scroll block animations end
@@ -327,6 +390,9 @@ $(document).ready(function() {
 
         // Remove active class for nav element
         headerNav.classList.remove('active');
+
+        // Remove active class for logo element
+        headerLogo.classList.remove('active');
 
         // Verity title text change start
 
@@ -399,8 +465,12 @@ $(document).ready(function() {
           duration: 700,
           delay: 1000
         });
+
         // Remove active class for nav element
         headerNav.classList.remove('active');
+
+        // Remove active class for logo element
+        headerLogo.classList.remove('active');
 
         // Animation for verity section
         word.show({
@@ -503,8 +573,15 @@ $(document).ready(function() {
           duration: 700
         });
 
-        // Remove active class for nav element
+        // Add active class for nav element
         headerNav.classList.add('active');
+
+        // Add active class for logo element
+
+        function addActiveLogo(){
+          headerLogo.classList.add('active');
+        }
+        setTimeout(addActiveLogo, 1000);
 
         // Animation for verity section
         word.hide({
@@ -719,6 +796,12 @@ let layeredAnimation = (function() {
 // });
 
 // End menu and logo animation
+
+/* Window width check */
+
+if ($(window).width() < 1200) {
+  $.scrollify.disable();
+}
 
 /* To top button */
 

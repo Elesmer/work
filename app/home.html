@@ -246,13 +246,20 @@
 		</div>
 	</section>
 	<section data-section-name="about-us" class="section section--verity section--dark">
-		<div class="uk-container uk-uk-container-expand">
+		<div class="uk-container">
 			<div class="background-lines grid">
 				<div class="background__line"></div>
 				<div class="background__line background__line--central"></div>
 				<div class="background__line"></div>
 			</div>
-			<div class="verity__slogan-wrapper">
+			<div class="verity__slogan-wrapper verity__slogan-wrapper--mobile  uk-hidden@l">
+				<div class="mobile__slogan">
+					<h2 class="mobile__slogan-word">perfection.</h2>
+					<h2 class="mobile__slogan-word">precision.</h2>
+					<h2 class="mobile__slogan-word">pixels.</h2>
+				</div>
+			</div>
+			<div class="verity__slogan-wrapper uk-visible@l">
 				<h2 id="text" class="verity__slogan verity__slogan-per text"></h2>
 			</div>
 			<a href="#about-us-modal" id="js-home-about-us-link" class="verity__more-button" uk-toggle>about us</a>
@@ -271,7 +278,7 @@
 				</div>
 			</div>
 			<!-- Skip button -->
-			<div class="skip-back__container skip-back__container--skip">
+			<div class="skip-back__container skip-back__container--skip uk-visible@l">
 				<div class="skip-back__button">
 					<a id="js-toThird" href="#" class="rolling-button rolling-button--skip">
 						<div class="roll-hover-btn__label">
@@ -285,10 +292,11 @@
 			</div>
 		</div>
 	</section>
+	<!-- Info section -->
 	<section id="js-info-trigger" data-section-name="info" class="section section--wrapper section--info">
 		<div class="scroll-block section--light">
 			<!-- Back button -->
-			<div class="skip-back__container skip-back__container--back">
+			<div class="skip-back__container skip-back__container--back uk-visible@l">
 				<div class="skip-back__button">
 					<a id="js-toSecond" href="#" class="rolling-button rolling-button--back">
 						<div class="roll-hover-btn__label">
@@ -300,7 +308,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="uk-container uk-uk-container-expand">
+			<div class="uk-container uk-container--info uk-uk-container-expand">
 				<!-- <a href="#" class="rolling-button">
 					<div class="roll-hover-btn__label">
 						<p class="roll-hover-btn__label-p">Меню</p>
@@ -309,27 +317,49 @@
 						<p class="roll-hover-btn__label-p">Меню</p>
 					</div>
 				</a> -->
-				<div class="info__content-wrapper">
+				<div class="info-main__container">
 					<div class="background-lines background-lines--info background-lines--light grid">
 						<div class="background__line"></div>
 						<div class="background__line"></div>
 						<div class="background__line"></div>
 					</div>
-					<div class="bg-text__wrapper">
-						<h4 class="bg-text bg-text--info">Design</h4>
+					<div id="js-why-trigger" class="info__content-wrapper info__content-wrapper--design">
+						<div class="bg-text__wrapper">
+							<h4 class="bg-text bg-text--info">Design</h4>
+						</div>
+						<div class="info__content">
+							<h3 class="sub-title sub-title--services">Наша задача</h3>
+							<h2 class="main-title main-title--services">Почему стоит выбрать нас?</h2>
+							<div class="info__bullits three-lines grid">
+								<div class="info__bullit">
+									<p class="info__bullit-p"><strong>Исследование аудитории</strong> - мы найдем самые сильные стороны вашего бизнеса и используем их для создания дизайна, который будет не просто красиво выглядеть но и подталкивать клиентов к
+										действию.</p>
+								</div>
+								<div class="info__bullit">
+									<p class="info__bullit-p"><strong>Разработка</strong> - удобный и стабильный сайт как для клиентов так и для сотрудников - только малая часть нашей задачи. Главной целью для нас является продумать сайт вашей компании до мельчайших
+										деталей.</p>
+								</div>
+								<div class="info__bullit">
+									<p class="info__bullit-p"><strong>Тестирование</strong> - мы отдаем готовый проект только после того, как проверим что все работает так, как должно. Как со стороны верстки, так и того что « под капотом »</p>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="info__content">
-						<h3 class="sub-title sub-title--services">Наша задача</h3>
-						<h2 class="main-title main-title--services">Почему стоит выбрать нас?</h2>
-						<div class="info__bullits three-lines grid">
-							<div class="info__bullit">
-								<p class="info__bullit-p"><strong>Исследование аудитории</strong> - мы найдем самые сильные стороны вашего бизнеса и используем их для создания дизайна, который будет не просто красиво выглядеть но и подталкивать клиентов к действию.</p>
-							</div>
-							<div class="info__bullit">
-								<p class="info__bullit-p"><strong>Разработка</strong> - удобный и стабильный сайт как для клиентов так и для сотрудников - только малая часть нашей задачи. Главной целью для нас является продумать сайт вашей компании до мельчайших деталей.</p>
-							</div>
-							<div class="info__bullit">
-								<p class="info__bullit-p"><strong>Тестирование</strong> - мы отдаем готовый проект только после того, как проверим что все работает так, как должно. Как со стороны верстки, так и того что « под капотом »</p>
+					<div class="info__content-wrapper info__content-wrapper--why">
+						<!-- <div class="background-lines background-lines--info background-lines--light grid">
+						<div class="background__line"></div>
+						<div class="background__line"></div>
+						<div class="background__line"></div>
+					</div> -->
+						<div class="bg-text__wrapper bg-text__wrapper--why">
+							<h4 class="bg-text bg-text--why">Why?</h4>
+						</div>
+						<div class="info__content">
+							<h3 class="sub-title sub-title--why">Наша задача</h3>
+							<h2 class="main-title main-title--why">Почему сайт это важно?</h2>
+							<div class="why-important">
+								<p class="why-important__p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti ratione, odit vitae. Quo rerum fuga neque odio modi dolores deserunt perferendis ut nam, sunt, quidem. Esse, fuga, alias! Nesciunt enim
+									incidunt fugit ab, est consectetur excepturi sint sapiente iure dolorum. Corrupti ea quo veniam nemo quaerat blanditiis labore, iure aut.</p>
 							</div>
 						</div>
 					</div>
@@ -338,7 +368,7 @@
 			<!-- /uk-container -->
 			<section id="js-contacts-trigger" class="section section--contacts section--dark">
 				<div class="uk-container">
-					<div class="info__content-wrapper">
+					<div class="info__content-wrapper info__content-wrapper--contacts">
 						<div class="background-lines background-lines--light grid">
 							<div class="background__line"></div>
 							<div class="background__line"></div>

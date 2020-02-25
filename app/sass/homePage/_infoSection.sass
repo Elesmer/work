@@ -2,21 +2,36 @@
   position: relative
   z-index: 10
 
+.uk-container--info
+  position: relative
+  z-index: 8
+
 .info__content-wrapper
   position: relative
   width: 100%
   height: auto
   float: left
 
+.info__content-wrapper--design
+  padding: 150px 0 0px 0
+
+.info__content-wrapper--why
+  padding: 50px 0 100px 0
+
 .info__content
-  position: absolute
-  top: 20%
-  left: 0
+  // position: absolute
+  // top: 20%
+  // left: 0
   padding: 0 10%
   width: calc(100% - 20%)
   z-index: 10
 
 // Bullits
+
+.info-main__container
+  position: relative
+  width: 100%
+  float: left
 
 .three-lines
   float: left
@@ -25,6 +40,13 @@
   margin: 50px 0
 
 .background-lines--info
+  top: 0
+  position: absolute
+  width: 80%
+  left: 50%
+  z-index: 5
+  transform: translate(-50%, 0)
+
   .background__line
     height: 0
 
@@ -55,3 +77,8 @@
 
 .info__bullit-p
   margin-left: 30px
+
+// Why important
+
+.why-important__p
+  padding-left: 5px

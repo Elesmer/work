@@ -70,20 +70,17 @@ strong
 // Bg text
 
 .bg-text__wrapper
-  position: absolute
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
+	position: absolute
+	top: 50%
+	left: 50%
+	z-index: 2
+	transform: translate(-50%, -50%)
 
 .bg-text
 	font-size: 10rem
 	text-transform: uppercase
 	font-weight: 900
 	color: rgba(171, 171, 171, 0.1)
-
-.bg-text--contacts,
-.bg-text--info
-	opacity: 0
 
 // Titles and subtitles
 
@@ -105,7 +102,13 @@ strong
 		transform: translate(-120%, -50%)
 
 .sub-title--contacts,
-.main-title--contacts
+.main-title--contacts,
+.bg-text--contacts,
+.bg-text--info,
+.why-important__p,
+.main-title,
+.sub-title,
+.info__bullit
 	opacity: 0
 
 .main-title
