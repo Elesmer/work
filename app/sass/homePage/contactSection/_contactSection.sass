@@ -245,3 +245,45 @@
 
   &:hover
     opacity: .8
+
+// Contacts address
+
+.rolling-button--address
+  font-size: 1rem
+
+.contact__address
+  position: absolute
+  bottom: 0
+
+  .three-lines
+    grid-template-columns: 1fr 2fr
+
+.contact__address
+  color: $white
+  font-size: 1.1rem
+  margin: 0 0 0 3px
+  transition: .5s
+  display: block
+
+.contact__social-list
+  list-style: none
+  padding: 0
+  width: 100%
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+
+.contact__social-item
+  margin: 0
+  padding: 0
+
+  &:nth-child(3)
+    margin-left: calc(50% - 100px)
+
+.rolling-button--social
+  font-size: 2rem
+  height: 40px
+  width: 50px
+
+  .roll-hover-btn__label
+    justify-content: center

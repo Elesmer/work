@@ -1,0 +1,29 @@
+@media only screen and (max-width : 1200px)
+
+	//Info section
+	.main-title
+		max-width: 90%
+
+@media only screen and (max-width : 960px)
+
+	// Background lines
+
+	.background-lines--info
+		grid-template-columns: repeat(2, 1fr)
+		// display: none
+
+		.background__line
+			&:nth-child(2)
+				height: 100%
+				border-right: 1px solid rgba(0,0,0,.095)
+
+			&:nth-child(3)
+				display: none
+
+	// Info section
+
+	.info__content-wrapper--design
+		padding: 70px 0
+
+	.three-lines
+		grid-template-columns: repeat(2, 1fr)

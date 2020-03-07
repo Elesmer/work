@@ -19,23 +19,10 @@
 	body
 		overflow-y: scroll
 
-	//Verity section
-
-	.verity__more-button
-		opacity: 1
-		bottom: 20px
-
-	.verity__slogan-wrapper
-		position: absolute
-
 	//Scroll block
 	.scroll-block
 		overflow: hidden
 		height: 100%
-
-	//Info section
-	.main-title
-		max-width: 90%
 
 @media only screen and (max-width : 960px)
 
@@ -45,28 +32,6 @@
 	.layered-animations .shape
 		stroke-width: .5px
 
-	// Background lines
-
-	.background-lines--info
-		grid-template-columns: repeat(2, 1fr)
-		// display: none
-
-		.background__line
-			&:nth-child(2)
-				height: 100%
-				border-right: 1px solid rgba(0,0,0,.095)
-
-			&:nth-child(3)
-				display: none
-
-	// Info section
-
-	.info__content-wrapper--design
-		padding: 70px 0
-
-	.three-lines
-		grid-template-columns: repeat(2, 1fr)
-
 @media only screen and (max-width : 640px)
 	/**/
 
@@ -75,3 +40,15 @@
 
 @media only screen and (max-width : 320px)
   /**/
+
+// Brand section ( first section )
+@import "homePage/brandSection/brandSectionMedia"
+
+// Verity section ( second section )
+@import "homePage/veritySection/veritySectionMedia"
+
+// Info section ( third section )
+@import "homePage/infoSection/infoSectionMedia"
+
+// Contacts section ( fourth section )
+@import "homePage/contactSection/contactSectionMedia"

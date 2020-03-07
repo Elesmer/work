@@ -41,8 +41,23 @@
 			align-items: center;
 			justify-content: center;
 		}
+
+		.large {
+			width: 300px;
+			margin: 100px 0px;
+		}
 	</style>
 	<div class="uk-container">
+		<svg class="large shape animated infinite slideBottomInOut3" viewBox="0 0 96 96" style="transform: translateX(-215.99px) translateY(38.0042px) rotate(79.5716deg);">
+			<defs>
+				<linearGradient id="circleGradient" x1="0%" x2="100%" y1="20%" y2="80%">
+					<stop stop-color="#373734" offset="0%"></stop>
+					<stop stop-color="#242423" offset="50%"></stop>
+					<stop stop-color="#0D0D0C" offset="100%"></stop>
+				</linearGradient>
+			</defs>
+			<circle cx="48" cy="48" r="41.32162142365383" fill-rule="evenodd" stroke-linecap="square" fill="url(#circleGradient)"></circle>
+		</svg>
 		<div class="svg-container">
 			<div id="js-progress-svg">
 				<svg width="150" height="92" viewBox="0 0 150 92" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,14 +76,11 @@
 			targets: '#js-progress-svg .polymorph',
 			d: [{
 				value: 'M74 1H76'
-			},
-			{
+			}, {
 				value: 'M75 57L75 59'
-			},
-			{
+			}, {
 				value: 'M75 57L75 92'
-			},
-		],
+			}, ],
 			easing: 'easeInOutQuart',
 			delay: 0,
 			duration: 5000,
@@ -77,14 +89,11 @@
 			targets: '#js-progress-svg .polymorph2',
 			d: [{
 				value: 'M74 1L76 1'
-			},
-			 {
+			}, {
 				value: 'M75 57L75 59'
-			},
-			 {
+			}, {
 				value: 'M75 57L75 92'
-			},
-		 ],
+			}, ],
 			easing: 'easeInOutQuart',
 			delay: 0,
 			duration: 5000,

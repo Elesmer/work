@@ -1,48 +1,5 @@
 /* Preloader */
 
-// let firstPixelAnime = anime({
-//   targets: '.preloader .d',
-//   keyframes: [
-//     {translateY: 8.36},
-//     {translateX: 8.33},
-//     {translateY: 0},
-//     {translateX: 0}
-//   ],
-//   duration: 10000,
-//   easing: 'easeOutElastic(1, .8)',
-//   loop: true
-// });
-
-// let secondPixelAnime = anime({
-//   targets: '.preloader .c',
-//   keyframes: [
-//     {translateX: -8.36},
-//     {translateY: 8.33},
-//     {translateX: 0},
-//     {translateY: 0}
-//   ],
-//   duration: 10000,
-//   easing: 'easeOutElastic(1, .8)',
-//   loop: true
-// });
-
-// let thirdPixelAnime = anime({
-//   targets: '.preloader .b',
-//   keyframes: [
-//     {translateY: -8.33},
-//     {translateX: -8.33},
-//     {translateY: 0},
-//     {translateX: 0}
-//   ],
-//   duration: 10000,
-//   easing: 'easeOutElastic(1, .8)',
-//   loop: true
-// });
-
-// End preloader logo animation
-
-// Preloader
-
 let preloadScripts = false,
     preloadImages = false;
 
