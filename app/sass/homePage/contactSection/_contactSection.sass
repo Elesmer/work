@@ -254,34 +254,38 @@
 .contact__address
   position: absolute
   bottom: 0
-
-  .three-lines
-    grid-template-columns: 1fr 2fr
-
-.contact__address
   color: $white
   font-size: 1.1rem
   margin: 0 0 0 3px
   transition: .5s
   display: block
 
+  .three-lines
+    grid-template-columns: 1fr 2fr
+
 .contact__social-list
   list-style: none
   padding: 0
-  width: 100%
   display: -webkit-flex
   display: -ms-flex
   display: flex
+  flex-direction: column
+  position: absolute
+  right: 5%
+  bottom: 20%
 
 .contact__social-item
-  margin: 0
+  margin: 10px 0
   padding: 0
 
-  &:nth-child(3)
-    margin-left: calc(50% - 100px)
+  &:first-child
+    margin-top: 0
+
+  &:last-child
+    margin-bottom: 0
 
 .rolling-button--social
-  font-size: 2rem
+  font-size: 1.5rem
   height: 40px
   width: 50px
 
