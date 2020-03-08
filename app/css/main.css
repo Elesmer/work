@@ -5001,15 +5001,24 @@ header.sticky {
   width: 100%;
 }
 
-.a {
+.contacts__logo .a,
+.brand__logo .a,
+.header__logo .a,
+.form__logo .a {
   fill: #fff;
 }
 
-.b {
+.contacts__logo .b,
+.brand__logo .b,
+.header__logo .b,
+.form__logo .b {
   fill: #fff;
 }
 
-.c {
+.contacts__logo .c,
+.brand__logo .c,
+.header__logo .c,
+.form__logo .c {
   fill: none;
   stroke: #fff;
   stroke-miterlimit: 10;
@@ -5893,6 +5902,7 @@ header.sticky {
   position: absolute;
   right: 5%;
   bottom: 20%;
+  opacity: 0;
 }
 
 .contact__social-item {
@@ -5935,19 +5945,29 @@ header.sticky {
   overflow: hidden;
 }
 
+.contacts__page-wrapper .header__nav {
+  z-index: 50;
+}
+
+.contacts__page-wrapper .header__nav:hover {
+  pointer-events: painted;
+}
+
 .contacts__logo-part {
   width: 50%;
   height: 100%;
   position: relative;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .contacts__bg-wrapper {
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-perspective: 100vw;
+  perspective: 100vw;
+  position: absolute;
+  pointer-events: none;
 }
 
 .contacts__bg-img {
@@ -5955,6 +5975,27 @@ header.sticky {
   object-fit: cover;
   height: 100%;
   width: 100%;
+  -o-object-position: center;
+  object-position: center;
+  pointer-events: none;
+  -webkit-transition-property: opacity;
+  -o-transition-property: opacity;
+  transition-property: opacity;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.contacts__logo-wrapper {
+  position: absolute;
+  z-index: 300;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  max-width: 350px;
 }
 
 .back-to-top {
@@ -6108,6 +6149,10 @@ header.sticky {
 
   .layered-animations .shape {
     stroke-width: .5px;
+  }
+
+  .brand__animation-wrapper {
+    display: none;
   }
 
   .background-lines--info {
