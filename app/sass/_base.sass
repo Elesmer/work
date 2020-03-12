@@ -2,7 +2,7 @@
 	color: #666
 
 ::selection
-	background-color: #333
+	background-color: $accent
 	color: #fff
 
 body
@@ -11,13 +11,8 @@ body
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
-	overflow: hidden
+	overflow-x: hidden
 	color: $text
-	min-height: 100vh
-	background-color: $accentBg
-
-	&.scroll
-		overflow-y: scroll
 
 	*
 		font-family: $default-font
@@ -30,91 +25,8 @@ body
 		&:required:valid
 			border-color: green
 
-a
-	&:hover
-		text-decoration: none
-
-b,
-strong
+b, strong
 	font-weight: bold
 
 .grid
 	display: grid
-
-.section
-	width: 100%
-	float: left
-	position: relative
-	min-height: 100vh
-
-// Svg wrapper
-
-.svg-wrap
-	position: absolute
-	width: 0px
-	height: 0px
-	overflow: hidden
-
-// Section styles
-
-.section--wrapper
-	position: relative
-	z-index: 10
-
-.section--dark
-	background-color: $accentBg
-
-.section--light
-	background-color: #f0ebeb
-
-// Bg text
-
-.bg-text__wrapper
-	position: absolute
-	top: 50%
-	left: 50%
-	z-index: 2
-	transform: translate(-50%, -50%)
-
-.bg-text
-	font-size: 10rem
-	text-transform: uppercase
-	font-weight: 900
-	color: rgba(171, 171, 171, 0.1)
-
-// Titles and subtitles
-
-.sub-title
-	margin: 0 5px
-	font-family: Montserrat, sans-serif
-	font-size: 1rem
-	position: relative
-
-	&::before
-		content: ''
-		display: block
-		height: 1px
-		width: 5%
-		background-color: $accentBg
-		position: absolute
-		bottom: 50%
-		left: 0
-		transform: translate(-120%, -50%)
-
-.sub-title--contacts,
-.main-title--contacts,
-.bg-text--contacts,
-.bg-text--info,
-.why-important__p,
-.main-title,
-.sub-title,
-.info__bullit
-	opacity: 0
-
-.main-title
-	font-family: Montserrat, sans-serif
-	font-size: 4rem
-	font-weight: bold
-	max-width: 60%
-	line-height: 1.2
-	margin: 20px 0
