@@ -1,0 +1,117 @@
+@media only screen and (max-width : 960px)
+  // Lines
+
+  .background-lines--contacts
+    padding: 0 5%
+    position: absolute
+    left: 50%
+    transform: translate(-50%,0)
+    grid-template-columns: repeat(2, 1fr)
+    width: 90%
+
+    .background__line
+      &:first-child
+        border: none
+
+      &:nth-child(2)
+        height: 100%
+
+      &:last-child
+        display: none
+
+  .section--contacts
+    height: auto
+    float: left
+
+    .info__content-wrapper
+      position: static
+
+  .main-title--contacts
+    width: 100%
+    padding: 0 3%
+
+  .sub-title--contacts
+    padding: 0 3%
+
+  // Contact form wrapper
+
+  .contact__wrapper
+    width: calc(100% - 40px)
+    padding: 0 20px
+
+  .contact__wrapper--form
+    .contact-form
+      &:first-child
+        display: none
+
+  .contacts-modal
+    .uk-modal-dialog
+      overflow-y: scroll
+
+  .form
+    height: 150vh
+    width: 90%
+    justify-content: flex-start
+
+  .form__logo-wrapper
+    position: relative
+    z-index: 1000
+
+  .form__input,
+  .form__textarea
+    border-radius: 0
+
+  .form__label
+    border: none
+
+  // Social
+
+  .contact__social-list
+    flex-direction: row
+
+  .contact__address
+    .contact__wrapper,
+    .contact__social-list
+      padding: 0
+      width: 50%
+
+  .contact__social-item
+    &:first-child
+      margin-top: 10px
+
+@media only screen and (max-width : 640px)
+  // Social
+
+  .info__content--contact
+    position: relative
+    float: left
+    transform: none
+    left: 0
+    top: 0
+    padding: 70px 0
+
+  .contact__wrapper
+    grid-template-columns: 1fr
+
+  .contact__address
+    position: relative
+    float: left
+
+    .contact-form
+      padding: 0
+
+    .contact__wrapper
+      margin: 0
+
+    .contact__wrapper,
+    .contact__social-list
+      padding: 0
+      width: 100%
+      float: left
+      position: static
+      transform: none
+
+  // Offcanvas menu
+
+  .form__logo-wrapper
+    margin-top: 50px !important

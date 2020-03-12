@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Page name</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<!-- Template Basic Images End -->
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+	<link href="libs/uikit/uikit.min.css" rel="stylesheet">
+	<link href="css/main.min.css" rel="stylesheet">
+</head>
+
+<body class="">
+	<!-- Header -->
+	<!-- HTML here -->
+	<style>
+		.svg-container {
+			width: 20%;
+			padding: 100px;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+			justify-content: center;
+		}
+
+		#morph {
+			display: flex;
+			-ms-align-items: center;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.large {
+			width: 300px;
+			margin: 100px 0px;
+		}
+
+		.test {
+			position: absolute;
+			top: 15%;
+			left: 50%;
+		}
+	</style>
+	<div class="uk-container">
+		<svg class="large shape" viewBox="0 0 96 96" style="transform: translateX(-71.7423px) translateY(108.024px) rotate(108.814deg);">
+			<defs>
+				<linearGradient id="triangleGradient" x1="0%" x2="100%" y1="20%" y2="80%">
+					<stop stop-color="#373734" offset="0%"></stop>
+					<stop stop-color="#242423" offset="50%"></stop>
+					<stop stop-color="#0D0D0C" offset="100%"></stop>
+				</linearGradient>
+			</defs>
+			<polygon fill-rule="evenodd" points="52.692928530926665 18.9694542711336 94.847271355668 87.94871315239908 10.53858570618533 87.94871315239908 " stroke-linecap="square" fill="url(#triangleGradient)"></polygon>
+		</svg>
+		<svg class="large shape" viewBox="0 0 96 96" style="transform: translateX(-215.99px) translateY(38.0042px) rotate(79.5716deg);">
+			<defs>
+				<linearGradient id="circleGradient" x1="0%" x2="100%" y1="20%" y2="80%">
+					<stop stop-color="#373734" offset="0%"></stop>
+					<stop stop-color="#242423" offset="50%"></stop>
+					<stop stop-color="#0D0D0C" offset="100%"></stop>
+				</linearGradient>
+			</defs>
+			<circle cx="48" cy="48" r="41.32162142365383" fill-rule="evenodd" stroke-linecap="square" fill="url(#circleGradient)"></circle>
+		</svg>
+		<div class="svg-container">
+			<div id="js-progress-svg">
+				<svg width="150" height="92" viewBox="0 0 150 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path class="polymorph" d="M0 1H75" stroke="white" stroke-width="1" />
+					<path class="polymorph2" d="M150 1L75 0.999993" stroke="white" stroke-width="1" />
+				</svg>
+			</div>
+		</div>
+
+
+		<svg class="large shape test" viewBox="0 0 96 96">
+			<defs>
+				<linearGradient id="rectGradient" x1="0%" x2="100%" y1="20%" y2="80%">
+					<stop stop-color="#373734" offset="0%"></stop>
+					<stop stop-color="#242423" offset="50%"></stop>
+					<stop stop-color="#0D0D0C" offset="100%"></stop>
+				</linearGradient>
+			</defs>
+			<rect width="99.40146959412816" height="71.77245455181658" x="24" y="24" fill-rule="evenodd" stroke-linecap="square" fill="url(#rectGradient)"></rect>
+		</svg>
+	</div>
+	<!-- To top -->
+	<a uk-totop uk-scroll class="js-back-to-top back-to-top"></a>
+	<script src="libs/anime/anime.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+	<script>
+		let morphing = anime({
+			targets: '#js-progress-svg .polymorph',
+			d: [{
+				value: 'M74 1H76'
+			}, {
+				value: 'M75 57L75 59'
+			}, {
+				value: 'M75 57L75 92'
+			}, ],
+			easing: 'easeInOutQuart',
+			delay: 0,
+			duration: 5000,
+		});
+		let morphing2 = anime({
+			targets: '#js-progress-svg .polymorph2',
+			d: [{
+				value: 'M74 1L76 1'
+			}, {
+				value: 'M75 57L75 59'
+			}, {
+				value: 'M75 57L75 92'
+			}, ],
+			easing: 'easeInOutQuart',
+			delay: 0,
+			duration: 5000,
+		});
+	</script>
+</body>
+
+</html>

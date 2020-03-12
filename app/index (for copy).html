@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="ru">
 
 <head>
 	<meta charset="utf-8">
@@ -9,8 +9,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!-- Template Basic Images Start -->
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="icon" href="img/dest/favicon/favicon.ico">
-	<link rel="apple-touch-icon" sizes="180x180" href="img/dest/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" href="img/favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
 	<!-- Template Basic Images End -->
 	<!-- Custom Browsers Color Start -->
 	<meta name="theme-color" content="#000">
@@ -20,22 +20,49 @@
 	<link href="css/main.min.css" rel="stylesheet">
 </head>
 
-<!-- Burger -->
-
-<div class="burger" type="button" uk-toggle="target: #offcanvas-reveal">
-	<div class="burger-line"></div>
-	<div class="burger-line"></div>
-</div>
-
 <body class="">
 	<!-- Header -->
-
-	<!-- Off-canvas menu -->
+	<header>
+		<div class="header__content">
+			<nav class="uk-container">
+				<div class="uk-navbar uk-light">
+					<div class="uk-navbar-left">
+						<a class="uk-navbar-item uk-logo" href="#">Logo</a>
+					</div>
+					<div class="uk-navbar-right uk-hidden@m">
+						<div class="burger" type="button" uk-toggle="target: #offcanvas-reveal">
+							<div class="burger-line"></div>
+							<div class="burger-line"></div>
+						</div>
+					</div>
+					<div class="uk-navbar-right uk-visible@m">
+						<div class="number">
+							<a href="#">+380730654513</a>
+						</div>
+						<ul class="uk-navbar-nav">
+							<li class="uk-active"><a href="#">Active</a></li>
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Parent</a></li>
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Parent</a></li>
+							<li><a href="#">Item</a></li>
+							<li><a href="#">Parent</a></li>
+							<li><a href="#">Item</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
 	<div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true">
 		<div class="uk-offcanvas-bar">
 			<button class="uk-offcanvas-close" type="button" uk-close></button>
 			<ul class="uk-list">
 				<li class="uk-active"><a href="#">Active</a></li>
+				<li><a href="#">Item</a></li>
+				<li><a href="#">Parent</a></li>
+				<li><a href="#">Item</a></li>
+				<li><a href="#">Parent</a></li>
 				<li><a href="#">Item</a></li>
 				<li><a href="#">Parent</a></li>
 				<li><a href="#">Item</a></li>

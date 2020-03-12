@@ -1,0 +1,47 @@
+.contacts__page-wrapper
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  flex-wrap: wrap
+  height: 100vh
+  min-height: 750px
+  overflow: hidden
+
+  .header__nav
+    z-index: 50
+
+.contacts__logo-part
+  width: 50%
+  height: 100%
+  position: relative
+  overflow: hidden
+  pointer-events: none
+
+.contacts__bg-wrapper
+  height: 100vh
+  width: 100%
+  perspective: 100vw
+  position: absolute
+  pointer-events: none
+
+.contacts__bg-img
+  object-fit: cover
+  height: 100%
+  width: 100%
+  object-position: center
+  pointer-events: none
+  transition-property: opacity
+  position: absolute
+  top: 0
+  left: 0
+  pointer-events: none
+
+// Contacts logo
+
+.contacts__logo-wrapper
+  position: absolute
+  z-index: 300
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  max-width: 350px

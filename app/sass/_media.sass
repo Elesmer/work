@@ -1,18 +1,135 @@
-// @import ""
+@media only screen and (max-width : 1650px)
 
-// For copy
+	// Header logo
 
-// @media only screen and (max-width : 1200px)
-// 	/**/
-//
-// @media only screen and (max-width : 960px)
-// 	/**/
-//
-// @media only screen and (max-width : 640px)
-// 	/**/
-//
-// @media only screen and (max-width : 480px)
-// 	/**/
-//
-// @media only screen and (max-width : 320px)
-//   /**/
+	.header__logo
+		left: 2%
+
+@media only screen and (max-width : 1450px)
+
+	// Header logo
+
+	.header__logo
+		transition: left .5s
+
+		&.active
+			left: -5%
+
+@media only screen and (max-width : 1200px)
+	body
+		overflow-y: scroll
+
+	//Scroll block
+	.scroll-block
+		overflow: hidden
+		height: 100%
+		margin-bottom: 0
+
+	// Preloader
+
+	.progress-svg
+		display: none
+
+@media only screen and (max-width : 960px)
+
+	html
+		font-size: 14px
+
+	.layered-animations .shape
+		stroke-width: .5px
+
+	.header__nav
+		width: calc(100% - 40px)
+		right: 0
+		top: 0
+		padding: 20px
+		background-color: rgba($accentBg, .7)
+		transition: .5s
+
+		&.active
+			background-color: #f0ebeb
+
+		.lang__wrapper
+			display: none
+
+	// Offcanvas menu
+
+	.offcanvas__close-button
+		top: 20px
+		right: 10%
+
+	.uk-offcanvas-bar
+		width: 100%
+
+		&::after
+			display: none
+
+	.uk-offcanvas-reveal
+		transition: width .3s ease-out
+
+	.uk-open > .uk-offcanvas-reveal
+		width: 80%
+
+	// Header logo
+
+	.header__logo
+		transition: left .5s
+		top: 15px
+		max-width: 100px
+		left: -50px
+
+		&.active
+			left: -50px
+
+	.header__logo-img
+		.a
+			display: none
+
+	// Preloader
+
+	.preloaded__progressbar-wrapper
+		width: 35%
+
+@media only screen and (max-width : 640px)
+	.background-lines
+		display: none
+
+	// Base
+
+	.bg-text
+		font-size: 6rem
+
+	.main-title
+		font-size: 3rem
+
+	// Offcanvas menu
+
+	.uk-open > .uk-offcanvas-reveal
+		width: 100%
+
+@media only screen and (max-width : 480px)
+	// Base
+
+	.bg-text
+		font-size: 4rem
+
+	.main-title
+		font-size: 2.5rem
+
+@media only screen and (max-width : 330px)
+	// Base
+
+	.bg-text
+		font-size: 3rem
+
+// Brand section ( first section )
+@import "homePage/brandSection/brandSectionMedia"
+
+// Verity section ( second section )
+@import "homePage/veritySection/veritySectionMedia"
+
+// Info section ( third section )
+@import "homePage/infoSection/infoSectionMedia"
+
+// Contacts section ( fourth section )
+@import "homePage/contactSection/contactSectionMedia"

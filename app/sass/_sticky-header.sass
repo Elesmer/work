@@ -1,26 +1,226 @@
-.burger
-  background-color: transparent
-  height: 50px
-  width: 50px
+.header__nav
+  position: fixed
+  top: 30px
+  right: 10%
+  z-index: 15
+
+  &.active
+    *
+      color: $accentBg
+
+    .burger
+      &::after,
+      &::before
+        color: $accentBg
+
+    .burger-line
+      background-color: $accentBg
+
+.header__nav-wrapper
+  position: relative
   display: -webkit-flex
   display: -ms-flex
   display: flex
-  align-items: flex-start
+  flex-direction: column
+  align-items: flex-end
+
+.lang__wrapper
+  margin-top: 20px
+
+.rolling-button--lang
+  margin: 10px 0
+  font-size: .9rem
+
+  &:first-child
+    margin-top: 0
+
+// Burger
+
+.burger
+  position: relative
+  background-color: transparent
+  height: 30px
+  width: 100px
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: flex-end
   flex-direction: column
   justify-content: center
   cursor: pointer
+  overflow: hidden
 
   &:hover
+    &::before
+      margin-top: -50px
+
+    &::after
+      margin-top: 0
+
     .burger-line
       &:last-child
-        width: 55%
+        width: 25px
+
+  &::before
+    content: 'menu'
+    color: #fff
+    font-family: $default-font
+    position: absolute
+    margin-right: 35px
+    transition: .35s
+    text-transform: uppercase
+    font-size: .9rem
+    left: 20px
+
+  &::after
+    content: 'menu'
+    color: #fff
+    font-family: $default-font
+    position: absolute
+    margin-right: 35px
+    margin-top: 50px
+    transition: .5s
+    text-transform: uppercase
+    font-size: .9rem
+    left: 20px
 
 .burger-line
   height: 1px
-  background: $text
-  width: 55%
+  background-color: $white
+  width: 25px
   margin: 5px 0
   transition: width .5s
 
   &:last-child
-    width: 30%
+    width: 15px
+
+.header__logo
+  position: fixed
+  z-index: 15
+  top: 30px
+  left: 10%
+  opacity: 0
+  transition: left .5s
+
+  &.active
+    left: 5%
+
+.header__logo-img
+  width: 100%
+  max-width: 150px
+  padding: 5px
+
+header.sticky
+  height: 90px
+
+.header__content
+  width: 100%
+
+// Off canvas menu
+
+.uk-open > .uk-offcanvas-reveal
+  width: 900px
+
+.uk-offcanvas-reveal
+  transition: width .5s ease-out
+
+.uk-offcanvas-overlay
+  &::before
+    background: rgba($accentBg, .5)
+
+.uk-offcanvas-bar
+  @include angled-edge('inside bottom', 'lower left', darken($text, 10%))
+  width: 500px + $angleSize
+  background-color: darken($text, 10%)
+  mafrin-left: 200px
+  position: absolute
+  height: 100%
+  overflow-y: visible
+  right: 0
+
+  &::after
+    width: $angleSize
+    height: 100%
+    position: absolute
+    left: -200px
+    top: 0
+    transition: left .5s
+
+.offcanvas__bg-text
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  font-size: 8rem
+  text-transform: uppercase
+  font-weight: 900
+  color: rgba($text, .2)
+
+// Offcanvas list
+
+.offcanvas__nav
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  list-style: none
+
+.offcanvas__li
+  margin-top: 30px
+
+  &:first-child
+    margin: 0
+
+  &:hover
+    .offcanvas__a
+      .rolling-button
+        .roll-hover-btn__label
+          top: -30px
+
+        .roll-hover-btn__label_active
+          top: -10px
+
+.offcanvas__close-button
+  position: absolute
+  right: 20%
+  top: 20%
+  font-size: 5rem
+  height: 30px
+  width: 30px
+
+  svg
+    width: 100%
+
+.offcanvas__a
+  text-transform: uppercase
+  font-size: 2rem
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+  align-items: center
+  font-weight: bold
+  position: relative
+  text-align: left
+
+  &:hover
+    &::after
+      width: calc(100% - 50px)
+
+  &::after
+    position: absolute
+    content: ''
+    width: 0
+    height: 2px
+    right: 0
+    background-color: $white
+    bottom: 5px
+    transition: width .5s
+
+  .rolling-button
+    height: 25px
+    margin: 0 30px 0 0
+    font-size: 1.2rem
+    border-bottom: 1px solid $white
+
+  .roll-hover-btn__label
+    transform: rotate(-90deg)
