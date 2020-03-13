@@ -3,14 +3,14 @@
 /* Preloader start */
 
 let preloadScripts = false,
-  preloadImages = false;
+    preloadImages = false;
 
 let
   scripts = document.images
-scripts_total_count = scripts.length
-scrips_loaded_count = 0,
+  scripts_total_count = scripts.length
+  scrips_loaded_count = 0,
   perc_display = document.getElementById('js-progressbar')
-preloaderBlock = document.getElementById('js-preloader')
+  preloaderBlock = document.getElementById('js-preloader')
 
 for (let i = 0; i < scripts_total_count; i++) {
   script_clone = new Image();
@@ -243,7 +243,7 @@ anime({
 
 let controller = new ScrollMagic.Controller({
   vertical: true,
-  addIndicators: true
+  // addIndicators: true
 });
 
 // Check if it home page
@@ -588,14 +588,30 @@ if (document.title == 'Home') {
   });
 
   // Scroll disable
-  $('#js-home-about-us-link, #js-offcanvas-scroll-off').click(function() {
+  $('#js-home-about-us-link').click(function() {
     $.scrollify.disable();
   });
 
   // Scroll enable
-  $('#js-home-about-us-close, #js-offcanvas-scroll-enable').click(function() {
+  $('#js-home-about-us-close').click(function() {
     $.scrollify.enable();
   });
+
+  if ($(window).width() > 1200) {
+    // Scroll disable
+    $('#js-offcanvas-scroll-off').click(function() {
+      $.scrollify.disable();
+    });
+
+    $('#offcanvas-reveal').click(function() {
+      $.scrollify.enable();
+    });
+
+    // Scroll enable
+    $('#js-offcanvas-scroll-enable').click(function() {
+      $.scrollify.enable();
+    });
+  }
 
   // Slogan definition
   $('.verity__slogan').text('perfection.')
@@ -622,263 +638,254 @@ if (document.title == 'Home') {
 
     // Full screen scroll init
 
-    $.scrollify({
-      section: ".section",
-      overflowScroll: true,
-      setHeights: false,
-      before: function(index, section) {
-        if (index == 0) {
+    if ($(window).width() > 1200) {
 
-          // Header logo animation
-          anime({
-            targets: '.header__logo',
-            opacity: 0,
-            easing: 'easeInOutQuad',
-            duration: 100
-          });
+      $.scrollify({
+        section: ".section",
+        overflowScroll: true,
+        setHeights: false,
+        before: function(index, section) {
+          if (index == 0) {
 
-          // Remove active class for nav element
-          headerNav.classList.remove('active');
-
-          // Remove active class for logo element
-          headerLogo.classList.remove('active');
-
-          // Verity title text change start
-
-          setTimeout(() => {
-            $('.verity__slogan').text('perfection.')
-          }, 300)
-
-          // Verity title text change END
-
-        } else if (index == 1) {
-
-          // Verity about us button
-          anime({
-            targets: '#js-home-about-us-link',
-            opacity: '1',
-            easing: 'easeInOutSine',
-            duration: 200,
-            delay: 1200
-          });
-
-          // Header logo animation
-          anime({
-            targets: '.header__logo',
-            opacity: '1',
-            scale: 1.03,
-            easing: 'easeInOutQuad',
-            duration: 200,
-            delay: 700
-          });
-
-          anime({
-            delay: 100,
-            duration: 400,
-            easing: 'easeInOutQuad',
-            fill: ['rgba(0,0,0,0)', '#fff'],
-            targets: '.header__logo-img .b',
-          });
-
-          anime({
-            delay: 200,
-            duration: 400,
-            easing: 'easeInOutQuad',
-            opacity: 1,
-            targets: '.header__logo-img .word',
-          });
-
-          // Back button animation
-          anime({
-            targets: '.skip-back__container--back',
-            translateY: '-100',
-            easing: 'easeInOutQuad',
-            duration: 700
-          });
-
-          // Skip button animation
-          anime({
-            targets: '.skip-back__container--skip',
-            translateY: '30',
-            translateX: '-50%',
-            easing: 'easeInOutQuad',
-            duration: 700
-          });
-
-          // Verity section central line shadow add
-          anime({
-            targets: '.background__line--central',
-            boxShadow: '0px 0px 15px 10px rgba(0,0,0,0.75)',
-            scale: 1.03,
-            easing: 'easeInOutQuad',
-            duration: 700,
-            delay: 1000
-          });
-
-          // Remove active class for nav element
-          headerNav.classList.remove('active');
-
-          // Remove active class for logo element
-          headerLogo.classList.remove('active');
-
-          // Animation for verity section
-          word.show({
-            lettersAnimationOpts: {
-              duration: 500,
-              delay: (t, i) => i * 60,
-              easing: 'easeOutExpo',
-              opacity: {
-                value: [0, 1],
-                duration: 50,
-                delay: (t, i) => i * 60,
-                easing: 'linear'
-              },
-              translateY: (t, i) => i % 2 ? [anime.random(-350, -300), 0] : [anime.random(300, 350), 0]
-            },
-            shapesAnimationOpts: {
-              duration: 2000,
-              easing: 'easeOutElastic',
-              translateY: t => {
-                const ty = anime.random(-200, 100);
-                t.dataset.ty = ty;
-                return [anime.random(-25, 25), ty];
-              },
-              scale: t => {
-                const s = randomBetween(1.5, 2);
-                t.dataset.s = s;
-                return [s, s];
-              },
-              rotate: () => anime.random(-45, 45),
-              opacity: {
-                value: [0, 0.9],
-                duration: 600,
-                delay: 300,
-                easing: 'linear'
-              }
-            }
-          });
-
-          // Verity title text change start
-
-          setTimeout(() => {
-            const title = document.querySelector('.verity__slogan');
-            $('.verity__slogan').text('precision.')
-            charming(title);
-            animateTitles();
-          }, 1800)
-
-          setTimeout(() => {
-            const title = document.querySelector('.verity__slogan');
-            $('.verity__slogan').text('pixels.')
-            charming(title);
-            animateTitles();
-          }, 3200)
-
-          // Verity title text change END
-
-        } else if (index == 2) {
-
-          // Header logo animation
-          anime({
-            targets: '.header__logo',
-            opacity: '1',
-            scale: 1.03,
-            easing: 'easeInOutQuad',
-            duration: 200,
-            delay: 300
-          });
-
-          anime({
-            targets: '.header__logo-img .word',
-            delay: 300,
-            duration: 200,
-            easing: 'easeInOutQuad',
-            opacity: 0,
-          });
-
-          anime({
-            targets: '.header__logo-img .b',
-            delay: 300,
-            duration: 200,
-            easing: 'easeInOutQuad',
-            fill: ['#fff', '#121212'],
-          });
-
-          // Back button animation
-          anime({
-            targets: '.skip-back__container--back',
-            translateY: '10',
-            translateX: '-35%',
-            easing: 'easeInOutQuad',
-            duration: 700
-          });
-
-          // Skip button animation
-          anime({
-            targets: '.skip-back__container--skip',
-            translateY: '100',
-            translateX: '-50%',
-            easing: 'easeInOutQuad',
-            duration: 700
-          });
-
-          // Add active class for nav element
-          headerNav.classList.add('active');
-
-          // Add active class for logo element
-
-          function addActiveLogo() {
-            headerLogo.classList.add('active');
-          }
-          setTimeout(addActiveLogo, 1000);
-
-          // Animation for verity section
-          word.hide({
-            lettersAnimationOpts: {
-              duration: () => anime.random(800, 1000),
+            // Header logo animation
+            anime({
+              targets: '.header__logo',
               opacity: 0,
-            },
-            shapesAnimationOpts: {
-              duration: () => anime.random(800, 1000),
-              opacity: {
-                value: 0,
-                duration: 200,
-                easing: 'linear'
+              easing: 'easeInOutQuad',
+              duration: 100
+            });
+
+            // Remove active class for nav element
+            headerNav.classList.remove('active');
+
+            // Remove active class for logo element
+            headerLogo.classList.remove('active');
+
+            // Verity title text change start
+
+            setTimeout(() => {
+              $('.verity__slogan').text('perfection.')
+            }, 300)
+
+            // Verity title text change END
+
+          } else if (index == 1) {
+
+            // Verity about us button
+            anime({
+              targets: '#js-home-about-us-link',
+              opacity: '1',
+              easing: 'easeInOutSine',
+              duration: 200,
+              delay: 1200
+            });
+
+            // Header logo animation
+            anime({
+              targets: '.header__logo',
+              opacity: '1',
+              scale: 1.03,
+              easing: 'easeInOutQuad',
+              duration: 200,
+              delay: 700
+            });
+
+            anime({
+              delay: 100,
+              duration: 400,
+              easing: 'easeInOutQuad',
+              fill: ['rgba(0,0,0,0)', '#fff'],
+              targets: '.header__logo-img .b',
+            });
+
+            anime({
+              delay: 200,
+              duration: 400,
+              easing: 'easeInOutQuad',
+              opacity: 1,
+              targets: '.header__logo-img .word',
+            });
+
+            // Back button animation
+            anime({
+              targets: '.skip-back__container--back',
+              translateY: '-100',
+              easing: 'easeInOutQuad',
+              duration: 700
+            });
+
+            // Skip button animation
+            anime({
+              targets: '.skip-back__container--skip',
+              translateY: '30',
+              translateX: '-50%',
+              easing: 'easeInOutQuad',
+              duration: 700
+            });
+
+            // Verity section central line shadow add
+            anime({
+              targets: '.background__line--central',
+              boxShadow: '0px 0px 15px 10px rgba(0,0,0,0.75)',
+              scale: 1.03,
+              easing: 'easeInOutQuad',
+              duration: 700,
+              delay: 1000
+            });
+
+            // Remove active class for nav element
+            headerNav.classList.remove('active');
+
+            // Remove active class for logo element
+            headerLogo.classList.remove('active');
+
+            // Animation for verity section
+            word.show({
+              lettersAnimationOpts: {
+                duration: 500,
+                delay: (t, i) => i * 60,
+                easing: 'easeOutExpo',
+                opacity: {
+                  value: [0, 1],
+                  duration: 50,
+                  delay: (t, i) => i * 60,
+                  easing: 'linear'
+                },
+                translateY: (t, i) => i % 2 ? [anime.random(-350, -300), 0] : [anime.random(300, 350), 0]
+              },
+              shapesAnimationOpts: {
+                duration: 2000,
+                easing: 'easeOutElastic',
+                translateY: t => {
+                  const ty = anime.random(-200, 100);
+                  t.dataset.ty = ty;
+                  return [anime.random(-25, 25), ty];
+                },
+                scale: t => {
+                  const s = randomBetween(1.5, 2);
+                  t.dataset.s = s;
+                  return [s, s];
+                },
+                rotate: () => anime.random(-45, 45),
+                opacity: {
+                  value: [0, 0.9],
+                  duration: 600,
+                  delay: 300,
+                  easing: 'linear'
+                }
               }
+            });
+
+            // Verity title text change start
+
+            setTimeout(() => {
+              const title = document.querySelector('.verity__slogan');
+              $('.verity__slogan').text('precision.')
+              charming(title);
+              animateTitles();
+            }, 1800)
+
+            setTimeout(() => {
+              const title = document.querySelector('.verity__slogan');
+              $('.verity__slogan').text('pixels.')
+              charming(title);
+              animateTitles();
+            }, 3200)
+
+            // Verity title text change END
+
+          } else if (index == 2) {
+
+            // Header logo animation
+            anime({
+              targets: '.header__logo',
+              opacity: '1',
+              scale: 1.03,
+              easing: 'easeInOutQuad',
+              duration: 200,
+              delay: 300
+            });
+
+            anime({
+              targets: '.header__logo-img .word',
+              delay: 300,
+              duration: 200,
+              easing: 'easeInOutQuad',
+              opacity: 0,
+            });
+
+            anime({
+              targets: '.header__logo-img .b',
+              delay: 300,
+              duration: 200,
+              easing: 'easeInOutQuad',
+              fill: ['#fff', '#121212'],
+            });
+
+            // Back button animation
+            anime({
+              targets: '.skip-back__container--back',
+              translateY: '10',
+              translateX: '-35%',
+              easing: 'easeInOutQuad',
+              duration: 700
+            });
+
+            // Skip button animation
+            anime({
+              targets: '.skip-back__container--skip',
+              translateY: '100',
+              translateX: '-50%',
+              easing: 'easeInOutQuad',
+              duration: 700
+            });
+
+            // Add active class for nav element
+            headerNav.classList.add('active');
+
+            // Add active class for logo element
+
+            function addActiveLogo() {
+              headerLogo.classList.add('active');
             }
-          });
-          $.scrollify.disable();
+            setTimeout(addActiveLogo, 1000);
 
-          // Back to home section
+            // Animation for verity section
+            word.hide({
+              lettersAnimationOpts: {
+                duration: () => anime.random(800, 1000),
+                opacity: 0,
+              },
+              shapesAnimationOpts: {
+                duration: () => anime.random(800, 1000),
+                opacity: {
+                  value: 0,
+                  duration: 200,
+                  easing: 'linear'
+                }
+              }
+            });
+            $.scrollify.disable();
 
-          $("#js-homeLink").click(function() {
-            $.scrollify.enable();
-            $.scrollify.move("#home");
-          });
+            // Back to home section
 
-          // Verity title text change start
-
-          setTimeout(() => {
-            $('.verity__slogan').text('perfection.')
-          }, 300)
-
-          // Verity title text change END
-        }
-
-        if ($(window).width() > 1200) {
-          // Disable scroll if index !== 2
-          if (index !== 2) {
-            $('#offcanvas-reveal').click(function() {
+            $("#js-homeLink").click(function() {
               $.scrollify.enable();
+              $.scrollify.move("#home");
             });
-          } else {
-            $('#offcanvas-reveal').click(function() {
-              $.scrollify.disable();
-            });
+
+            // Verity title text change start
+
+            setTimeout(() => {
+              $('.verity__slogan').text('perfection.')
+            }, 300)
+
+            // Verity title text change END
           }
         }
-      }
-    });
+      });
+
+    }
 
     // Glich effect for verity section start
 
@@ -942,108 +949,85 @@ if (document.title == 'Home') {
   /* Figures animation */
 
   function fitElementToParent(el, padding) {
-    let timeout = null;
-
+    var timeout = null;
     function resize() {
       if (timeout) clearTimeout(timeout);
-      anime.set(el, {
-        scale: 1
-      });
-      let pad = padding || 0;
-      let parentEl = el.parentNode;
-      let elOffsetWidth = el.offsetWidth - pad;
-      let parentOffsetWidth = parentEl.offsetWidth;
-      let ratio = parentOffsetWidth / elOffsetWidth;
-      timeout = setTimeout(anime.set(el, {
-        scale: ratio
-      }), 10);
+      anime.set(el, {scale: 1});
+      var pad = padding || 0;
+      var parentEl = el.parentNode;
+      var elOffsetWidth = el.offsetWidth - pad;
+      var parentOffsetWidth = parentEl.offsetWidth;
+      var ratio = parentOffsetWidth / elOffsetWidth;
+      timeout = setTimeout(anime.set(el, {scale: ratio}), 10);
     }
     resize();
     window.addEventListener('resize', resize);
   }
 
-  let layeredAnimation = (function() {
+  var layeredAnimation = (function() {
 
-    let transformEls = document.querySelectorAll('.transform-progress');
-    let layeredAnimationEl = document.querySelector('.layered-animations');
-    let shapeEls = layeredAnimationEl.querySelectorAll('.shape');
-    let triangleEl = layeredAnimationEl.querySelector('polygon');
-    let trianglePoints = triangleEl.getAttribute('points').split(' ');
-    let easings = ['easeInOutQuad', 'easeInOutCirc', 'easeInOutSine', 'spring'];
+    var transformEls = document.querySelectorAll('.transform-progress');
+    var layeredAnimationEl = document.querySelector('.layered-animations');
+    var shapeEls = layeredAnimationEl.querySelectorAll('.shape');
+    var triangleEl = layeredAnimationEl.querySelector('polygon');
+    var trianglePoints = triangleEl.getAttribute('points').split(' ');
+    var easings = ['easeInOutQuad', 'easeInOutCirc', 'easeInOutSine', 'spring'];
 
     fitElementToParent(layeredAnimationEl);
 
     function createKeyframes(value) {
-      let keyframes = [];
-      for (let i = 0; i < 30; i++) keyframes.push({
-        value: value
-      });
+      var keyframes = [];
+      for (var i = 0; i < 30; i++) keyframes.push({ value: value });
       return keyframes;
     }
 
     function animateShape(el) {
 
-      let circleEl = el.querySelector('circle');
-      let rectEl = el.querySelector('rect');
-      let polyEl = el.querySelector('polygon');
+      var circleEl = el.querySelector('circle');
+      var rectEl = el.querySelector('rect');
+      var polyEl = el.querySelector('polygon');
 
-      let animation = anime.timeline({
-          targets: el,
-          duration: function() {
-            return anime.random(600, 2200);
-          },
-          easing: function() {
-            return easings[anime.random(0, easings.length - 1)];
-          },
-          complete: function(anim) {
-            animateShape(anim.animatables[0].target);
-          },
-        })
-        .add({
-          translateX: createKeyframes(function(el) {
-            return el.classList.contains('large') ? anime.random(-300, 300) : anime.random(-520, 520);
-          }),
-          translateY: createKeyframes(function(el) {
-            return el.classList.contains('large') ? anime.random(-110, 110) : anime.random(-280, 280);
-          }),
-          rotate: createKeyframes(function() {
-            return anime.random(-180, 180);
-          }),
-        }, 0);
+      var animation = anime.timeline({
+        targets: el,
+        duration: function() { return anime.random(600, 2200); },
+        easing: function() { return easings[anime.random(0, easings.length - 1)]; },
+        complete: function(anim) { animateShape(anim.animatables[0].target); },
+      })
+      .add({
+        translateX: createKeyframes(function(el) {
+          return el.classList.contains('large') ? anime.random(-300, 300) : anime.random(-520, 520);
+        }),
+        translateY: createKeyframes(function(el) {
+          return el.classList.contains('large') ? anime.random(-110, 110) : anime.random(-280, 280);
+        }),
+        rotate: createKeyframes(function() { return anime.random(-180, 180); }),
+      }, 0);
       if (circleEl) {
         animation.add({
           targets: circleEl,
-          r: createKeyframes(function() {
-            return anime.random(32, 72);
-          }),
+          r: createKeyframes(function() { return anime.random(32, 72); }),
         }, 0);
       }
       if (rectEl) {
         animation.add({
           targets: rectEl,
-          width: createKeyframes(function() {
-            return anime.random(64, 120);
-          }),
-          height: createKeyframes(function() {
-            return anime.random(64, 120);
-          }),
+          width: createKeyframes(function() { return anime.random(64, 120); }),
+          height: createKeyframes(function() { return anime.random(64, 120); }),
         }, 0);
       }
       if (polyEl) {
         animation.add({
           targets: polyEl,
           points: createKeyframes(function() {
-            let scale = anime.random(72, 180) / 100;
-            return trianglePoints.map(function(p) {
-              return p * scale;
-            }).join(' ');
+            var scale = anime.random(72, 180) / 100;
+            return trianglePoints.map(function(p) { return p * scale; }).join(' ');
           }),
         }, 0);
       }
 
     }
 
-    for (let i = 0; i < shapeEls.length; i++) {
+    for (var i = 0; i < shapeEls.length; i++) {
       animateShape(shapeEls[i]);
     }
 
@@ -1090,8 +1074,8 @@ if (document.title == 'Contacts') {
 // Lists counter
 
 function countItems(countContainer, countItem) {
-  $(countContainer).each(function(){
-    $(countItem, this).each(function(i){
+  $(countContainer).each(function() {
+    $(countItem, this).each(function(i) {
       $(this).text('0' + (i + 1))
     })
   })
@@ -1110,12 +1094,6 @@ countItems('.info__bullits', '.info__bullit .info__small');
 // Add close effect for menu items
 
 // $(".uk-offcanvas-bar .uk-list li").children().addClass('uk-offcanvas-close');
-
-/* Window width check for scrolify */
-
-if ($(window).width() < 1200) {
-  $.scrollify.disable();
-}
 
 /* To top button */
 

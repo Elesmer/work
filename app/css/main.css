@@ -45,6 +45,7 @@
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
+  display: none;
   -webkit-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
@@ -5246,7 +5247,8 @@ header.sticky {
   margin: -275px 0 0 -550px;
 }
 
-.layered-animations .shape {
+.layered-animations .shape,
+.mobile__shape-wrapper .brand__mobile-shape {
   position: absolute;
   top: 50%;
   overflow: visible;
@@ -5724,6 +5726,7 @@ button {
   -ms-flex-pack: center;
   justify-content: center;
   border-radius: 100%;
+  border: 1px solid #ccc;
 }
 
 .info-main__container {
@@ -6538,6 +6541,26 @@ button {
     border: none;
   }
 
+  .verity__more-button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    -webkit-box-shadow: 15px 15px 30px #0d0d0d, -15px -15px 30px #171717;
+    box-shadow: 15px 15px 30px #0d0d0d, -15px -15px 30px #171717;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .verity__more-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
   .background-lines--info {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 5%;
@@ -6752,6 +6775,13 @@ button {
 
   .mobile__slogan-word {
     font-size: 3rem;
+  }
+
+  .info__mobile-slider-nav {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
